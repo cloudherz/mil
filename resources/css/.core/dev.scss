@@ -1,0 +1,22 @@
+.DEV-DISABLE_SELECTION {
+    //  CHROME AND SAFARI
+    -webkit-user-select: none;
+    //  FIREFOX
+    -moz-user-select: none;
+    //  INTERNET EXPLORER AND EDGE BROWSER
+    -ms-user-select: none;
+    //  MAIN
+    user-select: none;
+}
+
+
+
+.DEV-DISABLE_INTERACTIONS {
+    pointer-events: none;
+}
+
+
+
+.DEV-DISABLE_VISIBILITY {
+    display: none;
+}

@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *    ,
+ * 21 |     $LV-DESKTOP_INTERFACE-MIDDLE_HEIGHT: 100vh - $LV-DESKTOP_INTERFACE-HEADER_HEIGHT - $LV-DESKTOP_INTERFACE-BOTTOM_HEIGHT - 2 * $GV-DESKTOP-SAFE_SPACE_DESKTOP_DIVISIONS - 2 * $GV-SAFE_SPACE_APP;
+ *    |                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   ..\desktop.scss 21:130  DESKTOP-MODES()
+ *   modes.bundle.scss 9:5   root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 21 \2502      $LV-DESKTOP_INTERFACE-MIDDLE_HEIGHT: 100vh - $LV-DESKTOP_INTERFACE-HEADER_HEIGHT - $LV-DESKTOP_INTERFACE-BOTTOM_HEIGHT - 2 * $GV-DESKTOP-SAFE_SPACE_DESKTOP_DIVISIONS - 2 * $GV-SAFE_SPACE_APP;\a    \2502                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   ..\\desktop.scss 21:130  DESKTOP-MODES()\a   modes.bundle.scss 9:5   root stylesheet";
+}

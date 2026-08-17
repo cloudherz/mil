@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Eitai-3";
+  src: url("../../fonts/eitai/3-bold-BASIC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kiyosuna-3";
+  src: url("../../fonts/kiyosuna/3-bold-BASIC.woff2") format("woff2"), url("../../fonts/kiyosuna/3-bold-BASIC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kiyosuna-7";
+  src: url("../../fonts/kiyosuna/7-light-BASIC.woff2") format("woff2"), url("../../fonts/kiyosuna/7-light-BASIC.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=fonts.css.map */

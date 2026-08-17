@@ -1,0 +1,57 @@
+@use 'sass:math';
+
+// ENDPOINTS (используем math.div для деления)
+$MEDIA_ENDPOINTS-DESKTOP_MAIN: math.div(100, 69);
+$MEDIA_ENDPOINTS-DESKTOP_SLIM: math.div(100, 100);
+$MEDIA_ENDPOINTS-MOBILE_SPACIOUS: math.div(100, 140);
+
+$MEDIA_ENDPOINTS-LANDSCAPE: $MEDIA_ENDPOINTS-DESKTOP_MAIN;
+
+// Используем модули напрямую, без промежуточных bundle
+@use '../desktop' as desktop;
+@use '../landscape' as landscape;
+@use '../mobile' as mobile;
+@use '../desktop_responsive' as desktop_resp;
+@use '../landscape_responsive' as landscape_resp;
+@use '../mobile_responsive' as mobile_resp;
+
+// MODE: DESKTOP MAIN
+@media screen and (min-aspect-ratio: $MEDIA_ENDPOINTS-DESKTOP_MAIN){
+    @include desktop.DESKTOP_MODES(MAIN);
+}
+
+// MODE: DESKTOP SLIM
+@media screen and (max-aspect-ratio: $MEDIA_ENDPOINTS-DESKTOP_MAIN) and (min-aspect-ratio: $MEDIA_ENDPOINTS-DESKTOP_SLIM) {
+    @include desktop.DESKTOP_MODES(SLIM);
+}
+
+// MODE: LANDSCAPE MAIN
+@media screen and (min-aspect-ratio: $MEDIA_ENDPOINTS-LANDSCAPE) and (hover: none) and (pointer: coarse) {
+    @include landscape.LANDSCAPE_MODES(MAIN);
+}
+
+// MODE: LANDSCAPE SLIM
+@media screen and (max-aspect-ratio: $MEDIA_ENDPOINTS-LANDSCAPE) and (hover: none) and (pointer: coarse) {
+    @include landscape.LANDSCAPE_MODES(SLIM);
+}
+
+// MODE: MOBILE SPACIOUS
+@media screen and (max-aspect-ratio: $MEDIA_ENDPOINTS-DESKTOP_SLIM) and (min-aspect-ratio: $MEDIA_ENDPOINTS-MOBILE_SPACIOUS){
+    @include mobile.MOBILE_MODES(SPACIOUS);
+}
+
+// MODE: MOBILE MAIN
+@media screen and (max-aspect-ratio: $MEDIA_ENDPOINTS-MOBILE_SPACIOUS) {
+    @include mobile.MOBILE_MODES(MAIN);
+}
+
+// ASPECT RATIO REAL NUMBER LINE VISUALIZATION
+//
+// . . . ____1____2____3____ . . .
+//
+// After 3 = DESKTOP MAIN
+// Between 2 and 3 = DESKTOP SLIM
+// Between 1 and 2 = MOBILE SPACIOUS
+// Before 1 = MOBILE MAIN
+//
+// *LANDSCAPES exist independently

@@ -1,0 +1,65 @@
+.TYPO-WEIGHT-THIN {
+  font-variation-settings: "wght" 100;
+}
+
+.TYPO-WEIGHT-EXTRALIGHT {
+  font-variation-settings: "wght" 148;
+}
+
+.TYPO-WEIGHT-LIGHT {
+  font-variation-settings: "wght" 228;
+}
+
+.TYPO-WEIGHT-REGULAR {
+  font-variation-settings: "wght" 336;
+}
+
+.TYPO-WEIGHT-MEDIUM {
+  font-variation-settings: "wght" 469;
+}
+
+.TYPO-WEIGHT-SEMIBOLD {
+  font-variation-settings: "wght" 617;
+}
+
+.TYPO-WEIGHT-BOLD {
+  font-variation-settings: "wght" 767;
+}
+
+.TYPO-WEIGHT-EXTRABOLD {
+  font-variation-settings: "wght" 900;
+}
+
+.TYPO-OBLIQUE-NONE {
+  font-variation-settings: "ital" 100;
+}
+
+.TYPO-OBLIQUE-ITALIC {
+  font-variation-settings: "ital" 900;
+}
+
+.TYPO-OBLIQUE-RECLINED {
+  font-variation-settings: "ital" -700;
+}
+
+.TYPO-DETAILS-SS01 {
+  font-feature-settings: "ss01" 1;
+}
+
+.TYPO-DETAILS-SS02 {
+  font-feature-settings: "ss02" 1;
+}
+
+.TYPO-DETAILS-SS03 {
+  font-feature-settings: "ss03" 1;
+}
+
+.TYPO-DETAILS-CASE {
+  font-feature-settings: "case" 1;
+}
+
+.TYPO-DETAILS-ONUM {
+  font-feature-settings: "onum" 1;
+}
+
+/*# sourceMappingURL=typography.css.map */

@@ -1,0 +1,62 @@
+@use './variables' as *;
+
+
+
+// GLOBAL MARGINS & PADDINGS RESET
+* {
+    // MARGINS & PADDINGS
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// WINDOW SETTINGS
+html {
+    // SCROLL
+    scroll-behavior: smooth;
+}
+
+
+
+// GLOBAL SETTINGS OVERRIDE
+body {
+    // BACKGROUND
+    background: $PALETTE-SNOW;
+    // FONT SETTINGS
+    font-family: 'PangramSansNormal', sans-serif;
+    font-size: $GV-D-FONT_SIZES-DEFAULT;
+    font-weight: normal;
+    color: $PALETTE-VOID;
+    word-break: break-word;
+}
+
+
+
+// DISABLING SCROLL VISIBILITY
+::-webkit-scrollbar {
+    // CHROME, SAFARI, EDGE, OPERA
+    display: none;
+    width: 0;
+    background: transparent;
+}
+* {
+    // FIREFOX
+    scrollbar-width: none;
+    // INTERNET EXPLORER, OLD EDGE
+    -ms-overflow-style: none;
+}
+
+
+
+// DISABLING <BR> SELECTION
+br {
+    // CHROME AND SAFARI
+    -webkit-user-select: none;
+    // FIREFOX
+    -moz-user-select: none;
+    // INTERNET EXPLORER AND EDGE BROWSER
+    -ms-user-select: none;
+    // MAIN
+    user-select: none;
+}

@@ -1,0 +1,2421 @@
+@use './desktop_responsive' as desktop;
+@use '../.core/variables' as *;
+@use 'sass:map';
+
+@mixin DESKTOP_MODES($MODE) {
+    $MODE_VALUES: map.get(desktop.$DESKTOP_MODES, $MODE);
+
+
+
+    // CHUNK:DESKTOP
+    .S-DESKTOP-wrapper {
+        display: unset;
+    }
+    .S-LANDSCAPE-wrapper {
+        display: none;
+    }
+    .S-MOBILE-wrapper {
+        display: none;
+    }
+
+
+
+    // CHUNK:CORE
+    // LOCAL VARIABLES NAME = CORE
+    .S-DESKTOP-header {
+        // POSITIONING
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        // LAYERING
+        z-index: 1000;
+    }
+
+
+
+    // CHUNK:HEADER
+    // LOCAL VARIABLES NAME = HEADER
+    .S-HEADER-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+
+        .S-HEADER-carcass {
+            // FLEXBOX
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // SCALING
+            width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+            height: $GV-D-CORE-HEADER_HEIGHT;
+            // STREAMLINING
+            border-radius: 0 0 $GV-D-ROUNDING-ELEMENTS $GV-D-ROUNDING-ELEMENTS;
+            // TRANSITION
+            transition:
+                background-color 0.2s,
+                color 0.2s;
+
+            .S-HEADER-content {
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+
+                .S-CONTENT-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr max-content;
+                    grid-template-rows: 1fr;
+                    grid-column-gap: 0;
+                    grid-row-gap: 0;
+
+                    .S-CONTENT-list {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                        // FLEXBOX
+                        display: flex;
+                        align-items: center;
+
+                        .S-LIST-carcass {
+                            // FLEXBOX
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            // MARGINS & PADDINGS
+                            gap: $GV-D-SIZES-SMALL * 2;
+
+                            .L-LIST-image {
+                                // FLEXBOX
+                                display: flex;
+
+                                &:hover {
+                                    // CURSOR
+                                    cursor: pointer;
+                                }
+
+                                .I-LIST-logo {
+                                    // SCALING
+                                    width: 6.3vh;
+                                }
+                            }
+                            .L-LIST-text {
+                                // FONT SETTINGS
+                                text-decoration: none;
+                                // TRANSITION
+                                transition: color 0.2s;
+
+                                &:hover {
+                                    // CURSOR
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    .S-CONTENT-button {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 2 / 2 / 3;
+                        // FLEXBOX
+                        display: flex;
+                        align-items: center;
+
+                        .B-BUTTON-button {
+                            // BORDER
+                            border: none;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SMALL;
+                            // MARGINS & PADDINGS
+                            padding: ($GV-D-SIZES-SMALL / 2.4) ($GV-D-SIZES-SMALL * 1.05);
+                            // CURSOR
+                            cursor: pointer;
+                            // TRANSITION
+                            transition:
+                                background-color 0.2s,
+                                color 0.2s;
+                        }
+                        .B-BUTTON-button_transparent {
+                            // BACKGROUND
+                            background-color: $PALETTE-SNOW;
+                            // FONT SETTINGS
+                            color: $PALETTE-BLACK;
+
+                            &:hover {
+                                // BACKGROUND
+                                background-color: $PALETTE-WHITE_HOVER;
+                                // FONT SETTINGS
+                                color: $PALETTE-BLACK_HOVER;
+                            }
+                        }
+                        .B-BUTTON-button_solid {
+                            // BACKGROUND
+                            background-color: $PALETTE-LIGHT_GREEN;
+                            // FONT SETTINGS
+                            color: $PALETTE-BLACK;
+
+                            &:hover {
+                                // BACKGROUND
+                                background-color: $PALETTE-LIGHT_GREEN_HOVER;
+                                // FONT SETTINGS
+                                color: $PALETTE-BLACK_HOVER;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .S-HEADER-carcass_transparent {
+            // BACKGROUND
+            background-color: $PALETTE-GLASS;
+
+            .L-LIST-text {
+                // FONT SETTINGS
+                color: $PALETTE-SNOW;
+
+                &:hover {
+                    // FONT SETTINGS
+                    color: $PALETTE-WHITE_HOVER;
+                }
+            }
+        }
+        .S-HEADER-carcass_solid {
+            // BACKGROUND
+            background-color: $PALETTE-SNOW;
+
+            .L-LIST-text {
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+
+                &:hover {
+                    // FONT SETTINGS
+                    color: $PALETTE-BLACK_HOVER;
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:HERO
+    // LOCAL VARIABLES NAME = HERO
+    $LV-D-HERO-CONTENT_HEIGHT: 52.3vh;
+    $LV-D-HERO-CARCASS_HEIGHT: $GV-D-CORE-HEADER_HEIGHT + $LV-D-HERO-CONTENT_HEIGHT;
+    .S-HERO-carcass {
+        // CSS-GRID SETUP
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+        .S-HERO-background {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // LAYERING
+            z-index: 101;
+
+            .S-BACKGROUND-carcass {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // BACKGROUND
+                background-color: $PALETTE-LIGHT_GREEN;
+                // SCALING
+                height: $LV-D-HERO-CARCASS_HEIGHT;
+                // OVERFLOW
+                overflow: clip;
+
+                .I-BACKGROUND-shape {
+                    // TRANSFORM
+                    transform: scale(280%) translateX(-4%) translateY(-17%);
+                    transform-origin: top;
+                }
+            }
+        }
+        .S-HERO-content {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // LAYERING
+            z-index: 102;
+
+            .S-CONTENT-wrapper {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+
+                .S-CONTENT-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(3, max-content);
+                    grid-column-gap: 0;
+                    grid-row-gap: 0;
+                    // SCALING
+                    width: $GV-D-CORE-CONTENT_WIDTH;
+                    height: $LV-D-HERO-CONTENT_HEIGHT;
+                    // MARGINS & PADDINGS
+                    margin-top: $GV-D-CORE-HEADER_HEIGHT;
+
+                    .S-CONTENT-logo {
+                        // FLEXBOX
+                        display: flex;
+                        // MARGINS & PADDINGS
+                        margin-top: 5.5vh;
+
+                        .I-CONTENT-logo {
+                            // SCALING
+                            width: 26vh;
+                        }
+                    }
+                    .S-CONTENT-heading {
+                        // FONT SETTINGS
+                        color: $PALETTE-SNOW;
+                        line-height: 8vh;
+                        // MARGINS & PADDINGS
+                        margin-top: 1vh;
+                    }
+                    .S-CONTENT-rair {
+                        // FLEXBOX
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        // FONT SETTINGS
+                        color: $PALETTE-SNOW;
+                        // MARGINS & PADDINGS
+                        margin: ($GV-D-CORE-HEADER_HEIGHT / 1.2) 0;
+
+                        .I-CONTENT-rair {
+                            // SCALING
+                            width: 15vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:GOALS
+    // LOCAL VARIABLES NAME = GOALS
+    #goals {
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
+    }
+    .S-GOALS-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        margin: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 2) 0;
+
+        .S-GOALS-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: $GV-D-SIZES-H2_CONTENT;
+            justify-items: center;
+
+            .S-GOALS-title {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+            }
+            .S-GOALS-cards {
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+
+                .S-CARDS-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: $GV-D-SIZES-DEFAULT;
+                    grid-row-gap: $GV-D-SIZES-DEFAULT;
+
+                    .S-CARDS-card_1 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                    }
+                    .S-CARDS-card_2 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 2 / 2 / 3;
+                    }
+                    .S-CARDS-card_3 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 2 / 1 / 3 / 2;
+                    }
+                    .S-CARDS-card_4 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 2 / 2 / 3 / 3;
+                    }
+                    .S-CARDS-card_blue {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_BLUE;
+                    }
+                    .S-CARDS-card_green {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_GREEN;
+                    }
+                    .S-CARDS-card {
+                        // FLEXBOX
+                        display: flex;
+                        // MARGINS & PADDINGS
+                        padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-CARD-wrapper_blue {
+                            // BACKGROUND
+                            background-color: $PALETTE-WHITE_BLUE;
+                        }
+                        .S-CARD-wrapper_green {
+                            // BACKGROUND
+                            background-color: $PALETTE-WHITE_GREEN;
+                        }
+                        .S-CARD-wrapper {
+                            // FLEXBOX
+                            display: flex;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                            .S-CARD-carcass {
+                                // CSS-GRID SETUP
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                grid-template-rows: 1fr;
+                                grid-column-gap: 0;
+                                grid-row-gap: 0;
+
+                                .S-CARD-background {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 1 / 1 / 2 / 2;
+                                    // LAYERING
+                                    z-index: 101;
+                                    // OVERFLOW
+                                    overflow: clip;
+
+                                    .S-BACKGROUND-carcass {
+                                        // FLEXBOX
+                                        display: flex;
+                                        justify-content: center;
+
+                                        .I-BACKGROUND-shape_blue {
+                                            // FILL
+                                            fill: $PALETTE-DARK_BLUE;
+                                            // OPACITY
+                                            opacity: 0.025;
+                                        }
+                                        .I-BACKGROUND-shape_green {
+                                            // FILL
+                                            fill: $PALETTE-DARK_GREEN;
+                                            // OPACITY
+                                            opacity: 0.05;
+                                        }
+                                        .I-BACKGROUND-shape {
+                                            // SCALING
+                                            height: 20vh;
+                                            // TRANSFORM
+                                            transform-origin: top;
+                                        }
+                                    }
+                                }
+                                .S-CARD-content {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 1 / 1 / 2 / 2;
+                                    // SCALING
+                                    height: max-content;
+                                    // LAYERING
+                                    z-index: 102;
+
+                                    .S-CONTENT-carcass {
+                                        // CSS-GRID SETUP
+                                        display: grid;
+                                        grid-template-columns: repeat(2, 1fr);
+                                        grid-template-rows: repeat(2, max-content);
+                                        grid-column-gap: $GV-D-SIZES-SMALL;
+                                        grid-row-gap: $GV-D-SIZES-SMALL * 1.2;
+                                        // MARGINS & PADDINGS
+                                        padding: $GV-D-SIZES-INNER_PADDING;
+
+                                        .S-CONTENT-title {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 3;
+
+                                            .S-TITLE-carcass {
+                                                // CSS-GRID SETUP
+                                                display: grid;
+                                                grid-template-columns: max-content 1fr;
+                                                grid-template-rows: 1fr;
+                                                grid-column-gap: $GV-D-SIZES-SMALL * 1.15;
+                                                grid-row-gap: 0;
+
+                                                .S-TITLE-icon {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 1 / 2 / 2;
+
+                                                    .I-TITLE-icon_blue {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .I-TITLE-icon_green {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_GREEN;
+                                                    }
+                                                    .I-TITLE-icon {
+                                                        // SCALING
+                                                        height: 8vh;
+                                                    }
+                                                }
+                                                .S-TITLE-heading {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 2 / 2 / 3;
+                                                }
+                                            }
+                                        }
+                                        .S-CONTENT-text_1 {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 2 / 1 / 3 / 2;
+                                        }
+                                        .S-CONTENT-text_2 {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 2 / 2 / 3 / 3;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:RAIR
+    // LOCAL VARIABLES NAME = RAIR
+    .S-RAIR-carcass {
+        // CSS-GRID SETUP
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+        .S-RAIR-background {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // POSITIONING
+            position: relative;
+            // OVERFLOW
+            overflow: clip;
+            // LAYERING
+            z-index: 101;
+
+            .S-BACKGROUND-carcass_1 {
+                // BACKGROUND
+                background-color: $PALETTE-DARK_BLUE;
+            }
+            .S-BACKGROUND-carcass_2 {
+                // BACKGROUND
+                background-color: $PALETTE-LIGHT_GREEN;
+            }
+            .S-BACKGROUND-carcass {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // OVERFLOW
+                overflow: clip;
+                // POSITIONING
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                .I-BACKGROUND-shape_1 {
+                    // TRANSFORM
+                    transform: scale(300%) translateX(40%) translateY(78%) rotate(191deg);
+                }
+                .I-BACKGROUND-shape_2 {
+                    // TRANSFORM
+                    transform: scale(500%) translateX(0%) translateY(59%) rotate(180deg);
+                }
+                .I-BACKGROUND-shape {
+                    // TRANSFORM
+                    transform-origin: top;
+                }
+            }
+        }
+        .S-RAIR-content {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // LAYERING
+            z-index: 102;
+
+            .S-CONTENT-wrapper {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+
+                .S-CONTENT-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: 0;
+                    grid-row-gap: $GV-D-SIZES-SMALL * 2;
+                    // SCALING
+                    width: $GV-D-CORE-CONTENT_WIDTH;
+                    // MARGINS & PADDINGS
+                    margin: ($GV-D-SIZES-SECTIONS * 1.3) 0 ($GV-D-SIZES-SECTIONS * 1.5) 0;
+                    // FONT SETTINGS
+                    color: $PALETTE-SNOW;
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:TRACKS
+    // LOCAL VARIABLES NAME = TRACKS
+    $LV-D-TRACKS-MAX_CARDS_IN_A_ROW: 3;
+    $LV-D-TRACKS-CARDS_GAP: $GV-D-SIZES-DEFAULT;
+    $LV-D-TRACKS-CARDS_GAP_CALCULATION: calc((100% - ($LV-D-TRACKS-CARDS_GAP * ($LV-D-TRACKS-MAX_CARDS_IN_A_ROW - 1))) / $LV-D-TRACKS-MAX_CARDS_IN_A_ROW);
+    #tracks {
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
+    }
+    .S-TRACKS-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        margin: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 2) 0;
+
+        .S-TRACKS-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: $GV-D-SIZES-H2_CONTENT;
+            justify-items: center;
+
+            .S-TRACKS-title {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+            }
+            .S-TRACKS-cards {
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+
+                .S-CARDS-carcass {
+                    // FLEXBOX
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    // MARGINS & PADDINGS
+                    gap: $LV-D-TRACKS-CARDS_GAP;
+
+                    &:not(:last-child) {
+                        // MARGINS & PADDINGS
+                        margin-bottom: $LV-D-TRACKS-CARDS_GAP;
+                    }
+
+                    .S-CARDS-card_blue {
+                        // BACKGROUND
+                        background-color: $PALETTE-WHITE_BLUE;
+                    }
+                    .S-CARDS-card_green {
+                        // BACKGROUND
+                        background-color: $PALETTE-WHITE_GREEN;
+                    }
+                    .S-CARDS-card {
+                        // FLEXBOX
+                        display: flex;
+                        flex: 1;
+                        // SCALING
+                        max-width: $LV-D-TRACKS-CARDS_GAP_CALCULATION;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-CARD-wrapper {
+                            // FLEXBOX
+                            display: flex;
+                            // MARGINS & PADDINGS
+                            padding: $GV-D-SIZES-INNER_PADDING / 3.5;
+
+                            .S-CARD-carcass {
+                                // CSS-GRID SETUP
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                grid-template-rows: 1fr;
+                                grid-column-gap: 0;
+                                grid-row-gap: 0;
+                                // BACKGROUND
+                                background-color: $PALETTE-SNOW;
+                                // STREAMLINING
+                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                // POSITIONING
+                                position: relative;
+
+                                .S-CARD-background {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 1 / 1 / 2 / 2;
+                                    // LAYERING
+                                    z-index: 101;
+                                    // OVERFLOW
+                                    overflow: clip;
+                                    // POSITIONING
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+
+                                    .S-BACKGROUND-carcass {
+                                        // FLEXBOX
+                                        display: flex;
+                                        justify-content: center;
+
+                                        .I-BACKGROUND-shape_blue {
+                                            // FILL
+                                            fill: $PALETTE-WHITE_BLUE;
+                                        }
+                                        .I-BACKGROUND-shape_green {
+                                            // FILL
+                                            fill: $PALETTE-WHITE_GREEN;
+                                        }
+                                        .I-BACKGROUND-shape {
+                                            // SCALING
+                                            height: 20vh;
+                                            // TRANSFORM
+                                            transform-origin: top;
+                                        }
+                                    }
+                                }
+                                .S-CARD-content {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 1 / 1 / 2 / 2;
+                                    // SCALING
+                                    height: max-content;
+                                    // MARGINS & PADDINGS
+                                    padding: $GV-D-SIZES-INNER_PADDING / 1.7;
+                                    // LAYERING
+                                    z-index: 102;
+
+                                    .S-CONTENT-carcass {
+                                        // CSS-GRID SETUP
+                                        display: grid;
+                                        grid-template-columns: 1fr;
+                                        grid-template-rows: repeat(3, max-content);
+                                        grid-column-gap: 0;
+                                        grid-row-gap: 0;
+
+                                        .S-CONTENT-icon {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 2;
+                                            // FLEXBOX
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .I-CONTENT-icon_blue {
+                                                // FILL
+                                                fill: $PALETTE-DARK_BLUE;
+                                            }
+                                            .I-CONTENT-icon_green {
+                                                // FILL
+                                                fill: $PALETTE-DARK_GREEN;
+                                            }
+                                            .I-CONTENT-icon {
+                                                // SCALING
+                                                height: 5vh;
+                                            }
+                                        }
+                                        .S-CONTENT-heading {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 2 / 1 / 3 / 2;
+                                            // FLEXBOX
+                                            display: flex;
+                                            justify-content: center;
+                                            // FONT SETTINGS
+                                            text-align: center;
+                                            // MARGINS & PADDINGS
+                                            margin-bottom: $GV-D-SIZES-DEFAULT;
+
+                                            .T-CONTENT-heading_blue {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-DARK_BLUE;
+                                            }
+                                            .T-CONTENT-heading_green {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-DARK_GREEN;
+                                            }
+                                        }
+                                        .S-CONTENT-text {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 3 / 1 / 4 / 2;
+
+                                            .T-CONTENT-text {
+                                                // FLEXBOX
+                                                display: flex;
+                                                flex-direction: column;
+                                                // MARGINS & PADDINGS
+                                                gap: $GV-D-SIZES-SMALL * 1.6;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:DATES
+    // LOCAL VARIABLES NAME = DATES
+    $LV-D-DATES-WIDGET-PADDING_POLES: $GV-D-SIZES-INNER_PADDING / 1.05;
+    $LV-D-DATES-WIDGET-PADDING_SIDES: $GV-D-SIZES-INNER_PADDING / 2.26;
+    $LV-D-DATES-WIDGET-STRIPE_HEIGHT: 1.35vh;
+    $LV-D-DATES-WIDGET-CIRCLE_SIZE: 3.8vh;
+    $LV-D-DATES-WIDGET-CIRCLE_PADDING_LEFT: 1.3vh;
+    $LV-D-DATES-WIDGET-CIRCLE_BULB_SIZE: $LV-D-DATES-WIDGET-CIRCLE_SIZE / 1.6;
+    $LV-D-DATES-WIDGET-LINE_HEIGHT: $LV-D-DATES-WIDGET-CIRCLE_SIZE;
+    $LV-D-DATES-WIDGET-NUMBER_BOX_SIZE: $LV-D-DATES-WIDGET-CIRCLE_SIZE + ($LV-D-DATES-WIDGET-CIRCLE_PADDING_LEFT * 2);
+    $LV-D-DATES-WIDGET-NUMBER_BOX_PADDING: (($LV-D-DATES-WIDGET-CIRCLE_SIZE - $LV-D-DATES-WIDGET-CIRCLE_BULB_SIZE) / 2) / 1.4;
+    $LV-D-DATES-WIDGET-COLUMN-PADDING_LEFT: $GV-D-SIZES-SMALL;
+    $LV-D-DATES-WIDGET-COLUMNS-HALF_GAP: $GV-D-SIZES-SMALL / 3.2;
+    #dates {
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
+    }
+    .S-DATES-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        margin: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 2) 0;
+
+        .S-DATES-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: $GV-D-SIZES-H2_CONTENT;
+            justify-items: center;
+
+            .S-DATES-title {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+            }
+
+            .S-DATES-widget {
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+                // BACKGROUND
+                background-color: $PALETTE-DARK_BLUE;
+                // STREAMLINING
+                border-radius: $GV-D-ROUNDING-SECTIONS;
+                // MARGINS & PADDINGS
+                padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+
+                .S-WIDGET-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: max-content repeat(5, 1fr) max-content;
+                    grid-template-rows: 1fr;
+                    grid-column-gap: 0;
+                    grid-row-gap: 0;
+                    // MARGINS & PADDINGS
+                    padding: $LV-D-DATES-WIDGET-PADDING_POLES 0;
+                    // BACKGROUND
+                    background-color: $PALETTE-WHITE_BLUE;
+                    // STREAMLINING
+                    border-radius: $GV-D-ROUNDING-SECTIONS;
+                    // OVERFLOW
+                    overflow: clip;
+
+                    .S-WIDGET-column_left {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                    }
+                    .S-WIDGET-column_1 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 2 / 2 / 3;
+                    }
+                    .S-WIDGET-column_2 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 3 / 2 / 4;
+                    }
+                    .S-WIDGET-column_3 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 4 / 2 / 5;
+                    }
+                    .S-WIDGET-column_4 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 5 / 2 / 6;
+                    }
+                    .S-WIDGET-column_5 {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 6 / 2 / 7;
+                    }
+                    .S-WIDGET-column_right {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 7 / 2 / 8;
+                    }
+                    .S-WIDGET-side {
+                        // SCALING
+                        width: $LV-D-DATES-WIDGET-PADDING_SIDES - $LV-D-DATES-WIDGET-COLUMNS-HALF_GAP;
+
+                        .S-SIDE-stripe {
+                            // CSS-GRID CONFIGURATION
+                            grid-area: 1 / 1 / 2 / 2;
+                            // SCALING
+                            height: $LV-D-DATES-WIDGET-LINE_HEIGHT;
+
+                            .S-STRIPE-wrapper {
+                                // FLEXBOX
+                                display: flex;
+                                align-items: center;
+                                // SCALING
+                                height: $LV-D-DATES-WIDGET-LINE_HEIGHT;
+
+                                .S-STRIPE-carcass_left {
+                                    // BACKGROUND
+                                    background-color: $PALETTE-DARK_BLUE_PALE;
+                                }
+                                .S-STRIPE-carcass_right {
+                                    // BACKGROUND
+                                    background-color: $PALETTE-SNOW;
+                                }
+                                .S-STRIPE-carcass {
+                                    // FLEXBOX
+                                    flex: 1;
+                                    // SCALING
+                                    height: $LV-D-DATES-WIDGET-STRIPE_HEIGHT;
+                                }
+                            }
+                        }
+                    }
+                    .S-WIDGET-column {
+                        .S-COLUMN-wrapper {
+                            // SCALING
+                            height: 100%;
+
+                            .S-CONTENT-wrapper {
+                                // MARGINS & PADDINGS
+                                margin: 0 $LV-D-DATES-WIDGET-COLUMNS-HALF_GAP;
+                            }
+                            .S-COLUMN-carcass {
+                                // CSS-GRID SETUP
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                grid-template-rows: max-content 1fr;
+                                grid-column-gap: 0;
+                                grid-row-gap: $GV-D-SIZES-DEFAULT + $GV-D-SIZES-SMALL;
+                                // SCALING
+                                height: 100%;
+
+                                .S-COLUMN-line {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 1 / 1 / 2 / 2;
+
+                                    .S-LINE-carcass {
+                                        // CSS-GRID SETUP
+                                        display: grid;
+                                        grid-template-columns: 1fr;
+                                        grid-template-rows: 1fr;
+                                        grid-column-gap: 0;
+                                        grid-row-gap: 0;
+
+                                        .S-LINE-stripe {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 2;
+                                            // LAYERING
+                                            z-index: 101;
+
+                                            .S-STRIPE-wrapper {
+                                                // FLEXBOX
+                                                display: flex;
+                                                align-items: center;
+                                                // SCALING
+                                                height: $LV-D-DATES-WIDGET-LINE_HEIGHT;
+
+                                                .S-STRIPE-carcass_past {
+                                                    // BACKGROUND
+                                                    background-color: $PALETTE-DARK_BLUE_PALE;
+                                                }
+                                                .S-STRIPE-carcass_present {
+                                                    // BACKGROUND
+                                                    background: linear-gradient(90deg,$PALETTE-DARK_BLUE_PALE 0%, $PALETTE-DARK_BLUE 16%, $PALETTE-LIGHT_GREEN 28%, $PALETTE-SNOW 100%);
+                                                }
+                                                .S-STRIPE-carcass_future {
+                                                    // BACKGROUND
+                                                    background-color: $PALETTE-SNOW;
+                                                }
+                                                .S-STRIPE-carcass {
+                                                    // FLEXBOX
+                                                    flex: 1;
+                                                    // SCALING
+                                                    height: $LV-D-DATES-WIDGET-STRIPE_HEIGHT;
+                                                }
+                                            }
+                                        }
+                                        .S-LINE-circle {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 2;
+                                            // LAYERING
+                                            z-index: 102;
+
+                                            .S-CIRCLE-wrapper {
+                                                // MARGINS & PADDINGS
+                                                margin-left: $LV-D-DATES-WIDGET-COLUMN-PADDING_LEFT + $LV-D-DATES-WIDGET-CIRCLE_PADDING_LEFT + $LV-D-DATES-WIDGET-COLUMNS-HALF_GAP;
+
+                                                .S-CIRCLE-carcass {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    // SCALING
+                                                    height: $LV-D-DATES-WIDGET-CIRCLE_SIZE;
+                                                    width: $LV-D-DATES-WIDGET-CIRCLE_SIZE;
+                                                    // BACKGROUND
+                                                    background-color: $PALETTE-SNOW;
+                                                    // STREAMLINING
+                                                    border-radius: $GV-D-ROUNDING-MAXIMUM;
+
+                                                    .S-CIRCLE-bulb_past {
+                                                        // BACKGROUND
+                                                        background-color: $PALETTE-DARK_BLUE_PALE;
+                                                    }
+                                                    .S-CIRCLE-bulb_present {
+                                                        // BACKGROUND
+                                                        background-color: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .S-CIRCLE-bulb_future {
+                                                        // BACKGROUND
+                                                        background-color: $PALETTE-WHITE_BLUE;
+                                                    }
+                                                    .S-CIRCLE-bulb {
+                                                        // SCALING
+                                                        height: $LV-D-DATES-WIDGET-CIRCLE_BULB_SIZE;
+                                                        width: $LV-D-DATES-WIDGET-CIRCLE_BULB_SIZE;
+                                                        // STREAMLINING
+                                                        border-radius: $GV-D-ROUNDING-MAXIMUM;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .S-COLUMN-content {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 2 / 1 / 3 / 2;
+                                    // SCALING
+                                    height: 100%;
+
+                                    .S-CONTENT-wrapper {
+                                        // BACKGROUND
+                                        background-color: $PALETTE-SNOW;
+                                        // STREAMLINING
+                                        border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                        // SCALING
+                                        height: 100%;
+
+                                        .S-CONTENT-carcass {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: repeat(2, max-content);
+                                            grid-column-gap: 0;
+                                            grid-row-gap: 0;
+                                            // MARGINS & PADDINGS
+                                            padding: 0 $LV-D-DATES-WIDGET-COLUMN-PADDING_LEFT;
+
+                                            .S-CONTENT-number {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                                // SCALING
+                                                height: $LV-D-DATES-WIDGET-NUMBER_BOX_SIZE;
+                                                width: $LV-D-DATES-WIDGET-NUMBER_BOX_SIZE;
+                                                // BACKGROUND
+                                                background-color: $PALETTE-WHITE_BLUE;
+                                                // STREAMLINING
+                                                border-radius: $GV-D-ROUNDING-SMALL;
+                                                // MARGINS & PADDINGS
+                                                margin-top: (-$LV-D-DATES-WIDGET-NUMBER_BOX_SIZE / 2);
+
+                                                .S-NUMBER-wrapper {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    // SCALING
+                                                    height: $LV-D-DATES-WIDGET-NUMBER_BOX_SIZE;
+                                                    width: $LV-D-DATES-WIDGET-NUMBER_BOX_SIZE;
+
+                                                    .S-NUMBER-carcass {
+                                                        // FLEXBOX
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        // SCALING
+                                                        height: $LV-D-DATES-WIDGET-NUMBER_BOX_SIZE - ($LV-D-DATES-WIDGET-NUMBER_BOX_PADDING * 2);
+                                                        width: $LV-D-DATES-WIDGET-NUMBER_BOX_SIZE - ($LV-D-DATES-WIDGET-NUMBER_BOX_PADDING * 2);
+                                                        // BACKGROUND
+                                                        background-color: $PALETTE-SNOW;
+                                                        // STREAMLINING
+                                                        border-radius: $GV-D-ROUNDING-SMALL;
+
+                                                        .T-NUMBER-heading_past {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE_PALE;
+                                                        }
+                                                        .T-NUMBER-heading_present {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE;
+                                                        }
+                                                        .T-NUMBER-heading_future {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE_PALE;
+                                                        }
+                                                        .T-NUMBER-heading {
+                                                            // MARGINS & PADDINGS
+                                                            margin-top: -1.05vh;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .S-CONTENT-text {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 2 / 1 / 3 / 2;
+
+                                                .S-TEXT-carcass {
+                                                    // MARGINS & PADDINGS
+                                                    padding: $LV-D-DATES-WIDGET-COLUMN-PADDING_LEFT 0 $LV-D-DATES-WIDGET-COLUMN-PADDING_LEFT 0;
+
+                                                    p:first-child {
+                                                        // MARGINS & PADDINGS
+                                                        margin-bottom: 1.1vh;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:PRIZES
+    // LOCAL VARIABLES NAME = PRIZES
+    $LV-D-PRIZES-POINTER_WIDTH: 1.3vh;
+    $LV-D-PRIZES-POINTER_PADDINGS: 2vh;
+    $LV-D-PRIZES-PLACES_TOTAL_GAP: $LV-D-PRIZES-POINTER_WIDTH + ($LV-D-PRIZES-POINTER_PADDINGS * 2);
+    $LV-D-PRIZES-PLACE_WIDTH: ($GV-D-CORE-CONTENT_WIDTH_EXTRA - ($GV-D-SIZES-INNER_PADDING * 2) - ($LV-D-PRIZES-PLACES_TOTAL_GAP * 2)) / 3;
+    $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH: $LV-D-PRIZES-POINTER_WIDTH * 2.9;
+    $LV-D-PRIZES-PLACE_POINTER_ICON_CIRCLE_WIDTH: $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH * 1.27;
+    #prizes {
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
+    }
+    .S-PRIZES-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        margin: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 2) 0;
+
+        .S-PRIZES-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: $GV-D-SIZES-H2_CONTENT;
+            justify-items: center;
+
+            .S-PRIZES-title {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+            }
+            .S-PRIZES-widget {
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+
+                .S-WIDGET-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: 0;
+                    grid-row-gap: 0;
+                    // BACKGROUND
+                    background-color: $PALETTE-DARK_BLUE;
+                    // STREAMLINING
+                    border-radius: $GV-D-ROUNDING-SECTIONS;
+                    // MARGINS & PADDINGS
+                    padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+
+                    .S-WIDGET-fund {
+                        // FLEXBOX
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                        // FONT SETTINGS
+                        color: $PALETTE-SNOW;
+                        // MARGINS & PADDINGS
+                        padding: ($GV-D-SIZES-H2_CONTENT / 1.9) 0 ($GV-D-SIZES-H2_CONTENT / 1.5) 0;
+
+                        .T-FUND-number {
+                            // MARGINS & PADDINGS
+                            margin-top: -0.1vh;
+                        }
+                    }
+                    .S-WIDGET-distribution {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 2 / 1 / 3 / 2;
+
+                        .S-DISTRIBUTION-carcass {
+                            // CSS-GRID SETUP
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 1fr;
+                            grid-column-gap: 0;
+                            grid-row-gap: 0;
+                            // POSITIONING
+                            position: relative;
+
+                            .S-DISTRIBUTION-background {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+                                // OVERFLOW
+                                overflow: clip;
+                                // BACKGROUND
+                                background-color: $PALETTE-WHITE_BLUE;
+                                // STREAMLINING
+                                border-radius: $GV-D-ROUNDING-SECTIONS;
+                                // POSITIONING
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                // LAYERING
+                                z-index: 101;
+
+                                .S-BACKGROUND-carcass {
+                                    // FLEXBOX
+                                    display: flex;
+                                    justify-content: center;
+
+                                    .I-BACKGROUND-shape {
+                                        // SCALING
+                                        height: 50vh;
+                                        // TRANSFORM
+                                        transform: scale(240%) translateX(-16%) translateY(-21.5%) rotate(-15deg);
+                                        transform-origin: top;
+                                    }
+                                }
+                            }
+                            .S-DISTRIBUTION-content {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+                                // SCALING
+                                height: max-content;
+                                // MARGINS & PADDINGS
+                                padding: $GV-D-SIZES-INNER_PADDING;
+                                // STREAMLINING
+                                border-radius: $GV-D-ROUNDING-SECTIONS;
+                                // LAYERING
+                                z-index: 102;
+
+                                .S-CONTENT-carcass {
+                                    // CSS-GRID SETUP
+                                    display: grid;
+                                    grid-template-columns: repeat(5, max-content);
+                                    grid-template-rows: 1fr;
+                                    grid-column-gap: 0;
+                                    grid-row-gap: 0;
+                                    align-items: center;
+
+                                    .S-CONTENT-laureates {
+                                        // FLEXBOX
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 1 / 2 / 2;
+                                        // BACKGROUND
+                                        background-color: $PALETTE-DARK_BLUE_PALE;
+
+                                        .S-LAUREATES-carcass {
+                                            // MARGINS & PADDINGS
+                                            padding: $GV-D-SIZES-DEFAULT 0;
+
+                                            .T-LAUREATES-heading {
+                                                // FONT SETTINGS
+                                                text-align: center;
+                                                color: $PALETTE-SNOW;
+                                                // MARGINS & PADDINGS
+                                                margin-top: -0.8vh;
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-pointer_1 {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 2 / 2 / 3;
+
+                                        .I-POINTER-icon {
+                                            // FILL
+                                            fill: $PALETTE-DARK_BLUE_PALE;
+                                        }
+                                    }
+                                    .S-CONTENT-finalists {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 3 / 2 / 4;
+
+                                        .S-INFO-carcass {
+                                            // FLEXBOX
+                                            display: flex;
+                                            justify-content: center;
+                                            // MARGINS & PADDINGS
+                                            padding: ($GV-D-SIZES-DEFAULT * 1.2) 0 $GV-D-SIZES-DEFAULT 0;
+
+                                            .T-INFO-text {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-SNOW;
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-pointer_2 {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 4 / 2 / 5;
+
+                                        .I-POINTER-icon {
+                                            // FILL
+                                            fill: $PALETTE-DARK_GREEN;
+                                        }
+                                    }
+                                    .S-CONTENT-winner {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 5 / 2 / 6;
+
+                                        .S-INFO-carcass {
+                                            // FLEXBOX
+                                            display: flex;
+                                            justify-content: center;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            gap: $GV-D-FONT_SIZES-SMALL * 0.95;
+                                            // MARGINS & PADDINGS
+                                            padding: ($GV-D-SIZES-DEFAULT * 1.48) 0 $GV-D-SIZES-DEFAULT 0;
+
+                                            .I-INFO-icon {
+                                                // SCALING
+                                                width: 7.5vh;
+                                                // FILL
+                                                fill: $PALETTE-SNOW;
+                                            }
+
+                                            .T-INFO-text {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-SNOW;
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-pointer {
+                                        // MARGINS & PADDINGS
+                                        padding: 0 $LV-D-PRIZES-POINTER_PADDINGS;
+
+                                        .I-POINTER-icon {
+                                            // FLEXBOX
+                                            display: flex;
+                                            // SCALING
+                                            width: $LV-D-PRIZES-POINTER_WIDTH;
+                                        }
+                                    }
+                                    .S-CONTENT-place {
+                                        // SCALING
+                                        width: $LV-D-PRIZES-PLACE_WIDTH;
+                                        // STREAMLINING
+                                        border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                        // OVERFLOW
+                                        overflow: clip;
+                                    }
+                                    .S-CONTENT-case_blue {
+                                        // BACKGROUND
+                                        background-color: $PALETTE-DARK_BLUE;
+                                    }
+                                    .S-CONTENT-case_green {
+                                        // BACKGROUND
+                                        background-color: $PALETTE-LIGHT_GREEN;
+                                    }
+                                    .S-CONTENT-case {
+                                        .S-CASE-carcass {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: repeat(2, max-content);
+                                            grid-column-gap: 0;
+                                            grid-row-gap: 0;
+
+                                            .S-CASE-heading {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                                // BACKGROUND
+                                                background-color: $PALETTE-SNOW;
+                                                // STREAMLINING
+                                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+
+                                                .S-HEADING-carcass {
+                                                    // CSS-GRID SETUP
+                                                    display: grid;
+                                                    grid-template-columns: 1fr;
+                                                    grid-template-rows: repeat(2, max-content);
+                                                    grid-column-gap: 0;
+                                                    grid-row-gap: 0;
+
+                                                    .S-HEADING-text {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 1 / 1 / 2 / 2;
+                                                        // FLEXBOX
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        // MARGINS & PADDINGS
+                                                        padding: ($GV-D-FONT_SIZES-SMALL * 1.8) 0 ($GV-D-FONT_SIZES-SMALL * 1.2) 0;
+
+                                                        .T-HEADING-text_blue {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE;
+                                                        }
+                                                        .T-HEADING-text_green {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_GREEN;
+                                                        }
+                                                    }
+                                                    .S-HEADING-icon {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 2 / 1 / 3 / 2;
+                                                        // FLEXBOX
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        margin-bottom: -($LV-D-PRIZES-PLACE_POINTER_ICON_CIRCLE_WIDTH / 2);
+
+                                                        .S-ICON-wrapper {
+                                                            // FLEXBOX
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            // SCALING
+                                                            width: $LV-D-PRIZES-PLACE_POINTER_ICON_CIRCLE_WIDTH;
+                                                            height: $LV-D-PRIZES-PLACE_POINTER_ICON_CIRCLE_WIDTH;
+                                                            // BACKGROUND
+                                                            background-color: $PALETTE-SNOW;
+                                                            // STREAMLINING
+                                                            border-radius: $GV-D-ROUNDING-MAXIMUM;
+
+                                                            .S-ICON-carcass_blue {
+                                                                // BACKGROUND
+                                                                background-color: $PALETTE-DARK_BLUE;
+                                                            }
+                                                            .S-ICON-carcass_green {
+                                                                // BACKGROUND
+                                                                background-color: $PALETTE-LIGHT_GREEN;
+                                                            }
+                                                            .S-ICON-carcass {
+                                                                // FLEXBOX
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                // SCALING
+                                                                width: $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH;
+                                                                height: $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH;
+                                                                // STREAMLINING
+                                                                border-radius: $GV-D-ROUNDING-MAXIMUM;
+
+                                                                .I-ICON-icon {
+                                                                    // FLEXBOX
+                                                                    display: flex;
+                                                                    // SCALING
+                                                                    width: $LV-D-PRIZES-POINTER_WIDTH;
+                                                                    // FILL
+                                                                    fill: $PALETTE-SNOW;
+                                                                    // TRANSFORM
+                                                                    transform: rotate(90deg) translateX(0.15vh);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .S-CASE-info {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 2 / 1 / 3 / 2;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:CONDITIONS
+    // LOCAL VARIABLES NAME = CONDITIONS
+    #conditions {
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
+    }
+    .S-CONDITIONS-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        margin: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 2) 0;
+
+        .S-CONDITIONS-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: $GV-D-SIZES-H2_CONTENT;
+            justify-items: center;
+
+            .S-CONDITIONS-title {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+            }
+            .S-CONDITIONS-cards{
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+
+                .S-CARDS-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: 1fr;
+                    grid-column-gap: $GV-D-SIZES-DEFAULT;
+                    grid-row-gap: 0;
+                    align-items: stretch;
+
+                    .S-CARDS-card_individual {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                    }
+                    .S-CARDS-card_entity {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 2 / 2 / 3;
+                    }
+                    .S-CARDS-card_blue {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_BLUE;
+                    }
+                    .S-CARDS-card_green {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_GREEN;
+                    }
+                    .S-CARDS-card {
+                        // FLEXBOX
+                        display: flex;
+                        flex-direction: column;
+                        // MARGINS & PADDINGS
+                        padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-CARD-wrapper_blue {
+                            // BACKGROUND
+                            background-color: $PALETTE-WHITE_BLUE;
+                        }
+                        .S-CARD-wrapper_green {
+                            // BACKGROUND
+                            background-color: $PALETTE-WHITE_GREEN;
+                        }
+                        .S-CARD-wrapper {
+                            // FLEXBOX
+                            display: flex;
+                            flex-direction: column;
+                            flex: 1;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                            .S-CARD-carcass {
+                                // CSS-GRID SETUP
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                grid-template-rows: 1fr;
+                                grid-column-gap: 0;
+                                grid-row-gap: 0;
+
+                                .S-CARD-background {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 1 / 1 / 2 / 2;
+                                    // LAYERING
+                                    z-index: 101;
+                                    // OVERFLOW
+                                    overflow: clip;
+
+                                    .S-BACKGROUND-carcass {
+                                        // FLEXBOX
+                                        display: flex;
+                                        justify-content: center;
+
+                                        .I-BACKGROUND-shape_blue {
+                                            // FILL
+                                            fill: $PALETTE-DARK_BLUE;
+                                            // OPACITY
+                                            opacity: 0.025;
+                                        }
+                                        .I-BACKGROUND-shape_green {
+                                            // FILL
+                                            fill: $PALETTE-DARK_GREEN;
+                                            // OPACITY
+                                            opacity: 0.05;
+                                        }
+                                        .I-BACKGROUND-shape {
+                                            // SCALING
+                                            height: 30vh;
+                                            // TRANSFORM
+                                            transform-origin: top;
+                                        }
+                                    }
+                                }
+                                .S-CARD-content {
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: 1 / 1 / 2 / 2;
+                                    // SCALING
+                                    height: max-content;
+                                    // LAYERING
+                                    z-index: 102;
+
+                                    .S-CONTENT-carcass {
+                                        // CSS-GRID SETUP
+                                        display: grid;
+                                        grid-template-columns: 1fr;
+                                        grid-template-rows: repeat(3, max-content);
+                                        grid-column-gap: 0;
+                                        grid-row-gap: 0;
+                                        justify-items: center;
+                                        // MARGINS & PADDINGS
+                                        padding: $GV-D-SIZES-SMALL $GV-D-SIZES-SMALL ($GV-D-SIZES-SMALL * 1.6) $GV-D-SIZES-SMALL;
+                                        // FONT SETTINGS
+                                        text-align: center;
+
+                                        .S-CONTENT-heading {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 2;
+                                            // MARGINS & PADDINGS
+                                            margin-bottom: $GV-D-SIZES-SMALL * 1.3;
+
+                                            .S-HEADING-carcass {
+                                                // FLEXBOX
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                // SCALING
+                                                height: 10vh;
+                                                // BACKGROUND
+                                                background-color: $PALETTE-SNOW;
+                                                // STREAMLINING
+                                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                                // MARGINS & PADDINGS
+                                                padding: ($GV-D-SIZES-SMALL * 1.5) $GV-D-SIZES-INNER_PADDING;
+
+                                                .S-HEADING-icon {
+                                                    .I-HEADING-icon_blue {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .I-HEADING-icon_green {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_GREEN;
+                                                    }
+                                                }
+                                                .S-HEADING-text {
+                                                    .T-HEADING-text_blue {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .T-HEADING-text_green {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_GREEN;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .S-CONTENT-description {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 2 / 1 / 3 / 2;
+                                            // MARGINS & PADDINGS
+                                            margin-bottom: $GV-D-SIZES-SMALL * 0.9;
+                                        }
+                                        .S-CONTENT-price {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 3 / 1 / 4 / 2;
+
+                                            .T-CONTENT-price_blue {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-DARK_BLUE;
+                                            }
+                                            .T-CONTENT-price_green {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-DARK_GREEN;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:JURY
+    // LOCAL VARIABLES NAME = JURY
+    $LV-D-JURY-PORTRAIT_SIZE: 32vh;
+    $LV-D-JURY-PORTRAIT_OFFSET: $LV-D-JURY-PORTRAIT_SIZE / 2;
+    #jury {
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
+    }
+    .S-JURY-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        margin: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 2) 0;
+
+        .S-JURY-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: $GV-D-SIZES-H2_CONTENT + $LV-D-JURY-PORTRAIT_OFFSET;
+            justify-items: center;
+
+            .S-JURY-title {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+            }
+
+            .S-JURY-cards{
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+
+                .S-CARDS-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: $GV-D-SIZES-DEFAULT;
+                    grid-row-gap: ($GV-D-SIZES-DEFAULT * 1.5) + $LV-D-JURY-PORTRAIT_OFFSET;
+
+                    .S-CARDS-card_blue {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_BLUE;
+                    }
+                    .S-CARDS-card_green {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_GREEN;
+                    }
+                    .S-CARDS-card {
+                        // FLEXBOX
+                        display: flex;
+                        flex-direction: column;
+                        // MARGINS & PADDINGS
+                        padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-CARD-wrapper_blue {
+                            // BACKGROUND
+                            background-color: $PALETTE-WHITE_BLUE;
+                        }
+
+                        .S-CARD-wrapper_green {
+                            // BACKGROUND
+                            background-color: $PALETTE-WHITE_GREEN;
+                        }
+
+                        .S-CARD-wrapper {
+                            // FLEXBOX
+                            display: flex;
+                            flex-direction: column;
+                            flex: 1;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                            .S-CARD-carcass {
+                                // FLEXBOX
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                // FONT SETTINGS
+                                text-align: center;
+
+                                .S-CARD-portrait {
+                                    // MARGINS & PADDINGS
+                                    margin-bottom: $GV-D-ROUNDING-SMALL;
+
+                                    .I-CARD-portrait {
+                                        // SCALING
+                                        width: $LV-D-JURY-PORTRAIT_SIZE;
+                                        height: $LV-D-JURY-PORTRAIT_SIZE;
+                                        // STREAMLINING
+                                        border-radius: $GV-D-ROUNDING-SECTIONS;
+                                        margin-top: -$LV-D-JURY-PORTRAIT_OFFSET;
+                                    }
+                                }
+                                .S-CARD-name {
+                                    // MARGINS & PADDINGS
+                                    margin-bottom: $GV-D-ROUNDING-SMALL * 1.4;
+
+                                    .T-CARD-name_blue {
+                                        // FONT SETTINGS
+                                        color: $PALETTE-DARK_BLUE;
+                                    }
+                                    .T-CARD-name_green {
+                                        // FONT SETTINGS
+                                        color: $PALETTE-DARK_GREEN;
+                                    }
+                                }
+                                .S-CARD-title {
+                                    // MARGINS & PADDINGS
+                                    margin-bottom: $GV-D-ROUNDING-SMALL * 2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:NEWS
+    // LOCAL VARIABLES NAME = NEWS
+    $LV-D-NEWS-ARTICLES_GAP: $GV-D-SIZES-DEFAULT;
+    $LV-D-NEWS-BUTTON_SIZE: 7vh;
+    $LV-D-NEWS-BUTTON_SHADOW_OFFSET: $GV-D-SIZES-UNDER_SECTIONS / 1.4;
+    $LV-D-NEWS-BUTTON_ICON_SIZE: 3vh;
+    #news {
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT);
+    }
+    .S-NEWS-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        padding: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 2) 0;
+        // BACKGROUND
+        background-color: $PALETTE-WHITE_BLUE;
+
+        .S-NEWS-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: $GV-D-SIZES-H2_CONTENT;
+            justify-items: center;
+
+            .S-NEWS-title {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+            }
+
+            .S-NEWS-feed {
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+                // SCALING
+                width: $GV-D-CORE-CONTENT_WIDTH;
+
+                .S-FEED-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: 0;
+                    grid-row-gap: $GV-D-SIZES-DEFAULT;
+
+                    .S-FEED-articles {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+
+                        .S-ARTICLES-wrapper {
+                            // SCALING
+                            width: $GV-D-CORE-CONTENT_WIDTH;
+                            // OVERFLOW
+                            overflow-x: auto;
+                            overflow-y: hidden;
+
+                            .S-ARTICLES-carcass {
+                                // FLEXBOX
+                                display: flex;
+                                // MARGINS & PADDINGS
+                                gap: $LV-D-NEWS-ARTICLES_GAP;
+
+                                .S-ARTICLES-article {
+                                    // FLEXBOX
+                                    flex-shrink: 0;
+                                    // SCALING
+                                    width: ($GV-D-CORE-CONTENT_WIDTH - ($LV-D-NEWS-ARTICLES_GAP * 2)) / 3;
+                                    // BACKGROUND
+                                    background-color: $PALETTE-SNOW;
+                                    // STREAMLINING
+                                    border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                                    .S-ARTICLE-carcass {
+                                        // CSS-GRID SETUP
+                                        display: grid;
+                                        grid-template-columns: 1fr;
+                                        grid-template-rows: repeat(2, max-content) 1fr;
+                                        grid-column-gap: 0;
+                                        grid-row-gap: 0;
+
+                                        .S-ARTICLE-headline {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 2;
+                                            // MARGINS & PADDINGS
+                                            padding: $GV-D-SIZES-DEFAULT $GV-D-SIZES-DEFAULT ($GV-D-FONT_SIZES-SMALL * 2) $GV-D-SIZES-DEFAULT;
+
+                                            .T-ARTICLE-headline {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-DARK_BLUE;
+                                            }
+                                        }
+                                        .S-ARTICLE-text {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 2 / 1 / 3 / 2;
+                                            // SCALING
+                                            height: 35vh;
+                                            // MARGINS & PADDINGS
+                                            padding: 0 $GV-D-SIZES-DEFAULT $GV-D-FONT_SIZES-SMALL $GV-D-SIZES-DEFAULT;
+                                        }
+                                        .S-ARTICLE-bottom {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 3 / 1 / 4 / 2;
+                                            // MARGINS & PADDINGS
+                                            padding: 0 $GV-D-SIZES-DEFAULT;
+
+                                            .S-BOTTOM-carcass {
+                                                // CSS-GRID SETUP
+                                                display: grid;
+                                                grid-template-columns: max-content 1fr;
+                                                grid-template-rows: 1fr;
+                                                grid-column-gap: 0;
+                                                grid-row-gap: 0;
+                                                justify-items: end;
+
+                                                .S-BOTTOM-date {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 1 / 2 / 2;
+                                                    // MARGINS & PADDINGS
+                                                    padding-bottom: $GV-D-SIZES-DEFAULT;
+                                                }
+                                                .S-BOTTOM-fresh {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 2 / 2 / 3;
+                                                    // BACKGROUND
+                                                    background-color: $PALETTE-LIGHT_GREEN;
+                                                    // STREAMLINING
+                                                    border-radius: $GV-D-ROUNDING-SMALL $GV-D-ROUNDING-SMALL 0 0;
+                                                    // MARGINS & PADDINGS
+                                                    padding: 1.5vh 1.6vh 0 1.6vh;
+                                                    margin-top: -1.5vh;
+                                                    // SCALING
+                                                    width: max-content;
+
+                                                    .S-FRESH-carcass {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-SNOW;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .S-FEED-buttons {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 2 / 1 / 3 / 2;
+
+                        .S-BUTTONS-wrapper {
+                            // FLEXBOX
+                            display: flex;
+                            justify-content: center;
+
+                            .S-BUTTONS-carcass {
+                                // FLEXBOX
+                                display: flex;
+                                flex-direction: row;
+                                gap: $GV-D-SIZES-SMALL;
+
+                                .B-BUTTON-previous {
+                                    .I-BUTTON-icon {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                                .B-BUTTON-next {
+
+                                }
+                                .B-BUTTON-main {
+                                    // FLEXBOX
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    // BORDER
+                                    border: none;
+                                    // BACKGROUND
+                                    background-color: $PALETTE-SNOW;
+                                    // SCALING
+                                    width: $LV-D-NEWS-BUTTON_SIZE;
+                                    height: $LV-D-NEWS-BUTTON_SIZE;
+                                    // STREAMLINING
+                                    border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                    // CURSOR
+                                    cursor: pointer;
+                                    // SHADOW
+                                    box-shadow: $LV-D-NEWS-BUTTON_SHADOW_OFFSET $LV-D-NEWS-BUTTON_SHADOW_OFFSET $PALETTE-DARK_BLUE;
+                                    // TRANSITION
+                                    transition:
+                                        background-color 0.2s,
+                                        box-shadow 0.2s;
+
+                                    .I-BUTTON-icon {
+                                        // SCALING
+                                        width: $LV-D-NEWS-BUTTON_ICON_SIZE;
+                                        // FILL
+                                        fill: $PALETTE-DARK_BLUE;
+                                        // TRANSITION
+                                        transition: fill 0.2s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:ACTION
+    // LOCAL VARIABLES NAME = ACTION
+    .S-ACTION-carcass {
+        // CSS-GRID SETUP
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+        .S-ACTION-background {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // POSITIONING
+            position: relative;
+            // OVERFLOW
+            overflow: clip;
+            // LAYERING
+            z-index: 101;
+
+            .S-BACKGROUND-carcass {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // BACKGROUND
+                background-color: $PALETTE-LIGHT_GREEN;
+                // OVERFLOW
+                overflow: clip;
+                // POSITIONING
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                .I-BACKGROUND-shape {
+                    // TRANSFORM
+                    transform: scale(330%) translateX(-26%) translateY(-16.5%) rotate(-26deg);
+                    // TRANSFORM
+                    transform-origin: top;
+                }
+            }
+        }
+        .S-ACTION-content {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // LAYERING
+            z-index: 102;
+
+            .S-CONTENT-wrapper {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+
+                .S-CONTENT-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr max-content;
+                    grid-template-rows: 1fr;
+                    grid-column-gap: 0;
+                    grid-row-gap: $GV-D-SIZES-SMALL * 2;
+                    align-items: center;
+                    // SCALING
+                    width: $GV-D-CORE-CONTENT_WIDTH;
+                    // MARGINS & PADDINGS
+                    margin: ($GV-D-SIZES-SECTIONS * 3.65) 0 ($GV-D-SIZES-SECTIONS * 3.65) 0;
+                    // FONT SETTINGS
+                    color: $PALETTE-SNOW;
+
+                    .S-CONTENT-slogan {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                        // FONT SETTINGS
+                        color: $PALETTE-SNOW;
+                        line-height: 6.7vh;
+                        // MARGINS & PADDINGS
+                        margin-top: -1vh;
+                    }
+                    .S-CONTENT-button {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 2 / 2 / 3;
+
+                        .B-CONTENT-button {
+                            // FLEXBOX
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            // BORDER
+                            border: none;
+                            // BACKGROUND
+                            background-color: $PALETTE-SNOW;
+                            // SCALING
+                            width: 46.5vh;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-ELEMENTS;
+                            // MARGINS & PADDINGS
+                            padding: ($GV-D-SIZES-DEFAULT * 0.9) ($GV-D-SIZES-DEFAULT * 1.3);
+                            // CURSOR
+                            cursor: pointer;
+                            // SHADOW
+                            box-shadow: $GV-D-SIZES-UNDER_SECTIONS $GV-D-SIZES-UNDER_SECTIONS $PALETTE-DARK_BLUE;
+                            // TRANSITION
+                            transition:
+                                background-color 0.2s,
+                                box-shadow 0.2s;
+
+                            &:hover {
+                                // BACKGROUND
+                                background-color: $PALETTE-WHITE_BLUE;
+                                // SHADOW
+                                box-shadow: ($GV-D-SIZES-UNDER_SECTIONS * 1.8) ($GV-D-SIZES-UNDER_SECTIONS * 1.8) $PALETTE-DARK_BLUE;
+
+                                .I-BUTTON-icon {
+                                    // FILL
+                                    fill: $PALETTE-DARK_BLUE_PALE;
+                                }
+
+                                .T-BUTTON-heading {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_BLUE_PALE;
+                                }
+                            }
+
+                            .I-BUTTON-icon {
+                                // SCALING
+                                width: 3vh;
+                                // FILL
+                                fill: $PALETTE-DARK_BLUE;
+                                // TRANSITION
+                                transition: fill 0.2s;
+                            }
+
+                            .T-BUTTON-heading {
+                                // MARGINS & PADDINGS
+                                margin-top: -1vh;
+                                // FONT SETTINGS
+                                color: $PALETTE-DARK_BLUE;
+                                // TRANSITION
+                                transition: color 0.2s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:FOOTER
+    // LOCAL VARIABLES NAME = FOOTER
+    .S-FOOTER-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // BACKGROUND
+        background-color: $PALETTE-DEEP_BLUE;
+
+        .S-FOOTER-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: $GV-D-SIZES-H2_CONTENT * 1.5;
+            grid-row-gap: 0;
+            // SCALING
+            width: $GV-D-CORE-CONTENT_WIDTH;
+            // MARGINS & PADDINGS
+            padding: ($GV-D-SIZES-DEFAULT * 2) 0;
+
+            .S-FOOTER-logos {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // SCALING
+                height: 100%;
+
+                .S-LOGOS-wrapper {
+                    // SCALING
+                    height: 100%;
+
+                    .S-LOGOS-carcass {
+                        // CSS-GRID SETUP
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        // SCALING
+                        height: 100%;
+
+                        .S-LOGOS-mil {
+                            // FLEXBOX
+                            display: flex;
+                            align-items: center;
+                            // MARGINS & PADDINGS
+                            gap: $GV-D-SIZES-SMALL * 0.6;
+
+                            .I-LOGOS-mil {
+                                // SCALING
+                                width: 13vh;
+                            }
+
+                            .T-LOGOS-mil {
+                                // FONT SETTINGS
+                                color: $PALETTE-SNOW;
+                                // MARGINS & PADDINGS
+                                margin-top: -1.6vh;
+                            }
+                        }
+                        .S-LOGOS-rair {
+                            .I-LOGOS-rair {
+                                // SCALING
+                                width: 13vh;
+                                // MARGINS & PADDINGS
+                                margin-bottom: -0.3vh;
+                            }
+                        }
+                    }
+                }
+            }
+            .S-FOOTER-links {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 2 / 2 / 3;
+
+                .S-LINKS-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr max-content;
+                    grid-template-rows: 1fr max-content;
+                    grid-column-gap: 0;
+                    grid-row-gap: $GV-D-FONT_SIZES-DEFAULT * 3.8;
+
+                    .S-LINKS-main {
+                        // FLEXBOX
+                        display: flex;
+                        flex-direction: column;
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                        // MARGINS & PADDINGS
+                        gap: $GV-D-SIZES-SMALL / 1.2;
+
+                        .L-LINKS-main {
+                            // FLEXBOX
+                            display: flex;
+                            // SCALING
+                            width: max-content;
+                            // FONT SETTINGS
+                            color: $PALETTE-SNOW;
+                            text-decoration: none;
+                            // OPACITY
+                            opacity: 1;
+                            // TRANSITION
+                            transition: opacity 0.2s;
+
+                            &:hover {
+                                // OPACITY
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                    .S-LINKS-socials {
+                        // FLEXBOX
+                        display: flex;
+                        flex-direction: row;
+                        align-content: flex-start;
+                        justify-content: flex-end;
+                        align-items: center;
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 2 / 2 / 3;
+                        // MARGINS & PADDINGS
+                        gap: $GV-D-SIZES-SMALL / 1.2;
+                        // SCALING
+                        height: max-content;
+
+                        .L-LINKS-socials {
+                            .I-LINKS-socials {
+                                // FILL
+                                fill: $PALETTE-SNOW;
+                                // OPACITY
+                                opacity: 1;
+                                // TRANSITION
+                                transition: opacity 0.2s;
+
+                                &:hover {
+                                    // OPACITY
+                                    opacity: 0.7;
+                                }
+                            }
+                        }
+                    }
+                    .S-LINKS-alt {
+                        // FLEXBOX
+                        display: flex;
+                        flex-direction: column;
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 2 / 1 / 3 / 2;
+                        // MARGINS & PADDINGS
+                        gap: $GV-D-SIZES-SMALL / 1.2;
+
+                        .L-LINKS-alt {
+                            // FLEXBOX
+                            display: flex;
+                            // SCALING
+                            width: max-content;
+                            // FONT SETTINGS
+                            color: $PALETTE-DARK_BLUE_PALE;
+                            text-decoration: none;
+
+                            // OPACITY
+                            opacity: 1;
+                            // TRANSITION
+                            transition: opacity 0.2s;
+
+                            &:hover {
+                                // OPACITY
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                    .S-LINKS-credit {
+                        // FLEXBOX
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 2 / 2 / 3 / 3;
+
+                        .T-LINKS-credit {
+                            // FONT SETTINGS
+                            color: $PALETTE-DARK_BLUE_PALE;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

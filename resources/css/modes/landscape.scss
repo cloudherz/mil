@@ -1,0 +1,25 @@
+@use './landscape_responsive' as landscape;
+@use '../.core/variables' as *;
+@use 'sass:map';
+
+@mixin LANDSCAPE_MODES($MODE) {
+    $MODE_VALUES: map.get(landscape.$LANDSCAPE_MODES, $MODE);
+
+
+
+    // CHUNK:LANDSCAPE
+    .S-DESKTOP-wrapper {
+        display: none;
+    }
+    .S-LANDSCAPE-wrapper {
+        display: unset;
+    }
+    .S-MOBILE-wrapper {
+        display: none;
+    }
+
+
+
+    // CHUNK:
+    // LOCAL VARIABLES NAME =
+}

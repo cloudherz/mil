@@ -1,0 +1,14 @@
+@import '../app.css';
+@import '../fonts.css';
+.DEV-DISABLE_SELECTION {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.DEV-DISABLE_VISIBILITY {
+  display: none;
+}
+
+/*# sourceMappingURL=core.bundle.css.map */

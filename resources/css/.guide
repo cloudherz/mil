@@ -1,0 +1,20 @@
+Folders:
+'bundling' - folder with the main bundle and all installed bundle
+'*' - bundle
+
+Bundle extension:
+'final.bundle.scss' - main bundle
+'*.bundle.scss' - bundle for * bundle
+
+
+
+How to create custom packet:
+1) Create a folder 'bundle_name'
+2) Write css/scss in this folder (OPTIONAL: Create sub-folder 'bundling' for cleaner bundling)
+
+3) Create a file "bundle_name.bundle.scss"
+4) Write bundling logic inside this file
+
+5) Put folder 'bundle_name' inside folder 'resources/css/'
+6) Put file 'bundle_name.bundle.scss' inside folder 'resources/css/bundling/'
+7) In 'resources/css/bundling/final.bundle.scss' at the end of all imports put: @import 'bundle_name.bundle';

@@ -1,0 +1,170 @@
+@use './variables' as *;
+
+
+
+//  VALUES
+:root {
+    --wght-thin: 100;
+    --wght-extralight: 148;
+    --wght-light: 228;
+    --wght-regular: 336;
+    --wght-medium: 469;
+    --wght-semibold: 617;
+    --wght-bold: 767;
+    --wght-extrabold: 900;
+
+    --ital-none: 100;
+    --ital-italic: 900;
+    --ital-reclined: -700;
+}
+
+
+
+// FONT
+.TYPO-FONT-PS_NORMAL { font-family: 'PangramSansNormal', sans-serif; }
+.TYPO-FONT-PS_CONDENSED { font-family: 'PangramSansCondensed', sans-serif; }
+
+
+
+// SIZES DESKTOP
+.TYPO-D-SIZES-SMALL { font-size: $GV-D-FONT_SIZES-SMALL; }
+.TYPO-D-SIZES-DEFAULT { font-size: $GV-D-FONT_SIZES-DEFAULT; }
+.TYPO-D-SIZES-H3 { font-size: $GV-D-FONT_SIZES-H3; }
+.TYPO-D-SIZES-H2 { font-size: $GV-D-FONT_SIZES-H2; }
+.TYPO-D-SIZES-H1 { font-size: $GV-D-FONT_SIZES-H1; }
+
+
+
+// WEIGHTS
+.TYPO-WEIGHT-THIN { --current-wght: var(--wght-thin); }
+.TYPO-WEIGHT-EXTRALIGHT { --current-wght: var(--wght-extralight); }
+.TYPO-WEIGHT-LIGHT { --current-wght: var(--wght-light); }
+.TYPO-WEIGHT-REGULAR { --current-wght: var(--wght-regular); }
+.TYPO-WEIGHT-MEDIUM { --current-wght: var(--wght-medium); }
+.TYPO-WEIGHT-SEMIBOLD { --current-wght: var(--wght-semibold); }
+.TYPO-WEIGHT-BOLD { --current-wght: var(--wght-bold); }
+.TYPO-WEIGHT-EXTRABOLD { --current-wght: var(--wght-extrabold); }
+
+
+
+// OBLIQUES
+.TYPO-OBLIQUE-NONE { --current-ital: var(--ital-none); }
+.TYPO-OBLIQUE-ITALIC { --current-ital: var(--ital-italic); }
+.TYPO-OBLIQUE-RECLINED { --current-ital: var(--ital-reclined); }
+
+
+
+// VARIABLE
+.TYPO-VARIABLE {
+    font-variation-settings:
+        'wght' var(--current-wght, var(--wght-regular)),
+        'ital' var(--current-ital, var(--ital-none));
+}
+
+
+
+// DETAILS
+.TYPO-DETAILS-SS01 {
+    // STYLISTIC SET 1
+    // Q m n u w &
+    font-feature-settings:
+        "ss01" 1;
+}
+.TYPO-DETAILS-SS02 {
+    // STYLISTIC SET 2
+    // a j y @
+    font-feature-settings:
+        "ss02" 1;
+}
+.TYPO-DETAILS-SS03 {
+    // STYLISTIC SET 3
+    // &
+    font-feature-settings:
+        "ss03" 1;
+}
+.TYPO-DETAILS-CASE {
+    // CASE SENSITIVE
+    // {[(OH-@11:11!)]}
+    font-feature-settings:
+        "case" 1;
+}
+.TYPO-DETAILS-ONUM {
+    // OLD NUMERICS
+    // 0123456789
+    font-feature-settings:
+        "onum" 1;
+}
+
+
+
+// PRESETS
+.TYPO-PRESET-HEADER_TEXT {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_NORMAL;
+    @extend .TYPO-WEIGHT-SEMIBOLD;
+    @extend .TYPO-D-SIZES-DEFAULT;
+}
+.TYPO-PRESET-HERO_HEADING {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_CONDENSED;
+    @extend .TYPO-WEIGHT-SEMIBOLD;
+    @extend .TYPO-D-SIZES-H1;
+}
+.TYPO-PRESET-HERO_DESCRIPTION {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_NORMAL;
+    @extend .TYPO-WEIGHT-MEDIUM;
+    @extend .TYPO-D-SIZES-H3;
+}
+.TYPO-PRESET-PRIZES_NUMBER {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_CONDENSED;
+    @extend .TYPO-WEIGHT-SEMIBOLD;
+    @extend .TYPO-D-SIZES-H1;
+}
+
+.TYPO-PRESET-CORE_H2 {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_CONDENSED;
+    @extend .TYPO-WEIGHT-SEMIBOLD;
+    @extend .TYPO-D-SIZES-H2;
+}
+.TYPO-PRESET-CORE_H3 {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_CONDENSED;
+    @extend .TYPO-WEIGHT-SEMIBOLD;
+    @extend .TYPO-D-SIZES-H3;
+    line-height: 3.4vh;
+}
+.TYPO-PRESET-CORE_H3_LIGHT {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_CONDENSED;
+    @extend .TYPO-WEIGHT-MEDIUM;
+    @extend .TYPO-D-SIZES-H3;
+    line-height: 3.4vh;
+}
+.TYPO-PRESET-CORE_P {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_NORMAL;
+    @extend .TYPO-WEIGHT-MEDIUM;
+    @extend .TYPO-D-SIZES-DEFAULT;
+}
+.TYPO-PRESET-CORE_P_BOLD {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_NORMAL;
+    @extend .TYPO-WEIGHT-SEMIBOLD;
+    @extend .TYPO-D-SIZES-DEFAULT;
+}
+.TYPO-PRESET-CORE_P_ITALIC{
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_NORMAL;
+    @extend .TYPO-WEIGHT-MEDIUM;
+    @extend .TYPO-D-SIZES-DEFAULT;
+    @extend .TYPO-OBLIQUE-ITALIC;
+}
+.TYPO-PRESET-CORE_SMALL {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_NORMAL;
+    @extend .TYPO-WEIGHT-MEDIUM;
+    @extend .TYPO-D-SIZES-SMALL;
+}
