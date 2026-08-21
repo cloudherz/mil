@@ -29,7 +29,880 @@
         left: 0;
         right: 0;
         // LAYERING
-        z-index: 1000;
+        z-index: 200;
+    }
+
+
+
+    // CHUNK:APPLICATION
+    // LOCAL VARIABLES NAME = APPLICATION
+    $LV-D-APPLICATION-CARCASS-MAX_HEIGHT: 88vh;
+    $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP: $GV-D-SIZES-DEFAULT * 1.2;
+    $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM: 2vh;
+    $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_TOP: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP - $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM;
+    $LV-D-APPLICATION-FORM-INPUTS_MARGIN: $GV-D-SIZES-SMALL;
+    $LV-D-APPLICATION-FORM-INPUTS_OUTLINE_WIDTH: 0.35vh;
+    $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT: 5.2vh;
+    $LV-D-APPLICATION-FORM-INPUT-UPLOAD-DELETE_WIDTH: 7vh;
+    $LV-D-APPLICATION-FORM-INPUT-UPLOAD-ICON_HEIGHT: 2.5vh;
+    $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE: 3vh;
+    $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET: $GV-D-SIZES-UNDER_SECTIONS * 1.6;
+    .S-DESKTOP-application {
+        // POSITIONING
+        position: fixed;
+        // SCALING
+        width: 100vw;
+        height: 100vh;
+        // BACKGROUND
+        background-color: $PALETTE-POPUP_BACKGROUND;
+        // LAYERING
+        z-index: 300;
+
+        .S-APPLICATION-wrapper {
+            // FLEXBOX
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // SCALING
+            width: 100vw;
+            height: 100vh;
+
+            .S-APPLICATION-carcass {
+                // CSS-GRID SETUP
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 0;
+                grid-row-gap: 0;
+                align-items: center;
+                // SCALING
+                width: 100vh;
+                max-height: $LV-D-APPLICATION-CARCASS-MAX_HEIGHT;
+
+                .S-APPLICATION-window {
+                    // STREAMLINING
+                    border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                    .S-WINDOW-wrapper {
+                        // MARGINS & PADDINGS
+                        padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-WINDOW-carcass {
+                            // BACKGROUND
+                            background-color: $PALETTE-SNOW;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SECTIONS;
+                            // MARGINS & PADDINGS
+                            padding: $GV-D-SIZES-INNER_PADDING;
+                        }
+                    }
+                }
+                .S-APPLICATION-select {
+                    // CSS-GRID CONFIGURATION
+                    grid-area: 1 / 1 / 2 / 2;
+                    // SCALING
+                    height: max-content;
+
+                    .S-SELECT-wrapper_blue {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_BLUE;
+                    }
+                    .S-SELECT-wrapper_green {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_GREEN;
+                    }
+                    .S-SELECT-wrapper {
+                        .S-SELECT-carcass {
+                            // CSS-GRID SETUP
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(2, max-content);
+                            grid-column-gap: 0;
+                            grid-row-gap: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP;
+
+                            .S-SELECT-heading {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                            }
+                            .S-SELECT-buttons {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 2 / 1 / 3 / 2;
+
+                                .S-BUTTONS-carcass {
+                                    // CSS-GRID SETUP
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    grid-template-rows: 1fr;
+                                    grid-column-gap: $GV-D-SIZES-DEFAULT;
+                                    grid-row-gap: 0;
+
+                                    .S-BUTTONS-left {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 1 / 2 / 2;
+                                    }
+                                    .S-BUTTONS-right {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 2 / 2 / 3;
+                                    }
+                                    .S-BUTTONS-all {
+                                        .B-BUTTONS-button_blue {
+                                            // BACKGROUND
+                                            background-color: $PALETTE-WHITE_BLUE;
+                                            // SHADOW
+                                            box-shadow: 0 0 $PALETTE-DARK_BLUE;
+
+                                            &:hover {
+                                                // SHADOW
+                                                box-shadow: $GV-D-SIZES-UNDER_SECTIONS $GV-D-SIZES-UNDER_SECTIONS $PALETTE-DARK_BLUE;
+                                            }
+                                        }
+                                        .B-BUTTONS-button_green {
+                                            // BACKGROUND
+                                            background-color: $PALETTE-WHITE_GREEN;
+                                            // SHADOW
+                                            box-shadow: 0 0 $PALETTE-DARK_GREEN;
+
+                                            &:hover {
+                                                // SHADOW
+                                                box-shadow: $GV-D-SIZES-UNDER_SECTIONS $GV-D-SIZES-UNDER_SECTIONS $PALETTE-DARK_GREEN;
+                                            }
+                                        }
+                                        .B-BUTTONS-button {
+                                            // SCALING
+                                            width: 100%;
+                                            // BORDER
+                                            border: none;
+                                            // STREAMLINING
+                                            border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                            // MARGINS & PADDINGS
+                                            padding: ($GV-D-SIZES-DEFAULT * 0.9) 0;
+                                            // CURSOR
+                                            cursor: pointer;
+                                            // TRANSITION
+                                            transition:
+                                                background-color 0.2s,
+                                                box-shadow 0.2s;
+
+                                            .S-BUTTON-carcass {
+                                                // CSS-GRID SETUP
+                                                display: grid;
+                                                grid-template-columns: 1fr;
+                                                grid-template-rows: 7.5vh max-content;
+                                                grid-column-gap: 0;
+                                                grid-row-gap: $GV-D-FONT_SIZES-SMALL;
+
+                                                .S-BUTTON-icon {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 1 / 2 / 2;
+
+                                                    .I-BUTTON-icon_blue {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .I-BUTTON-icon_green {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_GREEN;
+                                                    }
+                                                }
+                                                .S-BUTTON-heading {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 2 / 1 / 3 / 2;
+
+                                                    .T-BUTTON-heading_blue {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .T-BUTTON-heading_green {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_GREEN;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .S-APPLICATION-form {
+                    // CSS-GRID CONFIGURATION
+                    grid-area: 1 / 1 / 2 / 2;
+                    // SCALING
+                    height: $LV-D-APPLICATION-CARCASS-MAX_HEIGHT;
+
+                    .S-FORM-wrapper_blue {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_BLUE;
+                    }
+                    .S-FORM-wrapper_green {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_GREEN;
+                    }
+                    .S-FORM-wrapper {
+                        // SCALING
+                        height: $LV-D-APPLICATION-CARCASS-MAX_HEIGHT - $GV-D-SIZES-UNDER_SECTIONS;
+
+                        .S-FORM-carcass {
+                            // CSS-GRID SETUP
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: max-content 1fr;
+                            grid-column-gap: 0;
+                            grid-row-gap: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_TOP;
+                            // SCALING
+                            height: $LV-D-APPLICATION-CARCASS-MAX_HEIGHT - ($GV-D-SIZES-INNER_PADDING * 2) - $GV-D-SIZES-UNDER_SECTIONS;
+                            // MARGINS & PADDINGS
+                            padding: $GV-D-SIZES-INNER_PADDING 0 !important;
+
+                            .S-FORM-heading {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                            }
+                            .S-FORM-content {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 2 / 1 / 3 / 2;
+                                // SCROLL
+                                overflow-y: scroll;
+
+                                .S-CONTENT-carcass {
+                                    // CSS-GRID SETUP
+                                    display: grid;
+                                    grid-template-columns: max-content 1fr;
+                                    grid-template-rows: repeat(7, max-content);
+                                    grid-column-gap: $GV-D-SIZES-DEFAULT;
+                                    grid-row-gap: 0;
+                                    // MARGINS & PADDINGS
+                                    padding: 0 $GV-D-SIZES-INNER_PADDING;
+                                    margin-top: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM;
+                                    margin-bottom: $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET;
+
+                                    .S-CONTENT-name_title {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 1 / 2 / 2;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-name_input {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 2 / 2 / 3;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-email_title {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 2 / 1 / 3 / 2;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-email_input {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 2 / 2 / 3 / 3;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-phone_title {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 3 / 1 / 4 / 2;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-phone_input {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 3 / 2 / 4 / 3;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-description_title {
+                                        // FLEXBOX
+                                        display: flex;
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 4 / 1 / 5 / 2;
+                                        // FLEXBOX
+                                        align-items: start !important;
+                                        // MARGINS & PADDINGS
+                                        margin-top: $GV-D-SIZES-SMALL;
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-description_input {
+                                        // FLEXBOX
+                                        display: flex;
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 4 / 2 / 5 / 3;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-presentation_title {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 5 / 1 / 6 / 2;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $GV-D-SIZES-DEFAULT;
+
+                                        .T-CONTENT-underline {
+                                            // FONT SETTINGS
+                                            text-decoration-line: underline;
+                                            text-decoration-style: dotted;
+                                            text-underline-offset: 0.3vh;
+                                            // CURSOR
+                                            cursor: pointer;
+                                        }
+                                    }
+                                    .S-CONTENT-presentation_input_blue_default, .S-CONTENT-presentation_input_green_default {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-template-columns: 1fr;
+                                    }
+                                    .S-CONTENT-presentation_input_blue_uploaded, .S-CONTENT-presentation_input_green_uploaded {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-template-columns: 1fr $LV-D-APPLICATION-FORM-INPUT-UPLOAD-DELETE_WIDTH;
+                                    }
+                                    .S-CONTENT-presentation_input {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 5 / 2 / 6 / 3;
+                                        // CSS-GRID SETUP
+                                        display: grid;
+                                        grid-template-rows: 1fr;
+                                        grid-column-gap: 0;
+                                        grid-row-gap: 0;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $GV-D-SIZES-DEFAULT;
+
+                                        .S-PRESENTATION_INPUT-wrapper {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 2;
+                                            // DISPLAY
+                                            display: block;
+                                            // SCALING
+                                            width: calc(100%);
+                                            height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                            // CURSOR
+                                            cursor: pointer;
+
+                                            .S-PRESENTATION_INPUT-carcass {
+                                                // CSS-GRID SETUP
+                                                display: grid;
+                                                grid-template-columns: 1fr;
+                                                grid-template-rows: 1fr;
+                                                grid-column-gap: 0;
+                                                grid-row-gap: 0;
+
+                                                .S-PRESENTATION_INPUT-upload_blue {
+                                                    // BACKGROUND
+                                                    background-color: $PALETTE-WHITE_BLUE;
+                                                }
+                                                .S-PRESENTATION_INPUT-upload_green {
+                                                    // BACKGROUND
+                                                    background-color: $PALETTE-WHITE_GREEN;
+                                                }
+                                                .S-PRESENTATION_INPUT-upload {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 1 / 2 / 2;
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    align-items: center;
+                                                    // SCALING
+                                                    width: calc(100% - ($GV-D-SIZES-SMALL * 2));
+                                                    height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                                    // STREAMLINING
+                                                    border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                                    // MARGINS & PADDINGS
+                                                    padding: 0 $GV-D-SIZES-SMALL;
+                                                    gap: $GV-D-FONT_SIZES-SMALL * 0.9;
+
+                                                    .S-PRESENTATION_INPUT-icons {
+                                                        // FLEXBOX
+                                                        display: flex;
+
+                                                        .I-PRESENTATION_INPUT-file {
+                                                            // FLEXBOX
+                                                            display: flex;
+                                                            // SCALING
+                                                            height: $LV-D-APPLICATION-FORM-INPUT-UPLOAD-ICON_HEIGHT;
+                                                        }
+                                                    }
+
+                                                    .T-PRESENTATION_INPUT-filename {
+                                                        // MARGINS & PADDINGS
+                                                        padding-top: 0.4vh;
+                                                    }
+                                                }
+                                                .S-PRESENTATION_INPUT-delete {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 2 / 2 / 3;
+                                                }
+                                            }
+                                        }
+                                        .S-PRESENTATION_INPUT-delete_blue_default, .S-PRESENTATION_INPUT-delete_green_default {
+                                            // DISPLAY
+                                            display: none !important;
+                                        }
+                                        .S-PRESENTATION_INPUT-delete_blue_uploaded, .S-PRESENTATION_INPUT-delete_green_uploaded {
+                                            // DISPLAY
+                                            display: flex !important;
+                                        }
+                                        .S-PRESENTATION_INPUT-delete {
+                                            // FLEXBOX
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 2 / 2 / 3;
+
+                                            .B-PRESENTATION_INPUT-delete {
+                                                // FLEXBOX
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                // BORDER
+                                                border: none;
+                                                // BACKGROUND
+                                                background-color: $PALETTE-GLASS;
+                                                // CURSOR
+                                                cursor: pointer;
+
+                                                .I-PRESENTATION_INPUT-delete {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    // SCALING
+                                                    height: $LV-D-APPLICATION-FORM-INPUT-UPLOAD-ICON_HEIGHT * 1.1;
+                                                    // FILL
+                                                    fill: $PALETTE-LIGHT_RED;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-confirmation {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 6 / 1 / 7 / 3;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: $GV-D-SIZES-DEFAULT;
+
+                                        .S-CONFIRMATION-carcass {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: max-content 1fr;
+                                            grid-template-rows: 1fr;
+                                            grid-column-gap: $GV-D-SIZES-SMALL;
+                                            grid-row-gap: 0;
+
+                                            .S-CONFIRMATION-checkbox {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+
+                                                .S-CHECKBOX-wrapper {
+                                                    // POSITIONING
+                                                    position: relative;
+
+                                                    .S-CHECKBOX-carcass {
+                                                        .IN-CHECKBOX-input {
+                                                            // SCALING
+                                                            width: $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE;
+                                                            height: $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE;
+                                                            // POSITIONING
+                                                            position: absolute;
+                                                            // OPACITY
+                                                            opacity: 0;
+                                                            // CURSOR
+                                                            cursor: pointer;
+                                                            // LAYERING
+                                                            z-index: 102;
+
+                                                            &:checked + .S-CHECKBOX-box {
+                                                                // BACKGROUND
+                                                                background: $PALETTE-GLASS;
+                                                            }
+
+                                                            &:checked + .S-CHECKBOX-box .I-CHECKBOX-icon {
+                                                                // TRANSFORM
+                                                                transform: scale(1);
+                                                                // OPACITY
+                                                                opacity: 1;
+                                                            }
+                                                        }
+
+                                                        .S-CHECKBOX-box {
+                                                            // FLEXBOX
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            // SCALING
+                                                            width: $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE;
+                                                            height: $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE;
+                                                            // BORDER
+                                                            border: 0.3vh $PALETTE-BLACK_HALF solid;
+                                                            // STREAMLINING
+                                                            border-radius: $GV-D-ROUNDING-SMALL * 0.8;
+                                                            // BACKGROUND
+                                                            background: $PALETTE-GLASS;
+                                                            // POSITIONING
+                                                            position: relative;
+                                                            // TRANSITION
+                                                            transition:
+                                                                opacity 0.1s,
+                                                                transform 0.1s;
+                                                            // LAYERING
+                                                            z-index: 101;
+
+                                                            .I-CHECKBOX-icon {
+                                                                // SCALING
+                                                                width: $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE * 0.71;
+                                                                // TRANSFORM
+                                                                transform: scale(0);
+                                                                // OPACITY
+                                                                opacity: 0;
+                                                                // TRANSITION
+                                                                transition:
+                                                                    opacity 0.1s,
+                                                                    transform 0.1s;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .S-CONFIRMATION-text {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 2 / 2 / 3;
+
+                                                .T-CONFIRMATION-text {
+                                                    // FONT SETTINGS
+                                                    color: $PALETTE-BLACK_HOVER;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-submit {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 7 / 1 / 8 / 3;
+
+                                        .B-CONTENT-submit_blue {
+                                            // BACKGROUND
+                                            background-color: $PALETTE-WHITE_BLUE;
+                                            // SHADOW
+                                            box-shadow: $GV-D-SIZES-UNDER_SECTIONS $GV-D-SIZES-UNDER_SECTIONS $PALETTE-DARK_BLUE;
+
+                                            &:hover {
+                                                // SHADOW
+                                                box-shadow: $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET $PALETTE-DARK_BLUE;
+                                            }
+                                        }
+                                        .B-CONTENT-submit_green {
+                                            // BACKGROUND
+                                            background-color: $PALETTE-WHITE_GREEN;
+                                            // SHADOW
+                                            box-shadow: $GV-D-SIZES-UNDER_SECTIONS $GV-D-SIZES-UNDER_SECTIONS $PALETTE-DARK_GREEN;
+
+                                            &:hover {
+                                                // SHADOW
+                                                box-shadow: $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET $PALETTE-DARK_GREEN;
+                                            }
+                                        }
+                                        .B-CONTENT-submit {
+                                            // BORDER
+                                            border: none;
+                                            // SCALING
+                                            width: 100%;
+                                            height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                            // STREAMLINING
+                                            border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                            // CURSOR
+                                            cursor: pointer;
+                                            // TRANSITION
+                                            transition: box-shadow 0.2s;
+
+                                            .T-CONTENT-submit_blue {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-DARK_BLUE;
+                                            }
+                                            .T-CONTENT-submit_green {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-DARK_GREEN;
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-presentation_hint {
+                                        // FLEXBOX
+                                        display: flex;
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 1 / 5 / 3;
+                                        // STREAMLINING
+                                        border-radius: $GV-D-ROUNDING-SECTIONS;
+                                        // MARGINS & PADDINGS
+                                        margin-top: 10vh;
+                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+
+                                        .S-HINT-wrapper {
+                                            // FLEXBOX
+                                            display: flex;
+                                            // SCALING
+                                            width: 100%;
+                                            // STREAMLINING
+                                            border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                                            .S-HINT-carcass_blue {
+                                                // BACKGROUND
+                                                background-color: $PALETTE-DARK_BLUE_PALE;
+                                            }
+                                            .S-HINT-carcass_green {
+                                                // BACKGROUND
+                                                background-color: $PALETTE-DARK_GREEN_PALE;
+                                            }
+                                            .S-HINT-carcass {
+                                                // CSS-GRID SETUP
+                                                display: grid;
+                                                grid-template-columns: 1fr;
+                                                grid-template-rows: 1fr;
+                                                grid-column-gap: 0;
+                                                grid-row-gap: 0;
+                                                // SCALING
+                                                width: 100%;
+                                                // STREAMLINING
+                                                border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                                                .S-HINT-hitbox {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 1 / 2 / 2;
+                                                    // SCALING
+                                                    width: 30vh;
+                                                    height: calc(100% + 5.5vh);
+                                                    // STREAMLINING
+                                                    border-radius: $GV-D-ROUNDING-SECTIONS 0 10vh 0;
+                                                    // CURSOR
+                                                    cursor: pointer;
+                                                }
+                                                .S-HINT-content {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 1 / 1 / 2 / 2;
+                                                    // SCALING
+                                                    width: 100%;
+                                                    // STREAMLINING
+                                                    border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                                                    .S-HINT_CONTENT-wrapper {
+                                                        // FLEXBOX
+                                                        display: flex;
+                                                        // SCALING
+                                                        width: 100%;
+
+                                                        .S-HINT_CONTENT-carcass {
+                                                            // CSS-GRID SETUP
+                                                            display: grid;
+                                                            grid-template-columns: repeat(3, 1fr);
+                                                            grid-template-rows: 1fr;
+                                                            grid-column-gap: $GV-D-SIZES-DEFAULT * 0.8;
+                                                            grid-row-gap: 0;
+                                                            // SCALING
+                                                            width: 100%;
+                                                            // MARGINS & PADDINGS
+                                                            margin: $GV-D-SIZES-INNER_PADDING;
+
+                                                            .S-HINT_CONTENT-panel_1 {
+                                                                // CSS-GRID CONFIGURATION
+                                                                grid-area: 1 / 1 / 2 / 2;
+                                                            }
+                                                            .S-HINT_CONTENT-panel_2 {
+                                                                // CSS-GRID CONFIGURATION
+                                                                grid-area: 1 / 2 / 2 / 3;
+                                                            }
+                                                            .S-HINT_CONTENT-panel_3 {
+                                                                // CSS-GRID CONFIGURATION
+                                                                grid-area: 1 / 3 / 2 / 4;
+                                                            }
+                                                            .S-HINT_CONTENT-panel {
+                                                                // FLEXBOX
+                                                                display: flex;
+                                                                // BACKGROUND
+                                                                background-color: $PALETTE-SNOW;
+                                                                // STREAMLINING
+                                                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                                                // SCALING
+                                                                width: 100%;
+
+                                                                .S-PANEL-wrapper {
+                                                                    // FLEXBOX
+                                                                    display: flex;
+                                                                    // SCALING
+                                                                    width: 100%;
+
+                                                                    .S-PANEL-carcass {
+                                                                        // CSS-GRID SETUP
+                                                                        display: grid;
+                                                                        grid-template-columns: 1fr;
+                                                                        grid-template-rows: 1fr repeat(2, max-content);
+                                                                        grid-column-gap: 0;
+                                                                        grid-row-gap: 0;
+                                                                        align-items: center;
+                                                                        justify-items: center;
+                                                                        // SCALING
+                                                                        width: 100%;
+                                                                        // FONT SETTINGS
+                                                                        text-align: center;
+
+                                                                        .S-PANEL-icon {
+                                                                            // FLEXBOX
+                                                                            display: flex;
+                                                                            align-items: center;
+                                                                            justify-content: center;
+                                                                            // CSS-GRID CONFIGURATION
+                                                                            grid-area: 1 / 1 / 2 / 2;
+
+                                                                            .I-PANEL-icon_blue {
+                                                                                // FILL
+                                                                                fill: $PALETTE-DARK_BLUE_PALE;
+                                                                            }
+                                                                            .I-PANEL-icon_green {
+                                                                                // FILL
+                                                                                fill: $PALETTE-DARK_GREEN_PALE;
+                                                                            }
+                                                                        }
+                                                                        .S-PANEL-text {
+                                                                            // CSS-GRID CONFIGURATION
+                                                                            grid-area: 2 / 1 / 3 / 2;
+                                                                        }
+                                                                        .S-PANEL-number_blue {
+                                                                            // FONT SETTINGS
+                                                                            color: $PALETTE-DARK_BLUE_PALE;
+                                                                        }
+                                                                        .S-PANEL-number_green {
+                                                                            // FONT SETTINGS
+                                                                            color: $PALETTE-DARK_GREEN_PALE;
+                                                                        }
+                                                                        .S-PANEL-number {
+                                                                            // CSS-GRID CONFIGURATION
+                                                                            grid-area: 3 / 1 / 4 / 2;
+                                                                            // MARGINS & PADDINGS
+                                                                            padding: $GV-D-SIZES-SMALL 0;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-title {
+                                        // FLEXBOX
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        // MARGINS & PADDINGS
+                                        gap: 0.3vh;
+
+                                        .T-CONTENT-asterisk{
+                                            // FONT SETTINGS
+                                            color: $PALETTE-LIGHT_GREEN;
+                                            // MARGINS & PADDINGS
+                                            margin-top: -0.15vh;
+                                        }
+                                    }
+                                    .S-CONTENT-input {
+                                        .IN-CONTENT-string_blue {
+                                            // BACKGROUND
+                                            background: $PALETTE-WHITE_BLUE;
+
+                                            &:focus {
+                                                // BORDER
+                                                outline-color: $PALETTE-DARK_BLUE;
+                                            }
+                                        }
+                                        .IN-CONTENT-string_green {
+                                            // BACKGROUND
+                                            background: $PALETTE-WHITE_GREEN;
+
+                                            &:focus {
+                                                // BORDER
+                                                outline-color: $PALETTE-DARK_GREEN;
+                                            }
+                                        }
+                                        .IN-CONTENT-string {
+                                            // SCALING
+                                            width: calc(100% - ($GV-D-SIZES-SMALL * 2));
+                                            height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                            // BORDER
+                                            border: none;
+                                            outline-width: 0;
+                                            // STREAMLINING
+                                            border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                            // MARGINS & PADDINGS
+                                            padding: 0 $GV-D-SIZES-SMALL;
+                                            // TRANSITION
+                                            transition: outline-width 0.06s;
+
+                                            &:focus {
+                                                // BORDER
+                                                outline-width: $LV-D-APPLICATION-FORM-INPUTS_OUTLINE_WIDTH;
+                                                outline-style: solid;
+                                            }
+                                            &::placeholder {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-BLACK_PLACEHOLDER;
+                                            }
+                                        }
+                                        .IN-CONTENT-text_blue {
+                                            // BACKGROUND
+                                            background: $PALETTE-WHITE_BLUE;
+
+                                            &:focus {
+                                                // BORDER
+                                                outline-color: $PALETTE-DARK_BLUE;
+                                            }
+                                        }
+                                        .IN-CONTENT-text_green {
+                                            // BACKGROUND
+                                            background: $PALETTE-WHITE_GREEN;
+
+                                            &:focus {
+                                                // BORDER
+                                                outline-color: $PALETTE-DARK_GREEN;
+                                            }
+                                        }
+                                        .IN-CONTENT-text {
+                                            // SCALING
+                                            width: calc(100% - ($GV-D-SIZES-SMALL * 2));
+                                            height: 20vh;
+                                            // BORDER
+                                            border: none;
+                                            outline-width: 0;
+                                            // STREAMLINING
+                                            border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                            // RESIZE
+                                            resize: none;
+                                            // MARGINS & PADDINGS
+                                            padding: $GV-D-SIZES-SMALL;
+                                            // TRANSITION
+                                            transition: outline-width 0.06s;
+
+                                            &:focus {
+                                                // BORDER
+                                                outline-width: $LV-D-APPLICATION-FORM-INPUTS_OUTLINE_WIDTH;
+                                                outline-style: solid;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 

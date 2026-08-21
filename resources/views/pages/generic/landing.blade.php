@@ -6,6 +6,59 @@
 @section('meta-url', '')
 
 @section('mode-desktop')
+    <div class="S-DESKTOP-application" id="LANDING-APPLICATION-POPUP" style="display: none">
+        <div class="S-APPLICATION-wrapper">
+            <div class="S-APPLICATION-carcass">
+                <div class="S-APPLICATION-select S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-SELECT">
+                    <div class="S-SELECT-wrapper S-SELECT-wrapper_blue S-WINDOW-wrapper">
+                        <div class="S-SELECT-carcass S-WINDOW-carcass">
+                            <div class="S-SELECT-heading">
+                                <h3 class="TYPO-PRESET-CORE_H3">Выбор типа заявки</h3>
+                            </div>
+                            <div class="S-SELECT-buttons">
+                                <div class="S-BUTTONS-wrapper">
+                                    <div class="S-BUTTONS-carcass">
+                                        <div class="S-BUTTONS-left S-BUTTONS-all">
+                                            <x-blades.application.select.button
+                                                type="individual"
+                                                color="blue"
+                                                icon="person"
+                                                icon_height="7.5vh"
+                                                title="Физическое лицо"
+                                            />
+                                        </div>
+                                        <div class="S-BUTTONS-right S-BUTTONS-all">
+                                            <x-blades.application.select.button
+                                                type="entity"
+                                                color="green"
+                                                icon="briefcase"
+                                                icon_height="6.5vh"
+                                                title="Юридическое лицо"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="S-APPLICATION-form S-APPLICATION-individual S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-INDIVIDUAL" style="display: none">
+                    <x-blades.application.form
+                        type="individual"
+                        color="blue"
+                        title="Подача заявки (Физ. лицо)"
+                    />
+                </div>
+                <div class="S-APPLICATION-form S-APPLICATION-entity S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-ENTITY" style="display: none">
+                    <x-blades.application.form
+                        type="entity"
+                        color="green"
+                        title="Подача заявки (Юр. лицо)"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="S-DESKTOP-header">
         <div class="S-HEADER-wrapper">
             <div class="S-HEADER-carcass S-HEADER-carcass_transparent" id="LANDING-HEADER-CARCASS">
