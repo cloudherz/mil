@@ -643,7 +643,7 @@
             </div>
         </div>
     </main>
-    <main class="S-DESKTOP-footer">
+    <footer class="S-DESKTOP-footer">
         <div class="S-FOOTER-wrapper">
             <div class="S-FOOTER-carcass">
                 <div class="S-FOOTER-logos">
@@ -696,7 +696,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </footer>
 @endsection
 
 @section('mode-landscape')

@@ -1097,7 +1097,12 @@
 
                 .I-BACKGROUND-shape {
                     // TRANSFORM
-                    transform: scale(280%) translateX(-4%) translateY(-17%);
+                    //transform: scale(280%) translateX(-4%) translateY(-17%);
+                    // 4% * 2.8 = 11.2%
+                    // 17% * 2.8 = 47.6%
+                    scale: 2.8;
+                    translate: -11.2% -47.6%;
+                    rotate: 0deg;
                     transform-origin: top;
                 }
             }
@@ -1415,11 +1420,21 @@
 
                 .I-BACKGROUND-shape_1 {
                     // TRANSFORM
-                    transform: scale(300%) translateX(40%) translateY(78%) rotate(191deg);
+                    //transform: scale(300%) translateX(40%) translateY(78%) rotate(191deg);
+                    // 40% * 3 = 120%
+                    // 78% * 3 = 234%
+                    scale: 3;
+                    translate: 120% 234%;
+                    rotate: 191deg;
                 }
                 .I-BACKGROUND-shape_2 {
                     // TRANSFORM
-                    transform: scale(500%) translateX(0%) translateY(59%) rotate(180deg);
+                    //transform: scale(500%) translateX(0%) translateY(59%) rotate(180deg);
+                    // 0% * 5 = 0%
+                    // 59% * 5 = 295%
+                    scale: 5;
+                    translate: 0 295%;
+                    rotate: 180deg;
                 }
                 .I-BACKGROUND-shape {
                     // TRANSFORM
@@ -1982,7 +1997,7 @@
                                                         }
                                                         .T-NUMBER-heading {
                                                             // MARGINS & PADDINGS
-                                                            margin-top: -1.05vh;
+                                                            text-box: trim-both cap alphabetic;
                                                         }
                                                     }
                                                 }
@@ -2129,7 +2144,12 @@
                                         // SCALING
                                         height: 50vh;
                                         // TRANSFORM
-                                        transform: scale(240%) translateX(-16%) translateY(-21.5%) rotate(-15deg);
+                                        //transform: scale(240%) translateX(-16%) translateY(-21.5%) rotate(-15deg);
+                                        // 16% * 2.4 = 38.4%
+                                        // 21.5% * 2.4 = 51.6%
+                                        scale: 2.4;
+                                        translate: -38.4% -51.6%;
+                                        rotate: -15deg;
                                         transform-origin: top;
                                     }
                                 }
@@ -2992,8 +3012,12 @@
 
                 .I-BACKGROUND-shape {
                     // TRANSFORM
-                    transform: scale(330%) translateX(-26%) translateY(-16.5%) rotate(-26deg);
-                    // TRANSFORM
+                    //transform: scale(330%) translateX(-26%) translateY(-16.5%) rotate(-26deg);
+                    // 26% * 3.3 = 85.8%
+                    // 16.5% * 3.3 = 54.45%
+                    scale: 3.3;
+                    translate: -85.8% -54.45%;
+                    rotate: -26deg;
                     transform-origin: top;
                 }
             }

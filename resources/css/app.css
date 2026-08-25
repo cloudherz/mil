@@ -863,7 +863,9 @@ br {
     overflow: clip;
   }
   .S-HERO-carcass .S-HERO-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
-    transform: scale(280%) translateX(-4%) translateY(-17%);
+    scale: 2.8;
+    translate: -11.2% -47.6%;
+    rotate: 0deg;
     transform-origin: top;
   }
   .S-HERO-carcass .S-HERO-content {
@@ -1075,10 +1077,14 @@ br {
     bottom: 0;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
-    transform: scale(300%) translateX(40%) translateY(78%) rotate(191deg);
+    scale: 3;
+    translate: 120% 234%;
+    rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
-    transform: scale(500%) translateX(0%) translateY(59%) rotate(180deg);
+    scale: 5;
+    translate: 0 295%;
+    rotate: 180deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
     transform-origin: top;
@@ -1444,7 +1450,7 @@ br {
     color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-number .S-NUMBER-wrapper .S-NUMBER-carcass .T-NUMBER-heading {
-    margin-top: -1.05vh;
+    text-box: trim-both cap alphabetic;
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text {
     grid-area: 2/1/3/2;
@@ -1531,7 +1537,9 @@ br {
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
     height: 50vh;
-    transform: scale(240%) translateX(-16%) translateY(-21.5%) rotate(-15deg);
+    scale: 2.4;
+    translate: -38.4% -51.6%;
+    rotate: -15deg;
     transform-origin: top;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content {
@@ -2079,7 +2087,9 @@ br {
     bottom: 0;
   }
   .S-ACTION-carcass .S-ACTION-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
-    transform: scale(330%) translateX(-26%) translateY(-16.5%) rotate(-26deg);
+    scale: 3.3;
+    translate: -85.8% -54.45%;
+    rotate: -26deg;
     transform-origin: top;
   }
   .S-ACTION-carcass .S-ACTION-content {
@@ -2948,7 +2958,9 @@ br {
     overflow: clip;
   }
   .S-HERO-carcass .S-HERO-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
-    transform: scale(280%) translateX(-4%) translateY(-17%);
+    scale: 2.8;
+    translate: -11.2% -47.6%;
+    rotate: 0deg;
     transform-origin: top;
   }
   .S-HERO-carcass .S-HERO-content {
@@ -3160,10 +3172,14 @@ br {
     bottom: 0;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
-    transform: scale(300%) translateX(40%) translateY(78%) rotate(191deg);
+    scale: 3;
+    translate: 120% 234%;
+    rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
-    transform: scale(500%) translateX(0%) translateY(59%) rotate(180deg);
+    scale: 5;
+    translate: 0 295%;
+    rotate: 180deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
     transform-origin: top;
@@ -3529,7 +3545,7 @@ br {
     color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-number .S-NUMBER-wrapper .S-NUMBER-carcass .T-NUMBER-heading {
-    margin-top: -1.05vh;
+    text-box: trim-both cap alphabetic;
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text {
     grid-area: 2/1/3/2;
@@ -3616,7 +3632,9 @@ br {
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
     height: 50vh;
-    transform: scale(240%) translateX(-16%) translateY(-21.5%) rotate(-15deg);
+    scale: 2.4;
+    translate: -38.4% -51.6%;
+    rotate: -15deg;
     transform-origin: top;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content {
@@ -4164,7 +4182,9 @@ br {
     bottom: 0;
   }
   .S-ACTION-carcass .S-ACTION-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
-    transform: scale(330%) translateX(-26%) translateY(-16.5%) rotate(-26deg);
+    scale: 3.3;
+    translate: -85.8% -54.45%;
+    rotate: -26deg;
     transform-origin: top;
   }
   .S-ACTION-carcass .S-ACTION-content {
