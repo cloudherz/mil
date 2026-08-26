@@ -1424,7 +1424,8 @@
                     // 40% * 3 = 120%
                     // 78% * 3 = 234%
                     scale: 3;
-                    translate: 120% 234%;
+                    //translate: 120% 234%;
+                    translate: 74.5vh 68.9vh;
                     rotate: 191deg;
                 }
                 .I-BACKGROUND-shape_2 {
@@ -1996,7 +1997,7 @@
                                                             color: $PALETTE-DARK_BLUE_PALE;
                                                         }
                                                         .T-NUMBER-heading {
-                                                            // MARGINS & PADDINGS
+                                                            // FONT SETTINGS
                                                             text-box: trim-both cap alphabetic;
                                                         }
                                                     }
@@ -3016,7 +3017,8 @@
                     // 26% * 3.3 = 85.8%
                     // 16.5% * 3.3 = 54.45%
                     scale: 3.3;
-                    translate: -85.8% -54.45%;
+                    //translate: -85.8% -54.45%;
+                    translate: -88.4vh -26.6vh;
                     rotate: -26deg;
                     transform-origin: top;
                 }
@@ -3044,7 +3046,7 @@
                     // SCALING
                     width: $GV-D-CORE-CONTENT_WIDTH;
                     // MARGINS & PADDINGS
-                    margin: ($GV-D-SIZES-SECTIONS * 3.65) 0 ($GV-D-SIZES-SECTIONS * 3.65) 0;
+                    margin: ($GV-D-SIZES-SECTIONS * 3.75) 0 ($GV-D-SIZES-SECTIONS * 3.75) 0;
                     // FONT SETTINGS
                     color: $PALETTE-SNOW;
 
@@ -3054,8 +3056,8 @@
                         // FONT SETTINGS
                         color: $PALETTE-SNOW;
                         line-height: 6.7vh;
-                        // MARGINS & PADDINGS
-                        margin-top: -1vh;
+                        // FONT SETTINGS
+                        text-box: trim-both cap alphabetic;
                     }
                     .S-CONTENT-button {
                         // CSS-GRID CONFIGURATION
@@ -3114,7 +3116,9 @@
 
                             .T-BUTTON-heading {
                                 // MARGINS & PADDINGS
-                                margin-top: -1vh;
+                                margin-top: -0.1vh;
+                                // FONT SETTINGS
+                                text-box: trim-both cap alphabetic;
                                 // FONT SETTINGS
                                 color: $PALETTE-DARK_BLUE;
                                 // TRANSITION

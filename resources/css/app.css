@@ -1078,7 +1078,7 @@ br {
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
     scale: 3;
-    translate: 120% 234%;
+    translate: 74.5vh 68.9vh;
     rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
@@ -2088,7 +2088,7 @@ br {
   }
   .S-ACTION-carcass .S-ACTION-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
     scale: 3.3;
-    translate: -85.8% -54.45%;
+    translate: -88.4vh -26.6vh;
     rotate: -26deg;
     transform-origin: top;
   }
@@ -2108,14 +2108,14 @@ br {
     grid-row-gap: 3.8vh;
     align-items: center;
     width: 120vh;
-    margin: 18.25vh 0 18.25vh 0;
+    margin: 18.75vh 0 18.75vh 0;
     color: oklch(100% 0 0deg);
   }
   .S-ACTION-carcass .S-ACTION-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-slogan {
     grid-area: 1/1/2/2;
     color: oklch(100% 0 0deg);
     line-height: 6.7vh;
-    margin-top: -1vh;
+    text-box: trim-both cap alphabetic;
   }
   .S-ACTION-carcass .S-ACTION-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button {
     grid-area: 1/2/2/3;
@@ -2150,7 +2150,8 @@ br {
     transition: fill 0.2s;
   }
   .S-ACTION-carcass .S-ACTION-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .T-BUTTON-heading {
-    margin-top: -1vh;
+    margin-top: -0.1vh;
+    text-box: trim-both cap alphabetic;
     color: oklch(63.85% 0.1954 257.48deg);
     transition: color 0.2s;
   }
@@ -3173,7 +3174,7 @@ br {
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
     scale: 3;
-    translate: 120% 234%;
+    translate: 74.5vh 68.9vh;
     rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
@@ -4183,7 +4184,7 @@ br {
   }
   .S-ACTION-carcass .S-ACTION-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
     scale: 3.3;
-    translate: -85.8% -54.45%;
+    translate: -88.4vh -26.6vh;
     rotate: -26deg;
     transform-origin: top;
   }
@@ -4203,14 +4204,14 @@ br {
     grid-row-gap: 3.8vh;
     align-items: center;
     width: 120vh;
-    margin: 18.25vh 0 18.25vh 0;
+    margin: 18.75vh 0 18.75vh 0;
     color: oklch(100% 0 0deg);
   }
   .S-ACTION-carcass .S-ACTION-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-slogan {
     grid-area: 1/1/2/2;
     color: oklch(100% 0 0deg);
     line-height: 6.7vh;
-    margin-top: -1vh;
+    text-box: trim-both cap alphabetic;
   }
   .S-ACTION-carcass .S-ACTION-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button {
     grid-area: 1/2/2/3;
@@ -4245,7 +4246,8 @@ br {
     transition: fill 0.2s;
   }
   .S-ACTION-carcass .S-ACTION-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .T-BUTTON-heading {
-    margin-top: -1vh;
+    margin-top: -0.1vh;
+    text-box: trim-both cap alphabetic;
     color: oklch(63.85% 0.1954 257.48deg);
     transition: color 0.2s;
   }
