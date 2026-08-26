@@ -47,6 +47,7 @@
     $LV-D-APPLICATION-FORM-INPUT-UPLOAD-ICON_HEIGHT: 2.5vh;
     $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE: 3vh;
     $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET: $GV-D-SIZES-UNDER_SECTIONS * 1.6;
+    $LV-D-APPLICATION-FORM-LEFT_COLUMN-WIDTH: 14.18vh;
     .S-DESKTOP-application {
         // POSITIONING
         position: fixed;
@@ -280,7 +281,7 @@
                                 .S-CONTENT-carcass {
                                     // CSS-GRID SETUP
                                     display: grid;
-                                    grid-template-columns: max-content 1fr;
+                                    grid-template-columns: $LV-D-APPLICATION-FORM-LEFT_COLUMN-WIDTH 1fr;
                                     grid-template-rows: repeat(7, max-content);
                                     grid-column-gap: $GV-D-SIZES-DEFAULT;
                                     grid-row-gap: 0;
@@ -325,11 +326,231 @@
                                         // MARGINS & PADDINGS
                                         margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
                                     }
+                                    .S-CONTENT-tracks {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 4 / 1 / 5 / 3;
+
+                                        .S-CONTENT_TRACKS-carcass_individual {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: 1fr;
+                                            grid-column-gap: 0;
+                                            grid-row-gap: 0;
+
+                                            .S-CONTENT_TRACKS-individual_track {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                            }
+                                        }
+                                        .S-CONTENT_TRACKS-carcass_entity {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: repeat(3, max-content);
+                                            grid-column-gap: 0;
+                                            grid-row-gap: 0;
+
+                                            .S-CONTENT_TRACKS-entity_track_1 {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                            }
+                                            .S-CONTENT_TRACKS-entity_track_2 {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 2 / 1 / 3 / 2;
+                                            }
+                                            .S-CONTENT_TRACKS-entity_track_3 {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 3 / 1 / 4 / 2;
+                                            }
+                                        }
+                                        .S-CONTENT_TRACKS-carcass {
+                                            .S-CONTENT_TRACKS-track {
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+
+                                                .S-TRACK-carcass {
+                                                    // CSS-GRID SETUP
+                                                    display: grid;
+                                                    grid-template-columns: $LV-D-APPLICATION-FORM-LEFT_COLUMN-WIDTH 1fr;
+                                                    grid-template-rows: 1fr;
+                                                    grid-column-gap: $GV-D-SIZES-DEFAULT;
+                                                    grid-row-gap: 0;
+
+                                                    .S-TRACK-title {
+                                                        // FLEXBOX
+                                                        display: flex;
+                                                        flex-direction: row;
+                                                        align-items: center;
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 1 / 1 / 2 / 2;
+                                                        // MARGINS & PADDINGS
+                                                        gap: 0.3vh;
+
+                                                        .T-TRACK-asterisk_blue {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE;
+                                                        }
+                                                        .T-TRACK-asterisk_green {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-LIGHT_GREEN;
+                                                        }
+                                                        .T-TRACK-asterisk {
+                                                            // MARGINS & PADDINGS
+                                                            margin-top: -0.15vh;
+                                                        }
+                                                    }
+                                                    .S-TRACK-select {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 1 / 2 / 2 / 3;
+
+                                                        .S-SELECT-carcass {
+                                                            // POSITIONING
+                                                            position: relative;
+                                                            // SCALING
+                                                            width: calc(100% - ($GV-D-SIZES-SMALL * 2));
+
+                                                            .S-TRACK-select_blue {
+                                                                // BACKGROUND
+                                                                background: $PALETTE-WHITE_BLUE;
+                                                            }
+                                                            .S-TRACK-select_green {
+                                                                // BACKGROUND
+                                                                background: $PALETTE-WHITE_GREEN;
+                                                            }
+                                                            .S-TRACK-select {
+                                                                // FLEXBOX
+                                                                display: flex;
+                                                                justify-content: space-between;
+                                                                align-items: center;
+                                                                // SCALING
+                                                                width: 100%;
+                                                                height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                                                // STREAMLINING
+                                                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                                                // MARGINS & PADDINGS
+                                                                padding: 0 $GV-D-SIZES-SMALL;
+                                                                // CURSOR
+                                                                cursor: pointer;
+
+                                                                &.open {
+                                                                    .I-TRACK-select {
+                                                                        // TRANSFORM
+                                                                        transform: rotate(270deg);
+                                                                    }
+                                                                }
+
+                                                                .I-TRACK-select {
+                                                                    // FILL
+                                                                    fill: $PALETTE-BLACK;
+                                                                    // SCALING
+                                                                    width: 0.8vh;
+                                                                    // TRANSFORM
+                                                                    transform: rotate(90deg);
+                                                                    // TRANSITION
+                                                                    transition: transform 0.2s;
+                                                                }
+                                                            }
+
+                                                            .UL-TRACK-options_blue {
+                                                                // BACKGROUND
+                                                                background: $PALETTE-WHITE_BLUE;
+                                                                // BORDER
+                                                                outline: $PALETTE-DARK_BLUE solid $LV-D-APPLICATION-FORM-INPUTS_OUTLINE_WIDTH;
+                                                            }
+                                                            .UL-TRACK-options_green {
+                                                                // BACKGROUND
+                                                                background: $PALETTE-WHITE_GREEN;
+                                                                // BORDER
+                                                                outline: $PALETTE-DARK_GREEN solid $LV-D-APPLICATION-FORM-INPUTS_OUTLINE_WIDTH;
+                                                            }
+                                                            .UL-TRACK-options {
+                                                                // POSITIONING
+                                                                position: absolute;
+                                                                top: calc(100% + ($LV-D-APPLICATION-FORM-INPUTS_MARGIN / 2));
+                                                                left: 0;
+                                                                right: 0;
+                                                                // SCALING
+                                                                width: calc(100% + ($GV-D-SIZES-SMALL * 2));
+                                                                height: (($LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT * 3) + ($LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT / 2));
+                                                                // OVERFLOW
+                                                                overflow-y: auto;
+                                                                // LIST SETTINGS
+                                                                list-style: none;
+                                                                // MARGINS & PADDINGS
+                                                                padding: ($LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT * 0.2) 0;
+                                                                // STREAMLINING
+                                                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                                                // OPACITY
+                                                                opacity: 0;
+                                                                // VISIBILITY
+                                                                visibility: hidden;
+                                                                // TRANSFORM
+                                                                transform: translateY(-0.8vh);
+                                                                // LAYERING
+                                                                z-index: 101;
+                                                                // TRANSITION
+                                                                transition:
+                                                                    opacity 0.1s,
+                                                                    visibility 0.1s,
+                                                                    transform 0.1s;
+
+                                                                &.open {
+                                                                    // OPACITY
+                                                                    opacity: 1;
+                                                                    // VISIBILITY
+                                                                    visibility: visible;
+                                                                    // TRANSFORM
+                                                                    transform: translateY(0);
+                                                                }
+
+                                                                .LI-TRACK-option_blue {
+                                                                    // BACKGROUND
+                                                                    background: $PALETTE-WHITE_BLUE;
+
+                                                                    &:hover {
+                                                                        // BACKGROUND
+                                                                        background-color: $PALETTE-DARK_BLUE;
+                                                                        color: $PALETTE-SNOW;
+                                                                    }
+                                                                }
+                                                                .LI-TRACK-option_green {
+                                                                    // BACKGROUND
+                                                                    background: $PALETTE-WHITE_GREEN;
+
+                                                                    &:hover {
+                                                                        // BACKGROUND
+                                                                        background-color: $PALETTE-DARK_GREEN;
+                                                                        color: $PALETTE-SNOW;
+                                                                    }
+                                                                }
+                                                                .LI-TRACK-option {
+                                                                    // FLEXBOX
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    // MARGINS & PADDINGS
+                                                                    padding: 0 $GV-D-SIZES-SMALL;
+                                                                    // SCALING
+                                                                    height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                                                    // CURSOR
+                                                                    cursor: pointer;
+                                                                    // TRANSITION
+                                                                    transition:
+                                                                        background 0.2s,
+                                                                        color 0.2s;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                     .S-CONTENT-description_title {
                                         // FLEXBOX
                                         display: flex;
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 4 / 1 / 5 / 2;
+                                        grid-area: 5 / 1 / 6 / 2;
                                         // FLEXBOX
                                         align-items: start !important;
                                         // MARGINS & PADDINGS
@@ -340,13 +561,13 @@
                                         // FLEXBOX
                                         display: flex;
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 4 / 2 / 5 / 3;
+                                        grid-area: 5 / 2 / 6 / 3;
                                         // MARGINS & PADDINGS
                                         margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
                                     }
                                     .S-CONTENT-presentation_title {
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 5 / 1 / 6 / 2;
+                                        grid-area: 6 / 1 / 7 / 2;
                                         // MARGINS & PADDINGS
                                         margin-bottom: $GV-D-SIZES-DEFAULT;
 
@@ -369,7 +590,7 @@
                                     }
                                     .S-CONTENT-presentation_input {
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 5 / 2 / 6 / 3;
+                                        grid-area: 6 / 2 / 7 / 3;
                                         // CSS-GRID SETUP
                                         display: grid;
                                         grid-template-rows: 1fr;
@@ -487,7 +708,7 @@
                                     }
                                     .S-CONTENT-confirmation {
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 6 / 1 / 7 / 3;
+                                        grid-area: 7 / 1 / 8 / 3;
                                         // MARGINS & PADDINGS
                                         margin-bottom: $GV-D-SIZES-DEFAULT;
 
@@ -574,19 +795,24 @@
                                                 }
                                             }
                                             .S-CONFIRMATION-text {
+                                                // FLEXBOX
+                                                display: flex;
+                                                align-items: center;
                                                 // CSS-GRID CONFIGURATION
                                                 grid-area: 1 / 2 / 2 / 3;
 
                                                 .T-CONFIRMATION-text {
                                                     // FONT SETTINGS
                                                     color: $PALETTE-BLACK_HOVER;
+                                                    // FONT SETTINGS
+                                                    text-box: trim-both cap alphabetic;
                                                 }
                                             }
                                         }
                                     }
                                     .S-CONTENT-submit {
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 7 / 1 / 8 / 3;
+                                        grid-area: 8 / 1 / 9 / 3;
 
                                         .B-CONTENT-submit_blue {
                                             // BACKGROUND
@@ -636,12 +862,12 @@
                                     .S-CONTENT-presentation_hint {
                                         // FLEXBOX
                                         display: flex;
+                                        align-items: flex-end;
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 1 / 1 / 5 / 3;
+                                        grid-area: 1 / 1 / 6 / 3;
                                         // STREAMLINING
                                         border-radius: $GV-D-ROUNDING-SECTIONS;
                                         // MARGINS & PADDINGS
-                                        margin-top: 10vh;
                                         margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
 
                                         .S-HINT-wrapper {
@@ -671,15 +897,17 @@
                                                 width: 100%;
                                                 // STREAMLINING
                                                 border-radius: $GV-D-ROUNDING-SECTIONS;
+                                                // LAYERING
+                                                z-index: 201;
 
                                                 .S-HINT-hitbox {
                                                     // CSS-GRID CONFIGURATION
                                                     grid-area: 1 / 1 / 2 / 2;
                                                     // SCALING
-                                                    width: 30vh;
+                                                    width: 21vh;
                                                     height: calc(100% + 5.5vh);
                                                     // STREAMLINING
-                                                    border-radius: $GV-D-ROUNDING-SECTIONS 0 10vh 0;
+                                                    border-radius: $GV-D-ROUNDING-SECTIONS 0 5vh 0;
                                                     // CURSOR
                                                     cursor: pointer;
                                                 }
@@ -760,6 +988,8 @@
                                                                             justify-content: center;
                                                                             // CSS-GRID CONFIGURATION
                                                                             grid-area: 1 / 1 / 2 / 2;
+                                                                            // MARGINS & PADDINGS
+                                                                            padding: $GV-D-SIZES-DEFAULT 0;
 
                                                                             .I-PANEL-icon_blue {
                                                                                 // FILL
@@ -805,9 +1035,15 @@
                                         // MARGINS & PADDINGS
                                         gap: 0.3vh;
 
-                                        .T-CONTENT-asterisk{
+                                        .T-CONTENT-asterisk_blue {
+                                            // FONT SETTINGS
+                                            color: $PALETTE-DARK_BLUE;
+                                        }
+                                        .T-CONTENT-asterisk_green {
                                             // FONT SETTINGS
                                             color: $PALETTE-LIGHT_GREEN;
+                                        }
+                                        .T-CONTENT-asterisk {
                                             // MARGINS & PADDINGS
                                             margin-top: -0.15vh;
                                         }

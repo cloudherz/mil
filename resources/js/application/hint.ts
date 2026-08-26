@@ -1,74 +1,57 @@
 function initApplicationHint() {
     document.addEventListener('DOMContentLoaded', () => {
-        // Get all anchor elements
-        const blueAnchor = document.getElementById('LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_BLUE');
-        const greenAnchor = document.getElementById('LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_GREEN');
+        const colors = ['BLUE', 'GREEN'];
 
-        // Get all content elements
-        const blueContent = document.getElementById('LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_BLUE');
-        const greenContent = document.getElementById('LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_GREEN');
+        colors.forEach(color => {
+            const anchor = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_${color}`);
+            const content = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_${color}`);
+            const wrapper = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_WRAPPER_${color}`);
 
-        // Hide content initially
-        if (blueContent) blueContent.style.display = 'none';
-        if (greenContent) greenContent.style.display = 'none';
+            if (!anchor || !content) return;
 
-        // Track if mouse is over content
-        let isMouseOverBlueContent = false;
-        let isMouseOverGreenContent = false;
+            // Hide content initially
+            content.style.display = 'none';
 
-        // Blue hover events
-        if (blueAnchor && blueContent) {
-            blueAnchor.addEventListener('mouseenter', () => {
-                blueContent.style.display = 'flex';
+            // Track if mouse is over content or wrapper
+            let isMouseOver = false;
+
+            // Anchor hover events
+            anchor.addEventListener('mouseenter', () => {
+                content.style.display = 'flex';
             });
 
-            // Only hide if mouse is not over content
-            blueAnchor.addEventListener('mouseleave', () => {
+            anchor.addEventListener('mouseleave', () => {
                 setTimeout(() => {
-                    if (!isMouseOverBlueContent) {
-                        blueContent.style.display = 'none';
+                    if (!isMouseOver) {
+                        content.style.display = 'none';
                     }
                 }, 50);
             });
 
-            // Blue content events
-            blueContent.addEventListener('mouseenter', () => {
-                isMouseOverBlueContent = true;
-                blueContent.style.display = 'flex';
+            // Content hover events
+            content.addEventListener('mouseenter', () => {
+                isMouseOver = true;
+                content.style.display = 'flex';
             });
 
-            blueContent.addEventListener('mouseleave', () => {
-                isMouseOverBlueContent = false;
-                blueContent.style.display = 'none';
-            });
-        }
-
-        // Green hover events
-        if (greenAnchor && greenContent) {
-            greenAnchor.addEventListener('mouseenter', () => {
-                greenContent.style.display = 'flex';
+            content.addEventListener('mouseleave', () => {
+                isMouseOver = false;
+                content.style.display = 'none';
             });
 
-            // Only hide if mouse is not over content
-            greenAnchor.addEventListener('mouseleave', () => {
-                setTimeout(() => {
-                    if (!isMouseOverGreenContent) {
-                        greenContent.style.display = 'none';
-                    }
-                }, 50);
-            });
+            // Wrapper hover events (new)
+            if (wrapper) {
+                wrapper.addEventListener('mouseenter', () => {
+                    isMouseOver = true;
+                    content.style.display = 'flex';
+                });
 
-            // Green content events
-            greenContent.addEventListener('mouseenter', () => {
-                isMouseOverGreenContent = true;
-                greenContent.style.display = 'flex';
-            });
-
-            greenContent.addEventListener('mouseleave', () => {
-                isMouseOverGreenContent = false;
-                greenContent.style.display = 'none';
-            });
-        }
+                wrapper.addEventListener('mouseleave', () => {
+                    isMouseOver = false;
+                    content.style.display = 'none';
+                });
+            }
+        });
     });
 }
 

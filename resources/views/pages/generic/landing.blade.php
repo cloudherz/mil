@@ -44,16 +44,12 @@
                 </div>
                 <div class="S-APPLICATION-form S-APPLICATION-individual S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-INDIVIDUAL" style="display: none">
                     <x-blades.application.form
-                        type="individual"
                         color="blue"
-                        title="Подача заявки (Физ. лицо)"
                     />
                 </div>
                 <div class="S-APPLICATION-form S-APPLICATION-entity S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-ENTITY" style="display: none">
                     <x-blades.application.form
-                        type="entity"
                         color="green"
-                        title="Подача заявки (Юр. лицо)"
                     />
                 </div>
             </div>

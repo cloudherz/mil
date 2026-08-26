@@ -1,19 +1,38 @@
 @php
     $colorCapitalized = ucfirst(strtolower($color));
-    $colorUppercase= strtoupper($color);
+    $colorUppercase = strtoupper($color);
+
+    $windowTitle = match ($color) {
+        'blue'  => 'Подача заявки (Физ. лицо)',
+        'green' => 'Подача заявки (Юр. лицо)',
+        default => 'Ошибка'
+    };
+
+    $presentationTitle = match ($color) {
+        'blue'  => 'Презентация (?)',
+        'green' => 'Презентации (?)',
+        default => 'Ошибка'
+    };
+
+    $presentationUploadButtonTitle = match ($color) {
+        'blue'  => 'Прикрепить файл',
+        'green' => 'Прикрепить файлы',
+        default => 'Ошибка'
+    };
+
 @endphp
 
 <div class="S-FORM-wrapper S-FORM-wrapper_{{ $color }} S-WINDOW-wrapper">
     <div class="S-FORM-carcass S-WINDOW-carcass">
         <div class="S-FORM-heading">
-            <h3 class="TYPO-PRESET-CORE_H3">{!! $title !!}</h3>
+            <h3 class="TYPO-PRESET-CORE_H3">{!! $windowTitle !!}</h3>
         </div>
         <form class="S-FORM-content">
             <div class="S-CONTENT-wrapper">
                 <div class="S-CONTENT-carcass">
                     <div class="S-CONTENT-name_title S-CONTENT-title">
                         <label class="TYPO-PRESET-CORE_P_BOLD">ФИО</label>
-                        <p class="T-CONTENT-asterisk TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-name_input S-CONTENT-input">
                         <input
@@ -26,7 +45,7 @@
                     </div>
                     <div class="S-CONTENT-email_title S-CONTENT-title">
                         <label class="TYPO-PRESET-CORE_P_BOLD">Почта</label>
-                        <p class="T-CONTENT-asterisk TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-email_input S-CONTENT-input">
                         <input
@@ -39,7 +58,7 @@
                     </div>
                     <div class="S-CONTENT-phone_title S-CONTENT-title">
                         <label class="TYPO-PRESET-CORE_P_BOLD">Телефон</label>
-                        <p class="T-CONTENT-asterisk TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-phone_input S-CONTENT-input">
                         <input
@@ -50,9 +69,41 @@
                             placeholder="+7 981 ..."
                         >
                     </div>
+                    <div class="S-CONTENT-tracks">
+                        <div class="S-CONTENT_TRACKS-wrapper">
+                            <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass" style="display: {{ $color === 'blue' ? 'grid' : 'none' }}">
+                                <div class="S-CONTENT_TRACKS-individual_track S-CONTENT_TRACKS-track">
+                                    <x-blades.application.select_track.string
+                                        number="1"
+                                        color="{{ $color }}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="S-CONTENT_TRACKS-carcass_entity S-CONTENT_TRACKS-carcass" style="display: {{ $color === 'green' ? 'grid' : 'none' }}">
+                                <div class="S-CONTENT_TRACKS-entity_track_1 S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
+                                    <x-blades.application.select_track.string
+                                        number="1"
+                                        color="{{ $color }}"
+                                    />
+                                </div>
+                                <div class="S-CONTENT_TRACKS-entity_track_2 S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
+                                    <x-blades.application.select_track.string
+                                        number="2"
+                                        color="{{ $color }}"
+                                    />
+                                </div>
+                                <div class="S-CONTENT_TRACKS-entity_track_3 S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
+                                    <x-blades.application.select_track.string
+                                        number="3"
+                                        color="{{ $color }}"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="S-CONTENT-description_title S-CONTENT-title">
                         <label class="TYPO-PRESET-CORE_P_BOLD">Описание</label>
-                        <p class="T-CONTENT-asterisk TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-description_input S-CONTENT-input">
                         <textarea
@@ -63,8 +114,8 @@
                         ></textarea>
                     </div>
                     <div class="S-CONTENT-presentation_title S-CONTENT-title">
-                        <label class="T-CONTENT-underline TYPO-PRESET-CORE_P_BOLD" id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $colorUppercase }}">Презентация (?)</label>
-                        <p class="T-CONTENT-asterisk TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <label class="T-CONTENT-underline TYPO-PRESET-CORE_P_BOLD" id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $colorUppercase }}">{{ $presentationTitle }}</label>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default">
                         <label class="S-PRESENTATION_INPUT-wrapper" id="uploadLabel{{ $colorCapitalized }}">
@@ -79,7 +130,7 @@
                                             class="I-PRESENTATION_INPUT-file_after_{{ $color }} I-PRESENTATION_INPUT-file"
                                         />
                                     </div>
-                                    <span class="T-PRESENTATION_INPUT-filename TYPO-PRESET-CORE_P" id="uploadText{{ $colorCapitalized }}">Прикрепить файл</span>
+                                    <span class="T-PRESENTATION_INPUT-filename TYPO-PRESET-CORE_P" id="uploadText{{ $colorCapitalized }}">{{ $presentationUploadButtonTitle }}</span>
                                 </div>
                             </div>
                         </label>
@@ -124,7 +175,7 @@
                         </button>
                     </div>
                     <div class="S-CONTENT-presentation_hint" id="LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_{{ $colorUppercase }}">
-                        <div class="S-HINT-wrapper">
+                        <div class="S-HINT-wrapper" id="LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_WRAPPER_{{ $colorUppercase }}">
                             <div class="S-HINT-carcass S-HINT-carcass_{{ $color }}">
                                 <div class="S-HINT-hitbox"></div>
                                 <div class="S-HINT-content">

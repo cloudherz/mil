@@ -37,12 +37,14 @@ $MEDIA_ENDPOINTS-LANDSCAPE: $MEDIA_ENDPOINTS-DESKTOP_MAIN;
 
 // MODE: MOBILE SPACIOUS
 @media screen and (max-aspect-ratio: $MEDIA_ENDPOINTS-DESKTOP_SLIM) and (min-aspect-ratio: $MEDIA_ENDPOINTS-MOBILE_SPACIOUS){
-    @include mobile.MOBILE_MODES(SPACIOUS);
+    //@include mobile.MOBILE_MODES(SPACIOUS);
+    @include desktop.DESKTOP_MODES(MAIN);
 }
 
 // MODE: MOBILE MAIN
 @media screen and (max-aspect-ratio: $MEDIA_ENDPOINTS-MOBILE_SPACIOUS) {
-    @include mobile.MOBILE_MODES(MAIN);
+    //@include mobile.MOBILE_MODES(MAIN);
+    @include desktop.DESKTOP_MODES(SLIM);
 }
 
 // ASPECT RATIO REAL NUMBER LINE VISUALIZATION
