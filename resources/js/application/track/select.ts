@@ -5,6 +5,11 @@ function initApplicationTrackSelect() {
         const selectedValue = select.querySelector('.selected-value');
         const hiddenInput = wrapper.querySelector('.S-TRACK-hidden-input');
 
+        // По умолчанию класс TEST-GRAY уже есть в HTML, но на всякий случай:
+        if (selectedValue) {
+            selectedValue.classList.add('T-TRACK-select');
+        }
+
         // Toggle dropdown on click
         select.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -30,8 +35,16 @@ function initApplicationTrackSelect() {
                 const value = this.dataset.value;
                 const text = this.textContent;
 
-                // Update selected value display
-                selectedValue.textContent = text;
+                // Обновляем отображаемый текст
+                if (value === '-') {
+                    // Если выбрали "Отменить выбор" - показываем "Выберите трек"
+                    selectedValue.textContent = 'Выберите трек';
+                    selectedValue.classList.add('T-TRACK-select');
+                } else {
+                    // Если выбрали реальный трек - показываем его название
+                    selectedValue.textContent = text;
+                    selectedValue.classList.remove('T-TRACK-select');
+                }
 
                 // Update hidden input for form submission
                 if (hiddenInput) {
@@ -66,14 +79,4 @@ function initApplicationTrackSelect() {
     });
 }
 
-
 initApplicationTrackSelect();
-
-
-
-
-
-
-
-
-

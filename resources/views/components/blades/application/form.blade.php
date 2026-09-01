@@ -74,27 +74,15 @@
                             <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass" style="display: {{ $color === 'blue' ? 'grid' : 'none' }}">
                                 <div class="S-CONTENT_TRACKS-individual_track S-CONTENT_TRACKS-track">
                                     <x-blades.application.select_track.string
-                                        number="1"
+                                        type="individual"
                                         color="{{ $color }}"
                                     />
                                 </div>
                             </div>
                             <div class="S-CONTENT_TRACKS-carcass_entity S-CONTENT_TRACKS-carcass" style="display: {{ $color === 'green' ? 'grid' : 'none' }}">
-                                <div class="S-CONTENT_TRACKS-entity_track_1 S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
+                                <div class="S-CONTENT_TRACKS-entity_tracks S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
                                     <x-blades.application.select_track.string
-                                        number="1"
-                                        color="{{ $color }}"
-                                    />
-                                </div>
-                                <div class="S-CONTENT_TRACKS-entity_track_2 S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
-                                    <x-blades.application.select_track.string
-                                        number="2"
-                                        color="{{ $color }}"
-                                    />
-                                </div>
-                                <div class="S-CONTENT_TRACKS-entity_track_3 S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
-                                    <x-blades.application.select_track.string
-                                        number="3"
+                                        type="entity"
                                         color="{{ $color }}"
                                     />
                                 </div>
@@ -117,7 +105,7 @@
                         <label class="T-CONTENT-underline TYPO-PRESET-CORE_P_BOLD" id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $colorUppercase }}">{{ $presentationTitle }}</label>
                         <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
-                    <div class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default">
+                    <div class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default DEV-DISABLE_SELECTION">
                         <label class="S-PRESENTATION_INPUT-wrapper" id="uploadLabel{{ $colorCapitalized }}">
                             <div class="S-PRESENTATION_INPUT-carcass">
                                 <div class="S-PRESENTATION_INPUT-upload S-PRESENTATION_INPUT-upload_{{ $color }}">
@@ -169,7 +157,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="S-CONTENT-submit">
+                    <div class="S-CONTENT-submit DEV-DISABLE_SELECTION">
                         <button class="B-CONTENT-submit B-CONTENT-submit_{{ $color }}">
                             <p class="T-CONTENT-submit_{{ $color }} TYPO-PRESET-CORE_P_BOLD">Подать заявку</p>
                         </button>

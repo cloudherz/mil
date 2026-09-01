@@ -36,7 +36,7 @@
 
     // CHUNK:APPLICATION
     // LOCAL VARIABLES NAME = APPLICATION
-    $LV-D-APPLICATION-CARCASS-MAX_HEIGHT: 88vh;
+    $LV-D-APPLICATION-CARCASS-MAX_HEIGHT: max-content;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP: $GV-D-SIZES-DEFAULT * 1.2;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM: 2vh;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_TOP: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP - $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM;
@@ -47,7 +47,7 @@
     $LV-D-APPLICATION-FORM-INPUT-UPLOAD-ICON_HEIGHT: 2.5vh;
     $LV-D-APPLICATION-FORM-INPUT-CHECKBOX-SCALE: 3vh;
     $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET: $GV-D-SIZES-UNDER_SECTIONS * 1.6;
-    $LV-D-APPLICATION-FORM-LEFT_COLUMN-WIDTH: 14.18vh;
+    $LV-D-APPLICATION-FORM-LEFT_COLUMN-WIDTH: 14.5vh;
     .S-DESKTOP-application {
         // POSITIONING
         position: fixed;
@@ -79,6 +79,8 @@
                 // SCALING
                 width: 100vh;
                 max-height: $LV-D-APPLICATION-CARCASS-MAX_HEIGHT;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
 
                 .S-APPLICATION-window {
                     // STREAMLINING
@@ -351,17 +353,9 @@
                                             grid-column-gap: 0;
                                             grid-row-gap: 0;
 
-                                            .S-CONTENT_TRACKS-entity_track_1 {
+                                            .S-CONTENT_TRACKS-entity_tracks {
                                                 // CSS-GRID CONFIGURATION
                                                 grid-area: 1 / 1 / 2 / 2;
-                                            }
-                                            .S-CONTENT_TRACKS-entity_track_2 {
-                                                // CSS-GRID CONFIGURATION
-                                                grid-area: 2 / 1 / 3 / 2;
-                                            }
-                                            .S-CONTENT_TRACKS-entity_track_3 {
-                                                // CSS-GRID CONFIGURATION
-                                                grid-area: 3 / 1 / 4 / 2;
                                             }
                                         }
                                         .S-CONTENT_TRACKS-carcass {
@@ -398,6 +392,48 @@
                                                         .T-TRACK-asterisk {
                                                             // MARGINS & PADDINGS
                                                             margin-top: -0.15vh;
+                                                        }
+                                                    }
+                                                    .S-TRACK-select_individual {
+                                                        // CSS-GRID SETUP
+                                                        display: grid;
+                                                        grid-template-columns: 1fr;
+                                                        grid-template-rows: 1fr;
+                                                        grid-column-gap: 0;
+                                                        grid-row-gap: 0;
+
+                                                        .S-SELECT-carcass_1 {
+                                                            // CSS-GRID CONFIGURATION
+                                                            grid-area: 1 / 1 / 2 / 2;
+                                                        }
+                                                        .S-SELECT-carcass_2 {
+                                                            // DISPLAY
+                                                            display: none;
+                                                        }
+                                                        .S-SELECT-carcass_3 {
+                                                            // DISPLAY
+                                                            display: none;
+                                                        }
+                                                    }
+                                                    .S-TRACK-select_entity {
+                                                        // CSS-GRID SETUP
+                                                        display: grid;
+                                                        grid-template-columns: repeat(3, 1fr);
+                                                        grid-template-rows: 1fr;
+                                                        grid-column-gap: $LV-D-APPLICATION-FORM-INPUTS_MARGIN / 2;
+                                                        grid-row-gap: 0;
+
+                                                        .S-SELECT-carcass_1 {
+                                                            // CSS-GRID CONFIGURATION
+                                                            grid-area: 1 / 1 / 2 / 2;
+                                                        }
+                                                        .S-SELECT-carcass_2 {
+                                                            // CSS-GRID CONFIGURATION
+                                                            grid-area: 1 / 2 / 2 / 3;
+                                                        }
+                                                        .S-SELECT-carcass_3 {
+                                                            // CSS-GRID CONFIGURATION
+                                                            grid-area: 1 / 3 / 2 / 4;
                                                         }
                                                     }
                                                     .S-TRACK-select {
@@ -449,6 +485,11 @@
                                                                     transform: rotate(90deg);
                                                                     // TRANSITION
                                                                     transition: transform 0.2s;
+                                                                }
+
+                                                                .T-TRACK-select {
+                                                                    // FONT SETTINGS
+                                                                    color: $PALETTE-BLACK_PLACEHOLDER;
                                                                 }
                                                             }
 
@@ -651,6 +692,8 @@
                                                             display: flex;
                                                             // SCALING
                                                             height: $LV-D-APPLICATION-FORM-INPUT-UPLOAD-ICON_HEIGHT;
+                                                            // FILL
+                                                            fill: $PALETTE-BLACK;
                                                         }
                                                     }
 
@@ -989,7 +1032,7 @@
                                                                             // CSS-GRID CONFIGURATION
                                                                             grid-area: 1 / 1 / 2 / 2;
                                                                             // MARGINS & PADDINGS
-                                                                            padding: $GV-D-SIZES-DEFAULT 0;
+                                                                            padding: ($GV-D-SIZES-DEFAULT * 0.9) 0;
 
                                                                             .I-PANEL-icon_blue {
                                                                                 // FILL
@@ -1129,6 +1172,10 @@
                                                 // BORDER
                                                 outline-width: $LV-D-APPLICATION-FORM-INPUTS_OUTLINE_WIDTH;
                                                 outline-style: solid;
+                                            }
+                                            &::placeholder {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-BLACK_PLACEHOLDER;
                                             }
                                         }
                                     }
@@ -1408,9 +1455,80 @@
 
 
 
+    // CHUNK:REASON
+    // LOCAL VARIABLES NAME = REASON
+    .S-REASON-wrapper {
+        // FLEXBOX
+        display: flex;
+        justify-content: center;
+        // MARGINS & PADDINGS
+        margin: $GV-D-SIZES-SECTIONS 0;
+
+        .S-REASON-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: max-content repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: $GV-D-SIZES-INNER_PADDING * 0.6;
+            grid-row-gap: 0;
+            // SCALING
+            width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+
+            .S-REASON-block {
+                // FLEXBOX
+                display: flex;
+                flex-direction: column;
+                // MARGINS & PADDINGS
+                gap: $GV-D-SIZES-SMALL * 1.3;
+            }
+            .S-REASON-question {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+            }
+            .S-REASON-answer {
+                .T-REASON-answer_text {
+                    // FONT SETTINGS
+                    color: $PALETTE-BLACK;
+                }
+            }
+            .S-REASON-answer_1 {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 2 / 2 / 3;
+
+                .T-REASON-answer_heading {
+                    // FONT SETTINGS
+                    color: $PALETTE-LIGHT_GREEN;
+                }
+            }
+            .S-REASON-answer_2 {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 3 / 2 / 4;
+
+                .T-REASON-answer_heading {
+                    // FONT SETTINGS
+                    color: $PALETTE-LIGHT_BLUE;
+                }
+            }
+            .S-REASON-answer_3 {
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 4 / 2 / 5;
+
+                .T-REASON-answer_heading {
+                    // FONT SETTINGS
+                    color: $PALETTE-DEEP_BLUE;
+                }
+            }
+        }
+    }
+
+
+
     // CHUNK:GOALS
     // LOCAL VARIABLES NAME = GOALS
     #goals {
+        // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
     }
     .S-GOALS-wrapper {
@@ -1716,6 +1834,7 @@
     $LV-D-TRACKS-CARDS_GAP: $GV-D-SIZES-DEFAULT;
     $LV-D-TRACKS-CARDS_GAP_CALCULATION: calc((100% - ($LV-D-TRACKS-CARDS_GAP * ($LV-D-TRACKS-MAX_CARDS_IN_A_ROW - 1))) / $LV-D-TRACKS-MAX_CARDS_IN_A_ROW);
     #tracks {
+        // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
     }
     .S-TRACKS-wrapper {
@@ -1859,6 +1978,9 @@
                                             // FLEXBOX
                                             display: flex;
                                             justify-content: center;
+                                            align-items: center;
+                                            // SCALING
+                                            height: 5.5vh;
 
                                             .I-CONTENT-icon_blue {
                                                 // FILL
@@ -1902,7 +2024,14 @@
                                                 display: flex;
                                                 flex-direction: column;
                                                 // MARGINS & PADDINGS
-                                                gap: $GV-D-SIZES-SMALL * 1.6;
+                                                //gap: $GV-D-SIZES-SMALL * 1.6;
+
+                                                .TYPO-PRESET-CORE_H3 {
+                                                    // FONT SETTINGS
+                                                    text-align: center;
+                                                    // MARGINS & PADDINGS
+                                                    margin: ($GV-D-SIZES-SMALL / 1.5) 0 ($GV-D-SIZES-SMALL / 2.6) 0;
+                                                }
                                             }
                                         }
                                     }
@@ -1931,6 +2060,7 @@
     $LV-D-DATES-WIDGET-COLUMN-PADDING_LEFT: $GV-D-SIZES-SMALL;
     $LV-D-DATES-WIDGET-COLUMNS-HALF_GAP: $GV-D-SIZES-SMALL / 3.2;
     #dates {
+        // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
     }
     .S-DATES-wrapper {
@@ -2275,6 +2405,7 @@
     $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH: $LV-D-PRIZES-POINTER_WIDTH * 2.9;
     $LV-D-PRIZES-PLACE_POINTER_ICON_CIRCLE_WIDTH: $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH * 1.27;
     #prizes {
+        // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
     }
     .S-PRIZES-wrapper {
@@ -2642,6 +2773,7 @@
     // CHUNK:CONDITIONS
     // LOCAL VARIABLES NAME = CONDITIONS
     #conditions {
+        // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
     }
     .S-CONDITIONS-wrapper {
@@ -2866,6 +2998,7 @@
     $LV-D-JURY-PORTRAIT_SIZE: 32vh;
     $LV-D-JURY-PORTRAIT_OFFSET: $LV-D-JURY-PORTRAIT_SIZE / 2;
     #jury {
+        // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT + $GV-D-SIZES-SECTIONS);
     }
     .S-JURY-wrapper {
@@ -2999,6 +3132,7 @@
     $LV-D-NEWS-BUTTON_SHADOW_OFFSET: $GV-D-SIZES-UNDER_SECTIONS / 1.4;
     $LV-D-NEWS-BUTTON_ICON_SIZE: 3vh;
     #news {
+        // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT);
     }
     .S-NEWS-wrapper {
@@ -3554,5 +3688,16 @@
                 }
             }
         }
+    }
+
+
+
+    .S-MAIN-bar {
+        // SCALING
+        height: $GV-D-SIZES-UNDER_SECTIONS;
+    }
+    .S-MAIN-blue_bar {
+        // BACKGROUND
+        background-color: $PALETTE-DARK_BLUE;
     }
 }

@@ -214,7 +214,8 @@ br {
     grid-row-gap: 0;
     align-items: center;
     width: 100vh;
-    max-height: 88vh;
+    max-height: max-content;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
     border-radius: 2.8vh;
@@ -318,7 +319,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: 88vh;
+    height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -327,7 +328,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 87.24vh;
+    height: max-content-0.76vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -335,7 +336,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 77.24vh;
+    height: max-content-10vh-0.76vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -349,7 +350,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: repeat(7, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -401,21 +402,15 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_1 {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_tracks {
     grid-area: 1/1/2/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_2 {
-    grid-area: 2/1/3/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_3 {
-    grid-area: 3/1/4/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track {
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -435,6 +430,38 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_3 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.95vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_2 {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_3 {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select {
     grid-area: 1/2/2/3;
@@ -467,6 +494,9 @@ br {
     width: 0.8vh;
     transform: rotate(90deg);
     transition: transform 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-select {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -593,6 +623,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .S-PRESENTATION_INPUT-icons .I-PRESENTATION_INPUT-file {
     display: flex;
     height: 2.5vh;
+    fill: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .T-PRESENTATION_INPUT-filename {
     padding-top: 0.4vh;
@@ -807,7 +838,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.5vh 0;
+    padding: 3.15vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -896,6 +927,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
     outline-width: 0.35vh;
     outline-style: solid;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-HEADER-wrapper {
     display: flex;
@@ -1057,6 +1091,49 @@ br {
   }
   .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair .I-CONTENT-rair {
     width: 15vh;
+  }
+  .S-REASON-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+  }
+  .S-REASON-wrapper .S-REASON-carcass {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 3vh;
+    grid-row-gap: 0;
+    width: 131vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.47vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
+    grid-area: 1/1/2/2;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 {
+    grid-area: 1/2/2/3;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 .T-REASON-answer_heading {
+    color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 {
+    grid-area: 1/3/2/4;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 .T-REASON-answer_heading {
+    color: oklch(79.76% 0.1342 205.19deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 {
+    grid-area: 1/4/2/5;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 .T-REASON-answer_heading {
+    color: oklch(39.3% 0.1501 258.69deg);
   }
   #goals {
     scroll-margin-top: 11.7vh;
@@ -1358,6 +1435,8 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 5.5vh;
   }
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-icon .I-CONTENT-icon_blue {
     fill: oklch(63.85% 0.1954 257.48deg);
@@ -1387,7 +1466,10 @@ br {
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text {
     display: flex;
     flex-direction: column;
-    gap: 3.04vh;
+  }
+  .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text .TYPO-PRESET-CORE_H3 {
+    text-align: center;
+    margin: 1.2666666667vh 0 0.7307692308vh 0;
   }
   #dates {
     scroll-margin-top: 11.7vh;
@@ -2418,6 +2500,12 @@ br {
   .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-links .S-LINKS-carcass .S-LINKS-credit .T-LINKS-credit {
     color: oklch(74.07% 0.1354 256.19deg);
     text-decoration: none;
+  }
+  .S-MAIN-bar {
+    height: 0.76vh;
+  }
+  .S-MAIN-blue_bar {
+    background-color: oklch(63.85% 0.1954 257.48deg);
   }
 }
 @media screen and (max-aspect-ratio: 1.4492753623) and (min-aspect-ratio: 1) {
@@ -2459,7 +2547,8 @@ br {
     grid-row-gap: 0;
     align-items: center;
     width: 100vh;
-    max-height: 88vh;
+    max-height: max-content;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
     border-radius: 2.8vh;
@@ -2563,7 +2652,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: 88vh;
+    height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -2572,7 +2661,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 87.24vh;
+    height: max-content-0.76vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -2580,7 +2669,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 77.24vh;
+    height: max-content-10vh-0.76vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -2594,7 +2683,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: repeat(7, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -2646,21 +2735,15 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_1 {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_tracks {
     grid-area: 1/1/2/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_2 {
-    grid-area: 2/1/3/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_3 {
-    grid-area: 3/1/4/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track {
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -2680,6 +2763,38 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_3 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.95vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_2 {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_3 {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select {
     grid-area: 1/2/2/3;
@@ -2712,6 +2827,9 @@ br {
     width: 0.8vh;
     transform: rotate(90deg);
     transition: transform 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-select {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -2838,6 +2956,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .S-PRESENTATION_INPUT-icons .I-PRESENTATION_INPUT-file {
     display: flex;
     height: 2.5vh;
+    fill: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .T-PRESENTATION_INPUT-filename {
     padding-top: 0.4vh;
@@ -3052,7 +3171,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.5vh 0;
+    padding: 3.15vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -3141,6 +3260,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
     outline-width: 0.35vh;
     outline-style: solid;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-HEADER-wrapper {
     display: flex;
@@ -3302,6 +3424,49 @@ br {
   }
   .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair .I-CONTENT-rair {
     width: 15vh;
+  }
+  .S-REASON-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+  }
+  .S-REASON-wrapper .S-REASON-carcass {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 3vh;
+    grid-row-gap: 0;
+    width: 131vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.47vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
+    grid-area: 1/1/2/2;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 {
+    grid-area: 1/2/2/3;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 .T-REASON-answer_heading {
+    color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 {
+    grid-area: 1/3/2/4;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 .T-REASON-answer_heading {
+    color: oklch(79.76% 0.1342 205.19deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 {
+    grid-area: 1/4/2/5;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 .T-REASON-answer_heading {
+    color: oklch(39.3% 0.1501 258.69deg);
   }
   #goals {
     scroll-margin-top: 11.7vh;
@@ -3603,6 +3768,8 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 5.5vh;
   }
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-icon .I-CONTENT-icon_blue {
     fill: oklch(63.85% 0.1954 257.48deg);
@@ -3632,7 +3799,10 @@ br {
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text {
     display: flex;
     flex-direction: column;
-    gap: 3.04vh;
+  }
+  .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text .TYPO-PRESET-CORE_H3 {
+    text-align: center;
+    margin: 1.2666666667vh 0 0.7307692308vh 0;
   }
   #dates {
     scroll-margin-top: 11.7vh;
@@ -4663,6 +4833,12 @@ br {
   .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-links .S-LINKS-carcass .S-LINKS-credit .T-LINKS-credit {
     color: oklch(74.07% 0.1354 256.19deg);
     text-decoration: none;
+  }
+  .S-MAIN-bar {
+    height: 0.76vh;
+  }
+  .S-MAIN-blue_bar {
+    background-color: oklch(63.85% 0.1954 257.48deg);
   }
 }
 @media screen and (min-aspect-ratio: 1.4492753623) and (hover: none) and (pointer: coarse) {
@@ -4726,7 +4902,8 @@ br {
     grid-row-gap: 0;
     align-items: center;
     width: 100vh;
-    max-height: 88vh;
+    max-height: max-content;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
     border-radius: 2.8vh;
@@ -4830,7 +5007,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: 88vh;
+    height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -4839,7 +5016,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 87.24vh;
+    height: max-content-0.76vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -4847,7 +5024,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 77.24vh;
+    height: max-content-10vh-0.76vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -4861,7 +5038,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: repeat(7, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -4913,21 +5090,15 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_1 {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_tracks {
     grid-area: 1/1/2/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_2 {
-    grid-area: 2/1/3/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_3 {
-    grid-area: 3/1/4/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track {
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -4947,6 +5118,38 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_3 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.95vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_2 {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_3 {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select {
     grid-area: 1/2/2/3;
@@ -4979,6 +5182,9 @@ br {
     width: 0.8vh;
     transform: rotate(90deg);
     transition: transform 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-select {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -5105,6 +5311,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .S-PRESENTATION_INPUT-icons .I-PRESENTATION_INPUT-file {
     display: flex;
     height: 2.5vh;
+    fill: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .T-PRESENTATION_INPUT-filename {
     padding-top: 0.4vh;
@@ -5319,7 +5526,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.5vh 0;
+    padding: 3.15vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -5408,6 +5615,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
     outline-width: 0.35vh;
     outline-style: solid;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-HEADER-wrapper {
     display: flex;
@@ -5569,6 +5779,49 @@ br {
   }
   .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair .I-CONTENT-rair {
     width: 15vh;
+  }
+  .S-REASON-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+  }
+  .S-REASON-wrapper .S-REASON-carcass {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 3vh;
+    grid-row-gap: 0;
+    width: 131vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.47vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
+    grid-area: 1/1/2/2;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 {
+    grid-area: 1/2/2/3;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 .T-REASON-answer_heading {
+    color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 {
+    grid-area: 1/3/2/4;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 .T-REASON-answer_heading {
+    color: oklch(79.76% 0.1342 205.19deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 {
+    grid-area: 1/4/2/5;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 .T-REASON-answer_heading {
+    color: oklch(39.3% 0.1501 258.69deg);
   }
   #goals {
     scroll-margin-top: 11.7vh;
@@ -5870,6 +6123,8 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 5.5vh;
   }
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-icon .I-CONTENT-icon_blue {
     fill: oklch(63.85% 0.1954 257.48deg);
@@ -5899,7 +6154,10 @@ br {
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text {
     display: flex;
     flex-direction: column;
-    gap: 3.04vh;
+  }
+  .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text .TYPO-PRESET-CORE_H3 {
+    text-align: center;
+    margin: 1.2666666667vh 0 0.7307692308vh 0;
   }
   #dates {
     scroll-margin-top: 11.7vh;
@@ -6930,6 +7188,12 @@ br {
   .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-links .S-LINKS-carcass .S-LINKS-credit .T-LINKS-credit {
     color: oklch(74.07% 0.1354 256.19deg);
     text-decoration: none;
+  }
+  .S-MAIN-bar {
+    height: 0.76vh;
+  }
+  .S-MAIN-blue_bar {
+    background-color: oklch(63.85% 0.1954 257.48deg);
   }
 }
 @media screen and (max-aspect-ratio: 0.7142857143) {
@@ -6971,7 +7235,8 @@ br {
     grid-row-gap: 0;
     align-items: center;
     width: 100vh;
-    max-height: 88vh;
+    max-height: max-content;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
     border-radius: 2.8vh;
@@ -7075,7 +7340,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: 88vh;
+    height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -7084,7 +7349,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 87.24vh;
+    height: max-content-0.76vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -7092,7 +7357,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 77.24vh;
+    height: max-content-10vh-0.76vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -7106,7 +7371,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: repeat(7, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -7158,21 +7423,15 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_1 {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_tracks {
     grid-area: 1/1/2/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_2 {
-    grid-area: 2/1/3/2;
-  }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_entity .S-CONTENT_TRACKS-entity_track_3 {
-    grid-area: 3/1/4/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track {
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass {
     display: grid;
-    grid-template-columns: 14.18vh 1fr;
+    grid-template-columns: 14.5vh 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
@@ -7192,6 +7451,38 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual .S-SELECT-carcass_3 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.95vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_2 {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_entity .S-SELECT-carcass_3 {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select {
     grid-area: 1/2/2/3;
@@ -7224,6 +7515,9 @@ br {
     width: 0.8vh;
     transform: rotate(90deg);
     transition: transform 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-select {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -7350,6 +7644,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .S-PRESENTATION_INPUT-icons .I-PRESENTATION_INPUT-file {
     display: flex;
     height: 2.5vh;
+    fill: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_input .S-PRESENTATION_INPUT-wrapper .S-PRESENTATION_INPUT-carcass .S-PRESENTATION_INPUT-upload .T-PRESENTATION_INPUT-filename {
     padding-top: 0.4vh;
@@ -7564,7 +7859,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.5vh 0;
+    padding: 3.15vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -7653,6 +7948,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
     outline-width: 0.35vh;
     outline-style: solid;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5);
   }
   .S-HEADER-wrapper {
     display: flex;
@@ -7814,6 +8112,49 @@ br {
   }
   .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair .I-CONTENT-rair {
     width: 15vh;
+  }
+  .S-REASON-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+  }
+  .S-REASON-wrapper .S-REASON-carcass {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 3vh;
+    grid-row-gap: 0;
+    width: 131vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.47vh;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
+    grid-area: 1/1/2/2;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 {
+    grid-area: 1/2/2/3;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_1 .T-REASON-answer_heading {
+    color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 {
+    grid-area: 1/3/2/4;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_2 .T-REASON-answer_heading {
+    color: oklch(79.76% 0.1342 205.19deg);
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 {
+    grid-area: 1/4/2/5;
+  }
+  .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer_3 .T-REASON-answer_heading {
+    color: oklch(39.3% 0.1501 258.69deg);
   }
   #goals {
     scroll-margin-top: 11.7vh;
@@ -8115,6 +8456,8 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 5.5vh;
   }
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-icon .I-CONTENT-icon_blue {
     fill: oklch(63.85% 0.1954 257.48deg);
@@ -8144,7 +8487,10 @@ br {
   .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text {
     display: flex;
     flex-direction: column;
-    gap: 3.04vh;
+  }
+  .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text .TYPO-PRESET-CORE_H3 {
+    text-align: center;
+    margin: 1.2666666667vh 0 0.7307692308vh 0;
   }
   #dates {
     scroll-margin-top: 11.7vh;
@@ -9175,6 +9521,12 @@ br {
   .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-links .S-LINKS-carcass .S-LINKS-credit .T-LINKS-credit {
     color: oklch(74.07% 0.1354 256.19deg);
     text-decoration: none;
+  }
+  .S-MAIN-bar {
+    height: 0.76vh;
+  }
+  .S-MAIN-blue_bar {
+    background-color: oklch(63.85% 0.1954 257.48deg);
   }
 }
 
