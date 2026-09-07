@@ -1,11 +1,19 @@
 function initApplicationHint() {
     document.addEventListener('DOMContentLoaded', () => {
-        const colors = ['BLUE', 'GREEN'];
+        // Определяем соответствие типов и их цветов
+        const typeConfigs = [
+            { type: 'STUDENT', color: 'BLUE' },
+            { type: 'INDIVIDUAL', color: 'BLUE' },
+            { type: 'ENTITY', color: 'GREEN' }
+        ];
 
-        colors.forEach(color => {
-            const anchor = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_${color}`);
-            const content = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_${color}`);
-            const wrapper = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_WRAPPER_${color}`);
+        typeConfigs.forEach(config => {
+            const { type, color } = config;
+
+            // Используем тип для поиска элементов
+            const anchor = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_${type}`);
+            const content = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_${type}`);
+            const wrapper = document.getElementById(`LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_WRAPPER_${type}`);
 
             if (!anchor || !content) return;
 

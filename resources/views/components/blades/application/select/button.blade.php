@@ -11,7 +11,13 @@
                 {!! $buttonIcon !!}
             </div>
             <div class="S-BUTTON-heading">
-                <span class="T-BUTTON-heading T-BUTTON-heading_{{ $color }} TYPO-PRESET-CORE_H3">{!! $title !!}</span>
+                <p class="T-BUTTON-heading T-BUTTON-heading_{{ $color }} TYPO-PRESET-CORE_H3">{!! $title !!}</p>
+            </div>
+            <div class="S-BUTTON-text">
+                <p class="T-BUTTON-text T-BUTTON-text_{{ $color }} TYPO-PRESET-CORE_P">{!! $text !!}</p>
+            </div>
+            <div class="S-BUTTON-price">
+                <p class="T-BUTTON-price T-BUTTON-price_{{ $color }} TYPO-PRESET-CORE_P_BOLD">{!! $price !!}</p>
             </div>
         </div>
     </div>

@@ -1,24 +1,35 @@
 @php
+
+    $windowTitle = match ($type) {
+        'student' => 'Подача заявки (Студент)',
+        'individual' => 'Подача заявки (Физ. лицо)',
+        'entity' => 'Подача заявки (Юр. лицо)',
+        default => 'Ошибка'
+    };
+
+    $presentationTitle = match ($type) {
+        'student','individual'  => 'Презентация (?)',
+        'entity' => 'Презентации (?)',
+        default => 'Ошибка'
+    };
+
+    $presentationUploadButtonTitle = match ($type) {
+        'student','individual'  => 'Прикрепить файл',
+        'entity' => 'Прикрепить файлы',
+        default => 'Ошибка'
+    };
+
+    $color = match ($type) {
+        'student','individual'  => 'blue',
+        'entity' => 'green',
+        default => 'Ошибка'
+    };
+
     $colorCapitalized = ucfirst(strtolower($color));
     $colorUppercase = strtoupper($color);
 
-    $windowTitle = match ($color) {
-        'blue'  => 'Подача заявки (Физ. лицо)',
-        'green' => 'Подача заявки (Юр. лицо)',
-        default => 'Ошибка'
-    };
-
-    $presentationTitle = match ($color) {
-        'blue'  => 'Презентация (?)',
-        'green' => 'Презентации (?)',
-        default => 'Ошибка'
-    };
-
-    $presentationUploadButtonTitle = match ($color) {
-        'blue'  => 'Прикрепить файл',
-        'green' => 'Прикрепить файлы',
-        default => 'Ошибка'
-    };
+    $typeCapitalized = ucfirst(strtolower($type));
+    $typeUppercase = strtoupper($type);
 
 @endphp
 
@@ -30,18 +41,73 @@
         <form class="S-FORM-content">
             <div class="S-CONTENT-wrapper">
                 <div class="S-CONTENT-carcass">
-                    <div class="S-CONTENT-name_title S-CONTENT-title">
-                        <label class="TYPO-PRESET-CORE_P_BOLD">ФИО</label>
-                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
+                    <div class="S-CONTENT-name_solo S-CONTENT-name" style="display: {{ $type === 'entity' ? 'none' : 'unset' }}">
+                        <div class="S-NAME_SOLO-wrapper">
+                            <div class="S-NAME_SOLO-carcass">
+                                <div class="S-NAME_SOLO-name_title S-CONTENT-title">
+                                    <label class="TYPO-PRESET-CORE_P_BOLD">ФИО</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                        *</p>
+                                </div>
+                                <div class="S-NAME_SOLO-name_input S-CONTENT-input">
+                                    <input
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder='Меня зовут ...'
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="S-CONTENT-name_input S-CONTENT-input">
-                        <input
-                            class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Меня зовут ..."
-                        >
+                    <div class="S-CONTENT-name_entity S-CONTENT-name" style="display: {{ $type === 'entity' ? 'unset' : 'none' }}">
+                        <div class="S-NAME_ENTITY-wrapper">
+                            <div class="S-NAME_ENTITY-carcass">
+                                <div class="S-NAME_ENTITY-name_title S-CONTENT-title">
+                                    <label class="TYPO-PRESET-CORE_P_BOLD">Название орг.</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                        *</p>
+                                </div>
+                                <div class="S-NAME_ENTITY-name_input S-CONTENT-input">
+                                    <input
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder='"ООО" ...'
+                                    >
+                                </div>
+                                <div class="S-NAME_ENTITY-tin_title S-CONTENT-title">
+                                    <label class="TYPO-PRESET-CORE_P_BOLD">ИНН</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                        *</p>
+                                </div>
+                                <div class="S-NAME_ENTITY-tin_input S-CONTENT-input">
+                                    <input
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder="1234 ..."
+                                    >
+                                </div>
+                                <div class="S-NAME_ENTITY-representative_title S-CONTENT-title">
+                                    <label class="TYPO-PRESET-CORE_P_BOLD">Представитель</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                        *</p>
+                                </div>
+                                <div class="S-NAME_ENTITY-representative_input S-CONTENT-input">
+                                    <input
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder="Иванов Иван ..."
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="S-CONTENT-email_title S-CONTENT-title">
                         <label class="TYPO-PRESET-CORE_P_BOLD">Почта</label>
@@ -53,7 +119,7 @@
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="Свяжитесь со мной по адресу ..."
+                            placeholder="Свяжитесь {{ $type === 'entity' ? 'с нами' : 'со мной' }} по адресу ..."
                         >
                     </div>
                     <div class="S-CONTENT-phone_title S-CONTENT-title">
@@ -71,7 +137,8 @@
                     </div>
                     <div class="S-CONTENT-tracks">
                         <div class="S-CONTENT_TRACKS-wrapper">
-                            <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass" style="display: {{ $color === 'blue' ? 'grid' : 'none' }}">
+                            <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass"
+                                 style="display: {{ $color === 'blue' ? 'grid' : 'none' }}">
                                 <div class="S-CONTENT_TRACKS-individual_track S-CONTENT_TRACKS-track">
                                     <x-blades.application.select_track.string
                                         type="individual"
@@ -80,7 +147,8 @@
                                 </div>
                             </div>
                             <div class="S-CONTENT_TRACKS-carcass_entity S-CONTENT_TRACKS-carcass" style="display: {{ $color === 'green' ? 'grid' : 'none' }}">
-                                <div class="S-CONTENT_TRACKS-entity_tracks S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
+                                <div
+                                    class="S-CONTENT_TRACKS-entity_tracks S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
                                     <x-blades.application.select_track.string
                                         type="entity"
                                         color="{{ $color }}"
@@ -98,18 +166,20 @@
                             class="IN-CONTENT-text IN-CONTENT-text_{{ $color }} TYPO-PRESET-CORE_P"
                             id="description"
                             name="description"
-                            placeholder="Мой проект это ..."
+                            placeholder="{{ $type === 'entity' ? 'Наш' : 'Мой' }} проект это ..."
                         ></textarea>
                     </div>
                     <div class="S-CONTENT-presentation_title S-CONTENT-title">
-                        <label class="T-CONTENT-underline TYPO-PRESET-CORE_P_BOLD" id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $colorUppercase }}">{{ $presentationTitle }}</label>
+                        <label class="T-CONTENT-underline TYPO-PRESET-CORE_P_BOLD"
+                               id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $typeUppercase }}">{{ $presentationTitle }}</label>
                         <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
-                    <div class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default DEV-DISABLE_SELECTION">
+                    <div
+                        class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default DEV-DISABLE_SELECTION">
                         <label class="S-PRESENTATION_INPUT-wrapper" id="uploadLabel{{ $colorCapitalized }}">
                             <div class="S-PRESENTATION_INPUT-carcass">
                                 <div class="S-PRESENTATION_INPUT-upload S-PRESENTATION_INPUT-upload_{{ $color }}">
-                                    <input type="file" id="uploadInput{{ $colorCapitalized }}" hidden />
+                                    <input type="file" id="uploadInput{{ $colorCapitalized }}" hidden/>
                                     <div class="S-PRESENTATION_INPUT-icons">
                                         <x-svg.icons.upload
                                             class="I-PRESENTATION_INPUT-file_before_{{ $color }} I-PRESENTATION_INPUT-file"
@@ -118,12 +188,14 @@
                                             class="I-PRESENTATION_INPUT-file_after_{{ $color }} I-PRESENTATION_INPUT-file"
                                         />
                                     </div>
-                                    <span class="T-PRESENTATION_INPUT-filename TYPO-PRESET-CORE_P" id="uploadText{{ $colorCapitalized }}">{{ $presentationUploadButtonTitle }}</span>
+                                    <span class="T-PRESENTATION_INPUT-filename TYPO-PRESET-CORE_P"
+                                          id="uploadText{{ $colorCapitalized }}">{{ $presentationUploadButtonTitle }}</span>
                                 </div>
                             </div>
                         </label>
                         <div class="S-PRESENTATION_INPUT-delete S-PRESENTATION_INPUT-delete_{{ $color }}_default">
-                            <button class="B-PRESENTATION_INPUT-delete" id="uploadDelete{{ $colorCapitalized }}" type="button">
+                            <button class="B-PRESENTATION_INPUT-delete" id="uploadDelete{{ $colorCapitalized }}"
+                                    type="button">
                                 <x-svg.icons.trash
                                     class="I-PRESENTATION_INPUT-delete"
                                 />
@@ -151,7 +223,8 @@
                                     </div>
                                 </div>
                                 <div class="S-CONFIRMATION-text">
-                                    <p class="T-CONFIRMATION-text TYPO-PRESET-CORE_P">Я даю согласие на обработку своих персональных данных (имя, отчество, фамилия, почта)<br>
+                                    <p class="T-CONFIRMATION-text TYPO-PRESET-CORE_P">Я даю согласие на обработку своих
+                                        персональных данных (имя, отчество, фамилия, почта)<br>
                                         в соответствии с требованиями Федерального закона №152-ФЗ от 27.07.2006.</p>
                                 </div>
                             </div>
@@ -162,8 +235,10 @@
                             <p class="T-CONTENT-submit_{{ $color }} TYPO-PRESET-CORE_P_BOLD">Подать заявку</p>
                         </button>
                     </div>
-                    <div class="S-CONTENT-presentation_hint" id="LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_{{ $colorUppercase }}">
-                        <div class="S-HINT-wrapper" id="LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_WRAPPER_{{ $colorUppercase }}">
+                    <div class="S-CONTENT-presentation_hint"
+                         id="LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_{{ $typeUppercase }}">
+                        <div class="S-HINT-wrapper"
+                             id="LANDING-APPLICATION-PRESENTATION_HINT_CONTENT_WRAPPER_{{ $typeUppercase }}">
                             <div class="S-HINT-carcass S-HINT-carcass_{{ $color }}">
                                 <div class="S-HINT-hitbox"></div>
                                 <div class="S-HINT-content">

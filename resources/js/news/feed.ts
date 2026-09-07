@@ -209,9 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-
-    // Log to confirm script loaded
-    console.log('News carousel initialized!');
 });
 
 }

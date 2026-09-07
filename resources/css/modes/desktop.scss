@@ -34,9 +34,84 @@
 
 
 
+    // CHUNK:MESSAGE
+    // LOCAL VARIABLES NAME = MESSAGE
+    .S-DESKTOP-message {
+        // POSITIONING
+        position: fixed;
+        // SCALING
+        width: 100vw;
+        height: 100vh;
+        // EVENTS
+        pointer-events: none;
+        // LAYERING
+        z-index: 300;
+
+        .S-MESSAGE-wrapper {
+            // FLEXBOX
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            // SCALING
+            width: 100vw;
+            height: 100vh;
+
+            .S-MESSAGE-carcass {
+                // CSS-GRID SETUP
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                grid-template-rows: 1fr;
+                grid-column-gap: $GV-D-SIZES-SMALL;
+                grid-row-gap: 0;
+                align-items: center;
+                // BACKGROUND
+                background-color: $PALETTE-WHITE_GREEN;
+                // BORDER
+                outline: $PALETTE-DARK_GREEN solid 0.5vh;
+                // STREAMLINING
+                border-radius: $GV-D-ROUNDING-SECTIONS;
+                // MARGINS & PADDINGS
+                padding: ($GV-D-SIZES-DEFAULT * 0.9) ($GV-D-SIZES-DEFAULT * 1.1);
+                margin-bottom: 0;
+                // OPACITY
+                opacity: 0;
+                // TRANSITION
+                transition:
+                    opacity 0.2s,
+                    margin-bottom 0.2s;
+
+                .S-MESSAGE-icon {
+                    // CSS-GRID CONFIGURATION
+                    grid-area: 1 / 1 / 2 / 2;
+
+                    .I-MESSAGE-icon {
+                        // FLEXBOX
+                        display: flex;
+                        // SCALING
+                        height: 2.55vh;
+                        // FILL
+                        fill: $PALETTE-DARK_GREEN;
+                    }
+                }
+                .S-MESSAGE-text {
+                    // CSS-GRID CONFIGURATION
+                    grid-area: 1 / 2 / 2 / 3;
+
+                    .T-MESSAGE-text {
+                        // FONT SETTINGS
+                        color: $PALETTE-DARK_GREEN;
+                        text-box: trim-both cap alphabetic;
+                    }
+                }
+            }
+        }
+    }
+
+
+
     // CHUNK:APPLICATION
     // LOCAL VARIABLES NAME = APPLICATION
-    $LV-D-APPLICATION-CARCASS-MAX_HEIGHT: max-content;
+    $LV-D-APPLICATION-CARCASS-MAX_HEIGHT: 75vh;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP: $GV-D-SIZES-DEFAULT * 1.2;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM: 2vh;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_TOP: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP - $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM;
@@ -77,7 +152,6 @@
                 grid-row-gap: 0;
                 align-items: center;
                 // SCALING
-                width: 100vh;
                 max-height: $LV-D-APPLICATION-CARCASS-MAX_HEIGHT;
                 // FONT SETTINGS
                 color: $PALETTE-BLACK;
@@ -106,6 +180,7 @@
                     // CSS-GRID CONFIGURATION
                     grid-area: 1 / 1 / 2 / 2;
                     // SCALING
+                    width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
                     height: max-content;
 
                     .S-SELECT-wrapper_blue {
@@ -139,18 +214,23 @@
                                 .S-BUTTONS-carcass {
                                     // CSS-GRID SETUP
                                     display: grid;
-                                    grid-template-columns: repeat(2, 1fr);
+                                    grid-template-columns: repeat(3, 1fr);
                                     grid-template-rows: 1fr;
                                     grid-column-gap: $GV-D-SIZES-DEFAULT;
                                     grid-row-gap: 0;
+                                    align-items: stretch;
 
-                                    .S-BUTTONS-left {
+                                    .S-BUTTONS-student {
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 1 / 1 / 2 / 2;
                                     }
-                                    .S-BUTTONS-right {
+                                    .S-BUTTONS-individual {
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 1 / 2 / 2 / 3;
+                                    }
+                                    .S-BUTTONS-entity {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 1 / 3 / 2 / 4;
                                     }
                                     .S-BUTTONS-all {
                                         .B-BUTTONS-button_blue {
@@ -176,14 +256,17 @@
                                             }
                                         }
                                         .B-BUTTONS-button {
+                                            // FLEXBOX
+                                            display: flex;
                                             // SCALING
                                             width: 100%;
+                                            height: 100%;
                                             // BORDER
                                             border: none;
                                             // STREAMLINING
                                             border-radius: $GV-D-ROUNDING-ELEMENTS;
                                             // MARGINS & PADDINGS
-                                            padding: ($GV-D-SIZES-DEFAULT * 0.9) 0;
+                                            padding: ($GV-D-SIZES-DEFAULT * 0.9) ($GV-D-SIZES-DEFAULT * 0.9);
                                             // CURSOR
                                             cursor: pointer;
                                             // TRANSITION
@@ -192,10 +275,14 @@
                                                 box-shadow 0.2s;
 
                                             .S-BUTTON-carcass {
+                                                // SCALING
+                                                height: 100%;
+                                            }
+                                            .S-BUTTON-carcass {
                                                 // CSS-GRID SETUP
                                                 display: grid;
                                                 grid-template-columns: 1fr;
-                                                grid-template-rows: 7.5vh max-content;
+                                                grid-template-rows: 7.5vh max-content auto max-content;
                                                 grid-column-gap: 0;
                                                 grid-row-gap: $GV-D-FONT_SIZES-SMALL;
 
@@ -229,6 +316,86 @@
                                                         color: $PALETTE-DARK_GREEN;
                                                     }
                                                 }
+                                                .S-BUTTON-text {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    align-items: flex-start;
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 3 / 1 / 4 / 2;
+                                                    // MARGINS & PADDINGS
+                                                    padding-top: ($GV-D-SIZES-SMALL * 0.5);
+
+                                                    .T-BUTTON-text_blue {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .T-BUTTON-text_green {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_GREEN;
+                                                    }
+                                                    .T-BUTTON-text {
+                                                        // FONT SETTINGS
+                                                        text-align: left;
+                                                    }
+                                                }
+                                                .S-BUTTON-price {
+                                                    // CSS-GRID CONFIGURATION
+                                                    grid-area: 4 / 1 / 5 / 2;
+                                                    // MARGINS & PADDINGS
+                                                    padding-top: ($GV-D-SIZES-SMALL * 0.4);
+
+                                                    .T-BUTTON-price_blue {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .T-BUTTON-price_green {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-DARK_GREEN;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .S-SELECT-description {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 3 / 1 / 4 / 2;
+
+                                .S-DESCRIPTION-wrapper {
+                                    // FLEXBOX
+                                    display: flex;
+                                    justify-content: center;
+
+                                    .S-DESCRIPTION-carcass {
+                                        // CSS-GRID SETUP
+                                        display: grid;
+                                        grid-template-columns: max-content 1fr;
+                                        grid-template-rows: 1fr;
+                                        grid-column-gap: $GV-D-SIZES-SMALL * 1;
+                                        grid-row-gap: 0;
+                                        align-items: center;
+                                        // SCALING
+                                        width: max-content;
+
+                                        .S-DESCRIPTION-icon {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 1 / 2 / 2;
+
+                                            .I-DESCRIPTION-icon {
+                                                // SCALING
+                                                height: 2.56vh;
+                                                // FILL
+                                                fill: $PALETTE-BLACK_HOVER;
+                                            }
+                                        }
+                                        .S-DESCRIPTION-text {
+                                            // CSS-GRID CONFIGURATION
+                                            grid-area: 1 / 2 / 2 / 3;
+
+                                            .T-DESCRIPTION-text {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-BLACK_HOVER;
                                             }
                                         }
                                     }
@@ -241,6 +408,7 @@
                     // CSS-GRID CONFIGURATION
                     grid-area: 1 / 1 / 2 / 2;
                     // SCALING
+                    width: 100vh;
                     height: $LV-D-APPLICATION-CARCASS-MAX_HEIGHT;
 
                     .S-FORM-wrapper_blue {
@@ -292,17 +460,76 @@
                                     margin-top: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM;
                                     margin-bottom: $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET;
 
-                                    .S-CONTENT-name_title {
+                                    .S-CONTENT-name {
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 1 / 1 / 2 / 2;
-                                        // MARGINS & PADDINGS
-                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
-                                    }
-                                    .S-CONTENT-name_input {
-                                        // CSS-GRID CONFIGURATION
-                                        grid-area: 1 / 2 / 2 / 3;
-                                        // MARGINS & PADDINGS
-                                        margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                        grid-area: 1 / 1 / 2 / 3;
+
+                                        .S-NAME_SOLO-carcass {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: $LV-D-APPLICATION-FORM-LEFT_COLUMN-WIDTH 1fr;
+                                            grid-template-rows: max-content;
+                                            grid-column-gap: $GV-D-SIZES-DEFAULT;
+                                            grid-row-gap: 0;
+
+                                            .S-NAME_SOLO-name_title {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                            .S-NAME_SOLO-name_input {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 2 / 2 / 3;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                        }
+                                        .S-NAME_ENTITY-carcass {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: $LV-D-APPLICATION-FORM-LEFT_COLUMN-WIDTH 1fr;
+                                            grid-template-rows: repeat(3, max-content);
+                                            grid-column-gap: $GV-D-SIZES-DEFAULT;
+                                            grid-row-gap: 0;
+
+                                            .S-NAME_ENTITY-name_title {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                            .S-NAME_ENTITY-name_input {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 2 / 2 / 3;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                            .S-NAME_ENTITY-tin_title {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 2 / 1 / 3 / 2;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                            .S-NAME_ENTITY-tin_input {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 2 / 2 / 3 / 3;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                            .S-NAME_ENTITY-representative_title {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 3 / 1 / 4 / 2;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                            .S-NAME_ENTITY-representative_input {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 3 / 2 / 4 / 3;
+                                                // MARGINS & PADDINGS
+                                                margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                        }
                                     }
                                     .S-CONTENT-email_title {
                                         // CSS-GRID CONFIGURATION
@@ -1032,7 +1259,7 @@
                                                                             // CSS-GRID CONFIGURATION
                                                                             grid-area: 1 / 1 / 2 / 2;
                                                                             // MARGINS & PADDINGS
-                                                                            padding: ($GV-D-SIZES-DEFAULT * 0.9) 0;
+                                                                            padding: ($GV-D-SIZES-DEFAULT * 0.95) 0;
 
                                                                             .I-PANEL-icon_blue {
                                                                                 // FILL
@@ -1674,7 +1901,7 @@
                                         grid-column-gap: $GV-D-SIZES-SMALL;
                                         grid-row-gap: $GV-D-SIZES-SMALL * 1.2;
                                         // MARGINS & PADDINGS
-                                        padding: $GV-D-SIZES-INNER_PADDING;
+                                        padding: ($GV-D-SIZES-INNER_PADDING * 0.9) $GV-D-SIZES-INNER_PADDING;
 
                                         .S-CONTENT-title {
                                             // CSS-GRID CONFIGURATION
@@ -1689,6 +1916,9 @@
                                                 grid-row-gap: 0;
 
                                                 .S-TITLE-icon {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    align-items: center;
                                                     // CSS-GRID CONFIGURATION
                                                     grid-area: 1 / 1 / 2 / 2;
 
@@ -1702,12 +1932,20 @@
                                                     }
                                                     .I-TITLE-icon {
                                                         // SCALING
-                                                        height: 8vh;
+                                                        height: 7vh;
                                                     }
                                                 }
                                                 .S-TITLE-heading {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    align-items: center;
                                                     // CSS-GRID CONFIGURATION
                                                     grid-area: 1 / 2 / 2 / 3;
+
+                                                    .T-TITLE-heading {
+                                                        // FONT SETTINGS
+                                                        text-box: trim-both cap alphabetic;
+                                                    }
                                                 }
                                             }
                                         }
@@ -2396,6 +2634,158 @@
 
 
 
+    // CHUNK:PARTNERSHIP
+    // LOCAL VARIABLES NAME = PARTNERSHIP
+    .S-PARTNERSHIP-carcass {
+        // CSS-GRID SETUP
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+
+        .S-PARTNERSHIP-background {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // POSITIONING
+            position: relative;
+            // OVERFLOW
+            overflow: clip;
+            // LAYERING
+            z-index: 101;
+
+            .S-BACKGROUND-carcass {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // BACKGROUND
+                background-color: $PALETTE-LIGHT_GREEN;
+                // OVERFLOW
+                overflow: clip;
+                // POSITIONING
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                .I-BACKGROUND-shape {
+                    // TRANSFORM
+                    transform-origin: top;
+                    //transform: scale(500%) translateX(0%) translateY(59%) rotate(180deg);
+                    // 0% * 5 = 0%
+                    // 59% * 5 = 295%
+                    scale: 6;
+                    translate: -109% 226%;
+                    rotate: 240.5deg;
+                }
+            }
+        }
+        .S-PARTNERSHIP-content {
+            // CSS-GRID CONFIGURATION
+            grid-area: 1 / 1 / 2 / 2;
+            // LAYERING
+            z-index: 102;
+
+            .S-CONTENT-wrapper {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+
+                .S-CONTENT-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr max-content;
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: $GV-D-SIZES-DEFAULT * 2;
+                    grid-row-gap: $GV-D-SIZES-SMALL * 2;
+                    align-items: center;
+                    // SCALING
+                    width: $GV-D-CORE-CONTENT_WIDTH;
+                    // MARGINS & PADDINGS
+                    margin: ($GV-D-SIZES-SECTIONS * 1.3) 0 ($GV-D-SIZES-SECTIONS * 1.5) 0;
+                    // FONT SETTINGS
+                    color: $PALETTE-SNOW;
+
+                    .S-CONTENT-title {
+                        grid-area: 1 / 1 / 2 / 2;
+                    }
+                    .S-CONTENT-text {
+                        grid-area: 2 / 1 / 3 / 2;
+                    }
+                    .S-CONTENT-button {
+                        grid-area: 1 / 2 / 3 / 3;
+
+                        .B-CONTENT-button {
+                            // FLEXBOX
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            // BORDER
+                            border: none;
+                            // BACKGROUND
+                            background-color: $PALETTE-SNOW;
+                            // SCALING
+                            width: 46.5vh;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-ELEMENTS;
+                            // MARGINS & PADDINGS
+                            padding: ($GV-D-SIZES-DEFAULT * 0.9) ($GV-D-SIZES-DEFAULT * 1.3);
+                            // CURSOR
+                            cursor: pointer;
+                            // SHADOW
+                            box-shadow: $GV-D-SIZES-UNDER_SECTIONS $GV-D-SIZES-UNDER_SECTIONS $PALETTE-DARK_BLUE;
+                            // TRANSITION
+                            transition:
+                                background-color 0.2s,
+                                box-shadow 0.2s;
+
+                            &:hover {
+                                // BACKGROUND
+                                background-color: $PALETTE-WHITE_BLUE;
+                                // SHADOW
+                                box-shadow: ($GV-D-SIZES-UNDER_SECTIONS * 1.8) ($GV-D-SIZES-UNDER_SECTIONS * 1.8) $PALETTE-DARK_BLUE;
+
+                                .I-BUTTON-icon {
+                                    // FILL
+                                    fill: $PALETTE-DARK_BLUE_PALE;
+                                }
+
+                                .T-BUTTON-heading {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_BLUE_PALE;
+                                }
+                            }
+
+                            .I-BUTTON-icon {
+                                // SCALING
+                                height: 3.3vh;
+                                // FILL
+                                fill: $PALETTE-DARK_BLUE;
+                                // TRANSITION
+                                transition: fill 0.2s;
+                            }
+
+                            .T-BUTTON-heading {
+                                // MARGINS & PADDINGS
+                                margin-top: -0.1vh;
+                                // FONT SETTINGS
+                                text-box: trim-both cap alphabetic;
+                                // FONT SETTINGS
+                                color: $PALETTE-DARK_BLUE;
+                                // TRANSITION
+                                transition: color 0.2s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
     // CHUNK:PRIZES
     // LOCAL VARIABLES NAME = PRIZES
     $LV-D-PRIZES-POINTER_WIDTH: 1.3vh;
@@ -3037,7 +3427,7 @@
                 .S-CARDS-carcass {
                     // CSS-GRID SETUP
                     display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: repeat(2, max-content);
                     grid-column-gap: $GV-D-SIZES-DEFAULT;
                     grid-row-gap: ($GV-D-SIZES-DEFAULT * 1.5) + $LV-D-JURY-PORTRAIT_OFFSET;
@@ -3100,7 +3490,8 @@
                                 }
                                 .S-CARD-name {
                                     // MARGINS & PADDINGS
-                                    margin-bottom: $GV-D-ROUNDING-SMALL * 1.4;
+                                    margin-bottom: $GV-D-ROUNDING-SMALL * 1.5;
+                                    padding: 0 $GV-D-SIZES-INNER_PADDING;
 
                                     .T-CARD-name_blue {
                                         // FONT SETTINGS
@@ -3113,7 +3504,8 @@
                                 }
                                 .S-CARD-title {
                                     // MARGINS & PADDINGS
-                                    margin-bottom: $GV-D-ROUNDING-SMALL * 2;
+                                    margin-bottom: $GV-D-ROUNDING-SMALL * 2.1;
+                                    padding: 0 ($GV-D-SIZES-DEFAULT);
                                 }
                             }
                         }

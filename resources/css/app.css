@@ -192,6 +192,50 @@ br {
     right: 0;
     z-index: 200;
   }
+  .S-DESKTOP-message {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 300;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    background-color: oklch(97.54% 0.036 160.67deg);
+    outline: oklch(60.51% 0.1384 159.32deg) solid 0.5vh;
+    border-radius: 2.8vh;
+    padding: 3.15vh 3.85vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: opacity 0.2s, margin-bottom 0.2s;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+    display: flex;
+    height: 2.55vh;
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-box: trim-both cap alphabetic;
+  }
   .S-DESKTOP-application {
     position: fixed;
     width: 100vw;
@@ -213,8 +257,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    width: 100vh;
-    max-height: max-content;
+    max-height: 75vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -231,6 +274,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select {
     grid-area: 1/1/2/2;
+    width: 131vh;
     height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper_blue {
@@ -256,16 +300,20 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
+    align-items: stretch;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-left {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-student {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-right {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-individual {
     grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-entity {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button_blue {
     background-color: oklch(95.77% 0.0199 267.29deg);
@@ -282,17 +330,22 @@ br {
     box-shadow: 0.76vh 0.76vh oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button {
+    display: flex;
     width: 100%;
+    height: 100%;
     border: none;
     border-radius: 1.8vh;
-    padding: 3.15vh 0;
+    padding: 3.15vh 3.15vh;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
+    height: 100%;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 7.5vh max-content;
+    grid-template-rows: 7.5vh max-content auto max-content;
     grid-column-gap: 0;
     grid-row-gap: 1.485vh;
   }
@@ -317,9 +370,64 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-heading .T-BUTTON-heading_green {
     color: oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text {
+    display: flex;
+    align-items: flex-start;
+    grid-area: 3/1/4/2;
+    padding-top: 0.95vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text {
+    text-align: left;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price {
+    grid-area: 4/1/5/2;
+    padding-top: 0.76vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description {
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    width: max-content;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon .I-DESCRIPTION-icon {
+    height: 2.56vh;
+    fill: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text .T-DESCRIPTION-text {
+    color: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: max-content;
+    width: 100vh;
+    height: 75vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -328,7 +436,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: max-content-0.76vh;
+    height: 74.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -336,7 +444,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: max-content-10vh-0.76vh;
+    height: 64.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -358,12 +466,53 @@ br {
     margin-top: 2vh;
     margin-bottom: 1.216vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_title {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name {
+    grid-area: 1/1/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: max-content;
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_title {
     grid-area: 1/1/2/2;
     margin-bottom: 1.9vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_input {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input {
     grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_title {
+    grid-area: 1/1/2/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input {
+    grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
+    grid-area: 2/1/3/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
+    grid-area: 2/2/3/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
+    grid-area: 3/1/4/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input {
+    grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
@@ -838,7 +987,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.15vh 0;
+    padding: 3.325vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -1240,7 +1389,7 @@ br {
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 1.9vh;
     grid-row-gap: 2.28vh;
-    padding: 5vh;
+    padding: 4.5vh 5vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title {
     grid-area: 1/1/2/3;
@@ -1253,6 +1402,8 @@ br {
     grid-row-gap: 0;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon_blue {
@@ -1262,10 +1413,15 @@ br {
     fill: oklch(60.51% 0.1384 159.32deg);
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon {
-    height: 8vh;
+    height: 7vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading {
+    display: flex;
+    align-items: center;
     grid-area: 1/2/2/3;
+  }
+  .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading .T-TITLE-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text_1 {
     grid-area: 2/1/3/2;
@@ -1692,6 +1848,99 @@ br {
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
   }
+  .S-PARTNERSHIP-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background {
+    grid-area: 1/1/2/2;
+    position: relative;
+    overflow: clip;
+    z-index: 101;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass {
+    display: flex;
+    justify-content: center;
+    background-color: oklch(83.25% 0.1842 154.43deg);
+    overflow: clip;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
+    transform-origin: top;
+    scale: 6;
+    translate: -109% 226%;
+    rotate: 240.5deg;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content {
+    grid-area: 1/1/2/2;
+    z-index: 102;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, max-content);
+    grid-column-gap: 7vh;
+    grid-row-gap: 3.8vh;
+    align-items: center;
+    width: 120vh;
+    margin: 6.5vh 0 7.5vh 0;
+    color: oklch(100% 0 0deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-title {
+    grid-area: 1/1/2/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text {
+    grid-area: 2/1/3/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button {
+    grid-area: 1/2/3/3;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: oklch(100% 0 0deg);
+    width: 46.5vh;
+    border-radius: 1.8vh;
+    padding: 3.15vh 4.55vh;
+    cursor: pointer;
+    box-shadow: 0.76vh 0.76vh oklch(63.85% 0.1954 257.48deg);
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+    box-shadow: 1.368vh 1.368vh oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .I-BUTTON-icon {
+    fill: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .T-BUTTON-heading {
+    color: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .I-BUTTON-icon {
+    height: 3.3vh;
+    fill: oklch(63.85% 0.1954 257.48deg);
+    transition: fill 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .T-BUTTON-heading {
+    margin-top: -0.1vh;
+    text-box: trim-both cap alphabetic;
+    color: oklch(63.85% 0.1954 257.48deg);
+    transition: color 0.2s;
+  }
   #prizes {
     scroll-margin-top: 11.7vh;
   }
@@ -2104,7 +2353,7 @@ br {
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 21.25vh;
@@ -2149,7 +2398,8 @@ br {
     margin-top: -16vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name {
-    margin-bottom: 1.68vh;
+    margin-bottom: 1.8vh;
+    padding: 0 5vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name .T-CARD-name_blue {
     color: oklch(63.85% 0.1954 257.48deg);
@@ -2158,7 +2408,8 @@ br {
     color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-title {
-    margin-bottom: 2.4vh;
+    margin-bottom: 2.52vh;
+    padding: 0 3.5vh;
   }
   #news {
     scroll-margin-top: 6.7vh;
@@ -2525,6 +2776,50 @@ br {
     right: 0;
     z-index: 200;
   }
+  .S-DESKTOP-message {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 300;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    background-color: oklch(97.54% 0.036 160.67deg);
+    outline: oklch(60.51% 0.1384 159.32deg) solid 0.5vh;
+    border-radius: 2.8vh;
+    padding: 3.15vh 3.85vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: opacity 0.2s, margin-bottom 0.2s;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+    display: flex;
+    height: 2.55vh;
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-box: trim-both cap alphabetic;
+  }
   .S-DESKTOP-application {
     position: fixed;
     width: 100vw;
@@ -2546,8 +2841,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    width: 100vh;
-    max-height: max-content;
+    max-height: 75vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -2564,6 +2858,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select {
     grid-area: 1/1/2/2;
+    width: 131vh;
     height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper_blue {
@@ -2589,16 +2884,20 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
+    align-items: stretch;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-left {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-student {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-right {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-individual {
     grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-entity {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button_blue {
     background-color: oklch(95.77% 0.0199 267.29deg);
@@ -2615,17 +2914,22 @@ br {
     box-shadow: 0.76vh 0.76vh oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button {
+    display: flex;
     width: 100%;
+    height: 100%;
     border: none;
     border-radius: 1.8vh;
-    padding: 3.15vh 0;
+    padding: 3.15vh 3.15vh;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
+    height: 100%;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 7.5vh max-content;
+    grid-template-rows: 7.5vh max-content auto max-content;
     grid-column-gap: 0;
     grid-row-gap: 1.485vh;
   }
@@ -2650,9 +2954,64 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-heading .T-BUTTON-heading_green {
     color: oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text {
+    display: flex;
+    align-items: flex-start;
+    grid-area: 3/1/4/2;
+    padding-top: 0.95vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text {
+    text-align: left;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price {
+    grid-area: 4/1/5/2;
+    padding-top: 0.76vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description {
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    width: max-content;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon .I-DESCRIPTION-icon {
+    height: 2.56vh;
+    fill: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text .T-DESCRIPTION-text {
+    color: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: max-content;
+    width: 100vh;
+    height: 75vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -2661,7 +3020,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: max-content-0.76vh;
+    height: 74.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -2669,7 +3028,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: max-content-10vh-0.76vh;
+    height: 64.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -2691,12 +3050,53 @@ br {
     margin-top: 2vh;
     margin-bottom: 1.216vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_title {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name {
+    grid-area: 1/1/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: max-content;
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_title {
     grid-area: 1/1/2/2;
     margin-bottom: 1.9vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_input {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input {
     grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_title {
+    grid-area: 1/1/2/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input {
+    grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
+    grid-area: 2/1/3/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
+    grid-area: 2/2/3/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
+    grid-area: 3/1/4/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input {
+    grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
@@ -3171,7 +3571,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.15vh 0;
+    padding: 3.325vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -3573,7 +3973,7 @@ br {
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 1.9vh;
     grid-row-gap: 2.28vh;
-    padding: 5vh;
+    padding: 4.5vh 5vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title {
     grid-area: 1/1/2/3;
@@ -3586,6 +3986,8 @@ br {
     grid-row-gap: 0;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon_blue {
@@ -3595,10 +3997,15 @@ br {
     fill: oklch(60.51% 0.1384 159.32deg);
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon {
-    height: 8vh;
+    height: 7vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading {
+    display: flex;
+    align-items: center;
     grid-area: 1/2/2/3;
+  }
+  .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading .T-TITLE-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text_1 {
     grid-area: 2/1/3/2;
@@ -4025,6 +4432,99 @@ br {
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
   }
+  .S-PARTNERSHIP-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background {
+    grid-area: 1/1/2/2;
+    position: relative;
+    overflow: clip;
+    z-index: 101;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass {
+    display: flex;
+    justify-content: center;
+    background-color: oklch(83.25% 0.1842 154.43deg);
+    overflow: clip;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
+    transform-origin: top;
+    scale: 6;
+    translate: -109% 226%;
+    rotate: 240.5deg;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content {
+    grid-area: 1/1/2/2;
+    z-index: 102;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, max-content);
+    grid-column-gap: 7vh;
+    grid-row-gap: 3.8vh;
+    align-items: center;
+    width: 120vh;
+    margin: 6.5vh 0 7.5vh 0;
+    color: oklch(100% 0 0deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-title {
+    grid-area: 1/1/2/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text {
+    grid-area: 2/1/3/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button {
+    grid-area: 1/2/3/3;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: oklch(100% 0 0deg);
+    width: 46.5vh;
+    border-radius: 1.8vh;
+    padding: 3.15vh 4.55vh;
+    cursor: pointer;
+    box-shadow: 0.76vh 0.76vh oklch(63.85% 0.1954 257.48deg);
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+    box-shadow: 1.368vh 1.368vh oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .I-BUTTON-icon {
+    fill: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .T-BUTTON-heading {
+    color: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .I-BUTTON-icon {
+    height: 3.3vh;
+    fill: oklch(63.85% 0.1954 257.48deg);
+    transition: fill 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .T-BUTTON-heading {
+    margin-top: -0.1vh;
+    text-box: trim-both cap alphabetic;
+    color: oklch(63.85% 0.1954 257.48deg);
+    transition: color 0.2s;
+  }
   #prizes {
     scroll-margin-top: 11.7vh;
   }
@@ -4437,7 +4937,7 @@ br {
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 21.25vh;
@@ -4482,7 +4982,8 @@ br {
     margin-top: -16vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name {
-    margin-bottom: 1.68vh;
+    margin-bottom: 1.8vh;
+    padding: 0 5vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name .T-CARD-name_blue {
     color: oklch(63.85% 0.1954 257.48deg);
@@ -4491,7 +4992,8 @@ br {
     color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-title {
-    margin-bottom: 2.4vh;
+    margin-bottom: 2.52vh;
+    padding: 0 3.5vh;
   }
   #news {
     scroll-margin-top: 6.7vh;
@@ -4880,6 +5382,50 @@ br {
     right: 0;
     z-index: 200;
   }
+  .S-DESKTOP-message {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 300;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    background-color: oklch(97.54% 0.036 160.67deg);
+    outline: oklch(60.51% 0.1384 159.32deg) solid 0.5vh;
+    border-radius: 2.8vh;
+    padding: 3.15vh 3.85vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: opacity 0.2s, margin-bottom 0.2s;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+    display: flex;
+    height: 2.55vh;
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-box: trim-both cap alphabetic;
+  }
   .S-DESKTOP-application {
     position: fixed;
     width: 100vw;
@@ -4901,8 +5447,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    width: 100vh;
-    max-height: max-content;
+    max-height: 75vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -4919,6 +5464,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select {
     grid-area: 1/1/2/2;
+    width: 131vh;
     height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper_blue {
@@ -4944,16 +5490,20 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
+    align-items: stretch;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-left {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-student {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-right {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-individual {
     grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-entity {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button_blue {
     background-color: oklch(95.77% 0.0199 267.29deg);
@@ -4970,17 +5520,22 @@ br {
     box-shadow: 0.76vh 0.76vh oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button {
+    display: flex;
     width: 100%;
+    height: 100%;
     border: none;
     border-radius: 1.8vh;
-    padding: 3.15vh 0;
+    padding: 3.15vh 3.15vh;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
+    height: 100%;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 7.5vh max-content;
+    grid-template-rows: 7.5vh max-content auto max-content;
     grid-column-gap: 0;
     grid-row-gap: 1.485vh;
   }
@@ -5005,9 +5560,64 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-heading .T-BUTTON-heading_green {
     color: oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text {
+    display: flex;
+    align-items: flex-start;
+    grid-area: 3/1/4/2;
+    padding-top: 0.95vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text {
+    text-align: left;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price {
+    grid-area: 4/1/5/2;
+    padding-top: 0.76vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description {
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    width: max-content;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon .I-DESCRIPTION-icon {
+    height: 2.56vh;
+    fill: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text .T-DESCRIPTION-text {
+    color: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: max-content;
+    width: 100vh;
+    height: 75vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -5016,7 +5626,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: max-content-0.76vh;
+    height: 74.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -5024,7 +5634,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: max-content-10vh-0.76vh;
+    height: 64.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -5046,12 +5656,53 @@ br {
     margin-top: 2vh;
     margin-bottom: 1.216vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_title {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name {
+    grid-area: 1/1/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: max-content;
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_title {
     grid-area: 1/1/2/2;
     margin-bottom: 1.9vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_input {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input {
     grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_title {
+    grid-area: 1/1/2/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input {
+    grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
+    grid-area: 2/1/3/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
+    grid-area: 2/2/3/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
+    grid-area: 3/1/4/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input {
+    grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
@@ -5526,7 +6177,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.15vh 0;
+    padding: 3.325vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -5928,7 +6579,7 @@ br {
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 1.9vh;
     grid-row-gap: 2.28vh;
-    padding: 5vh;
+    padding: 4.5vh 5vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title {
     grid-area: 1/1/2/3;
@@ -5941,6 +6592,8 @@ br {
     grid-row-gap: 0;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon_blue {
@@ -5950,10 +6603,15 @@ br {
     fill: oklch(60.51% 0.1384 159.32deg);
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon {
-    height: 8vh;
+    height: 7vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading {
+    display: flex;
+    align-items: center;
     grid-area: 1/2/2/3;
+  }
+  .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading .T-TITLE-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text_1 {
     grid-area: 2/1/3/2;
@@ -6380,6 +7038,99 @@ br {
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
   }
+  .S-PARTNERSHIP-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background {
+    grid-area: 1/1/2/2;
+    position: relative;
+    overflow: clip;
+    z-index: 101;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass {
+    display: flex;
+    justify-content: center;
+    background-color: oklch(83.25% 0.1842 154.43deg);
+    overflow: clip;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
+    transform-origin: top;
+    scale: 6;
+    translate: -109% 226%;
+    rotate: 240.5deg;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content {
+    grid-area: 1/1/2/2;
+    z-index: 102;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, max-content);
+    grid-column-gap: 7vh;
+    grid-row-gap: 3.8vh;
+    align-items: center;
+    width: 120vh;
+    margin: 6.5vh 0 7.5vh 0;
+    color: oklch(100% 0 0deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-title {
+    grid-area: 1/1/2/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text {
+    grid-area: 2/1/3/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button {
+    grid-area: 1/2/3/3;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: oklch(100% 0 0deg);
+    width: 46.5vh;
+    border-radius: 1.8vh;
+    padding: 3.15vh 4.55vh;
+    cursor: pointer;
+    box-shadow: 0.76vh 0.76vh oklch(63.85% 0.1954 257.48deg);
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+    box-shadow: 1.368vh 1.368vh oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .I-BUTTON-icon {
+    fill: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .T-BUTTON-heading {
+    color: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .I-BUTTON-icon {
+    height: 3.3vh;
+    fill: oklch(63.85% 0.1954 257.48deg);
+    transition: fill 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .T-BUTTON-heading {
+    margin-top: -0.1vh;
+    text-box: trim-both cap alphabetic;
+    color: oklch(63.85% 0.1954 257.48deg);
+    transition: color 0.2s;
+  }
   #prizes {
     scroll-margin-top: 11.7vh;
   }
@@ -6792,7 +7543,7 @@ br {
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 21.25vh;
@@ -6837,7 +7588,8 @@ br {
     margin-top: -16vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name {
-    margin-bottom: 1.68vh;
+    margin-bottom: 1.8vh;
+    padding: 0 5vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name .T-CARD-name_blue {
     color: oklch(63.85% 0.1954 257.48deg);
@@ -6846,7 +7598,8 @@ br {
     color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-title {
-    margin-bottom: 2.4vh;
+    margin-bottom: 2.52vh;
+    padding: 0 3.5vh;
   }
   #news {
     scroll-margin-top: 6.7vh;
@@ -7213,6 +7966,50 @@ br {
     right: 0;
     z-index: 200;
   }
+  .S-DESKTOP-message {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 300;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    background-color: oklch(97.54% 0.036 160.67deg);
+    outline: oklch(60.51% 0.1384 159.32deg) solid 0.5vh;
+    border-radius: 2.8vh;
+    padding: 3.15vh 3.85vh;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: opacity 0.2s, margin-bottom 0.2s;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+    display: flex;
+    height: 2.55vh;
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-box: trim-both cap alphabetic;
+  }
   .S-DESKTOP-application {
     position: fixed;
     width: 100vw;
@@ -7234,8 +8031,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    width: 100vh;
-    max-height: max-content;
+    max-height: 75vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -7252,6 +8048,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select {
     grid-area: 1/1/2/2;
+    width: 131vh;
     height: max-content;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper_blue {
@@ -7277,16 +8074,20 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 3.5vh;
     grid-row-gap: 0;
+    align-items: stretch;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-left {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-student {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-right {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-individual {
     grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-entity {
+    grid-area: 1/3/2/4;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button_blue {
     background-color: oklch(95.77% 0.0199 267.29deg);
@@ -7303,17 +8104,22 @@ br {
     box-shadow: 0.76vh 0.76vh oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button {
+    display: flex;
     width: 100%;
+    height: 100%;
     border: none;
     border-radius: 1.8vh;
-    padding: 3.15vh 0;
+    padding: 3.15vh 3.15vh;
     cursor: pointer;
     transition: background-color 0.2s, box-shadow 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
+    height: 100%;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 7.5vh max-content;
+    grid-template-rows: 7.5vh max-content auto max-content;
     grid-column-gap: 0;
     grid-row-gap: 1.485vh;
   }
@@ -7338,9 +8144,64 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-heading .T-BUTTON-heading_green {
     color: oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text {
+    display: flex;
+    align-items: flex-start;
+    grid-area: 3/1/4/2;
+    padding-top: 0.95vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-text .T-BUTTON-text {
+    text-align: left;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price {
+    grid-area: 4/1/5/2;
+    padding-top: 0.76vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-buttons .S-BUTTONS-carcass .S-BUTTONS-all .B-BUTTONS-button .S-BUTTON-carcass .S-BUTTON-price .T-BUTTON-price_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description {
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1.9vh;
+    grid-row-gap: 0;
+    align-items: center;
+    width: max-content;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-icon .I-DESCRIPTION-icon {
+    height: 2.56vh;
+    fill: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text {
+    grid-area: 1/2/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text .T-DESCRIPTION-text {
+    color: oklch(32.65% 0.0127 252.99deg / 0.7);
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
-    height: max-content;
+    width: 100vh;
+    height: 75vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -7349,7 +8210,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: max-content-0.76vh;
+    height: 74.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -7357,7 +8218,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: max-content-10vh-0.76vh;
+    height: 64.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -7379,12 +8240,53 @@ br {
     margin-top: 2vh;
     margin-bottom: 1.216vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_title {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name {
+    grid-area: 1/1/2/3;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: max-content;
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_title {
     grid-area: 1/1/2/2;
     margin-bottom: 1.9vh;
   }
-  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name_input {
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input {
     grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
+    display: grid;
+    grid-template-columns: 14.5vh 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 3.5vh;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_title {
+    grid-area: 1/1/2/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input {
+    grid-area: 1/2/2/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
+    grid-area: 2/1/3/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
+    grid-area: 2/2/3/3;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
+    grid-area: 3/1/4/2;
+    margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input {
+    grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
@@ -7859,7 +8761,7 @@ br {
     align-items: center;
     justify-content: center;
     grid-area: 1/1/2/2;
-    padding: 3.15vh 0;
+    padding: 3.325vh 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-icon .I-PANEL-icon_blue {
     fill: oklch(74.07% 0.1354 256.19deg);
@@ -8261,7 +9163,7 @@ br {
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 1.9vh;
     grid-row-gap: 2.28vh;
-    padding: 5vh;
+    padding: 4.5vh 5vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title {
     grid-area: 1/1/2/3;
@@ -8274,6 +9176,8 @@ br {
     grid-row-gap: 0;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon_blue {
@@ -8283,10 +9187,15 @@ br {
     fill: oklch(60.51% 0.1384 159.32deg);
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-icon .I-TITLE-icon {
-    height: 8vh;
+    height: 7vh;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading {
+    display: flex;
+    align-items: center;
     grid-area: 1/2/2/3;
+  }
+  .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-title .S-TITLE-carcass .S-TITLE-heading .T-TITLE-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-GOALS-wrapper .S-GOALS-carcass .S-GOALS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text_1 {
     grid-area: 2/1/3/2;
@@ -8713,6 +9622,99 @@ br {
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
   }
+  .S-PARTNERSHIP-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background {
+    grid-area: 1/1/2/2;
+    position: relative;
+    overflow: clip;
+    z-index: 101;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass {
+    display: flex;
+    justify-content: center;
+    background-color: oklch(83.25% 0.1842 154.43deg);
+    overflow: clip;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-background .S-BACKGROUND-carcass .I-BACKGROUND-shape {
+    transform-origin: top;
+    scale: 6;
+    translate: -109% 226%;
+    rotate: 240.5deg;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content {
+    grid-area: 1/1/2/2;
+    z-index: 102;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(2, max-content);
+    grid-column-gap: 7vh;
+    grid-row-gap: 3.8vh;
+    align-items: center;
+    width: 120vh;
+    margin: 6.5vh 0 7.5vh 0;
+    color: oklch(100% 0 0deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-title {
+    grid-area: 1/1/2/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text {
+    grid-area: 2/1/3/2;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button {
+    grid-area: 1/2/3/3;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: oklch(100% 0 0deg);
+    width: 46.5vh;
+    border-radius: 1.8vh;
+    padding: 3.15vh 4.55vh;
+    cursor: pointer;
+    box-shadow: 0.76vh 0.76vh oklch(63.85% 0.1954 257.48deg);
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+    box-shadow: 1.368vh 1.368vh oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .I-BUTTON-icon {
+    fill: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button:hover .T-BUTTON-heading {
+    color: oklch(74.07% 0.1354 256.19deg);
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .I-BUTTON-icon {
+    height: 3.3vh;
+    fill: oklch(63.85% 0.1954 257.48deg);
+    transition: fill 0.2s;
+  }
+  .S-PARTNERSHIP-carcass .S-PARTNERSHIP-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-button .B-CONTENT-button .T-BUTTON-heading {
+    margin-top: -0.1vh;
+    text-box: trim-both cap alphabetic;
+    color: oklch(63.85% 0.1954 257.48deg);
+    transition: color 0.2s;
+  }
   #prizes {
     scroll-margin-top: 11.7vh;
   }
@@ -9125,7 +10127,7 @@ br {
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 3.5vh;
     grid-row-gap: 21.25vh;
@@ -9170,7 +10172,8 @@ br {
     margin-top: -16vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name {
-    margin-bottom: 1.68vh;
+    margin-bottom: 1.8vh;
+    padding: 0 5vh;
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-name .T-CARD-name_blue {
     color: oklch(63.85% 0.1954 257.48deg);
@@ -9179,7 +10182,8 @@ br {
     color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-JURY-wrapper .S-JURY-carcass .S-JURY-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-title {
-    margin-bottom: 2.4vh;
+    margin-bottom: 2.52vh;
+    padding: 0 3.5vh;
   }
   #news {
     scroll-margin-top: 6.7vh;

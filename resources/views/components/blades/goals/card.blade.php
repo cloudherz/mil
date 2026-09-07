@@ -23,7 +23,7 @@
                                         {!! $titleIcon !!}
                                     </div>
                                     <div class="S-TITLE-heading">
-                                        <h3 class="TYPO-PRESET-CORE_H3">{!! $title !!}</h3>
+                                        <h3 class="T-TITLE-heading TYPO-PRESET-CORE_H3">{!! $title !!}</h3>
                                     </div>
                                 </div>
                             </div>

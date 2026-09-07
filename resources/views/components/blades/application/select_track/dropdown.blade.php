@@ -1,5 +1,5 @@
 <div class="S-TRACK-select S-TRACK-select_{{ $color }}" data-color="{{ $color }}">
-    <span class="selected-value T-TRACK-select">Выберите трек</span>
+    <span class="selected-value T-TRACK-select">{{ $color === 'green' ? 'Номинация ' . $number : 'Выберите номинацию' }}</span>
     <x-svg.icons.pointer
         class="I-TRACK-select"
     />

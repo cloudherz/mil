@@ -8,4 +8,6 @@ import './application/track/select.ts';
 
 import './header/scroll.ts';
 
+import './partnership/copy.ts';
+
 import './news/feed.ts';

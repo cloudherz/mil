@@ -6,6 +6,20 @@
 @section('meta-url', '')
 
 @section('mode-desktop')
+    <div class="S-DESKTOP-message S-DESKTOP-message_email_copied" id="LANDING-MESSAGE-EMAIL_COPIED">
+        <div class="S-MESSAGE-wrapper">
+            <div class="S-MESSAGE-carcass" id="LANDING-MESSAGE-EMAIL_COPIED-CARCASS">
+                <div class="S-MESSAGE-icon">
+                    <x-svg.icons.check
+                        class="I-MESSAGE-icon"
+                    />
+                </div>
+                <div class="S-MESSAGE-text">
+                    <p class="T-MESSAGE-text TYPO-PRESET-CORE_H3">Почта скопирована в буфер обмена</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="S-DESKTOP-application" id="LANDING-APPLICATION-POPUP" style="display: none">
         <div class="S-APPLICATION-wrapper">
             <div class="S-APPLICATION-carcass">
@@ -18,23 +32,52 @@
                             <div class="S-SELECT-buttons">
                                 <div class="S-BUTTONS-wrapper">
                                     <div class="S-BUTTONS-carcass">
-                                        <div class="S-BUTTONS-left S-BUTTONS-all">
+                                        <div class="S-BUTTONS-student S-BUTTONS-all">
+                                            <x-blades.application.select.button
+                                                type="student"
+                                                color="blue"
+                                                icon="student"
+                                                icon_height="7.3vh"
+                                                title="Студент"
+                                                text="Студент / Аспирант. Академические проекты, вышедшие за рамки учебной задачи: прототип, пилот, метрики, публикации, участие в конкурсах."
+                                                price="7 000₽"
+                                            />
+                                        </div>
+                                        <div class="S-BUTTONS-individual S-BUTTONS-all">
                                             <x-blades.application.select.button
                                                 type="individual"
                                                 color="blue"
                                                 icon="person"
-                                                icon_height="7.5vh"
+                                                icon_height="7.3vh"
                                                 title="Физическое лицо"
+                                                text="Физическое лицо / Предприниматель. Индивидуальные проекты, стартапы, независимые разработки с измеримыми результатами (пилот, патент, продажи, публикации)."
+                                                price="14 000₽"
                                             />
                                         </div>
-                                        <div class="S-BUTTONS-right S-BUTTONS-all">
+                                        <div class="S-BUTTONS-entity S-BUTTONS-all">
                                             <x-blades.application.select.button
                                                 type="entity"
                                                 color="green"
                                                 icon="briefcase"
                                                 icon_height="6.5vh"
                                                 title="Юридическое лицо"
+                                                text="Юридическое лицо / Компания. Технологические проекты и команды на стадии MVP и выше с отраслевым эффектом и потенциалом масштабирования. Компании могут подать до 3 заявок в любые из 15 номинаций."
+                                                price="90 000₽"
                                             />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="S-SELECT-description">
+                                <div class="S-DESCRIPTION-wrapper">
+                                    <div class="S-DESCRIPTION-carcass">
+                                        <div class="S-DESCRIPTION-icon">
+                                            <x-svg.icons.info
+                                                class="I-DESCRIPTION-icon"
+                                            />
+                                        </div>
+                                        <div class="S-DESCRIPTION-text">
+                                            <p class="T-DESCRIPTION-text TYPO-PRESET-CORE_P">Участие только для проектов с измеримым эффектом. Предусмотрена оплата<br>организационного взноса по выбранной категории, который включает билет<br>«Стандарт» на торжественную церемонию награждения премии МИЛ.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -42,14 +85,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="S-APPLICATION-form S-APPLICATION-student S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-STUDENT" style="display: none">
+                    <x-blades.application.form
+                        type="student"
+                    />
+                </div>
                 <div class="S-APPLICATION-form S-APPLICATION-individual S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-INDIVIDUAL" style="display: none">
                     <x-blades.application.form
-                        color="blue"
+                        type="individual"
                     />
                 </div>
                 <div class="S-APPLICATION-form S-APPLICATION-entity S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-ENTITY" style="display: none">
                     <x-blades.application.form
-                        color="green"
+                        type="entity"
                     />
                 </div>
             </div>
@@ -69,8 +117,9 @@
                                                 class="I-LIST-logo"
                                             />
                                         </a>
-                                        <a class="L-LIST-text" href="#goals">Цели</a>
-                                        <a class="L-LIST-text" href="#tracks">Треки</a>
+                                        <a class="L-LIST-text" href="#goals">Миссия</a>
+                                        <a class="L-LIST-text" href="#tracks">Номинации</a>
+                                        <a class="L-LIST-text" href="#dates">Этапы</a>
                                         <a class="L-LIST-text" href="#prizes">Награды</a>
                                         <a class="L-LIST-text" href="#news">Новости</a>
                                     </div>
@@ -155,7 +204,7 @@
                     <div class="S-GOALS-wrapper">
                         <div class="S-GOALS-carcass">
                             <div class="S-GOALS-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Цели премии</h2>
+                                <h2 class="TYPO-PRESET-CORE_H2">Миссия</h2>
                             </div>
                             <div class="S-GOALS-cards">
                                 <div class="S-CARDS-wrapper">
@@ -163,46 +212,46 @@
                                         <x-blades.goals.card
                                             number="1"
                                             color="blue"
-                                            icon="passport"
-                                            icon_rotate="-9deg"
+                                            icon="award"
+                                            icon_rotate="-7deg"
                                             icon_transform="scale(102%) translateY(5%)"
-                                            background_transform="scale(250%) translateX(-16%) translateY(1%) rotate(8deg)"
-                                            title="Госповестка<br>работает на нас"
-                                            text1="Курс на технологический суверенитет и развитие регионов: спрос на «своих» инноваторов как никогда высок."
-                                            text2="Курс на технологический суверенитет и развитие регионов: спрос на «своих» инноваторов как никогда высок."
+                                            background_transform="scale(230%) translateX(-12%) translateY(0%) rotate(12deg)"
+                                            title="О премии"
+                                            text1="Премия создана для тех, кто уже прошёл путь от идеи до работающего продукта и может показать измеримый эффект для рынка, науки или своего региона."
+                                            text2="МИЛ выделяет лидеров, перешедших из стартап-энтузиастов в системных игроков, и победа в пяти номинациях подтверждает зрелость решений, открывая доступ к экспертам и стратегическим возможностям."
                                         />
                                         <x-blades.goals.card
                                             number="2"
                                             color="green"
-                                            icon="connections"
-                                            icon_rotate="-8deg"
-                                            icon_transform="scale(100%)"
-                                            background_transform="scale(218%) translateX(-48%) translateY(-18%) rotate(7deg)"
-                                            title="Нет единой<br>точки входа"
-                                            text1="Сильные молодые лидеры разрознены — нет федеральной площадки, где их одновременно видят государство, корпорации и капитал."
-                                            text2="Сильные молодые лидеры разрознены — нет федеральной площадки, где их одновременно видят государство, корпорации и капитал."
+                                            icon="papers"
+                                            icon_rotate="-7deg"
+                                            icon_transform="scale(103%)"
+                                            background_transform="scale(218%) translateX(-42%) translateY(-10%) rotate(5deg)"
+                                            title="Цели и задачи"
+                                            text1="Премия формирует трек роста, где лидерство — это внедрения, а каталог проектов МИЛ становится витриной для корпораций, чтобы успешные практики тиражировались в отраслях, а экосистема РАИР даёт пространство для кооперации и грантов."
+                                            text2="Премия закрепляет репутацию трека как отраслевого стандарта, маркера зрелости и надёжности для инвесторов и вузов, поднимая видимость молодых инноваторов и признание их на уровне индустрии."
                                         />
                                         <x-blades.goals.card
                                             number="3"
                                             color="green"
-                                            icon="map"
-                                            icon_rotate="0"
-                                            icon_transform="scale(88%)"
-                                            background_transform="scale(195%) translateX(-15%) translateY(-10%) rotate(6deg)"
-                                            title="Регионам нужны<br>команды"
-                                            text1="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                            text2="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
+                                            icon="court"
+                                            icon_rotate="-7deg"
+                                            icon_transform="scale(90%)"
+                                            background_transform="scale(215%) translateX(-14%) translateY(-5%) rotate(10deg)"
+                                            title="Об организаторе"
+                                            text1="РАИР объединяет индустриальных партнёров, научные центры и вузы для единой инфраструктуры поддержки технологий, действует с июня 2008 года и стала рупором общественного мнения по стратегиям инновационного развития."
+                                            text2="Ассоциация внедряет разработки в реальный сектор, развивает кооперацию науки и бизнеса, а также популяризирует инженерный труд и предпринимательские инициативы."
                                         />
                                         <x-blades.goals.card
                                             number="4"
                                             color="blue"
-                                            icon="cup"
+                                            icon="leader"
                                             icon_rotate="-7deg"
-                                            icon_transform="scale(88%)"
-                                            background_transform="scale(195%) translateX(-20%) translateY(3%) rotate(7deg)"
-                                            title="Старые премии<br>устарели"
-                                            text1="Награды для «подающих надежды» не отражают тех, кто уже построил бизнес, команду и измеримый эффект."
-                                            text2="Награды для «подающих надежды» не отражают тех, кто уже построил бизнес, команду и измеримый эффект."
+                                            icon_transform="scale(100%)"
+                                            background_transform="scale(205%) translateX(-22%) translateY(-3.5%) rotate(14deg)"
+                                            title="Кто может участвовать"
+                                            text1="Мы ждём лидеров 20–40 лет, уже доказавших эффективность: фаундеров и CEO, корпоративных инноваторов, руководителей технопарков и ОЭЗ, академических предпринимателей и региональных управленцев."
+                                            text2="Инженеров и руководителей передовых школ, преподавателей инноватики и наставников, социальных визионеров из EdTech, MedTech, AgroTech, и тех, кто превращает территории в точки роста."
                                         />
                                     </div>
                                 </div>
@@ -221,7 +270,7 @@
                     <div class="S-TRACKS-wrapper">
                         <div class="S-TRACKS-carcass">
                             <div class="S-TRACKS-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Треки</h2>
+                                <h2 class="TYPO-PRESET-CORE_H2">Номинации</h2>
                             </div>
                             <div class="S-TRACKS-cards">
                                 <div class="S-CARDS-wrapper">
@@ -249,7 +298,7 @@
                                         />
                                         <x-blades.tracks.card
                                             number="2"
-                                            color="green"
+                                            color="blue"
                                             icon="office"
                                             icon_scale="4.9vh"
                                             background_transform="scale(190%) translateX(16%) translateY(71%) rotate(6deg)"
@@ -343,7 +392,7 @@
                     <div class="S-DATES-wrapper">
                         <div class="S-DATES-carcass">
                             <div class="S-DATES-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Регламент и Даты</h2>
+                                <h2 class="TYPO-PRESET-CORE_H2">Этапы</h2>
                             </div>
                             <div class="S-DATES-widget">
                                 <div class="S-WIDGET-wrapper">
@@ -353,32 +402,32 @@
                                         />
                                         <x-blades.dates.column
                                             number="1"
-                                            date="10 августа, 2026"
-                                            description="Старт премии, начало приема заявок"
-                                            state="past"
-                                        />
-                                        <x-blades.dates.column
-                                            number="2"
-                                            date="10 октября, 2026"
-                                            description="Конец приема заявок, начало оценки кандидатов составом жюри"
-                                            state="past"
-                                        />
-                                        <x-blades.dates.column
-                                            number="3"
-                                            date="10 февраля, 2027"
-                                            description="Объявление результатов, определние лауреатов"
+                                            date="14 Сентября, 2026"
+                                            description="Старт премии. Начало приема заявок."
                                             state="present"
                                         />
                                         <x-blades.dates.column
+                                            number="2"
+                                            date="30 Октября, 2026"
+                                            description="Верификация. Формирование списка номинантов."
+                                            state="future"
+                                        />
+                                        <x-blades.dates.column
+                                            number="3"
+                                            date="5 Ноября, 2026"
+                                            description="Независимая экспертная оценка жюри и выставление баллов по критериям."
+                                            state="future"
+                                        />
+                                        <x-blades.dates.column
                                             number="4"
-                                            date="20 марта, 2027"
-                                            description="Торжественное награждение финалистов и победителя Гран-При"
+                                            date="10 Декабря, 2026"
+                                            description="Отбор финалистов по каждой номинации. Объявление шорт-листа."
                                             state="future"
                                         />
                                         <x-blades.dates.column
                                             number="5"
-                                            date="20 марта, 2027"
-                                            description="Торжественное награждение финалистов и победителя Гран-При"
+                                            date="Март, 2027"
+                                            description="Защита проектов. Торжественное награждение финалистов."
                                             state="future"
                                         />
                                         <x-blades.dates.side
@@ -390,13 +439,46 @@
                         </div>
                     </div>
                 </div>
-                <x-blades.main.rair
-                    number="2"
-                    heading="Создано в сотрудничестве с РАИР"
-                    text="Действует с июня 2008 года. На сегодняшний день объединяет более 1400 членов<br>
-                        из 28 регионов. За время работы РАИР стала рупором общественного мнения<br>
-                        по стратегическим векторам инновационного развития страны и регионов."
-                />
+                <div class="S-MAIN-partnership" id="partnership">
+                    <div class="S-PARTNERSHIP-wrapper">
+                        <div class="S-PARTNERSHIP-carcass">
+                            <div class="S-PARTNERSHIP-background DEV-DISABLE_SELECTION">
+                                <div class="S-BACKGROUND-wrapper">
+                                    <div class="S-BACKGROUND-carcass">
+                                        <x-svg.backgrounds.rair_2
+                                            class="I-BACKGROUND-shape"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="S-PARTNERSHIP-content">
+                                <div class="S-CONTENT-wrapper">
+                                    <div class="S-CONTENT-carcass">
+                                        <div class="S-CONTENT-title">
+                                            <h2 class="TYPO-PRESET-CORE_H2">Партнерство с Премией</h2>
+                                        </div>
+                                        <div class="S-CONTENT-text">
+                                            <p class="TYPO-PRESET-CORE_P">
+                                                Премия МИЛ открыта к партнёрству с компаниями, институтами развития,<br>медиа и отраслевыми объединениями. Участвуя, вы усиливаете<br>позиционирование и становитесь частью актуальной инициативы<br>по развитию инновационного лидерства.
+                                                <br><br>
+                                                Напишите нам — обсудим форматы сотрудничества.
+                                            </p>
+                                        </div>
+                                        <div class="S-CONTENT-button">
+                                            <button class="B-CONTENT-button TYPO-PRESET-CORE_H3" id="LANDING-PARTNERSHIP-COPY_BUTTON">
+                                                <span class="T-BUTTON-heading">hello@milpremia.ru</span>
+                                                <x-svg.icons.copy
+                                                    class="I-BUTTON-icon"
+                                                    style=""
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="S-MAIN-prizes" id="prizes">
                     <div class="S-PRIZES-wrapper">
                         <div class="S-PRIZES-carcass">
@@ -526,32 +608,43 @@
                                             number="1"
                                             color="blue"
                                             name="Шичкина Марина Ивановна"
-                                            title='Генеарльный директор НП "Росссийская<br>
-                                                ассоциация инновационного развития"'
+                                            title='Генеральный директор НП "Росссийская ассоциация инновационного развития"'
                                             portrait="images/people/shichkina_marina_ivanovna-portrait-01.png"
                                         />
                                         <x-blades.jury.card
                                             number="2"
                                             color="green"
                                             name="Колесников Андрей Николаевич"
-                                            title='Директор аналитического консалтингового центра<br>
-                                                экономического факультета МГУ им. М.В.Ломоносова'
+                                            title='Директор аналитического консалтингового центра экономического факультета МГУ им. М.В.Ломоносова'
                                             portrait="images/people/kolesnikov_andrey_nikolaevich-portrait-01.png"
                                         />
                                         <x-blades.jury.card
                                             number="3"
-                                            color="green"
+                                            color="blue"
                                             name="Поденок Андрей Евгеньевич"
-                                            title='Президент МОО "Московская<br>
-                                                ассоциация предпринимателей"'
+                                            title='Президент МОО "Московская ассоциация предпринимателей"'
                                             portrait="images/people/podenok_andrey_evgenievich-portrait-01.png"
                                         />
                                         <x-blades.jury.card
                                             number="4"
-                                            color="blue"
+                                            color="green"
                                             name="Лейбинен Снежана Александровна"
-                                            title='Председатель Гильдии предпринимателей<br>Турочагского района Ресублики Алтай'
+                                            title='Председатель Гильдии предпринимателей Турочагского района Республики Алтай'
                                             portrait="images/people/leybinen_snezhana_alexandrovna-portrait-01.png"
+                                        />
+                                        <x-blades.jury.card
+                                            number="5"
+                                            color="blue"
+                                            name="Шичкина Марина Ивановна"
+                                            title='Генеральный директор НП "Росссийская ассоциация инновационного развития"'
+                                            portrait="images/people/shichkina_marina_ivanovna-portrait-01.png"
+                                        />
+                                        <x-blades.jury.card
+                                            number="6"
+                                            color="green"
+                                            name="Колесников Андрей Николаевич"
+                                            title='Директор аналитического консалтингового центра экономического факультета МГУ им. М.В.Ломоносова'
+                                            portrait="images/people/kolesnikov_andrey_nikolaevich-portrait-01.png"
                                         />
                                     </div>
                                 </div>
