@@ -257,7 +257,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    max-height: 75vh;
+    max-height: 82vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -427,7 +427,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
     width: 100vh;
-    height: 75vh;
+    height: 82vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -436,7 +436,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 74.24vh;
+    height: 81.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -444,7 +444,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 64.24vh;
+    height: 71.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -1115,13 +1115,24 @@ br {
     gap: 3.8vh;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image {
-    display: flex;
+    display: grid;
+    grid-template-areas: "overlay";
+    place-items: center;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image:hover {
     cursor: pointer;
   }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 0;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 1;
+  }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo {
+    display: flex;
+    grid-area: overlay;
     width: 6.3vh;
+    transition: opacity 0.2s;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-text {
     text-decoration: none;
@@ -1169,6 +1180,12 @@ br {
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid {
     background-color: oklch(100% 0 0deg);
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 1 !important;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 0 !important;
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-text {
     color: oklch(32.65% 0.0127 252.99deg);
@@ -1253,6 +1270,7 @@ br {
     grid-column-gap: 3vh;
     grid-row-gap: 0;
     width: 131vh;
+    margin-left: 11vh;
   }
   .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
     display: flex;
@@ -1847,6 +1865,9 @@ br {
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
+  }
+  #partnership {
+    scroll-margin-top: 6.7vh;
   }
   .S-PARTNERSHIP-carcass {
     display: grid;
@@ -2841,7 +2862,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    max-height: 75vh;
+    max-height: 82vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -3011,7 +3032,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
     width: 100vh;
-    height: 75vh;
+    height: 82vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -3020,7 +3041,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 74.24vh;
+    height: 81.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -3028,7 +3049,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 64.24vh;
+    height: 71.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -3699,13 +3720,24 @@ br {
     gap: 3.8vh;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image {
-    display: flex;
+    display: grid;
+    grid-template-areas: "overlay";
+    place-items: center;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image:hover {
     cursor: pointer;
   }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 0;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 1;
+  }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo {
+    display: flex;
+    grid-area: overlay;
     width: 6.3vh;
+    transition: opacity 0.2s;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-text {
     text-decoration: none;
@@ -3753,6 +3785,12 @@ br {
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid {
     background-color: oklch(100% 0 0deg);
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 1 !important;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 0 !important;
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-text {
     color: oklch(32.65% 0.0127 252.99deg);
@@ -3837,6 +3875,7 @@ br {
     grid-column-gap: 3vh;
     grid-row-gap: 0;
     width: 131vh;
+    margin-left: 11vh;
   }
   .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
     display: flex;
@@ -4431,6 +4470,9 @@ br {
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
+  }
+  #partnership {
+    scroll-margin-top: 6.7vh;
   }
   .S-PARTNERSHIP-carcass {
     display: grid;
@@ -5447,7 +5489,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    max-height: 75vh;
+    max-height: 82vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -5617,7 +5659,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
     width: 100vh;
-    height: 75vh;
+    height: 82vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -5626,7 +5668,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 74.24vh;
+    height: 81.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -5634,7 +5676,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 64.24vh;
+    height: 71.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -6305,13 +6347,24 @@ br {
     gap: 3.8vh;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image {
-    display: flex;
+    display: grid;
+    grid-template-areas: "overlay";
+    place-items: center;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image:hover {
     cursor: pointer;
   }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 0;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 1;
+  }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo {
+    display: flex;
+    grid-area: overlay;
     width: 6.3vh;
+    transition: opacity 0.2s;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-text {
     text-decoration: none;
@@ -6359,6 +6412,12 @@ br {
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid {
     background-color: oklch(100% 0 0deg);
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 1 !important;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 0 !important;
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-text {
     color: oklch(32.65% 0.0127 252.99deg);
@@ -6443,6 +6502,7 @@ br {
     grid-column-gap: 3vh;
     grid-row-gap: 0;
     width: 131vh;
+    margin-left: 11vh;
   }
   .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
     display: flex;
@@ -7037,6 +7097,9 @@ br {
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
+  }
+  #partnership {
+    scroll-margin-top: 6.7vh;
   }
   .S-PARTNERSHIP-carcass {
     display: grid;
@@ -8031,7 +8094,7 @@ br {
     grid-column-gap: 0;
     grid-row-gap: 0;
     align-items: center;
-    max-height: 75vh;
+    max-height: 82vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-window {
@@ -8201,7 +8264,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form {
     grid-area: 1/1/2/2;
     width: 100vh;
-    height: 75vh;
+    height: 82vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -8210,7 +8273,7 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper {
-    height: 74.24vh;
+    height: 81.24vh;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass {
     display: grid;
@@ -8218,7 +8281,7 @@ br {
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0;
     grid-row-gap: 2.2vh;
-    height: 64.24vh;
+    height: 71.24vh;
     padding: 5vh 0 !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-heading {
@@ -8889,13 +8952,24 @@ br {
     gap: 3.8vh;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image {
-    display: flex;
+    display: grid;
+    grid-template-areas: "overlay";
+    place-items: center;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image:hover {
     cursor: pointer;
   }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 0;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 1;
+  }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-image .I-LIST-logo {
+    display: flex;
+    grid-area: overlay;
     width: 6.3vh;
+    transition: opacity 0.2s;
   }
   .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-content .S-CONTENT-carcass .S-CONTENT-list .S-LIST-carcass .L-LIST-text {
     text-decoration: none;
@@ -8943,6 +9017,12 @@ br {
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid {
     background-color: oklch(100% 0 0deg);
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_color_full {
+    opacity: 1 !important;
+  }
+  .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-image .I-LIST-logo_white_hollow {
+    opacity: 0 !important;
   }
   .S-HEADER-wrapper .S-HEADER-carcass_solid .L-LIST-text {
     color: oklch(32.65% 0.0127 252.99deg);
@@ -9027,6 +9107,7 @@ br {
     grid-column-gap: 3vh;
     grid-row-gap: 0;
     width: 131vh;
+    margin-left: 11vh;
   }
   .S-REASON-wrapper .S-REASON-carcass .S-REASON-block {
     display: flex;
@@ -9621,6 +9702,9 @@ br {
   }
   .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-carcass .S-WIDGET-column .S-COLUMN-wrapper .S-COLUMN-carcass .S-COLUMN-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-text .S-TEXT-carcass p:first-child {
     margin-bottom: 1.1vh;
+  }
+  #partnership {
+    scroll-margin-top: 6.7vh;
   }
   .S-PARTNERSHIP-carcass {
     display: grid;

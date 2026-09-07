@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('meta-title', '«МИЛ» Премия Молодые Инновационные Лидеры')
-@section('meta-description', '')
-@section('meta-image', '')
-@section('meta-url', '')
+@section('meta-description', 'Премия Российской Ассоциации Инновационного Развития')
+@section('meta-keywords', 'МИЛ, MIL')
+@section('meta-url', 'https://milpremia.ru/')
+@section('meta-image', 'https://milpremia.ru/images/meta/banner_1.png')
+@section('meta-image-alt', '«МИЛ»')
+@section('meta-site-name', 'Премия «МИЛ»')
 
 @section('mode-desktop')
     <div class="S-DESKTOP-message S-DESKTOP-message_email_copied" id="LANDING-MESSAGE-EMAIL_COPIED">
@@ -61,7 +64,7 @@
                                                 icon="briefcase"
                                                 icon_height="6.5vh"
                                                 title="Юридическое лицо"
-                                                text="Юридическое лицо / Компания. Технологические проекты и команды на стадии MVP и выше с отраслевым эффектом и потенциалом масштабирования. Компании могут подать до 3 заявок в любые из 15 номинаций."
+                                                text="Юридическое лицо / Компания. Технологические проекты и команды на стадии MVP и выше с отраслевым эффектом и потенциалом масштабирования. Компании могут подать до 3 заявок в любые из 5 номинаций."
                                                 price="90 000₽"
                                             />
                                         </div>
@@ -114,7 +117,10 @@
                                     <div class="S-LIST-carcass TYPO-PRESET-HEADER_TEXT">
                                         <a class="L-LIST-image" href="#hero">
                                             <x-svg.logo.color_full_2
-                                                class="I-LIST-logo"
+                                                class="I-LIST-logo I-LIST-logo_color_full"
+                                            />
+                                            <x-svg.logo.white_hollow_full
+                                                class="I-LIST-logo I-LIST-logo_white_hollow"
                                             />
                                         </a>
                                         <a class="L-LIST-text" href="#goals">Миссия</a>
@@ -122,6 +128,7 @@
                                         <a class="L-LIST-text" href="#dates">Этапы</a>
                                         <a class="L-LIST-text" href="#prizes">Награды</a>
                                         <a class="L-LIST-text" href="#news">Новости</a>
+                                        <a class="L-LIST-text" href="#partnership">Партнерство</a>
                                     </div>
                                 </div>
                             </div>
@@ -569,12 +576,10 @@
                                             icon="person"
                                             icon_scale="5.9vh"
                                             background_shape="people"
-                                            background_transform="scale(270%) translateX(-11%) translateY(-30.4%) rotate(-1deg)"
+                                            background_transform="scale(270%) translateX(-11%) translateY(-30.15%) rotate(-1deg)"
                                             heading="Физическое Лицо"
-                                            description="Гран-При — это главная награда премии.<br>
-                                                Победитель МИЛ входит в экспертный совет РАИР<br>
-                                                награда премии экспертный"
-                                            price="15 000₽"
+                                            description="Физическое лицо / Предприниматель.<br>Индивидуальные проекты, стартапы, независимые<br>разработки с измеримыми результатами<br>(пилот, патент, продажи, публикации)."
+                                            price="14 000₽"
                                         />
                                         <x-blades.conditions.card
                                             type="entity"
@@ -584,10 +589,8 @@
                                             background_shape="briefcases"
                                             background_transform="scale(270%) translateX(44%) translateY(-16%) rotate(45deg)"
                                             heading="Юридическое Лицо"
-                                            description="Гран-При — это главная награда премии.<br>
-                                                Победитель МИЛ входит в экспертный совет РАИР<br>
-                                                награда премии экспертный"
-                                            price="100 000₽"
+                                            description="Юридическое лицо / Компания. Технологические проекты<br>и команды на стадии MVP и выше с отраслевым эффектом<br>и потенциалом масштабирования. Компании могут подать<br>до 3 заявок в любые из 5 номинаций."
+                                            price="90 000₽"
                                         />
                                     </div>
                                 </div>
@@ -608,43 +611,85 @@
                                             number="1"
                                             color="blue"
                                             name="Шичкина Марина Ивановна"
-                                            title='Генеральный директор НП "Росссийская ассоциация инновационного развития"'
-                                            portrait="images/people/shichkina_marina_ivanovna-portrait-01.png"
+                                            title='Генеральный директор НП «Росссийская ассоциация инновационного развития»'
+                                            portrait="images/people/optimized/shichkina_marina_ivanovna-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
                                             number="2"
                                             color="green"
-                                            name="Колесников Андрей Николаевич"
-                                            title='Директор аналитического консалтингового центра экономического факультета МГУ им. М.В.Ломоносова'
-                                            portrait="images/people/kolesnikov_andrey_nikolaevich-portrait-01.png"
+                                            name="Поденок Андрей Евгеньевич"
+                                            title='Президент МОО «Московская<br>ассоциация предпринимателей»'
+                                            portrait="images/people/optimized/podenok_andrey_evgenievich-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
                                             number="3"
                                             color="blue"
-                                            name="Поденок Андрей Евгеньевич"
-                                            title='Президент МОО "Московская ассоциация предпринимателей"'
-                                            portrait="images/people/podenok_andrey_evgenievich-portrait-01.png"
+                                            name="Колесников Андрей Николаевич"
+                                            title='Директор аналитического консалтингового центра экономического факультета МГУ им. М.В. Ломоносова'
+                                            portrait="images/people/optimized/kolesnikov_andrey_nikolaevich-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
                                             number="4"
                                             color="green"
-                                            name="Лейбинен Снежана Александровна"
-                                            title='Председатель Гильдии предпринимателей Турочагского района Республики Алтай'
-                                            portrait="images/people/leybinen_snezhana_alexandrovna-portrait-01.png"
+                                            name="Бадулин Николай Александрович"
+                                            title='Венчурный инвестор, генеральный директор ИФК «Самотлор-Инвест»'
+                                            portrait="images/people/optimized/badulin_nikolay_alexandrovich-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
                                             number="5"
                                             color="blue"
-                                            name="Шичкина Марина Ивановна"
-                                            title='Генеральный директор НП "Росссийская ассоциация инновационного развития"'
-                                            portrait="images/people/shichkina_marina_ivanovna-portrait-01.png"
+                                            name="Пастухов Александр Владимирович"
+                                            title='Вице-президент Национального экологического института<br>устойчивого развития'
+                                            portrait="images/people/optimized/pastuhov_alexandr_vladimirovich-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
                                             number="6"
                                             color="green"
-                                            name="Колесников Андрей Николаевич"
-                                            title='Директор аналитического консалтингового центра экономического факультета МГУ им. М.В.Ломоносова'
-                                            portrait="images/people/kolesnikov_andrey_nikolaevich-portrait-01.png"
+                                            name="Лейбинен Снежана Александровна"
+                                            title='Председатель Гильдии предпринимателей Турочагского района Ресублики Алтай'
+                                            portrait="images/people/optimized/leybinen_snezhana_alexandrovna-portrait-01.webp"
+                                        />
+                                        <x-blades.jury.card
+                                            number="7"
+                                            color="blue"
+                                            name="Нестеренко Алексей Дмитриевич"
+                                            title='Генеральный директор логистической компании «ВекторФрахт»'
+                                            portrait="images/people/optimized/nesterenko_alexey_dmitrievich-portrait-01.webp"
+                                        />
+                                        <x-blades.jury.card
+                                            number="8"
+                                            color="green"
+                                            name="Замятина Надежда Юрьевна"
+                                            title='Профессор Высшей школы урбанистики им. А.А. Высоковского, факультет городского и регионального развития'
+                                            portrait="images/people/optimized/zamyatina_nadezhda_yurevna-portrait-01.webp"
+                                        />
+                                        <x-blades.jury.card
+                                            number="9"
+                                            color="blue"
+                                            name="Гусева Ольга Вячеславовна"
+                                            title='Девелопер, генеральный директор инвестиционной компании<br>«КЕЙ КАПИТАЛ»'
+                                            portrait="images/people/optimized/guseva_olga_vyacheslavovna-portrait-01.webp"
+                                        />
+                                        <x-blades.jury.card
+                                            number="10"
+                                            color="green"
+                                            name="Нагиева Валентина Викторовна"
+                                            title='Генеральный директор «ПетроСервис», Исполнительный директор<br>«Доверие потребителя»'
+                                            portrait="images/people/optimized/nagieva_valentina_viktorovna-portrait-01.webp"
+                                        />
+                                        <x-blades.jury.card
+                                            number="11"
+                                            color="blue"
+                                            name="Бурда Павел<br>Федорович"
+                                            title='Предприниматель, сооснователь проектов «Гениальный ребенок»<br>и «ArtVisionAi»'
+                                            portrait="images/people/optimized/burda_pavel_fedorovich-portrait-01.webp"
+                                        />
+                                        <x-blades.jury.card
+                                            number="12"
+                                            color="green"
+                                            name="Липина Светлана Артуровна"
+                                            title='Заместитель председателя СОПС ВАВТ Минэкономразвития РФ'
+                                            portrait="images/people/optimized/lipina_svetlana_arturovna-portrait-01.webp"
                                         />
                                     </div>
                                 </div>

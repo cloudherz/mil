@@ -111,7 +111,7 @@
 
     // CHUNK:APPLICATION
     // LOCAL VARIABLES NAME = APPLICATION
-    $LV-D-APPLICATION-CARCASS-MAX_HEIGHT: 75vh;
+    $LV-D-APPLICATION-CARCASS-MAX_HEIGHT: 82vh;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP: $GV-D-SIZES-DEFAULT * 1.2;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM: 2vh;
     $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_TOP: $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP - $LV-D-APPLICATION-FORM-HEADING_CONTENT_GAP_BOTTOM;
@@ -1467,17 +1467,33 @@
                             gap: $GV-D-SIZES-SMALL * 2;
 
                             .L-LIST-image {
-                                // FLEXBOX
-                                display: flex;
+                                // CSS-GRID SETUP
+                                display: grid;
+                                grid-template-areas: "overlay";
+                                place-items: center;
 
                                 &:hover {
                                     // CURSOR
                                     cursor: pointer;
                                 }
 
+                                .I-LIST-logo_color_full {
+                                    // OPACITY
+                                    opacity: 0;
+                                }
+                                .I-LIST-logo_white_hollow {
+                                    // OPACITY
+                                    opacity: 1;
+                                }
                                 .I-LIST-logo {
+                                    // FLEXBOX
+                                    display: flex;
+                                    // CSS-GRID CONFIGURATION
+                                    grid-area: overlay;
                                     // SCALING
                                     width: 6.3vh;
+                                    // TRANSITION
+                                    transition: opacity 0.2s;
                                 }
                             }
                             .L-LIST-text {
@@ -1562,6 +1578,16 @@
             // BACKGROUND
             background-color: $PALETTE-SNOW;
 
+            .L-LIST-image {
+                .I-LIST-logo_color_full {
+                    // OPACITY
+                    opacity: 1 !important;
+                }
+                .I-LIST-logo_white_hollow {
+                    // OPACITY
+                    opacity: 0 !important;
+                }
+            }
             .L-LIST-text {
                 // FONT SETTINGS
                 color: $PALETTE-BLACK;
@@ -1700,6 +1726,8 @@
             grid-row-gap: 0;
             // SCALING
             width: $GV-D-CORE-CONTENT_WIDTH_EXTRA;
+            // MARGINS & PADDINGS
+            margin-left: $GV-D-CORE-CONTENT_WIDTH_EXTRA - $GV-D-CORE-CONTENT_WIDTH;
 
             .S-REASON-block {
                 // FLEXBOX
@@ -2636,6 +2664,10 @@
 
     // CHUNK:PARTNERSHIP
     // LOCAL VARIABLES NAME = PARTNERSHIP
+    #partnership {
+        // SCROLL
+        scroll-margin-top: $GV-D-CORE-HEADER_HEIGHT;
+    }
     .S-PARTNERSHIP-carcass {
         // CSS-GRID SETUP
         display: grid;
