@@ -119,16 +119,17 @@
                                             <x-svg.logo.color_full_2
                                                 class="I-LIST-logo I-LIST-logo_color_full"
                                             />
-                                            <x-svg.logo.white_hollow_full
+                                            <x-svg.logo.white_hollow_full_2
                                                 class="I-LIST-logo I-LIST-logo_white_hollow"
                                             />
                                         </a>
-                                        <a class="L-LIST-text" href="#goals">Миссия</a>
                                         <a class="L-LIST-text" href="#tracks">Номинации</a>
                                         <a class="L-LIST-text" href="#dates">Этапы</a>
-                                        <a class="L-LIST-text" href="#prizes">Награды</a>
-                                        <a class="L-LIST-text" href="#news">Новости</a>
                                         <a class="L-LIST-text" href="#partnership">Партнерство</a>
+                                        <a class="L-LIST-text" href="#prizes">Награды</a>
+                                        <a class="L-LIST-text" href="#conditions">Условия</a>
+                                        <a class="L-LIST-text" href="#jury">Жюри</a>
+                                        <a class="L-LIST-text" href="#news">Новости</a>
                                     </div>
                                 </div>
                             </div>
@@ -268,10 +269,8 @@
                 </div>
                 <x-blades.main.rair
                     number="1"
-                    heading="Создано в сотрудничестве с РАИР"
-                    text="Действует с июня 2008 года. На сегодняшний день объединяет более 1400 членов<br>
-                        из 28 регионов. За время работы РАИР стала рупором общественного мнения<br>
-                        по стратегическим векторам инновационного развития страны и регионов."
+                    heading="Превращаем реальные достижения<br>в масштабный эффект"
+                    text="15 номинаций сгруппированы по 5 трекам — пяти векторам влияния.<br>Победитель каждой претендует на Гран-при «Лидер года МИЛ». "
                 />
                 <div class="S-MAIN-tracks" id="tracks">
                     <div class="S-TRACKS-wrapper">
@@ -374,7 +373,7 @@
                                             icon="engineering"
                                             icon_scale="5.3vh"
                                             background_transform="scale(185%) translateX(16%) translateY(60%) rotate(10deg)"
-                                            heading="Корпорации и Индустрия"
+                                            heading="Наука и Инженерия"
                                             text="
                                                 <span>Для учёных-предпринимателей, передовые инженерные школы и наставников, воспитавших технологических предпринимателей.</span>
                                                 <span class='TYPO-PRESET-CORE_H3'>Номинации трека:</span>
@@ -496,8 +495,7 @@
                                 <div class="S-WIDGET-wrapper">
                                     <div class="S-WIDGET-carcass">
                                         <div class="S-WIDGET-fund">
-                                            <h2 class="TYPO-PRESET-CORE_H2">Призовой фонд</h2>
-                                            <h1 class="T-FUND-number TYPO-PRESET-PRIZES_NUMBER">2 000 000₽</h1>
+                                            <h2 class="TYPO-PRESET-CORE_H2 T-FUND-heading">Призовой фонд — 2 000 000₽</h2>
                                         </div>
                                         <div class="S-WIDGET-distribution">
                                             <div class="S-DISTRIBUTION-wrapper">
@@ -514,13 +512,17 @@
                                                     <div class="S-DISTRIBUTION-content">
                                                         <div class="S-CONTENT-wrapper">
                                                             <div class="S-CONTENT-carcass">
-                                                                <div class="S-CONTENT-place S-CONTENT-laureates">
-                                                                    <div class="S-LAUREATES-wrapper">
-                                                                        <div class="S-LAUREATES-carcass">
-                                                                            <h3 class="T-LAUREATES-heading TYPO-PRESET-CORE_H3">15 Лауреатов<br>по 5 трекам</h3>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                <x-blades.prizes.case
+                                                                    place="laureates"
+                                                                    heading="15 Лауреатов"
+                                                                    color="pale_blue"
+                                                                >
+                                                                    <x-svg.icons.laurel_branch
+                                                                        class="I-INFO-icon"
+                                                                        style="scale: 1.23;"
+                                                                    />
+                                                                    <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">билет на церемонию</h3>
+                                                                </x-blades.prizes.case>
                                                                 <div class="S-CONTENT-pointer S-CONTENT-pointer_1">
                                                                     <x-svg.icons.pointer
                                                                         class="I-POINTER-icon"
@@ -531,6 +533,10 @@
                                                                     heading="5 Финалистов"
                                                                     color="blue"
                                                                 >
+                                                                    <x-svg.icons.medal
+                                                                        class="I-INFO-icon"
+                                                                        style="scale: 1.05;"
+                                                                    />
                                                                     <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">по 200 000₽</h3>
                                                                 </x-blades.prizes.case>
                                                                 <div class="S-CONTENT-pointer S-CONTENT-pointer_2">
@@ -545,7 +551,7 @@
                                                                 >
                                                                     <x-svg.icons.cup
                                                                         class="I-INFO-icon"
-                                                                        style=""
+                                                                        style="scale: 1;"
                                                                     />
                                                                     <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">1 000 000₽</h3>
                                                                 </x-blades.prizes.case>
@@ -579,7 +585,7 @@
                                             background_transform="scale(270%) translateX(-11%) translateY(-30.15%) rotate(-1deg)"
                                             heading="Физическое Лицо"
                                             description="Физическое лицо / Предприниматель.<br>Индивидуальные проекты, стартапы, независимые<br>разработки с измеримыми результатами<br>(пилот, патент, продажи, публикации)."
-                                            price="14 000₽"
+                                            price="14 000₽ (студентам 7 000₽)"
                                         />
                                         <x-blades.conditions.card
                                             type="entity"
@@ -602,7 +608,7 @@
                     <div class="S-JURY-wrapper">
                         <div class="S-JURY-carcass">
                             <div class="S-JURY-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Жюри</h2>
+                                <h2 class="TYPO-PRESET-CORE_H2">Жюри / Эксперты</h2>
                             </div>
                             <div class="S-JURY-cards">
                                 <div class="S-CARDS-wrapper">

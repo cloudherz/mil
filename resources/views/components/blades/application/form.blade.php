@@ -38,7 +38,14 @@
         <div class="S-FORM-heading">
             <h3 class="TYPO-PRESET-CORE_H3">{!! $windowTitle !!}</h3>
         </div>
-        <form class="S-FORM-content">
+        <form class="S-FORM-content" action="{{ route('application_submit_' . $type) }}" method="POST">
+            @csrf
+            <input
+                type="hidden"
+                id="application_type"
+                name="application_type"
+                value="{{ $type }}"
+            >
             <div class="S-CONTENT-wrapper">
                 <div class="S-CONTENT-carcass">
                     <div class="S-CONTENT-name_solo S-CONTENT-name" style="display: {{ $type === 'entity' ? 'none' : 'unset' }}">
@@ -52,10 +59,10 @@
                                 <div class="S-NAME_SOLO-name_input S-CONTENT-input">
                                     <input
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
-                                        type="text"
-                                        id="name"
-                                        name="name"
                                         placeholder='Меня зовут ...'
+                                        type="text"
+                                        id="person_name"
+                                        name="person_name"
                                     >
                                 </div>
                             </div>
@@ -72,10 +79,10 @@
                                 <div class="S-NAME_ENTITY-name_input S-CONTENT-input">
                                     <input
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
-                                        type="text"
-                                        id="name"
-                                        name="name"
                                         placeholder='"ООО" ...'
+                                        type="text"
+                                        id="organization_name"
+                                        name="organization_name"
                                     >
                                 </div>
                                 <div class="S-NAME_ENTITY-tin_title S-CONTENT-title">
@@ -86,10 +93,10 @@
                                 <div class="S-NAME_ENTITY-tin_input S-CONTENT-input">
                                     <input
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
-                                        type="text"
-                                        id="name"
-                                        name="name"
                                         placeholder="1234 ..."
+                                        type="text"
+                                        id="organization_tin"
+                                        name="organization_tin"
                                     >
                                 </div>
                                 <div class="S-NAME_ENTITY-representative_title S-CONTENT-title">
@@ -100,10 +107,10 @@
                                 <div class="S-NAME_ENTITY-representative_input S-CONTENT-input">
                                     <input
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
-                                        type="text"
-                                        id="name"
-                                        name="name"
                                         placeholder="Иванов Иван ..."
+                                        type="text"
+                                        id="organization_representative"
+                                        name="organization_representative"
                                     >
                                 </div>
                             </div>
@@ -116,10 +123,10 @@
                     <div class="S-CONTENT-email_input S-CONTENT-input">
                         <input
                             class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                            placeholder="Свяжитесь {{ $type === 'entity' ? 'с нами' : 'со мной' }} по адресу ..."
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="Свяжитесь {{ $type === 'entity' ? 'с нами' : 'со мной' }} по адресу ..."
                         >
                     </div>
                     <div class="S-CONTENT-phone_title S-CONTENT-title">
@@ -129,16 +136,23 @@
                     <div class="S-CONTENT-phone_input S-CONTENT-input">
                         <input
                             class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                            placeholder="+7 981 ..."
                             type="tel"
                             id="phone"
                             name="phone"
-                            placeholder="+7 981 ..."
                         >
                     </div>
                     <div class="S-CONTENT-tracks">
                         <div class="S-CONTENT_TRACKS-wrapper">
-                            <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass"
-                                 style="display: {{ $color === 'blue' ? 'grid' : 'none' }}">
+                            <div class="S-CONTENT_TRACKS-carcass_student S-CONTENT_TRACKS-carcass" style="display: {{ $type === 'student' ? 'grid' : 'none' }}">
+                                <div class="S-CONTENT_TRACKS-student_track S-CONTENT_TRACKS-track">
+                                    <x-blades.application.select_track.string
+                                        type="student"
+                                        color="{{ $color }}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass" style="display: {{ $type === 'individual' ? 'grid' : 'none' }}">
                                 <div class="S-CONTENT_TRACKS-individual_track S-CONTENT_TRACKS-track">
                                     <x-blades.application.select_track.string
                                         type="individual"
@@ -146,7 +160,7 @@
                                     />
                                 </div>
                             </div>
-                            <div class="S-CONTENT_TRACKS-carcass_entity S-CONTENT_TRACKS-carcass" style="display: {{ $color === 'green' ? 'grid' : 'none' }}">
+                            <div class="S-CONTENT_TRACKS-carcass_entity S-CONTENT_TRACKS-carcass" style="display: {{ $type === 'entity' ? 'grid' : 'none' }}">
                                 <div
                                     class="S-CONTENT_TRACKS-entity_tracks S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
                                     <x-blades.application.select_track.string
@@ -164,9 +178,10 @@
                     <div class="S-CONTENT-description_input S-CONTENT-input">
                         <textarea
                             class="IN-CONTENT-text IN-CONTENT-text_{{ $color }} TYPO-PRESET-CORE_P"
+                            placeholder="{{ $type === 'entity' ? 'Наш' : 'Мой' }} проект это ..."
+                            type="text"
                             id="description"
                             name="description"
-                            placeholder="{{ $type === 'entity' ? 'Наш' : 'Мой' }} проект это ..."
                         ></textarea>
                     </div>
                     <div class="S-CONTENT-presentation_title S-CONTENT-title">
@@ -209,10 +224,10 @@
                                     <div class="S-CHECKBOX-wrapper">
                                         <div class="S-CHECKBOX-carcass">
                                             <input
-                                                type="checkbox"
-                                                id="confirm"
-                                                name="confirm"
                                                 class="IN-CHECKBOX-input"
+                                                type="checkbox"
+                                                id="confirmation"
+                                                name="confirmation"
                                             />
                                             <div class="S-CHECKBOX-box">
                                                 <x-svg.icons.check
@@ -231,7 +246,7 @@
                         </div>
                     </div>
                     <div class="S-CONTENT-submit DEV-DISABLE_SELECTION">
-                        <button class="B-CONTENT-submit B-CONTENT-submit_{{ $color }}">
+                        <button class="B-CONTENT-submit B-CONTENT-submit_{{ $color }}" type="submit" id="submit_button">
                             <p class="T-CONTENT-submit_{{ $color }} TYPO-PRESET-CORE_P_BOLD">Подать заявку</p>
                         </button>
                     </div>

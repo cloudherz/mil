@@ -559,6 +559,19 @@
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 4 / 1 / 5 / 3;
 
+                                        .S-CONTENT_TRACKS-carcass_student {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: 1fr;
+                                            grid-column-gap: 0;
+                                            grid-row-gap: 0;
+
+                                            .S-CONTENT_TRACKS-student_track {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                            }
+                                        }
                                         .S-CONTENT_TRACKS-carcass_individual {
                                             // CSS-GRID SETUP
                                             display: grid;
@@ -619,6 +632,27 @@
                                                         .T-TRACK-asterisk {
                                                             // MARGINS & PADDINGS
                                                             margin-top: -0.15vh;
+                                                        }
+                                                    }
+                                                    .S-TRACK-select_student {
+                                                        // CSS-GRID SETUP
+                                                        display: grid;
+                                                        grid-template-columns: 1fr;
+                                                        grid-template-rows: 1fr;
+                                                        grid-column-gap: 0;
+                                                        grid-row-gap: 0;
+
+                                                        .S-SELECT-carcass_1 {
+                                                            // CSS-GRID CONFIGURATION
+                                                            grid-area: 1 / 1 / 2 / 2;
+                                                        }
+                                                        .S-SELECT-carcass_2 {
+                                                            // DISPLAY
+                                                            display: none;
+                                                        }
+                                                        .S-SELECT-carcass_3 {
+                                                            // DISPLAY
+                                                            display: none;
                                                         }
                                                     }
                                                     .S-TRACK-select_individual {
@@ -2043,9 +2077,9 @@
                     //transform: scale(300%) translateX(40%) translateY(78%) rotate(191deg);
                     // 40% * 3 = 120%
                     // 78% * 3 = 234%
-                    scale: 3;
+                    scale: 2.8;
                     //translate: 120% 234%;
-                    translate: 74.5vh 68.9vh;
+                    translate: 78vh 74.5vh;
                     rotate: 191deg;
                 }
                 .I-BACKGROUND-shape_2 {
@@ -2823,7 +2857,7 @@
     $LV-D-PRIZES-POINTER_WIDTH: 1.3vh;
     $LV-D-PRIZES-POINTER_PADDINGS: 2vh;
     $LV-D-PRIZES-PLACES_TOTAL_GAP: $LV-D-PRIZES-POINTER_WIDTH + ($LV-D-PRIZES-POINTER_PADDINGS * 2);
-    $LV-D-PRIZES-PLACE_WIDTH: ($GV-D-CORE-CONTENT_WIDTH_EXTRA - ($GV-D-SIZES-INNER_PADDING * 2) - ($LV-D-PRIZES-PLACES_TOTAL_GAP * 2)) / 3;
+    $LV-D-PRIZES-PLACE_WIDTH: ($GV-D-CORE-CONTENT_WIDTH_EXTRA - ($GV-D-SIZES-INNER_PADDING * 2) - ($LV-D-PRIZES-PLACES_TOTAL_GAP * 2) - ($GV-D-SIZES-SMALL * 2)) / 3;
     $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH: $LV-D-PRIZES-POINTER_WIDTH * 2.9;
     $LV-D-PRIZES-PLACE_POINTER_ICON_CIRCLE_WIDTH: $LV-D-PRIZES-PLACE_POINTER_ICON_BUTTON_WIDTH * 1.27;
     #prizes {
@@ -2874,7 +2908,7 @@
                     // STREAMLINING
                     border-radius: $GV-D-ROUNDING-SECTIONS;
                     // MARGINS & PADDINGS
-                    padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                    padding: 0 $GV-D-SIZES-SMALL $GV-D-SIZES-SMALL $GV-D-SIZES-SMALL;
 
                     .S-WIDGET-fund {
                         // FLEXBOX
@@ -2886,11 +2920,11 @@
                         // FONT SETTINGS
                         color: $PALETTE-SNOW;
                         // MARGINS & PADDINGS
-                        padding: ($GV-D-SIZES-H2_CONTENT / 1.9) 0 ($GV-D-SIZES-H2_CONTENT / 1.5) 0;
+                        padding: $GV-D-SIZES-DEFAULT 0;
 
-                        .T-FUND-number {
-                            // MARGINS & PADDINGS
-                            margin-top: -0.1vh;
+                        .T-FUND-heading {
+                            // FONT SETTINGS
+                            text-box: trim-both cap alphabetic;
                         }
                     }
                     .S-WIDGET-distribution {
@@ -2915,7 +2949,7 @@
                                 // BACKGROUND
                                 background-color: $PALETTE-WHITE_BLUE;
                                 // STREAMLINING
-                                border-radius: $GV-D-ROUNDING-SECTIONS;
+                                border-radius: $GV-D-ROUNDING-ELEMENTS;
                                 // POSITIONING
                                 position: absolute;
                                 top: 0;
@@ -2966,27 +3000,8 @@
                                     align-items: center;
 
                                     .S-CONTENT-laureates {
-                                        // FLEXBOX
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 1 / 1 / 2 / 2;
-                                        // BACKGROUND
-                                        background-color: $PALETTE-DARK_BLUE_PALE;
-
-                                        .S-LAUREATES-carcass {
-                                            // MARGINS & PADDINGS
-                                            padding: $GV-D-SIZES-DEFAULT 0;
-
-                                            .T-LAUREATES-heading {
-                                                // FONT SETTINGS
-                                                text-align: center;
-                                                color: $PALETTE-SNOW;
-                                                // MARGINS & PADDINGS
-                                                margin-top: -0.8vh;
-                                            }
-                                        }
                                     }
                                     .S-CONTENT-pointer_1 {
                                         // CSS-GRID CONFIGURATION
@@ -3000,19 +3015,6 @@
                                     .S-CONTENT-finalists {
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 1 / 3 / 2 / 4;
-
-                                        .S-INFO-carcass {
-                                            // FLEXBOX
-                                            display: flex;
-                                            justify-content: center;
-                                            // MARGINS & PADDINGS
-                                            padding: ($GV-D-SIZES-DEFAULT * 1.2) 0 $GV-D-SIZES-DEFAULT 0;
-
-                                            .T-INFO-text {
-                                                // FONT SETTINGS
-                                                color: $PALETTE-SNOW;
-                                            }
-                                        }
                                     }
                                     .S-CONTENT-pointer_2 {
                                         // CSS-GRID CONFIGURATION
@@ -3026,29 +3028,6 @@
                                     .S-CONTENT-winner {
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 1 / 5 / 2 / 6;
-
-                                        .S-INFO-carcass {
-                                            // FLEXBOX
-                                            display: flex;
-                                            justify-content: center;
-                                            flex-direction: column;
-                                            align-items: center;
-                                            gap: $GV-D-FONT_SIZES-SMALL * 0.95;
-                                            // MARGINS & PADDINGS
-                                            padding: ($GV-D-SIZES-DEFAULT * 1.48) 0 $GV-D-SIZES-DEFAULT 0;
-
-                                            .I-INFO-icon {
-                                                // SCALING
-                                                width: 7.5vh;
-                                                // FILL
-                                                fill: $PALETTE-SNOW;
-                                            }
-
-                                            .T-INFO-text {
-                                                // FONT SETTINGS
-                                                color: $PALETTE-SNOW;
-                                            }
-                                        }
                                     }
                                     .S-CONTENT-pointer {
                                         // MARGINS & PADDINGS
@@ -3061,13 +3040,9 @@
                                             width: $LV-D-PRIZES-POINTER_WIDTH;
                                         }
                                     }
-                                    .S-CONTENT-place {
-                                        // SCALING
-                                        width: $LV-D-PRIZES-PLACE_WIDTH;
-                                        // STREAMLINING
-                                        border-radius: $GV-D-ROUNDING-ELEMENTS;
-                                        // OVERFLOW
-                                        overflow: clip;
+                                    .S-CONTENT-case_pale_blue {
+                                        // BACKGROUND
+                                        background-color: $PALETTE-DARK_BLUE_PALE;
                                     }
                                     .S-CONTENT-case_blue {
                                         // BACKGROUND
@@ -3078,6 +3053,13 @@
                                         background-color: $PALETTE-LIGHT_GREEN;
                                     }
                                     .S-CONTENT-case {
+                                        // SCALING
+                                        width: $LV-D-PRIZES-PLACE_WIDTH;
+                                        // STREAMLINING
+                                        border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                        // OVERFLOW
+                                        overflow: clip;
+
                                         .S-CASE-carcass {
                                             // CSS-GRID SETUP
                                             display: grid;
@@ -3109,8 +3091,12 @@
                                                         display: flex;
                                                         justify-content: center;
                                                         // MARGINS & PADDINGS
-                                                        padding: ($GV-D-FONT_SIZES-SMALL * 1.8) 0 ($GV-D-FONT_SIZES-SMALL * 1.2) 0;
+                                                        padding: ($GV-D-FONT_SIZES-SMALL * 2) 0 ($GV-D-FONT_SIZES-SMALL * 0.7) 0;
 
+                                                        .T-HEADING-text_pale_blue {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE;
+                                                        }
                                                         .T-HEADING-text_blue {
                                                             // FONT SETTINGS
                                                             color: $PALETTE-DARK_BLUE;
@@ -3118,6 +3104,10 @@
                                                         .T-HEADING-text_green {
                                                             // FONT SETTINGS
                                                             color: $PALETTE-DARK_GREEN;
+                                                        }
+                                                        .T-HEADING-text {
+                                                            // FONT SETTINGS
+                                                            text-box: trim-both cap alphabetic;
                                                         }
                                                     }
                                                     .S-HEADING-icon {
@@ -3141,6 +3131,10 @@
                                                             // STREAMLINING
                                                             border-radius: $GV-D-ROUNDING-MAXIMUM;
 
+                                                            .S-ICON-carcass_pale_blue {
+                                                                // BACKGROUND
+                                                                background-color: $PALETTE-DARK_BLUE_PALE;
+                                                            }
                                                             .S-ICON-carcass_blue {
                                                                 // BACKGROUND
                                                                 background-color: $PALETTE-DARK_BLUE;
@@ -3178,6 +3172,30 @@
                                             .S-CASE-info {
                                                 // CSS-GRID CONFIGURATION
                                                 grid-area: 2 / 1 / 3 / 2;
+
+                                                .S-INFO-carcass {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    gap: $GV-D-FONT_SIZES-SMALL * 1.3;
+                                                    // MARGINS & PADDINGS
+                                                    padding: ($GV-D-SIZES-DEFAULT * 1.45) 0 ($GV-D-SIZES-DEFAULT * 1.1) 0;
+
+                                                    .I-INFO-icon {
+                                                        // SCALING
+                                                        height: 7.25vh;
+                                                        // FILL
+                                                        fill: $PALETTE-SNOW;
+                                                    }
+                                                    .T-INFO-text {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-SNOW;
+                                                        // FONT SETTINGS
+                                                        text-box: trim-both cap alphabetic;
+                                                    }
+                                                }
                                             }
                                         }
                                     }

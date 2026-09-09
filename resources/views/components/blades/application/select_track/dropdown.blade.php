@@ -10,6 +10,24 @@
     <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="2">Корпорации и Индустрия</li>
     <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="3">Регионы и Территории</li>
     <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="4">Общество и Будущее</li>
-    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="5">Корпорации и Индустрия</li>
+    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="5">Наука и Инженерия</li>
 </ul>
-<input type="hidden" name="track_select" class="S-TRACK-hidden-input" value="-">
+<input
+    class="S-TRACK-hidden-input"
+    type="hidden"
+    id="track{{
+        match($type) {
+            'student' => '_single' . ($number != 1 ? '_skip_' . $number : ''),
+            'individual' => '_individual' . ($number != 1 ? '_skip_' . $number : ''),
+            'entity' => '_' . $number
+        }
+    }}"
+    name="track{{
+        match($type) {
+            'student' => '_student' . ($number != 1 ? '_skip_' . $number : ''),
+            'individual' => '_individual' . ($number != 1 ? '_skip_' . $number : ''),
+            'entity' => '_' . $number
+        }
+    }}"
+    value=""
+>

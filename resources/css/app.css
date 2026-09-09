@@ -534,6 +534,16 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student .S-CONTENT_TRACKS-student_track {
+    grid-area: 1/1/2/2;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_individual {
     display: grid;
     grid-template-columns: 1fr;
@@ -579,6 +589,22 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_3 {
+    display: none;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
     display: grid;
@@ -1477,8 +1503,8 @@ br {
     bottom: 0;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
-    scale: 3;
-    translate: 74.5vh 68.9vh;
+    scale: 2.8;
+    translate: 78vh 74.5vh;
     rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
@@ -1996,7 +2022,7 @@ br {
     grid-row-gap: 0;
     background-color: oklch(63.85% 0.1954 257.48deg);
     border-radius: 2.8vh;
-    padding-bottom: 0.76vh;
+    padding: 0 1.9vh 1.9vh 1.9vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund {
     display: flex;
@@ -2004,10 +2030,10 @@ br {
     flex-direction: column;
     grid-area: 1/1/2/2;
     color: oklch(100% 0 0deg);
-    padding: 3.6842105263vh 0 4.6666666667vh 0;
+    padding: 3.5vh 0;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-number {
-    margin-top: -0.1vh;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution {
     grid-area: 2/1/3/2;
@@ -2024,7 +2050,7 @@ br {
     grid-area: 1/1/2/2;
     overflow: clip;
     background-color: oklch(95.77% 0.0199 267.29deg);
-    border-radius: 2.8vh;
+    border-radius: 1.8vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -2059,19 +2085,7 @@ br {
     align-items: center;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-area: 1/1/2/2;
-    background-color: oklch(74.07% 0.1354 256.19deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass {
-    padding: 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass .T-LAUREATES-heading {
-    text-align: center;
-    color: oklch(100% 0 0deg);
-    margin-top: -0.8vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_1 {
     grid-area: 1/2/2/3;
@@ -2082,14 +2096,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists {
     grid-area: 1/3/2/4;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    padding: 4.2vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_2 {
     grid-area: 1/4/2/5;
   }
@@ -2099,21 +2105,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner {
     grid-area: 1/5/2/6;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.41075vh;
-    padding: 5.18vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .I-INFO-icon {
-    width: 7.5vh;
-    fill: oklch(100% 0 0deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer {
     padding: 0 2vh;
   }
@@ -2121,16 +2112,19 @@ br {
     display: flex;
     width: 1.3vh;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-place {
-    width: 36.8vh;
-    border-radius: 1.8vh;
-    overflow: clip;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_green {
     background-color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case {
+    width: 35.5333333333vh;
+    border-radius: 1.8vh;
+    overflow: clip;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass {
     display: grid;
@@ -2155,13 +2149,19 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
-    padding: 2.673vh 0 1.782vh 0;
+    padding: 2.97vh 0 1.0395vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_pale_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_blue {
     color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon {
     grid-area: 2/1/3/2;
@@ -2177,6 +2177,9 @@ br {
     height: 4.7879vh;
     background-color: oklch(100% 0 0deg);
     border-radius: 999vh;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -2200,6 +2203,22 @@ br {
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info {
     grid-area: 2/1/3/2;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.9305vh;
+    padding: 5.075vh 0 3.85vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .I-INFO-icon {
+    height: 7.25vh;
+    fill: oklch(100% 0 0deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .T-INFO-text {
+    color: oklch(100% 0 0deg);
+    text-box: trim-both cap alphabetic;
   }
   #conditions {
     scroll-margin-top: 11.7vh;
@@ -3139,6 +3158,16 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student .S-CONTENT_TRACKS-student_track {
+    grid-area: 1/1/2/2;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_individual {
     display: grid;
     grid-template-columns: 1fr;
@@ -3184,6 +3213,22 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_3 {
+    display: none;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
     display: grid;
@@ -4082,8 +4127,8 @@ br {
     bottom: 0;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
-    scale: 3;
-    translate: 74.5vh 68.9vh;
+    scale: 2.8;
+    translate: 78vh 74.5vh;
     rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
@@ -4601,7 +4646,7 @@ br {
     grid-row-gap: 0;
     background-color: oklch(63.85% 0.1954 257.48deg);
     border-radius: 2.8vh;
-    padding-bottom: 0.76vh;
+    padding: 0 1.9vh 1.9vh 1.9vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund {
     display: flex;
@@ -4609,10 +4654,10 @@ br {
     flex-direction: column;
     grid-area: 1/1/2/2;
     color: oklch(100% 0 0deg);
-    padding: 3.6842105263vh 0 4.6666666667vh 0;
+    padding: 3.5vh 0;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-number {
-    margin-top: -0.1vh;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution {
     grid-area: 2/1/3/2;
@@ -4629,7 +4674,7 @@ br {
     grid-area: 1/1/2/2;
     overflow: clip;
     background-color: oklch(95.77% 0.0199 267.29deg);
-    border-radius: 2.8vh;
+    border-radius: 1.8vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -4664,19 +4709,7 @@ br {
     align-items: center;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-area: 1/1/2/2;
-    background-color: oklch(74.07% 0.1354 256.19deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass {
-    padding: 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass .T-LAUREATES-heading {
-    text-align: center;
-    color: oklch(100% 0 0deg);
-    margin-top: -0.8vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_1 {
     grid-area: 1/2/2/3;
@@ -4687,14 +4720,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists {
     grid-area: 1/3/2/4;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    padding: 4.2vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_2 {
     grid-area: 1/4/2/5;
   }
@@ -4704,21 +4729,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner {
     grid-area: 1/5/2/6;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.41075vh;
-    padding: 5.18vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .I-INFO-icon {
-    width: 7.5vh;
-    fill: oklch(100% 0 0deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer {
     padding: 0 2vh;
   }
@@ -4726,16 +4736,19 @@ br {
     display: flex;
     width: 1.3vh;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-place {
-    width: 36.8vh;
-    border-radius: 1.8vh;
-    overflow: clip;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_green {
     background-color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case {
+    width: 35.5333333333vh;
+    border-radius: 1.8vh;
+    overflow: clip;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass {
     display: grid;
@@ -4760,13 +4773,19 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
-    padding: 2.673vh 0 1.782vh 0;
+    padding: 2.97vh 0 1.0395vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_pale_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_blue {
     color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon {
     grid-area: 2/1/3/2;
@@ -4782,6 +4801,9 @@ br {
     height: 4.7879vh;
     background-color: oklch(100% 0 0deg);
     border-radius: 999vh;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -4805,6 +4827,22 @@ br {
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info {
     grid-area: 2/1/3/2;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.9305vh;
+    padding: 5.075vh 0 3.85vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .I-INFO-icon {
+    height: 7.25vh;
+    fill: oklch(100% 0 0deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .T-INFO-text {
+    color: oklch(100% 0 0deg);
+    text-box: trim-both cap alphabetic;
   }
   #conditions {
     scroll-margin-top: 11.7vh;
@@ -5766,6 +5804,16 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student .S-CONTENT_TRACKS-student_track {
+    grid-area: 1/1/2/2;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_individual {
     display: grid;
     grid-template-columns: 1fr;
@@ -5811,6 +5859,22 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_3 {
+    display: none;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
     display: grid;
@@ -6709,8 +6773,8 @@ br {
     bottom: 0;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
-    scale: 3;
-    translate: 74.5vh 68.9vh;
+    scale: 2.8;
+    translate: 78vh 74.5vh;
     rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
@@ -7228,7 +7292,7 @@ br {
     grid-row-gap: 0;
     background-color: oklch(63.85% 0.1954 257.48deg);
     border-radius: 2.8vh;
-    padding-bottom: 0.76vh;
+    padding: 0 1.9vh 1.9vh 1.9vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund {
     display: flex;
@@ -7236,10 +7300,10 @@ br {
     flex-direction: column;
     grid-area: 1/1/2/2;
     color: oklch(100% 0 0deg);
-    padding: 3.6842105263vh 0 4.6666666667vh 0;
+    padding: 3.5vh 0;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-number {
-    margin-top: -0.1vh;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution {
     grid-area: 2/1/3/2;
@@ -7256,7 +7320,7 @@ br {
     grid-area: 1/1/2/2;
     overflow: clip;
     background-color: oklch(95.77% 0.0199 267.29deg);
-    border-radius: 2.8vh;
+    border-radius: 1.8vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -7291,19 +7355,7 @@ br {
     align-items: center;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-area: 1/1/2/2;
-    background-color: oklch(74.07% 0.1354 256.19deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass {
-    padding: 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass .T-LAUREATES-heading {
-    text-align: center;
-    color: oklch(100% 0 0deg);
-    margin-top: -0.8vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_1 {
     grid-area: 1/2/2/3;
@@ -7314,14 +7366,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists {
     grid-area: 1/3/2/4;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    padding: 4.2vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_2 {
     grid-area: 1/4/2/5;
   }
@@ -7331,21 +7375,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner {
     grid-area: 1/5/2/6;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.41075vh;
-    padding: 5.18vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .I-INFO-icon {
-    width: 7.5vh;
-    fill: oklch(100% 0 0deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer {
     padding: 0 2vh;
   }
@@ -7353,16 +7382,19 @@ br {
     display: flex;
     width: 1.3vh;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-place {
-    width: 36.8vh;
-    border-radius: 1.8vh;
-    overflow: clip;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_green {
     background-color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case {
+    width: 35.5333333333vh;
+    border-radius: 1.8vh;
+    overflow: clip;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass {
     display: grid;
@@ -7387,13 +7419,19 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
-    padding: 2.673vh 0 1.782vh 0;
+    padding: 2.97vh 0 1.0395vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_pale_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_blue {
     color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon {
     grid-area: 2/1/3/2;
@@ -7409,6 +7447,9 @@ br {
     height: 4.7879vh;
     background-color: oklch(100% 0 0deg);
     border-radius: 999vh;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -7432,6 +7473,22 @@ br {
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info {
     grid-area: 2/1/3/2;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.9305vh;
+    padding: 5.075vh 0 3.85vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .I-INFO-icon {
+    height: 7.25vh;
+    fill: oklch(100% 0 0deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .T-INFO-text {
+    color: oklch(100% 0 0deg);
+    text-box: trim-both cap alphabetic;
   }
   #conditions {
     scroll-margin-top: 11.7vh;
@@ -8371,6 +8428,16 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_student .S-CONTENT_TRACKS-student_track {
+    grid-area: 1/1/2/2;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass_individual {
     display: grid;
     grid-template-columns: 1fr;
@@ -8416,6 +8483,22 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-title .T-TRACK-asterisk {
     margin-top: -0.15vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_1 {
+    grid-area: 1/1/2/2;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_2 {
+    display: none;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_student .S-SELECT-carcass_3 {
+    display: none;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select_individual {
     display: grid;
@@ -9314,8 +9397,8 @@ br {
     bottom: 0;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_1 {
-    scale: 3;
-    translate: 74.5vh 68.9vh;
+    scale: 2.8;
+    translate: 78vh 74.5vh;
     rotate: 191deg;
   }
   .S-RAIR-carcass .S-RAIR-background .S-BACKGROUND-carcass .I-BACKGROUND-shape_2 {
@@ -9833,7 +9916,7 @@ br {
     grid-row-gap: 0;
     background-color: oklch(63.85% 0.1954 257.48deg);
     border-radius: 2.8vh;
-    padding-bottom: 0.76vh;
+    padding: 0 1.9vh 1.9vh 1.9vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund {
     display: flex;
@@ -9841,10 +9924,10 @@ br {
     flex-direction: column;
     grid-area: 1/1/2/2;
     color: oklch(100% 0 0deg);
-    padding: 3.6842105263vh 0 4.6666666667vh 0;
+    padding: 3.5vh 0;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-number {
-    margin-top: -0.1vh;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-fund .T-FUND-heading {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution {
     grid-area: 2/1/3/2;
@@ -9861,7 +9944,7 @@ br {
     grid-area: 1/1/2/2;
     overflow: clip;
     background-color: oklch(95.77% 0.0199 267.29deg);
-    border-radius: 2.8vh;
+    border-radius: 1.8vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -9896,19 +9979,7 @@ br {
     align-items: center;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-area: 1/1/2/2;
-    background-color: oklch(74.07% 0.1354 256.19deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass {
-    padding: 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-laureates .S-LAUREATES-carcass .T-LAUREATES-heading {
-    text-align: center;
-    color: oklch(100% 0 0deg);
-    margin-top: -0.8vh;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_1 {
     grid-area: 1/2/2/3;
@@ -9919,14 +9990,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists {
     grid-area: 1/3/2/4;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    padding: 4.2vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-finalists .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer_2 {
     grid-area: 1/4/2/5;
   }
@@ -9936,21 +9999,6 @@ br {
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner {
     grid-area: 1/5/2/6;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.41075vh;
-    padding: 5.18vh 0 3.5vh 0;
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .I-INFO-icon {
-    width: 7.5vh;
-    fill: oklch(100% 0 0deg);
-  }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-winner .S-INFO-carcass .T-INFO-text {
-    color: oklch(100% 0 0deg);
-  }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-pointer {
     padding: 0 2vh;
   }
@@ -9958,16 +10006,19 @@ br {
     display: flex;
     width: 1.3vh;
   }
-  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-place {
-    width: 36.8vh;
-    border-radius: 1.8vh;
-    overflow: clip;
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case_green {
     background-color: oklch(83.25% 0.1842 154.43deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case {
+    width: 35.5333333333vh;
+    border-radius: 1.8vh;
+    overflow: clip;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass {
     display: grid;
@@ -9992,13 +10043,19 @@ br {
     grid-area: 1/1/2/2;
     display: flex;
     justify-content: center;
-    padding: 2.673vh 0 1.782vh 0;
+    padding: 2.97vh 0 1.0395vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_pale_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_blue {
     color: oklch(63.85% 0.1954 257.48deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-text .T-HEADING-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon {
     grid-area: 2/1/3/2;
@@ -10014,6 +10071,9 @@ br {
     height: 4.7879vh;
     background-color: oklch(100% 0 0deg);
     border-radius: 999vh;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_pale_blue {
+    background-color: oklch(74.07% 0.1354 256.19deg);
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-heading .S-HEADING-carcass .S-HEADING-icon .S-ICON-wrapper .S-ICON-carcass_blue {
     background-color: oklch(63.85% 0.1954 257.48deg);
@@ -10037,6 +10097,22 @@ br {
   }
   .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info {
     grid-area: 2/1/3/2;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.9305vh;
+    padding: 5.075vh 0 3.85vh 0;
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .I-INFO-icon {
+    height: 7.25vh;
+    fill: oklch(100% 0 0deg);
+  }
+  .S-PRIZES-wrapper .S-PRIZES-carcass .S-PRIZES-widget .S-WIDGET-carcass .S-WIDGET-distribution .S-DISTRIBUTION-carcass .S-DISTRIBUTION-content .S-CONTENT-carcass .S-CONTENT-case .S-CASE-carcass .S-CASE-info .S-INFO-carcass .T-INFO-text {
+    color: oklch(100% 0 0deg);
+    text-box: trim-both cap alphabetic;
   }
   #conditions {
     scroll-margin-top: 11.7vh;

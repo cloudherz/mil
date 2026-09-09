@@ -48,7 +48,11 @@ function initApplicationTrackSelect() {
 
                 // Update hidden input for form submission
                 if (hiddenInput) {
-                    hiddenInput.value = value;
+                    if (value === '-') {
+                        hiddenInput.value = '';
+                    } else {
+                        hiddenInput.value = value;
+                    }
                 }
 
                 optionsList.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
