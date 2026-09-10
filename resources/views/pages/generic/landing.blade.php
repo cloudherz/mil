@@ -80,7 +80,7 @@
                                             />
                                         </div>
                                         <div class="S-DESCRIPTION-text">
-                                            <p class="T-DESCRIPTION-text TYPO-PRESET-CORE_P">Участие только для проектов с измеримым эффектом. Предусмотрена оплата<br>организационного взноса по выбранной категории, который включает билет<br>«Стандарт» на торжественную церемонию награждения премии МИЛ.</p>
+                                            <p class="T-DESCRIPTION-text TYPO-PRESET-CORE_P">Участие только для проектов с измеримым эффектом. Оплата организационного<br>взноса только после верификации. Орг. взнос включает билет «Стандарт»<br>на торжественную церемонию награждения премии МИЛ.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -190,7 +190,7 @@
                         <div class="S-REASON-carcass">
                             <div class="S-REASON-question S-REASON-block">
                                 <h3 class="TYPO-PRESET-CORE_H3">Зачем участвовать?</h3>
-                                <p class="TYPO-PRESET-CORE_P">Премия МИЛ запускается впервые:<br>станьте первым инновационным лидером,<br>признанным экспертной комиссией.</p>
+                                <p class="TYPO-PRESET-CORE_P">Премия МИЛ запускается впервые:<br>Ваше инновационное лидерство получит<br>признание профессионалов и внимание<br>медиа.</p>
                             </div>
                             <div class="S-REASON-answer_1 S-REASON-block S-REASON-answer">
                                 <h3 class="T-REASON-answer_heading TYPO-PRESET-CORE_H3">1.</h3>
@@ -198,7 +198,7 @@
                             </div>
                             <div class="S-REASON-answer_2 S-REASON-block S-REASON-answer">
                                 <h3 class="T-REASON-answer_heading TYPO-PRESET-CORE_H3">2.</h3>
-                                <p class="T-REASON-answer_text TYPO-PRESET-CORE_P">Интеграцию в экосистему РАИР<br>для профессиональной<br>кооперации и масштабирования.</p>
+                                <p class="T-REASON-answer_text TYPO-PRESET-CORE_P">Интеграция в экосистему РАИР<br>для профессиональной<br>кооперации и масштабирования.</p>
                             </div>
                             <div class="S-REASON-answer_3 S-REASON-block S-REASON-answer">
                                 <h3 class="T-REASON-answer_heading TYPO-PRESET-CORE_H3">3.</h3>
@@ -212,7 +212,7 @@
                     <div class="S-GOALS-wrapper">
                         <div class="S-GOALS-carcass">
                             <div class="S-GOALS-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Миссия</h2>
+                                <h2 class="TYPO-PRESET-CORE_H2">О премии</h2>
                             </div>
                             <div class="S-GOALS-cards">
                                 <div class="S-CARDS-wrapper">
@@ -224,7 +224,7 @@
                                             icon_rotate="-7deg"
                                             icon_transform="scale(102%) translateY(5%)"
                                             background_transform="scale(230%) translateX(-12%) translateY(0%) rotate(12deg)"
-                                            title="О премии"
+                                            title="Для кого"
                                             text1="Премия создана для тех, кто уже прошёл путь от идеи до работающего продукта и может показать измеримый эффект для рынка, науки или своего региона."
                                             text2="МИЛ выделяет лидеров, перешедших из стартап-энтузиастов в системных игроков, и победа в пяти номинациях подтверждает зрелость решений, открывая доступ к экспертам и стратегическим возможностям."
                                         />
@@ -258,8 +258,8 @@
                                             icon_transform="scale(100%)"
                                             background_transform="scale(205%) translateX(-22%) translateY(-3.5%) rotate(14deg)"
                                             title="Кто может участвовать"
-                                            text1="Мы ждём лидеров 20–40 лет, уже доказавших эффективность: фаундеров и CEO, корпоративных инноваторов, руководителей технопарков и ОЭЗ, академических предпринимателей и региональных управленцев."
-                                            text2="Инженеров и руководителей передовых школ, преподавателей инноватики и наставников, социальных визионеров из EdTech, MedTech, AgroTech, и тех, кто превращает территории в точки роста."
+                                            text1="Молодые лидеры 20–40 лет, доказавшие свою эффективность: фаундеры и CEO, корпоративные инноваторы, руководители технопарков, инжиниринговых цетров, ОЭЗ, региональные управленцы, академические предприниматели,"
+                                            text2="руководители ПИШ, преподаватели инноватики, наставники,социальные визионеры из EdTech, MedTech, AgroTech, те, кто превращает территории в точки роста.<br><br>Для наставников нет возрастных ограничений."
                                         />
                                     </div>
                                 </div>
@@ -521,7 +521,7 @@
                                                                         class="I-INFO-icon"
                                                                         style="scale: 1.23;"
                                                                     />
-                                                                    <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">билет на церемонию</h3>
+                                                                    <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">диплом лауреата</h3>
                                                                 </x-blades.prizes.case>
                                                                 <div class="S-CONTENT-pointer S-CONTENT-pointer_1">
                                                                     <x-svg.icons.pointer
@@ -857,8 +857,8 @@
                                 </a>
                             </div>
                             <div class="S-LINKS-alt TYPO-PRESET-CORE_SMALL">
+                                <a class="L-LINKS-alt" href="#">Публичная оферта</a>
                                 <a class="L-LINKS-alt" href="#">Положение о премии</a>
-                                <a class="L-LINKS-alt" href="#">Согласие на обработку персональных данных</a>
                             </div>
                             <div class="S-LINKS-credit TYPO-PRESET-CORE_SMALL">
                                 <p class="T-LINKS-credit">© 2026, Все права защищены</p>

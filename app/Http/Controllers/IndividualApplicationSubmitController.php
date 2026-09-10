@@ -16,7 +16,7 @@ class IndividualApplicationSubmitController extends ApplicationSubmitController
             'organization_name' => 'prohibited',
             'organization_tin' => 'prohibited',
             'organization_representative' => 'prohibited',
-            'email' => 'required',
+            'email' => 'required|email',
             'phone' => 'required',
             'track_student' => 'prohibited',
             'track_individual' => 'required',
@@ -24,6 +24,8 @@ class IndividualApplicationSubmitController extends ApplicationSubmitController
             'track_2' => 'prohibited',
             'track_3' => 'prohibited',
             'description' => 'required',
+            'files_individual' => 'required|array|min:1|max:1',
+            'files_individual.*' => 'required|file|max:204800',
         ];
     }
 

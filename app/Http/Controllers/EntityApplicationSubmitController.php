@@ -16,7 +16,7 @@ class EntityApplicationSubmitController extends ApplicationSubmitController
             'organization_name' => 'required',
             'organization_tin' => 'required',
             'organization_representative' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'phone' => 'required',
             'track_student' => 'prohibited',
             'track_individual' => 'prohibited',
@@ -24,6 +24,8 @@ class EntityApplicationSubmitController extends ApplicationSubmitController
             'track_2' => 'required_without_all:track_1,track_3',
             'track_3' => 'required_without_all:track_1,track_2',
             'description' => 'required',
+            'files_entity' => 'required|array|min:1|max:3',
+            'files_entity.*' => 'required|file|max:204800',
         ];
     }
 

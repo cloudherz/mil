@@ -38,7 +38,7 @@
         <div class="S-FORM-heading">
             <h3 class="TYPO-PRESET-CORE_H3">{!! $windowTitle !!}</h3>
         </div>
-        <form class="S-FORM-content" action="{{ route('application_submit_' . $type) }}" method="POST">
+        <form class="S-FORM-content" action="{{ route('application_submit_' . $type) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input
                 type="hidden"
@@ -189,31 +189,43 @@
                                id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $typeUppercase }}">{{ $presentationTitle }}</label>
                         <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
                     </div>
-                    <div
-                        class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default DEV-DISABLE_SELECTION">
-                        <label class="S-PRESENTATION_INPUT-wrapper" id="uploadLabel{{ $colorCapitalized }}">
+                    <div class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default DEV-DISABLE_SELECTION">
+                        <label class="S-PRESENTATION_INPUT-wrapper" id="uploadLabel_{{ $type }}">
                             <div class="S-PRESENTATION_INPUT-carcass">
                                 <div class="S-PRESENTATION_INPUT-upload S-PRESENTATION_INPUT-upload_{{ $color }}">
-                                    <input type="file" id="uploadInput{{ $colorCapitalized }}" hidden/>
+                                    @php
+                                        $filesName = match($type) {
+                                            'student' => 'files_student',
+                                            'individual' => 'files_individual',
+                                            'entity' => 'files_entity',
+                                            default => 'files'
+                                        };
+                                    @endphp
+
+                                    <input
+                                        type="file"
+                                        id="file_{{ $type }}"
+                                        name="{{ $filesName }}[]"
+                                        multiple
+                                        accept=".pptx"
+                                        hidden
+                                    />
                                     <div class="S-PRESENTATION_INPUT-icons">
                                         <x-svg.icons.upload
-                                            class="I-PRESENTATION_INPUT-file_before_{{ $color }} I-PRESENTATION_INPUT-file"
+                                            class="I-PRESENTATION_INPUT-file_before_{{ $type }} I-PRESENTATION_INPUT-file"
                                         />
                                         <x-svg.icons.file
-                                            class="I-PRESENTATION_INPUT-file_after_{{ $color }} I-PRESENTATION_INPUT-file"
+                                            class="I-PRESENTATION_INPUT-file_after_{{ $type }} I-PRESENTATION_INPUT-file"
                                         />
                                     </div>
                                     <span class="T-PRESENTATION_INPUT-filename TYPO-PRESET-CORE_P"
-                                          id="uploadText{{ $colorCapitalized }}">{{ $presentationUploadButtonTitle }}</span>
+                                          id="uploadText_{{ $type }}">{{ $presentationUploadButtonTitle }}</span>
                                 </div>
                             </div>
                         </label>
                         <div class="S-PRESENTATION_INPUT-delete S-PRESENTATION_INPUT-delete_{{ $color }}_default">
-                            <button class="B-PRESENTATION_INPUT-delete" id="uploadDelete{{ $colorCapitalized }}"
-                                    type="button">
-                                <x-svg.icons.trash
-                                    class="I-PRESENTATION_INPUT-delete"
-                                />
+                            <button class="B-PRESENTATION_INPUT-delete" id="uploadDelete_{{ $type }}" type="button">
+                                <x-svg.icons.trash class="I-PRESENTATION_INPUT-delete" />
                             </button>
                         </div>
                     </div>

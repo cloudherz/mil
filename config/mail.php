@@ -111,8 +111,19 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'server@milpremia.ru'),
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Recipient
+    |--------------------------------------------------------------------------
+    |
+    | Email адрес, на который отправляются уведомления о новых заявках.
+    |
+    */
+
+    'application_recipient' => env('MAIL_APPLICATION_RECIPIENT', 'flappyz45@gmail.com'),
 
 ];

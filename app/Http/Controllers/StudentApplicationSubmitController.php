@@ -16,7 +16,7 @@ class StudentApplicationSubmitController extends ApplicationSubmitController
             'organization_name' => 'prohibited',
             'organization_tin' => 'prohibited',
             'organization_representative' => 'prohibited',
-            'email' => 'required',
+            'email' => 'required|email',
             'phone' => 'required',
             'track_student' => 'required',
             'track_individual' => 'prohibited',
@@ -24,6 +24,8 @@ class StudentApplicationSubmitController extends ApplicationSubmitController
             'track_2' => 'prohibited',
             'track_3' => 'prohibited',
             'description' => 'required',
+            'files_student' => 'required|array|min:1|max:1',
+            'files_student.*' => 'required|file|max:204800',
         ];
     }
 
