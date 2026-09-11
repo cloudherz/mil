@@ -29,15 +29,15 @@
                         <div class="S-CONTENT-number">
                             <div class="S-NUMBER-wrapper">
                                 <div class="S-NUMBER-carcass">
-                                    <h3 class="T-NUMBER-heading T-NUMBER-heading_{{ $state }} TYPO-PRESET-CORE_H3">{{ $number }}</h3>
+                                    <h3 class="T-NUMBER-heading T-NUMBER-heading_{{ $state }} TYPO-D-PRESET-CORE_H3">{{ $number }}</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="S-CONTENT-text">
                             <div class="S-TEXT-wrapper">
                                 <div class="S-TEXT-carcass">
-                                    <p class="TYPO-PRESET-CORE_P_BOLD">{!! $date !!}</p>
-                                    <p class="TYPO-PRESET-CORE_P">{!! $description !!}</p>
+                                    <p class="TYPO-D-PRESET-CORE_P_BOLD">{!! $date !!}</p>
+                                    <p class="TYPO-D-PRESET-CORE_P">{!! $description !!}</p>
                                 </div>
                             </div>
                         </div>

@@ -36,7 +36,7 @@
 <div class="S-FORM-wrapper S-FORM-wrapper_{{ $color }} S-WINDOW-wrapper">
     <div class="S-FORM-carcass S-WINDOW-carcass">
         <div class="S-FORM-heading">
-            <h3 class="TYPO-PRESET-CORE_H3">{!! $windowTitle !!}</h3>
+            <h3 class="TYPO-D-PRESET-CORE_H3">{!! $windowTitle !!}</h3>
         </div>
         <form class="S-FORM-content" action="{{ route('application_submit_' . $type) }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -52,13 +52,13 @@
                         <div class="S-NAME_SOLO-wrapper">
                             <div class="S-NAME_SOLO-carcass">
                                 <div class="S-NAME_SOLO-name_title S-CONTENT-title">
-                                    <label class="TYPO-PRESET-CORE_P_BOLD">ФИО</label>
-                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                    <label class="TYPO-D-PRESET-CORE_P_BOLD">ФИО</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">
                                         *</p>
                                 </div>
                                 <div class="S-NAME_SOLO-name_input S-CONTENT-input">
                                     <input
-                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-D-PRESET-CORE_P"
                                         placeholder='Меня зовут ...'
                                         type="text"
                                         id="person_name_{{ $type }}"
@@ -79,13 +79,13 @@
                         <div class="S-NAME_ENTITY-wrapper">
                             <div class="S-NAME_ENTITY-carcass">
                                 <div class="S-NAME_ENTITY-name_title S-CONTENT-title">
-                                    <label class="TYPO-PRESET-CORE_P_BOLD">Название орг.</label>
-                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                    <label class="TYPO-D-PRESET-CORE_P_BOLD">Название орг.</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">
                                         *</p>
                                 </div>
                                 <div class="S-NAME_ENTITY-name_input S-CONTENT-input">
                                     <input
-                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-D-PRESET-CORE_P"
                                         placeholder='"ООО" ...'
                                         type="text"
                                         id="organization_name_{{ $type }}"
@@ -100,13 +100,13 @@
                                     text="Введите название организации<br>на кириллице или латинице"
                                 />
                                 <div class="S-NAME_ENTITY-tin_title S-CONTENT-title">
-                                    <label class="TYPO-PRESET-CORE_P_BOLD">ИНН</label>
-                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                    <label class="TYPO-D-PRESET-CORE_P_BOLD">ИНН</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">
                                         *</p>
                                 </div>
                                 <div class="S-NAME_ENTITY-tin_input S-CONTENT-input">
                                     <input
-                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-D-PRESET-CORE_P"
                                         placeholder="1234 ..."
                                         type="text"
                                         id="organization_tin_{{ $type }}"
@@ -121,13 +121,13 @@
                                     text="Введите корректный<br>ИНН организации"
                                 />
                                 <div class="S-NAME_ENTITY-representative_title S-CONTENT-title">
-                                    <label class="TYPO-PRESET-CORE_P_BOLD">Представитель</label>
-                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
+                                    <label class="TYPO-D-PRESET-CORE_P_BOLD">Представитель</label>
+                                    <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">
                                         *</p>
                                 </div>
                                 <div class="S-NAME_ENTITY-representative_input S-CONTENT-input">
                                     <input
-                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                                        class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-D-PRESET-CORE_P"
                                         placeholder="Иванов Иван ..."
                                         type="text"
                                         id="organization_representative_{{ $type }}"
@@ -145,12 +145,12 @@
                         </div>
                     </div>
                     <div class="S-CONTENT-email_title S-CONTENT-title">
-                        <label class="TYPO-PRESET-CORE_P_BOLD">Почта</label>
-                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <label class="TYPO-D-PRESET-CORE_P_BOLD">Почта</label>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-email_input S-CONTENT-input">
                         <input
-                            class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                            class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-D-PRESET-CORE_P"
                             placeholder="Свяжитесь {{ $type === 'entity' ? 'с нами' : 'со мной' }} по адресу ..."
                             type="text"
                             inputmode="email"
@@ -167,12 +167,12 @@
                         text="Введите почту в корректном формате:<br>yourname@mail.com"
                     />
                     <div class="S-CONTENT-phone_title S-CONTENT-title">
-                        <label class="TYPO-PRESET-CORE_P_BOLD">Телефон</label>
-                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <label class="TYPO-D-PRESET-CORE_P_BOLD">Телефон</label>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-phone_input S-CONTENT-input">
                         <input
-                            class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
+                            class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-D-PRESET-CORE_P"
                             placeholder="+7 981 ..."
                             type="tel"
                             id="phone_{{ $type }}"
@@ -223,12 +223,12 @@
                         </div>
                     </div>
                     <div class="S-CONTENT-description_title S-CONTENT-title">
-                        <label class="TYPO-PRESET-CORE_P_BOLD">Описание</label>
-                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <label class="TYPO-D-PRESET-CORE_P_BOLD">Описание</label>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-description_input S-CONTENT-input">
                         <textarea
-                            class="IN-CONTENT-text IN-CONTENT-text_{{ $color }} TYPO-PRESET-CORE_P"
+                            class="IN-CONTENT-text IN-CONTENT-text_{{ $color }} TYPO-D-PRESET-CORE_P"
                             placeholder="{{ $type === 'entity' ? 'Наш' : 'Мой' }} проект это ..."
                             type="text"
                             id="description_{{ $type }}"
@@ -243,9 +243,9 @@
                         text="Введите описание длинной<br>до 10 000 символов"
                     />
                     <div class="S-CONTENT-presentation_title S-CONTENT-title">
-                        <label class="T-CONTENT-underline TYPO-PRESET-CORE_P_BOLD"
+                        <label class="T-CONTENT-underline TYPO-D-PRESET-CORE_P_BOLD"
                                id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $typeUppercase }}">{{ $presentationTitle }}</label>
-                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
+                        <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">*</p>
                     </div>
                     <div class="S-CONTENT-presentation_input S-CONTENT-presentation_input_{{ $color }}_default DEV-DISABLE_SELECTION">
                         <label class="S-PRESENTATION_INPUT-wrapper" id="uploadLabel_{{ $type }}">
@@ -276,7 +276,7 @@
                                             class="I-PRESENTATION_INPUT-file_after_{{ $type }} I-PRESENTATION_INPUT-file"
                                         />
                                     </div>
-                                    <span class="T-PRESENTATION_INPUT-filename TYPO-PRESET-CORE_P"
+                                    <span class="T-PRESENTATION_INPUT-filename TYPO-D-PRESET-CORE_P"
                                           id="uploadText_{{ $type }}">{{ $presentationUploadButtonTitle }}</span>
                                 </div>
                             </div>
@@ -308,7 +308,7 @@
                                     </div>
                                 </div>
                                 <div class="S-CONFIRMATION-text">
-                                    <p class="T-CONFIRMATION-text TYPO-PRESET-CORE_P">Я даю согласие на обработку своих
+                                    <p class="T-CONFIRMATION-text TYPO-D-PRESET-CORE_P">Я даю согласие на обработку своих
                                         персональных данных (имя, отчество, фамилия, почта)<br>
                                         в соответствии с требованиями Федерального закона №152-ФЗ от 27.07.2006.</p>
                                 </div>
@@ -317,7 +317,7 @@
                     </div>
                     <div class="S-CONTENT-submit DEV-DISABLE_SELECTION">
                         <button class="B-CONTENT-submit B-CONTENT-submit_{{ $color }}" type="submit" id="submit_button_{{ $type }}">
-                            <p class="T-CONTENT-submit T-CONTENT-submit_{{ $color }} TYPO-PRESET-CORE_P_BOLD">Подать заявку</p>
+                            <p class="T-CONTENT-submit T-CONTENT-submit_{{ $color }} TYPO-D-PRESET-CORE_P_BOLD">Подать заявку</p>
                         </button>
                     </div>
                     <div class="S-CONTENT-presentation_hint"

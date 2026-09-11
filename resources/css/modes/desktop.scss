@@ -9,12 +9,15 @@
 
     // CHUNK:DESKTOP
     .S-DESKTOP-wrapper {
+        // DISPLAY
         display: unset;
     }
     .S-LANDSCAPE-wrapper {
+        // DISPLAY
         display: none;
     }
     .S-MOBILE-wrapper {
+        // DISPLAY
         display: none;
     }
 
@@ -2858,7 +2861,7 @@
                                                 // MARGINS & PADDINGS
                                                 //gap: $GV-D-SIZES-SMALL * 1.6;
 
-                                                .TYPO-PRESET-CORE_H3 {
+                                                .TYPO-D-PRESET-CORE_H3 {
                                                     // FONT SETTINGS
                                                     text-align: center;
                                                     // MARGINS & PADDINGS

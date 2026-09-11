@@ -20,10 +20,10 @@
                             {!! $headingIcon !!}
                         </div>
                         <div class="S-CONTENT-heading">
-                            <h3 class="T-CONTENT-heading T-CONTENT-heading_{{ $color }} TYPO-PRESET-CORE_H3">{!! $heading !!}</h3>
+                            <h3 class="T-CONTENT-heading T-CONTENT-heading_{{ $color }} TYPO-D-PRESET-CORE_H3">{!! $heading !!}</h3>
                         </div>
                         <div class="S-CONTENT-text">
-                            <p class="T-CONTENT-text TYPO-PRESET-CORE_P">{!! $text !!}</p>
+                            <p class="T-CONTENT-text TYPO-D-PRESET-CORE_P">{!! $text !!}</p>
                         </div>
                     </div>
                 </div>

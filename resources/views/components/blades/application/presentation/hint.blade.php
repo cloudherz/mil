@@ -9,10 +9,10 @@
                 {!! $titleIcon !!}
             </div>
             <div class="S-PANEL-text">
-                <p class="TYPO-PRESET-CORE_P">{!! $text !!}</p>
+                <p class="TYPO-D-PRESET-CORE_P">{!! $text !!}</p>
             </div>
             <div class="S-PANEL-number S-PANEL-number_{{ $color }}">
-                <p class="TYPO-PRESET-CORE_P">{{ $number }}</p>
+                <p class="TYPO-D-PRESET-CORE_P">{{ $number }}</p>
             </div>
         </div>
     </div>

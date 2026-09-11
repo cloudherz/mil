@@ -9,17 +9,89 @@
 
     // CHUNK:MOBILE
     .S-DESKTOP-wrapper {
+        // DISPLAY
         display: none;
     }
     .S-LANDSCAPE-wrapper {
+        // DISPLAY
         display: none;
     }
     .S-MOBILE-wrapper {
+        // DISPLAY
         display: unset;
     }
 
 
 
-    // CHUNK:
-    // LOCAL VARIABLES NAME =
+    // CHUNK:DEV
+    // LOCAL VARIABLES NAME =DEV
+    .S-MOBILE-dev {
+        // SCALING
+        height: 100dvh;
+        width: 100dvw;
+        // BACKGROUND
+        background-color: $PALETTE-DEEP_BLUE;
+        // FONT SETTINGS
+        color: $PALETTE-SNOW;
+
+        .S-DEV-carcass {
+            // CSS-GRID SETUP
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, max-content);
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            // MARGINS & PADDINGS
+            padding-top: $GV-M-SIZES-DEFAULT * 2;
+
+            .S-DEV-logo {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // CSS-GRID CONFIGURATION
+                grid-area: 1 / 1 / 2 / 2;
+                // MARGINS & PADDINGS
+                margin-bottom: $GV-M-SIZES-DEFAULT * 2;
+
+                .I-DEV-logo {
+                    // FLEXBOX
+                    display: flex;
+                    // SCALING
+                    width: 35dvw;
+                }
+            }
+            .S-DEV-icon {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // CSS-GRID CONFIGURATION
+                grid-area: 2 / 1 / 3 / 2;
+                // MARGINS & PADDINGS
+                margin-bottom: $GV-M-SIZES-DEFAULT * 0.75;
+
+                .I-DEV-icon {
+                    // FLEXBOX
+                    display: flex;
+                    // SCALING
+                    width: 30dvw;
+                    // FILL
+                    fill: $PALETTE-SNOW;
+                }
+            }
+            .S-DEV-text {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                // CSS-GRID CONFIGURATION
+                grid-area: 3 / 1 / 4 / 2;
+
+                .T-DEV-text {
+                    // FONT SETTINGS
+                    text-align: center;
+                    text-box: trim-both cap alphabetic;
+                }
+            }
+        }
+    }
 }

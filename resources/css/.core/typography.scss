@@ -35,6 +35,15 @@
 
 
 
+// SIZES MOBILE
+.TYPO-M-SIZES-SMALL { font-size: $GV-M-FONT_SIZES-SMALL; }
+.TYPO-M-SIZES-DEFAULT { font-size: $GV-M-FONT_SIZES-DEFAULT; }
+.TYPO-M-SIZES-H3 { font-size: $GV-M-FONT_SIZES-H3; }
+.TYPO-M-SIZES-H2 { font-size: $GV-M-FONT_SIZES-H2; }
+.TYPO-M-SIZES-H1 { font-size: $GV-M-FONT_SIZES-H1; }
+
+
+
 // WEIGHTS
 .TYPO-WEIGHT-THIN { --current-wght: var(--wght-thin); }
 .TYPO-WEIGHT-EXTRALIGHT { --current-wght: var(--wght-extralight); }
@@ -97,74 +106,89 @@
 
 
 
-// PRESETS
-.TYPO-PRESET-HEADER_TEXT {
+// PRESETS DESKTOP
+.TYPO-D-PRESET-HEADER_TEXT {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_NORMAL;
     @extend .TYPO-WEIGHT-SEMIBOLD;
     @extend .TYPO-D-SIZES-DEFAULT;
 }
-.TYPO-PRESET-HERO_HEADING {
+.TYPO-D-PRESET-HERO_HEADING {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_CONDENSED;
     @extend .TYPO-WEIGHT-SEMIBOLD;
     @extend .TYPO-D-SIZES-H1;
 }
-.TYPO-PRESET-HERO_DESCRIPTION {
+.TYPO-D-PRESET-HERO_DESCRIPTION {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_NORMAL;
     @extend .TYPO-WEIGHT-MEDIUM;
     @extend .TYPO-D-SIZES-H3;
 }
-.TYPO-PRESET-PRIZES_NUMBER {
+.TYPO-D-PRESET-PRIZES_NUMBER {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_CONDENSED;
     @extend .TYPO-WEIGHT-SEMIBOLD;
     @extend .TYPO-D-SIZES-H1;
 }
-
-.TYPO-PRESET-CORE_H2 {
+.TYPO-D-PRESET-CORE_H2 {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_CONDENSED;
     @extend .TYPO-WEIGHT-SEMIBOLD;
     @extend .TYPO-D-SIZES-H2;
 }
-.TYPO-PRESET-CORE_H3 {
+.TYPO-D-PRESET-CORE_H3 {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_CONDENSED;
     @extend .TYPO-WEIGHT-SEMIBOLD;
     @extend .TYPO-D-SIZES-H3;
     line-height: 3.4vh;
 }
-.TYPO-PRESET-CORE_H3_LIGHT {
+.TYPO-D-PRESET-CORE_H3_LIGHT {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_CONDENSED;
     @extend .TYPO-WEIGHT-MEDIUM;
     @extend .TYPO-D-SIZES-H3;
     line-height: 3.4vh;
 }
-.TYPO-PRESET-CORE_P {
+.TYPO-D-PRESET-CORE_P {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_NORMAL;
     @extend .TYPO-WEIGHT-MEDIUM;
     @extend .TYPO-D-SIZES-DEFAULT;
 }
-.TYPO-PRESET-CORE_P_BOLD {
+.TYPO-D-PRESET-CORE_P_BOLD {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_NORMAL;
     @extend .TYPO-WEIGHT-SEMIBOLD;
     @extend .TYPO-D-SIZES-DEFAULT;
 }
-.TYPO-PRESET-CORE_P_ITALIC{
+.TYPO-D-PRESET-CORE_P_ITALIC{
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_NORMAL;
     @extend .TYPO-WEIGHT-MEDIUM;
     @extend .TYPO-D-SIZES-DEFAULT;
     @extend .TYPO-OBLIQUE-ITALIC;
 }
-.TYPO-PRESET-CORE_SMALL {
+.TYPO-D-PRESET-CORE_SMALL {
     @extend .TYPO-VARIABLE;
     @extend .TYPO-FONT-PS_NORMAL;
     @extend .TYPO-WEIGHT-MEDIUM;
     @extend .TYPO-D-SIZES-SMALL;
+}
+
+
+
+// PRESETS DESKTOP
+.TYPO-M-PRESET-CORE_P {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_NORMAL;
+    @extend .TYPO-WEIGHT-MEDIUM;
+    @extend .TYPO-M-SIZES-DEFAULT;
+}
+.TYPO-M-PRESET-CORE_H3_LIGHT {
+    @extend .TYPO-VARIABLE;
+    @extend .TYPO-FONT-PS_CONDENSED;
+    @extend .TYPO-WEIGHT-MEDIUM;
+    @extend .TYPO-M-SIZES-H3;
 }

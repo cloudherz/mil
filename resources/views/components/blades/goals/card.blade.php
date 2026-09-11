@@ -23,16 +23,16 @@
                                         {!! $titleIcon !!}
                                     </div>
                                     <div class="S-TITLE-heading">
-                                        <h3 class="T-TITLE-heading TYPO-PRESET-CORE_H3">{!! $title !!}</h3>
+                                        <h3 class="T-TITLE-heading TYPO-D-PRESET-CORE_H3">{!! $title !!}</h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="S-CONTENT-text_1">
-                            <p class="TYPO-PRESET-CORE_P">{!! $text1 !!}</p>
+                            <p class="TYPO-D-PRESET-CORE_P">{!! $text1 !!}</p>
                         </div>
                         <div class="S-CONTENT-text_2">
-                            <p class="TYPO-PRESET-CORE_P">{!! $text2 !!}</p>
+                            <p class="TYPO-D-PRESET-CORE_P">{!! $text2 !!}</p>
                         </div>
                     </div>
                 </div>

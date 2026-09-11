@@ -16,10 +16,10 @@
                 <div class="S-CONTENT-wrapper">
                     <div class="S-CONTENT-carcass">
                         <div class="S-CONTENT-title">
-                            <h2 class="TYPO-PRESET-CORE_H2">{!! $heading !!}</h2>
+                            <h2 class="TYPO-D-PRESET-CORE_H2">{!! $heading !!}</h2>
                         </div>
                         <div class="S-CONTENT-text">
-                            <p class="TYPO-PRESET-CORE_P">{!! $text !!}</p>
+                            <p class="TYPO-D-PRESET-CORE_P">{!! $text !!}</p>
                         </div>
                     </div>
                 </div>

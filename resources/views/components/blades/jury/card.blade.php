@@ -9,10 +9,10 @@
                 {!! $portraitImage !!}
             </div>
             <div class="S-CARD-name">
-                <h3 class="T-CARD-name T-CARD-name_{{ $color }} TYPO-PRESET-CORE_H3">{!! $name !!}
+                <h3 class="T-CARD-name T-CARD-name_{{ $color }} TYPO-D-PRESET-CORE_H3">{!! $name !!}
             </div>
             <div class="S-CARD-title">
-                <p class="TYPO-PRESET-CORE_P">{!! $title !!}</p>
+                <p class="TYPO-D-PRESET-CORE_P">{!! $title !!}</p>
             </div>
         </div>
     </div>

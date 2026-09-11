@@ -7,7 +7,7 @@
                 />
             </div>
             <div class="S-INPUT_STRING_ERROR-message">
-                <p class="T-INPUT_STRING_ERROR-text TYPO-PRESET-CORE_P">{!! $text !!}</p>
+                <p class="T-INPUT_STRING_ERROR-text TYPO-D-PRESET-CORE_P">{!! $text !!}</p>
             </div>
         </div>
     </div>

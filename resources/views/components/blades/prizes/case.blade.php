@@ -5,7 +5,7 @@
                 <div class="S-HEADING-wrapper">
                     <div class="S-HEADING-carcass">
                         <div class="S-HEADING-text">
-                            <h3 class="T-HEADING-text T-HEADING-text_{{ $color }} TYPO-PRESET-CORE_H3">{!! $heading !!}</h3>
+                            <h3 class="T-HEADING-text T-HEADING-text_{{ $color }} TYPO-D-PRESET-CORE_H3">{!! $heading !!}</h3>
                         </div>
                         <div class="S-HEADING-icon">
                             <div class="S-ICON-wrapper">

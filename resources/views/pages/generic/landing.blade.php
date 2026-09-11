@@ -17,7 +17,7 @@
                     <div class="S-WINDOW-wrapper">
                         <div class="S-WINDOW-carcass">
                             <div class="S-WINDOW-heading">
-                                <h3 class="T-WINDOW-heading TYPO-PRESET-CORE_H3">Что-то пошло не так...</h3>
+                                <h3 class="T-WINDOW-heading TYPO-D-PRESET-CORE_H3">Что-то пошло не так...</h3>
                             </div>
                             <div class="S-WINDOW-messages">
                                 @php
@@ -37,7 +37,7 @@
                             </div>
                             <div class="S-WINDOW-description">
                                 @if ($gentleWish)
-                                    <p class="T-WINDOW-description TYPO-PRESET-CORE_P">
+                                    <p class="T-WINDOW-description TYPO-D-PRESET-CORE_P">
                                         {{ $gentleWish }}
                                     </p>
                                 @endif
@@ -56,7 +56,7 @@
                     <div class="S-WINDOW-wrapper">
                         <div class="S-WINDOW-carcass">
                             <div class="S-WINDOW-heading">
-                                <h3 class="T-WINDOW-heading TYPO-PRESET-CORE_H3">Ваша заявка<br>подана успешно!</h3>
+                                <h3 class="T-WINDOW-heading TYPO-D-PRESET-CORE_H3">Ваша заявка<br>подана успешно!</h3>
                             </div>
                             <div class="S-WINDOW-icon">
                                 <x-svg.icons.success
@@ -64,7 +64,7 @@
                                 />
                             </div>
                             <div class="S-WINDOW-description">
-                                <p class="T-WINDOW-description TYPO-PRESET-CORE_P">
+                                <p class="T-WINDOW-description TYPO-D-PRESET-CORE_P">
                                     Ожидайте формирования списка номинантов.<br>
                                     Вы будете уведомлены по указанной почте.<br><br>
                                     Окно закроется автоматически через <span id="LANDING-MESSAGE-APPLICATION_SUCCESS-TIMER">5</span> сек.
@@ -83,7 +83,7 @@
                     <div class="S-WINDOW-wrapper S-WINDOW-wrapper_blue">
                         <div class="S-WINDOW-carcass">
                             <div class="S-WINDOW-heading">
-                                <h3 class="T-WINDOW-heading T-WINDOW-heading_blue TYPO-PRESET-CORE_H3">Заявка отправляется...</h3>
+                                <h3 class="T-WINDOW-heading T-WINDOW-heading_blue TYPO-D-PRESET-CORE_H3">Заявка отправляется...</h3>
                             </div>
                             <div class="S-WINDOW-loading">
                                 <x-svg.icons.loading
@@ -91,7 +91,7 @@
                                 />
                             </div>
                             <div class="S-WINDOW-description">
-                                <p class="T-WINDOW-description T-WINDOW-description_blue TYPO-PRESET-CORE_P_BOLD">Пожалуйста, не закрывайте вкладку!</p>
+                                <p class="T-WINDOW-description T-WINDOW-description_blue TYPO-D-PRESET-CORE_P_BOLD">Пожалуйста, не закрывайте вкладку!</p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                     />
                 </div>
                 <div class="S-MESSAGE_EMAIL_COPIED-text">
-                    <p class="T-MESSAGE_EMAIL_COPIED-text TYPO-PRESET-CORE_H3">Почта скопирована в буфер обмена</p>
+                    <p class="T-MESSAGE_EMAIL_COPIED-text TYPO-D-PRESET-CORE_H3">Почта скопирована в буфер обмена</p>
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@
                     <div class="S-SELECT-wrapper S-SELECT-wrapper_blue S-WINDOW-wrapper">
                         <div class="S-SELECT-carcass S-WINDOW-carcass">
                             <div class="S-SELECT-heading">
-                                <h3 class="TYPO-PRESET-CORE_H3">Выбор типа заявки</h3>
+                                <h3 class="TYPO-D-PRESET-CORE_H3">Выбор типа заявки</h3>
                             </div>
                             <div class="S-SELECT-buttons">
                                 <div class="S-BUTTONS-wrapper">
@@ -170,7 +170,7 @@
                                             />
                                         </div>
                                         <div class="S-DESCRIPTION-text">
-                                            <p class="T-DESCRIPTION-text TYPO-PRESET-CORE_P">Участие только для проектов с измеримым эффектом. Оплата организационного<br>взноса только после верификации. Орг. взнос включает билет «Стандарт»<br>на торжественную церемонию награждения премии МИЛ.</p>
+                                            <p class="T-DESCRIPTION-text TYPO-D-PRESET-CORE_P">Участие только для проектов с измеримым эффектом. Оплата организационного<br>взноса только после верификации. Орг. взнос включает билет «Стандарт»<br>на торжественную церемонию награждения премии МИЛ.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
                         <div class="S-CONTENT-carcass">
                             <div class="S-CONTENT-list">
                                 <div class="S-LIST-wrapper">
-                                    <div class="S-LIST-carcass TYPO-PRESET-HEADER_TEXT">
+                                    <div class="S-LIST-carcass TYPO-D-PRESET-HEADER_TEXT">
                                         <a class="L-LIST-image" href="#hero">
                                             <x-svg.logo.color_full_2
                                                 class="I-LIST-logo I-LIST-logo_color_full"
@@ -226,7 +226,7 @@
                             <div class="S-CONTENT-button">
                                 <div class="S-BUTTON-wrapper">
                                     <div class="S-BUTTON-carcass">
-                                        <button class="B-BUTTON-button B-BUTTON-button_transparent TYPO-PRESET-HEADER_TEXT" id="LANDING-HEADER-ACTION_BUTTON">Подать заявку</button>
+                                        <button class="B-BUTTON-button B-BUTTON-button_transparent TYPO-D-PRESET-HEADER_TEXT" id="LANDING-HEADER-ACTION_BUTTON">Подать заявку</button>
                                     </div>
                                 </div>
                             </div>
@@ -260,11 +260,11 @@
                                             />
                                         </div>
                                         <div class="S-CONTENT-heading">
-                                            <h1 class="TYPO-PRESET-HERO_HEADING">молодые инновационные<br>
+                                            <h1 class="TYPO-D-PRESET-HERO_HEADING">молодые инновационные<br>
                                                 лидеры</h1>
                                         </div>
                                         <div class="S-CONTENT-rair">
-                                            <h2 class="TYPO-PRESET-HERO_DESCRIPTION">премия Российской Ассоциации Инновационного Развития</h2>
+                                            <h2 class="TYPO-D-PRESET-HERO_DESCRIPTION">премия Российской Ассоциации Инновационного Развития</h2>
                                             <x-svg.rair.color_full
                                                 class="I-CONTENT-rair"
                                             />
@@ -279,20 +279,20 @@
                     <div class="S-REASON-wrapper">
                         <div class="S-REASON-carcass">
                             <div class="S-REASON-question S-REASON-block">
-                                <h3 class="TYPO-PRESET-CORE_H3">Зачем участвовать?</h3>
-                                <p class="TYPO-PRESET-CORE_P">Премия МИЛ запускается впервые:<br>Ваше инновационное лидерство получит<br>признание профессионалов и внимание<br>медиа.</p>
+                                <h3 class="TYPO-D-PRESET-CORE_H3">Зачем участвовать?</h3>
+                                <p class="TYPO-D-PRESET-CORE_P">Премия МИЛ запускается впервые:<br>Ваше инновационное лидерство получит<br>признание профессионалов и внимание<br>медиа.</p>
                             </div>
                             <div class="S-REASON-answer_1 S-REASON-block S-REASON-answer">
-                                <h3 class="T-REASON-answer_heading TYPO-PRESET-CORE_H3">1.</h3>
-                                <p class="T-REASON-answer_text TYPO-PRESET-CORE_P">Денежный приз на дальнейшее<br>развитие и значимый<br>репутационный актив.</p>
+                                <h3 class="T-REASON-answer_heading TYPO-D-PRESET-CORE_H3">1.</h3>
+                                <p class="T-REASON-answer_text TYPO-D-PRESET-CORE_P">Денежный приз на дальнейшее<br>развитие и значимый<br>репутационный актив.</p>
                             </div>
                             <div class="S-REASON-answer_2 S-REASON-block S-REASON-answer">
-                                <h3 class="T-REASON-answer_heading TYPO-PRESET-CORE_H3">2.</h3>
-                                <p class="T-REASON-answer_text TYPO-PRESET-CORE_P">Интеграция в экосистему РАИР<br>для профессиональной<br>кооперации и масштабирования.</p>
+                                <h3 class="T-REASON-answer_heading TYPO-D-PRESET-CORE_H3">2.</h3>
+                                <p class="T-REASON-answer_text TYPO-D-PRESET-CORE_P">Интеграция в экосистему РАИР<br>для профессиональной<br>кооперации и масштабирования.</p>
                             </div>
                             <div class="S-REASON-answer_3 S-REASON-block S-REASON-answer">
-                                <h3 class="T-REASON-answer_heading TYPO-PRESET-CORE_H3">3.</h3>
-                                <p class="T-REASON-answer_text TYPO-PRESET-CORE_P">Приоритетный доступ к сильным<br>игрокам рынка, партнёрам<br>и инвесторам, новые возможности<br>для внедрения проектов.</p>
+                                <h3 class="T-REASON-answer_heading TYPO-D-PRESET-CORE_H3">3.</h3>
+                                <p class="T-REASON-answer_text TYPO-D-PRESET-CORE_P">Приоритетный доступ к сильным<br>игрокам рынка, партнёрам<br>и инвесторам, новые возможности<br>для внедрения проектов.</p>
                             </div>
                         </div>
                     </div>
@@ -302,7 +302,7 @@
                     <div class="S-GOALS-wrapper">
                         <div class="S-GOALS-carcass">
                             <div class="S-GOALS-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">О премии</h2>
+                                <h2 class="TYPO-D-PRESET-CORE_H2">О премии</h2>
                             </div>
                             <div class="S-GOALS-cards">
                                 <div class="S-CARDS-wrapper">
@@ -366,7 +366,7 @@
                     <div class="S-TRACKS-wrapper">
                         <div class="S-TRACKS-carcass">
                             <div class="S-TRACKS-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Номинации</h2>
+                                <h2 class="TYPO-D-PRESET-CORE_H2">Номинации</h2>
                             </div>
                             <div class="S-TRACKS-cards">
                                 <div class="S-CARDS-wrapper">
@@ -380,15 +380,15 @@
                                             heading="Технологии и Бизнес"
                                             text="
                                                 <span>Для основателей и руководителей наукоёмких компаний, создавших уникальные продукты на основе ИС и достигших рыночных успехов.</span>
-                                                <span class='TYPO-PRESET-CORE_H3'>Номинации трека:</span>
+                                                <span class='TYPO-D-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
-                                                <span><span class='TYPO-PRESET-CORE_P_BOLD'>«Технологический прорыв»</span> (DeepTech-лидер)</span>
+                                                <span><span class='TYPO-D-PRESET-CORE_P_BOLD'>«Технологический прорыв»</span> (DeepTech-лидер)</span>
                                                 <span>Критерии: Научная новизна, наличие интеллектуальной собственности, первые коммерческие контракты.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Масштабирование смыслов»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Масштабирование смыслов»</span>
                                                 <span>Критерии: Темпы роста, доля рынка, выход на федеральный или международный уровень.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Международная экспансия»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Международная экспансия»</span>
                                                 <span>Критерий: Объём экспортной выручки, география присутствия, адаптация продукта, партнёрства с иностранными институтами.</span>
                                                 "
                                         />
@@ -401,15 +401,15 @@
                                             heading="Корпорации и Индустрия"
                                             text="
                                                 <span>Для основателей, руководителей компаний и R&D, инженерных команд, запустивших новый промышленный продукт или производственную линию.</span>
-                                                <span class='TYPO-PRESET-CORE_H3'>Номинации трека:</span>
+                                                <span class='TYPO-D-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Архитектор трансформации»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Архитектор трансформации»</span>
                                                 <span>Критерий: Измеримый экономический эффект цифровой или продуктовой трансформации, скорость внедрения, тиражируемость.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Индустриальный чемпион»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Индустриальный чемпион»</span>
                                                 <span>Критерий: Уровень технологической готовности от УГТ5 , импортозамещающий эффект, объём внедрения, отраслевой эффект.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Кооперация ради суверенитета»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Кооперация ради суверенитета»</span>
                                                 <span>Критерий: Масштаб кооперации, межкорпоративные консорциумы, снижение зависимости от импорта.</span>
                                                 "
                                         />
@@ -422,15 +422,15 @@
                                             heading="Регионы и Территории"
                                             text="
                                                 <span>Для глав регионов, муниципалитетов, технопарков, ОЭЗ, ИНТЦ и фондов, построивших работающую инфраструктуру инноваций.</span>
-                                                <span class='TYPO-PRESET-CORE_H3'>Номинации трека:</span>
+                                                <span class='TYPO-D-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Строитель экосистемы»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Строитель экосистемы»</span>
                                                 <span>Критерий: Число резидентов и рабочих мест, фактический объём инвестиций, выживаемость проектов, импульс для развития смежных отраслей.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Региональный прорыв»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Региональный прорыв»</span>
                                                 <span>Критерий: Число проектов, улучшающих качество жизни, межрегиональная тиражируемость, масштабируемость, измеримый вклад в инвестиционную привлекательность.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Устойчивое развитие территории»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Устойчивое развитие территории»</span>
                                                 <span>Критерий: Проекты, создающие долгосрочную ценность для территории: экологию, рабочие места, вовлечённость сообществ, устойчивую экономику.</span>
                                                 "
                                         />
@@ -445,15 +445,15 @@
                                             heading="Общество и Будущее"
                                             text="
                                                 <span>Для лидеров, задающих новые стандарты, улучшающих качество жизни, формирующих кадровый резерв технологического развития.</span>
-                                                <span class='TYPO-PRESET-CORE_H3'>Номинации трека:</span>
+                                                <span class='TYPO-D-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Технологии для жизни»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Технологии для жизни»</span>
                                                 <span>Критерий: Охват аудитории в медицине, образовании, городской среде, экологии, социальный эффект, внедрение в государственные системы.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Визионер отрасли»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Визионер отрасли»</span>
                                                 <span>Критерий: Влияние на отраслевые стандарты, регулирование, масштаб изменений, признание сообществом, партнерства.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Наставник поколения»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Наставник поколения»</span>
                                                 <span>Критерий: Масштаб образовательных инициатив, трудоустройство выпускников, партнёрства с вузами, развитие талантов.</span>
                                                 "
                                         />
@@ -466,15 +466,15 @@
                                             heading="Наука и Инженерия"
                                             text="
                                                 <span>Для учёных-предпринимателей, передовые инженерные школы и наставников, воспитавших технологических предпринимателей.</span>
-                                                <span class='TYPO-PRESET-CORE_H3'>Номинации трека:</span>
+                                                <span class='TYPO-D-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Академический предприниматель»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Академический предприниматель»</span>
                                                 <span>Критерии: Научная новизна и патенты (IP), объём коммерциализации, пилоты/внедрения, реальный вклад в развитие технологического рынка.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Инженерный прорыв»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Инженерный прорыв»</span>
                                                 <span>Критерии: техническая новизна и сложность, стадия реализации, потенциал масштабирования, кооперация с индустриальным партнёром.</span>
                                                 <br>
-                                                <span class='TYPO-PRESET-CORE_P_BOLD'>«Наставник инноваторов»</span>
+                                                <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Наставник инноваторов»</span>
                                                 <span>Критерии: количество выпускников, основавших компании, реализовавших инновационные проекты, вклад в образовательные программы по технологическому предпринимательству.</span>
                                                 "
                                         />
@@ -488,7 +488,7 @@
                     <div class="S-DATES-wrapper">
                         <div class="S-DATES-carcass">
                             <div class="S-DATES-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Этапы</h2>
+                                <h2 class="TYPO-D-PRESET-CORE_H2">Этапы</h2>
                             </div>
                             <div class="S-DATES-widget">
                                 <div class="S-WIDGET-wrapper">
@@ -551,17 +551,17 @@
                                 <div class="S-CONTENT-wrapper">
                                     <div class="S-CONTENT-carcass">
                                         <div class="S-CONTENT-title">
-                                            <h2 class="TYPO-PRESET-CORE_H2">Партнерство с Премией</h2>
+                                            <h2 class="TYPO-D-PRESET-CORE_H2">Партнерство с Премией</h2>
                                         </div>
                                         <div class="S-CONTENT-text">
-                                            <p class="TYPO-PRESET-CORE_P">
+                                            <p class="TYPO-D-PRESET-CORE_P">
                                                 Премия МИЛ открыта к партнёрству с компаниями, институтами развития,<br>медиа и отраслевыми объединениями. Участвуя, вы усиливаете<br>позиционирование и становитесь частью актуальной инициативы<br>по развитию инновационного лидерства.
                                                 <br><br>
                                                 Напишите нам — обсудим форматы сотрудничества.
                                             </p>
                                         </div>
                                         <div class="S-CONTENT-button">
-                                            <button class="B-CONTENT-button TYPO-PRESET-CORE_H3" id="LANDING-PARTNERSHIP-COPY_BUTTON">
+                                            <button class="B-CONTENT-button TYPO-D-PRESET-CORE_H3" id="LANDING-PARTNERSHIP-COPY_BUTTON">
                                                 <span class="T-BUTTON-heading">hello@milpremia.ru</span>
                                                 <x-svg.icons.copy
                                                     class="I-BUTTON-icon"
@@ -579,13 +579,13 @@
                     <div class="S-PRIZES-wrapper">
                         <div class="S-PRIZES-carcass">
                             <div class="S-PRIZES-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Награды</h2>
+                                <h2 class="TYPO-D-PRESET-CORE_H2">Награды</h2>
                             </div>
                             <div class="S-PRIZES-widget">
                                 <div class="S-WIDGET-wrapper">
                                     <div class="S-WIDGET-carcass">
                                         <div class="S-WIDGET-fund">
-                                            <h2 class="TYPO-PRESET-CORE_H2 T-FUND-heading">Призовой фонд — 2 000 000₽</h2>
+                                            <h2 class="TYPO-D-PRESET-CORE_H2 T-FUND-heading">Призовой фонд — 2 000 000₽</h2>
                                         </div>
                                         <div class="S-WIDGET-distribution">
                                             <div class="S-DISTRIBUTION-wrapper">
@@ -611,7 +611,7 @@
                                                                         class="I-INFO-icon"
                                                                         style="scale: 1.23;"
                                                                     />
-                                                                    <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">диплом лауреата</h3>
+                                                                    <h3 class="T-INFO-text TYPO-D-PRESET-CORE_H3">диплом лауреата</h3>
                                                                 </x-blades.prizes.case>
                                                                 <div class="S-CONTENT-pointer S-CONTENT-pointer_1">
                                                                     <x-svg.icons.pointer
@@ -627,7 +627,7 @@
                                                                         class="I-INFO-icon"
                                                                         style="scale: 1.05;"
                                                                     />
-                                                                    <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">по 200 000₽</h3>
+                                                                    <h3 class="T-INFO-text TYPO-D-PRESET-CORE_H3">по 200 000₽</h3>
                                                                 </x-blades.prizes.case>
                                                                 <div class="S-CONTENT-pointer S-CONTENT-pointer_2">
                                                                     <x-svg.icons.pointer
@@ -643,7 +643,7 @@
                                                                         class="I-INFO-icon"
                                                                         style="scale: 1;"
                                                                     />
-                                                                    <h3 class="T-INFO-text TYPO-PRESET-CORE_H3">1 000 000₽</h3>
+                                                                    <h3 class="T-INFO-text TYPO-D-PRESET-CORE_H3">1 000 000₽</h3>
                                                                 </x-blades.prizes.case>
                                                             </div>
                                                         </div>
@@ -661,7 +661,7 @@
                     <div class="S-CONDITIONS-wrapper">
                         <div class="S-CONDITIONS-carcass">
                             <div class="S-CONDITIONS-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Условия участия</h2>
+                                <h2 class="TYPO-D-PRESET-CORE_H2">Условия участия</h2>
                             </div>
                             <div class="S-CONDITIONS-cards">
                                 <div class="S-CARDS-wrapper">
@@ -698,7 +698,7 @@
                     <div class="S-JURY-wrapper">
                         <div class="S-JURY-carcass">
                             <div class="S-JURY-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Жюри / Эксперты</h2>
+                                <h2 class="TYPO-D-PRESET-CORE_H2">Жюри / Эксперты</h2>
                             </div>
                             <div class="S-JURY-cards">
                                 <div class="S-CARDS-wrapper">
@@ -797,7 +797,7 @@
                     <div class="S-NEWS-wrapper">
                         <div class="S-NEWS-carcass">
                             <div class="S-NEWS-title">
-                                <h2 class="TYPO-PRESET-CORE_H2">Новости</h2>
+                                <h2 class="TYPO-D-PRESET-CORE_H2">Новости</h2>
                             </div>
                             <div class="S-NEWS-feed">
                                 <div class="S-FEED-wrapper">
@@ -883,10 +883,10 @@
                                 <div class="S-CONTENT-wrapper">
                                     <div class="S-CONTENT-carcass">
                                         <div class="S-CONTENT-slogan">
-                                            <h1 class="TYPO-PRESET-HERO_HEADING">Ваш успех<br>начинается здесь!</h1>
+                                            <h1 class="TYPO-D-PRESET-HERO_HEADING">Ваш успех<br>начинается здесь!</h1>
                                         </div>
                                         <div class="S-CONTENT-button">
-                                            <button class="B-CONTENT-button TYPO-PRESET-CORE_H3" id="LANDING-FOOTER-ACTION_BUTTON">
+                                            <button class="B-CONTENT-button TYPO-D-PRESET-CORE_H3" id="LANDING-FOOTER-ACTION_BUTTON">
                                                 <span class="T-BUTTON-heading">Подать заявку</span>
                                                 <x-svg.icons.arrow
                                                     class="I-BUTTON-icon"
@@ -913,7 +913,7 @@
                                 <x-svg.logo.color_full_2
                                     class="I-LOGOS-mil"
                                 />
-                                <p class="T-LOGOS-mil TYPO-PRESET-CORE_H3">молодые инновационные<br>лидеры</p>
+                                <p class="T-LOGOS-mil TYPO-D-PRESET-CORE_H3">молодые инновационные<br>лидеры</p>
                             </div>
                             <div class="S-LOGOS-rair">
                                 <x-svg.rair.color_full
@@ -926,7 +926,7 @@
                 <div class="S-FOOTER-links">
                     <div class="S-LINKS-wrapper">
                         <div class="S-LINKS-carcass">
-                            <div class="S-LINKS-main TYPO-PRESET-CORE_P">
+                            <div class="S-LINKS-main TYPO-D-PRESET-CORE_P">
                                 <a class="L-LINKS-main" href="#">Ссылка номер 1</a>
                                 <a class="L-LINKS-main" href="#">Поддержка</a>
                                 <a class="L-LINKS-main" href="#">Сайт РАИР</a>
@@ -946,11 +946,11 @@
                                     />
                                 </a>
                             </div>
-                            <div class="S-LINKS-alt TYPO-PRESET-CORE_SMALL">
+                            <div class="S-LINKS-alt TYPO-D-PRESET-CORE_SMALL">
                                 <a class="L-LINKS-alt" href="{{ asset('docs/public_offer.pdf') }}" target="_blank" rel="noopener">Публичная оферта</a>
                                 <a class="L-LINKS-alt" href="#">Положение о премии</a>
                             </div>
-                            <div class="S-LINKS-credit TYPO-PRESET-CORE_SMALL">
+                            <div class="S-LINKS-credit TYPO-D-PRESET-CORE_SMALL">
                                 <p class="T-LINKS-credit">© 2026, Все права защищены</p>
                             </div>
                         </div>
@@ -967,6 +967,25 @@
 @endsection
 
 @section('mode-mobile')
-    <p>Mobile</p>
-    <p>App Name: {{ $APP_Name }}</p>
+    <div class="S-MOBILE-dev">
+        <div class="S-DEV-wrapper">
+            <div class="S-DEV-carcass">
+                <div class="S-DEV-logo">
+                    <x-svg.logo.mobile_dev
+                        class="I-DEV-logo"
+                    />
+                </div>
+                <div class="S-DEV-icon">
+                    <x-svg.icons.developing
+                        class="I-DEV-icon"
+                    />
+                </div>
+                <div class="S-DEV-text">
+                    <h3 class="T-DEV-text TYPO-M-PRESET-CORE_H3_LIGHT">
+                        мобильная версия сайта в разработке.<br>пожалуйста, откройте страницу с пк<br>или ноутбука
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

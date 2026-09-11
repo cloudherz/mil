@@ -23,16 +23,16 @@
                                         {!! $headingIcon !!}
                                     </div>
                                     <div class="S-HEADING-text">
-                                        <h3 class="T-HEADING-text T-HEADING-text_{{ $color }} TYPO-PRESET-CORE_H3">{{ $heading }}</h3>
+                                        <h3 class="T-HEADING-text T-HEADING-text_{{ $color }} TYPO-D-PRESET-CORE_H3">{{ $heading }}</h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="S-CONTENT-description">
-                            <p class="TYPO-PRESET-CORE_P">{!! $description !!}</p>
+                            <p class="TYPO-D-PRESET-CORE_P">{!! $description !!}</p>
                         </div>
                         <div class="S-CONTENT-price">
-                            <p class="T-CONTENT-price T-CONTENT-price_{{ $color }} TYPO-PRESET-CORE_H3_LIGHT">{{ $price }}</p>
+                            <p class="T-CONTENT-price T-CONTENT-price_{{ $color }} TYPO-D-PRESET-CORE_H3_LIGHT">{{ $price }}</p>
                         </div>
                     </div>
                 </div>
