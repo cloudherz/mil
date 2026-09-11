@@ -192,21 +192,274 @@ br {
     right: 0;
     z-index: 200;
   }
-  .S-DESKTOP-message {
+  .S-DESKTOP-message_application_fail {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper {
+    background-color: oklch(65% 0.2368 20.74deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-messages {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon .I-WINDOW-icon {
+    fill: oklch(60.51% 0.1384 159.32deg);
+    height: 12.6vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_green {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper {
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_blue {
+    fill: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_green {
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading {
+    height: 8.5vh;
+    animation: spin 1s ease-in-out infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_email_copied {
     position: fixed;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     z-index: 300;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 100vw;
     height: 100vh;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: 1fr;
@@ -221,18 +474,18 @@ br {
     opacity: 0;
     transition: opacity 0.2s, margin-bottom 0.2s;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon .I-MESSAGE_EMAIL_COPIED-icon {
     display: flex;
     height: 2.55vh;
     fill: oklch(60.51% 0.1384 159.32deg);
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text {
     grid-area: 1/2/2/3;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text .T-MESSAGE_EMAIL_COPIED-text {
     color: oklch(60.51% 0.1384 159.32deg);
     text-box: trim-both cap alphabetic;
   }
@@ -484,6 +737,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
     display: grid;
     grid-template-columns: 14.5vh 1fr;
@@ -499,6 +755,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -506,6 +765,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input_error {
+    grid-area: 2/2/3/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
     grid-area: 3/1/4/2;
@@ -515,6 +777,9 @@ br {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input_error {
+    grid-area: 3/2/4/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -523,6 +788,9 @@ br {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_input_error {
+    grid-area: 2/2/3/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_title {
     grid-area: 3/1/4/2;
     margin-bottom: 1.9vh;
@@ -530,6 +798,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input_error {
+    grid-area: 3/2/4/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
@@ -695,7 +966,7 @@ br {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-0.8vh);
-    z-index: 101;
+    z-index: 102;
     transition: opacity 0.1s, visibility 0.1s, transform 0.1s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options.open {
@@ -736,6 +1007,9 @@ br {
     display: flex;
     grid-area: 5/2/6/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_input_error {
+    grid-area: 5/2/6/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_title {
     grid-area: 6/1/7/2;
@@ -856,7 +1130,7 @@ br {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    z-index: 102;
+    z-index: 103;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper .S-CHECKBOX-carcass .IN-CHECKBOX-input:checked + .S-CHECKBOX-box {
     background: oklch(100% 0 0deg / 0);
@@ -910,6 +1184,12 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_green:hover {
     box-shadow: 1.216vh 1.216vh oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled {
+    box-shadow: none !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled:hover {
+    box-shadow: none !important;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit {
     border: none;
     width: 100%;
@@ -923,6 +1203,12 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_disabled {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit {
+    transition: color 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint {
     display: flex;
@@ -1105,6 +1391,70 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
     color: oklch(32.65% 0.0127 252.99deg / 0.5);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error {
+    width: 100%;
+    height: 5.2vh;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 101;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_blue {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_green {
+    background-color: oklch(97.54% 0.036 160.67deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: 5.2vh;
+    height: 5.2vh;
+    border-radius: 1.8vh;
+    pointer-events: auto;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover {
+    cursor: pointer;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon .I-INPUT_STRING_ERROR-icon {
+    display: flex;
+    height: 2.5vh;
+    margin-top: -0.2vh;
+    fill: oklch(65% 0.2368 20.74deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message {
+    display: flex;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: max-content;
+    height: 5.2vh;
+    margin-right: 5.2vh;
+    margin-top: -1.9vh;
+    padding: 1.9vh 3.04vh;
+    background-color: oklch(65% 0.2368 20.74deg);
+    border-radius: 1.8vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message .T-INPUT_STRING_ERROR-text {
+    color: oklch(100% 0 0deg);
+    text-align: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover ~ .S-INPUT_STRING_ERROR-message {
+    opacity: 1;
+    pointer-events: auto;
   }
   .S-HEADER-wrapper {
     display: flex;
@@ -2816,21 +3166,274 @@ br {
     right: 0;
     z-index: 200;
   }
-  .S-DESKTOP-message {
+  .S-DESKTOP-message_application_fail {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper {
+    background-color: oklch(65% 0.2368 20.74deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-messages {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon .I-WINDOW-icon {
+    fill: oklch(60.51% 0.1384 159.32deg);
+    height: 12.6vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_green {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper {
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_blue {
+    fill: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_green {
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading {
+    height: 8.5vh;
+    animation: spin 1s ease-in-out infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_email_copied {
     position: fixed;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     z-index: 300;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 100vw;
     height: 100vh;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: 1fr;
@@ -2845,18 +3448,18 @@ br {
     opacity: 0;
     transition: opacity 0.2s, margin-bottom 0.2s;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon .I-MESSAGE_EMAIL_COPIED-icon {
     display: flex;
     height: 2.55vh;
     fill: oklch(60.51% 0.1384 159.32deg);
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text {
     grid-area: 1/2/2/3;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text .T-MESSAGE_EMAIL_COPIED-text {
     color: oklch(60.51% 0.1384 159.32deg);
     text-box: trim-both cap alphabetic;
   }
@@ -3108,6 +3711,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
     display: grid;
     grid-template-columns: 14.5vh 1fr;
@@ -3123,6 +3729,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -3130,6 +3739,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input_error {
+    grid-area: 2/2/3/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
     grid-area: 3/1/4/2;
@@ -3139,6 +3751,9 @@ br {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input_error {
+    grid-area: 3/2/4/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -3147,6 +3762,9 @@ br {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_input_error {
+    grid-area: 2/2/3/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_title {
     grid-area: 3/1/4/2;
     margin-bottom: 1.9vh;
@@ -3154,6 +3772,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input_error {
+    grid-area: 3/2/4/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
@@ -3319,7 +3940,7 @@ br {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-0.8vh);
-    z-index: 101;
+    z-index: 102;
     transition: opacity 0.1s, visibility 0.1s, transform 0.1s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options.open {
@@ -3360,6 +3981,9 @@ br {
     display: flex;
     grid-area: 5/2/6/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_input_error {
+    grid-area: 5/2/6/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_title {
     grid-area: 6/1/7/2;
@@ -3480,7 +4104,7 @@ br {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    z-index: 102;
+    z-index: 103;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper .S-CHECKBOX-carcass .IN-CHECKBOX-input:checked + .S-CHECKBOX-box {
     background: oklch(100% 0 0deg / 0);
@@ -3534,6 +4158,12 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_green:hover {
     box-shadow: 1.216vh 1.216vh oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled {
+    box-shadow: none !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled:hover {
+    box-shadow: none !important;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit {
     border: none;
     width: 100%;
@@ -3547,6 +4177,12 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_disabled {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit {
+    transition: color 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint {
     display: flex;
@@ -3729,6 +4365,70 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
     color: oklch(32.65% 0.0127 252.99deg / 0.5);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error {
+    width: 100%;
+    height: 5.2vh;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 101;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_blue {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_green {
+    background-color: oklch(97.54% 0.036 160.67deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: 5.2vh;
+    height: 5.2vh;
+    border-radius: 1.8vh;
+    pointer-events: auto;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover {
+    cursor: pointer;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon .I-INPUT_STRING_ERROR-icon {
+    display: flex;
+    height: 2.5vh;
+    margin-top: -0.2vh;
+    fill: oklch(65% 0.2368 20.74deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message {
+    display: flex;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: max-content;
+    height: 5.2vh;
+    margin-right: 5.2vh;
+    margin-top: -1.9vh;
+    padding: 1.9vh 3.04vh;
+    background-color: oklch(65% 0.2368 20.74deg);
+    border-radius: 1.8vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message .T-INPUT_STRING_ERROR-text {
+    color: oklch(100% 0 0deg);
+    text-align: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover ~ .S-INPUT_STRING_ERROR-message {
+    opacity: 1;
+    pointer-events: auto;
   }
   .S-HEADER-wrapper {
     display: flex;
@@ -5462,21 +6162,274 @@ br {
     right: 0;
     z-index: 200;
   }
-  .S-DESKTOP-message {
+  .S-DESKTOP-message_application_fail {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper {
+    background-color: oklch(65% 0.2368 20.74deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-messages {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon .I-WINDOW-icon {
+    fill: oklch(60.51% 0.1384 159.32deg);
+    height: 12.6vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_green {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper {
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_blue {
+    fill: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_green {
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading {
+    height: 8.5vh;
+    animation: spin 1s ease-in-out infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_email_copied {
     position: fixed;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     z-index: 300;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 100vw;
     height: 100vh;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: 1fr;
@@ -5491,18 +6444,18 @@ br {
     opacity: 0;
     transition: opacity 0.2s, margin-bottom 0.2s;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon .I-MESSAGE_EMAIL_COPIED-icon {
     display: flex;
     height: 2.55vh;
     fill: oklch(60.51% 0.1384 159.32deg);
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text {
     grid-area: 1/2/2/3;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text .T-MESSAGE_EMAIL_COPIED-text {
     color: oklch(60.51% 0.1384 159.32deg);
     text-box: trim-both cap alphabetic;
   }
@@ -5754,6 +6707,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
     display: grid;
     grid-template-columns: 14.5vh 1fr;
@@ -5769,6 +6725,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -5776,6 +6735,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input_error {
+    grid-area: 2/2/3/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
     grid-area: 3/1/4/2;
@@ -5785,6 +6747,9 @@ br {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input_error {
+    grid-area: 3/2/4/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -5793,6 +6758,9 @@ br {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_input_error {
+    grid-area: 2/2/3/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_title {
     grid-area: 3/1/4/2;
     margin-bottom: 1.9vh;
@@ -5800,6 +6768,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input_error {
+    grid-area: 3/2/4/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
@@ -5965,7 +6936,7 @@ br {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-0.8vh);
-    z-index: 101;
+    z-index: 102;
     transition: opacity 0.1s, visibility 0.1s, transform 0.1s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options.open {
@@ -6006,6 +6977,9 @@ br {
     display: flex;
     grid-area: 5/2/6/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_input_error {
+    grid-area: 5/2/6/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_title {
     grid-area: 6/1/7/2;
@@ -6126,7 +7100,7 @@ br {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    z-index: 102;
+    z-index: 103;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper .S-CHECKBOX-carcass .IN-CHECKBOX-input:checked + .S-CHECKBOX-box {
     background: oklch(100% 0 0deg / 0);
@@ -6180,6 +7154,12 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_green:hover {
     box-shadow: 1.216vh 1.216vh oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled {
+    box-shadow: none !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled:hover {
+    box-shadow: none !important;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit {
     border: none;
     width: 100%;
@@ -6193,6 +7173,12 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_disabled {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit {
+    transition: color 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint {
     display: flex;
@@ -6375,6 +7361,70 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
     color: oklch(32.65% 0.0127 252.99deg / 0.5);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error {
+    width: 100%;
+    height: 5.2vh;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 101;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_blue {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_green {
+    background-color: oklch(97.54% 0.036 160.67deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: 5.2vh;
+    height: 5.2vh;
+    border-radius: 1.8vh;
+    pointer-events: auto;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover {
+    cursor: pointer;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon .I-INPUT_STRING_ERROR-icon {
+    display: flex;
+    height: 2.5vh;
+    margin-top: -0.2vh;
+    fill: oklch(65% 0.2368 20.74deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message {
+    display: flex;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: max-content;
+    height: 5.2vh;
+    margin-right: 5.2vh;
+    margin-top: -1.9vh;
+    padding: 1.9vh 3.04vh;
+    background-color: oklch(65% 0.2368 20.74deg);
+    border-radius: 1.8vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message .T-INPUT_STRING_ERROR-text {
+    color: oklch(100% 0 0deg);
+    text-align: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover ~ .S-INPUT_STRING_ERROR-message {
+    opacity: 1;
+    pointer-events: auto;
   }
   .S-HEADER-wrapper {
     display: flex;
@@ -8086,21 +9136,274 @@ br {
     right: 0;
     z-index: 200;
   }
-  .S-DESKTOP-message {
+  .S-DESKTOP-message_application_fail {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper {
+    background-color: oklch(65% 0.2368 20.74deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-messages {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_fail .S-MESSAGE_APPLICATION_FAIL-wrapper .S-MESSAGE_APPLICATION_FAIL-carcass .S-MESSAGE_APPLICATION_FAIL-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(65% 0.2368 20.74deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-icon .I-WINDOW-icon {
+    fill: oklch(60.51% 0.1384 159.32deg);
+    height: 12.6vh;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_success .S-MESSAGE_APPLICATION_SUCCESS-wrapper .S-MESSAGE_APPLICATION_SUCCESS-carcass .S-MESSAGE_APPLICATION_SUCCESS-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    color: oklch(60.51% 0.1384 159.32deg);
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: oklch(39.3% 0.1501 258.69deg / 0.5);
+    z-index: 300;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    color: oklch(32.65% 0.0127 252.99deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window {
+    grid-area: 1/1/2/2;
+    width: max-content;
+    height: max-content;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper_green {
+    background-color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper {
+    padding-bottom: 0.76vh;
+    border-radius: 2.8vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background-color: oklch(100% 0 0deg);
+    border-radius: 2.8vh;
+    padding: 5vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-heading .T-WINDOW-heading {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading {
+    display: flex;
+    justify-content: center;
+    grid-area: 2/1/3/2;
+    margin-bottom: 4.2vh;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_blue {
+    fill: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading_green {
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-loading .I-WINDOW-loading {
+    height: 8.5vh;
+    animation: spin 1s ease-in-out infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description {
+    display: flex;
+    justify-content: center;
+    grid-area: 3/1/4/2;
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_blue {
+    color: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description_green {
+    color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-message_application_sending .S-MESSAGE_APPLICATION_SENDING-wrapper .S-MESSAGE_APPLICATION_SENDING-carcass .S-MESSAGE_APPLICATION_SENDING-window .S-WINDOW-wrapper .S-WINDOW-carcass .S-WINDOW-description .T-WINDOW-description {
+    text-align: center;
+    text-box: trim-both cap alphabetic;
+  }
+  .S-DESKTOP-message_email_copied {
     position: fixed;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     z-index: 300;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 100vw;
     height: 100vh;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: 1fr;
@@ -8115,18 +9418,18 @@ br {
     opacity: 0;
     transition: opacity 0.2s, margin-bottom 0.2s;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon {
     grid-area: 1/1/2/2;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-icon .I-MESSAGE-icon {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-icon .I-MESSAGE_EMAIL_COPIED-icon {
     display: flex;
     height: 2.55vh;
     fill: oklch(60.51% 0.1384 159.32deg);
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text {
     grid-area: 1/2/2/3;
   }
-  .S-DESKTOP-message .S-MESSAGE-wrapper .S-MESSAGE-carcass .S-MESSAGE-text .T-MESSAGE-text {
+  .S-DESKTOP-message_email_copied .S-MESSAGE_EMAIL_COPIED-wrapper .S-MESSAGE_EMAIL_COPIED-carcass .S-MESSAGE_EMAIL_COPIED-text .T-MESSAGE_EMAIL_COPIED-text {
     color: oklch(60.51% 0.1384 159.32deg);
     text-box: trim-both cap alphabetic;
   }
@@ -8378,6 +9681,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_SOLO-carcass .S-NAME_SOLO-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass {
     display: grid;
     grid-template-columns: 14.5vh 1fr;
@@ -8393,6 +9699,9 @@ br {
     grid-area: 1/2/2/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-name_input_error {
+    grid-area: 1/2/2/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -8400,6 +9709,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-tin_input_error {
+    grid-area: 2/2/3/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_title {
     grid-area: 3/1/4/2;
@@ -8409,6 +9721,9 @@ br {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-name .S-NAME_ENTITY-carcass .S-NAME_ENTITY-representative_input_error {
+    grid-area: 3/2/4/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_title {
     grid-area: 2/1/3/2;
     margin-bottom: 1.9vh;
@@ -8417,6 +9732,9 @@ br {
     grid-area: 2/2/3/3;
     margin-bottom: 1.9vh;
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-email_input_error {
+    grid-area: 2/2/3/3;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_title {
     grid-area: 3/1/4/2;
     margin-bottom: 1.9vh;
@@ -8424,6 +9742,9 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input {
     grid-area: 3/2/4/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-phone_input_error {
+    grid-area: 3/2/4/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks {
     grid-area: 4/1/5/3;
@@ -8589,7 +9910,7 @@ br {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-0.8vh);
-    z-index: 101;
+    z-index: 102;
     transition: opacity 0.1s, visibility 0.1s, transform 0.1s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options.open {
@@ -8630,6 +9951,9 @@ br {
     display: flex;
     grid-area: 5/2/6/3;
     margin-bottom: 1.9vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_input_error {
+    grid-area: 5/2/6/3;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_title {
     grid-area: 6/1/7/2;
@@ -8750,7 +10074,7 @@ br {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    z-index: 102;
+    z-index: 103;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper .S-CHECKBOX-carcass .IN-CHECKBOX-input:checked + .S-CHECKBOX-box {
     background: oklch(100% 0 0deg / 0);
@@ -8804,6 +10128,12 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_green:hover {
     box-shadow: 1.216vh 1.216vh oklch(60.51% 0.1384 159.32deg);
   }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled {
+    box-shadow: none !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit_disabled:hover {
+    box-shadow: none !important;
+  }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit {
     border: none;
     width: 100%;
@@ -8817,6 +10147,12 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_green {
     color: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit_disabled {
+    color: oklch(32.65% 0.0127 252.99deg / 0.5) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-submit .B-CONTENT-submit .T-CONTENT-submit {
+    transition: color 0.2s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint {
     display: flex;
@@ -8999,6 +10335,70 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text::placeholder {
     color: oklch(32.65% 0.0127 252.99deg / 0.5);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error {
+    width: 100%;
+    height: 5.2vh;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 101;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_blue {
+    background-color: oklch(95.77% 0.0199 267.29deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon_green {
+    background-color: oklch(97.54% 0.036 160.67deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: 5.2vh;
+    height: 5.2vh;
+    border-radius: 1.8vh;
+    pointer-events: auto;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover {
+    cursor: pointer;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon .I-INPUT_STRING_ERROR-icon {
+    display: flex;
+    height: 2.5vh;
+    margin-top: -0.2vh;
+    fill: oklch(65% 0.2368 20.74deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message {
+    display: flex;
+    align-items: center;
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    width: max-content;
+    height: 5.2vh;
+    margin-right: 5.2vh;
+    margin-top: -1.9vh;
+    padding: 1.9vh 3.04vh;
+    background-color: oklch(65% 0.2368 20.74deg);
+    border-radius: 1.8vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-message .T-INPUT_STRING_ERROR-text {
+    color: oklch(100% 0 0deg);
+    text-align: center;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input_string_error .S-INPUT_STRING_ERROR-carcass .S-INPUT_STRING_ERROR-icon:hover ~ .S-INPUT_STRING_ERROR-message {
+    opacity: 1;
+    pointer-events: auto;
   }
   .S-HEADER-wrapper {
     display: flex;

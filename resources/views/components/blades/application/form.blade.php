@@ -14,8 +14,8 @@
     };
 
     $presentationUploadButtonTitle = match ($type) {
-        'student','individual'  => 'Прикрепить файл',
-        'entity' => 'Прикрепить файлы',
+        'student','individual'  => 'Прикрепить файл (.pptx или .pdf) (до 32мб)',
+        'entity' => 'Прикрепить файлы (.pptx или .pdf) (до 32мб в сумме)',
         default => 'Ошибка'
     };
 
@@ -42,8 +42,8 @@
             @csrf
             <input
                 type="hidden"
-                id="application_type"
-                name="application_type"
+                id="application_type_{{ $type }}"
+                name="application_type_{{ $type }}"
                 value="{{ $type }}"
             >
             <div class="S-CONTENT-wrapper">
@@ -61,10 +61,17 @@
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
                                         placeholder='Меня зовут ...'
                                         type="text"
-                                        id="person_name"
-                                        name="person_name"
+                                        id="person_name_{{ $type }}"
+                                        name="person_name_{{ $type }}"
                                     >
                                 </div>
+                                <x-blades.application.errors.input_string
+                                    type="{{ $type }}"
+                                    color="{{ $color }}"
+                                    class="S-NAME_SOLO-name_input_error"
+                                    name="person_name"
+                                    text="Введите ФИО<br>на кириллице"
+                                />
                             </div>
                         </div>
                     </div>
@@ -81,10 +88,17 @@
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
                                         placeholder='"ООО" ...'
                                         type="text"
-                                        id="organization_name"
+                                        id="organization_name_{{ $type }}"
                                         name="organization_name"
                                     >
                                 </div>
+                                <x-blades.application.errors.input_string
+                                    type="{{ $type }}"
+                                    color="{{ $color }}"
+                                    class="S-NAME_ENTITY-name_input_error"
+                                    name="organization_name"
+                                    text="Введите название организации<br>на кириллице или латинице"
+                                />
                                 <div class="S-NAME_ENTITY-tin_title S-CONTENT-title">
                                     <label class="TYPO-PRESET-CORE_P_BOLD">ИНН</label>
                                     <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
@@ -95,10 +109,17 @@
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
                                         placeholder="1234 ..."
                                         type="text"
-                                        id="organization_tin"
+                                        id="organization_tin_{{ $type }}"
                                         name="organization_tin"
                                     >
                                 </div>
+                                <x-blades.application.errors.input_string
+                                    type="{{ $type }}"
+                                    color="{{ $color }}"
+                                    class="S-NAME_ENTITY-tin_input_error"
+                                    name="organization_tin"
+                                    text="Введите корректный<br>ИНН организации"
+                                />
                                 <div class="S-NAME_ENTITY-representative_title S-CONTENT-title">
                                     <label class="TYPO-PRESET-CORE_P_BOLD">Представитель</label>
                                     <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">
@@ -109,10 +130,17 @@
                                         class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
                                         placeholder="Иванов Иван ..."
                                         type="text"
-                                        id="organization_representative"
+                                        id="organization_representative_{{ $type }}"
                                         name="organization_representative"
                                     >
                                 </div>
+                                <x-blades.application.errors.input_string
+                                    type="{{ $type }}"
+                                    color="{{ $color }}"
+                                    class="S-NAME_ENTITY-representative_input_error"
+                                    name="organization_representative"
+                                    text="Введите ФИО представителя<br>на кириллице"
+                                />
                             </div>
                         </div>
                     </div>
@@ -124,11 +152,20 @@
                         <input
                             class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
                             placeholder="Свяжитесь {{ $type === 'entity' ? 'с нами' : 'со мной' }} по адресу ..."
-                            type="email"
-                            id="email"
-                            name="email"
+                            type="text"
+                            inputmode="email"
+                            autocomplete="email"
+                            id="email_{{ $type }}"
+                            name="email_{{ $type }}"
                         >
                     </div>
+                    <x-blades.application.errors.input_string
+                        type="{{ $type }}"
+                        color="{{ $color }}"
+                        class="S-CONTENT-email_input_error"
+                        name="email"
+                        text="Введите почту в корректном формате:<br>yourname@mail.com"
+                    />
                     <div class="S-CONTENT-phone_title S-CONTENT-title">
                         <label class="TYPO-PRESET-CORE_P_BOLD">Телефон</label>
                         <p class="T-CONTENT-asterisk T-CONTENT-asterisk_{{ $color }} TYPO-PRESET-CORE_P_BOLD">*</p>
@@ -138,37 +175,51 @@
                             class="IN-CONTENT-string IN-CONTENT-string_{{ $color }} TYPO-PRESET-CORE_P"
                             placeholder="+7 981 ..."
                             type="tel"
-                            id="phone"
-                            name="phone"
+                            id="phone_{{ $type }}"
+                            name="phone_{{ $type }}"
                         >
                     </div>
+                    <x-blades.application.errors.input_string
+                        type="{{ $type }}"
+                        color="{{ $color }}"
+                        class="S-CONTENT-phone_input_error"
+                        name="phone"
+                        text="Введите номер в корректном формате:<br>+7 999 123-45-67"
+                    />
                     <div class="S-CONTENT-tracks">
                         <div class="S-CONTENT_TRACKS-wrapper">
-                            <div class="S-CONTENT_TRACKS-carcass_student S-CONTENT_TRACKS-carcass" style="display: {{ $type === 'student' ? 'grid' : 'none' }}">
-                                <div class="S-CONTENT_TRACKS-student_track S-CONTENT_TRACKS-track">
-                                    <x-blades.application.select_track.string
-                                        type="student"
-                                        color="{{ $color }}"
-                                    />
+                            @if($type === 'student')
+                                <div class="S-CONTENT_TRACKS-carcass_student S-CONTENT_TRACKS-carcass" style="display: grid">
+                                    <div class="S-CONTENT_TRACKS-student_track S-CONTENT_TRACKS-track">
+                                        <x-blades.application.select_track.string
+                                            type="student"
+                                            color="{{ $color }}"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass" style="display: {{ $type === 'individual' ? 'grid' : 'none' }}">
-                                <div class="S-CONTENT_TRACKS-individual_track S-CONTENT_TRACKS-track">
-                                    <x-blades.application.select_track.string
-                                        type="individual"
-                                        color="{{ $color }}"
-                                    />
+                            @endif
+
+                            @if($type === 'individual')
+                                <div class="S-CONTENT_TRACKS-carcass_individual S-CONTENT_TRACKS-carcass" style="display: grid">
+                                    <div class="S-CONTENT_TRACKS-individual_track S-CONTENT_TRACKS-track">
+                                        <x-blades.application.select_track.string
+                                            type="individual"
+                                            color="{{ $color }}"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="S-CONTENT_TRACKS-carcass_entity S-CONTENT_TRACKS-carcass" style="display: {{ $type === 'entity' ? 'grid' : 'none' }}">
-                                <div
-                                    class="S-CONTENT_TRACKS-entity_tracks S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
-                                    <x-blades.application.select_track.string
-                                        type="entity"
-                                        color="{{ $color }}"
-                                    />
+                            @endif
+
+                            @if($type === 'entity')
+                                <div class="S-CONTENT_TRACKS-carcass_entity S-CONTENT_TRACKS-carcass" style="display: grid">
+                                    <div class="S-CONTENT_TRACKS-entity_tracks S-CONTENT_TRACKS-entity_track S-CONTENT_TRACKS-track">
+                                        <x-blades.application.select_track.string
+                                            type="entity"
+                                            color="{{ $color }}"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                     </div>
                     <div class="S-CONTENT-description_title S-CONTENT-title">
@@ -180,10 +231,17 @@
                             class="IN-CONTENT-text IN-CONTENT-text_{{ $color }} TYPO-PRESET-CORE_P"
                             placeholder="{{ $type === 'entity' ? 'Наш' : 'Мой' }} проект это ..."
                             type="text"
-                            id="description"
-                            name="description"
+                            id="description_{{ $type }}"
+                            name="description_{{ $type }}"
                         ></textarea>
                     </div>
+                    <x-blades.application.errors.input_string
+                        type="{{ $type }}"
+                        color="{{ $color }}"
+                        class="S-CONTENT-description_input_error"
+                        name="description"
+                        text="Введите описание длинной<br>до 10 000 символов"
+                    />
                     <div class="S-CONTENT-presentation_title S-CONTENT-title">
                         <label class="T-CONTENT-underline TYPO-PRESET-CORE_P_BOLD"
                                id="LANDING-APPLICATION-PRESENTATION_HINT_ANCHOR_{{ $typeUppercase }}">{{ $presentationTitle }}</label>
@@ -206,8 +264,8 @@
                                         type="file"
                                         id="file_{{ $type }}"
                                         name="{{ $filesName }}[]"
-                                        multiple
-                                        accept=".pptx"
+                                        @if($type === 'entity') multiple @endif
+                                        accept=".pptx,.pdf"
                                         hidden
                                     />
                                     <div class="S-PRESENTATION_INPUT-icons">
@@ -238,8 +296,8 @@
                                             <input
                                                 class="IN-CHECKBOX-input"
                                                 type="checkbox"
-                                                id="confirmation"
-                                                name="confirmation"
+                                                id="confirmation_{{ $type }}"
+                                                name="confirmation_{{ $type }}"
                                             />
                                             <div class="S-CHECKBOX-box">
                                                 <x-svg.icons.check
@@ -258,8 +316,8 @@
                         </div>
                     </div>
                     <div class="S-CONTENT-submit DEV-DISABLE_SELECTION">
-                        <button class="B-CONTENT-submit B-CONTENT-submit_{{ $color }}" type="submit" id="submit_button">
-                            <p class="T-CONTENT-submit_{{ $color }} TYPO-PRESET-CORE_P_BOLD">Подать заявку</p>
+                        <button class="B-CONTENT-submit B-CONTENT-submit_{{ $color }}" type="submit" id="submit_button_{{ $type }}">
+                            <p class="T-CONTENT-submit T-CONTENT-submit_{{ $color }} TYPO-PRESET-CORE_P_BOLD">Подать заявку</p>
                         </button>
                     </div>
                     <div class="S-CONTENT-presentation_hint"

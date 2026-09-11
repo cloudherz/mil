@@ -18,6 +18,11 @@ abstract class ApplicationSubmitController
 
     abstract protected function saveApplication(array $validated);
 
+    protected const REGEX_PERSON_NAME = '/^[А-Яа-яЁё\s\-.,\'’]+$/u';
+    protected const REGEX_ORGANIZATION_NAME = '/^[А-Яа-яЁёA-Za-z0-9\s\-.,"\'’()«»№\/\\\\&%$@#!?:;_*+]+$/u';
+    protected const REGEX_EMAIL = '/^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/';
+    protected const REGEX_PHONE = '/^\+?7\d{10}$/';
+
     protected function validateRequest(Request $request): array
     {
         try {
@@ -37,54 +42,128 @@ abstract class ApplicationSubmitController
     protected function getValidationMessages(): array
     {
         return [
-            'description.required' => 'Поле описания обязательно для заполнения',
-            'description.string' => 'Недопустимый тип ввода описания',
-            'description.min' => 'Описание должно быть не менее 1 символов',
-            'description.max' => 'Описание должно быть не более 8192 символов',
+            // ── Description ──────────────────────────
+            'description_student.required' => 'Поле описания обязательно для заполнения',
+            'description_student.string' => 'Недопустимый тип ввода описания',
+            'description_student.min' => 'Описание должно быть не менее 1 символа',
+            'description_student.max' => 'Описание должно быть не более 10 000 символов',
 
-            // Файлы: обязательность
+            'description_individual.required' => 'Поле описания обязательно для заполнения',
+            'description_individual.string' => 'Недопустимый тип ввода описания',
+            'description_individual.min' => 'Описание должно быть не менее 1 символа',
+            'description_individual.max' => 'Описание должно быть не более 10 000 символов',
+
+            'description_entity.required' => 'Поле описания обязательно для заполнения',
+            'description_entity.string' => 'Недопустимый тип ввода описания',
+            'description_entity.min' => 'Описание должно быть не менее 1 символа',
+            'description_entity.max' => 'Описание должно быть не более 10 000 символов',
+
+            // ── Person name ──────────────────────────
+            'person_name_student.required' => 'Поле ФИО обязательно для заполнения',
+            'person_name_student.min' => 'ФИО должно быть не короче 2 символов',
+            'person_name_student.max' => 'ФИО должно быть не длиннее 256 символов',
+            'person_name_student.regex' => 'ФИО может содержать только кириллицу, пробел, дефис, точку, запятую и апостроф',
+
+            'person_name_individual.required' => 'Поле ФИО обязательно для заполнения',
+            'person_name_individual.min' => 'ФИО должно быть не короче 2 символов',
+            'person_name_individual.max' => 'ФИО должно быть не длиннее 256 символов',
+            'person_name_individual.regex' => 'ФИО может содержать только кириллицу, пробел, дефис, точку, запятую и апостроф',
+
+            'organization_representative.required' => 'Поле ФИО представителя обязательно для заполнения',
+            'organization_representative.min' => 'ФИО представителя должно быть не короче 2 символов',
+            'organization_representative.max' => 'ФИО представителя должно быть не длиннее 256 символов',
+            'organization_representative.regex' => 'ФИО представителя может содержать только кириллицу, пробел, дефис, точку, запятую и апостроф',
+
+            // ── Organization ─────────────────────────
+            'organization_name.required' => 'Поле названия организации обязательно для заполнения',
+            'organization_name.min' => 'Название организации должно быть не короче 2 символов',
+            'organization_name.max' => 'Название организации должно быть не длиннее 512 символов',
+            'organization_name.regex' => 'Название организации содержит недопустимые символы',
+
+            'organization_tin.required' => 'Поле ИНН обязательно для заполнения',
+            'organization_tin.digits_between' => 'ИНН должен содержать от 1 до 12 цифр',
+
+            // ── Email ────────────────────────────────
+            'email_student.required' => 'Поле почты обязательно для заполнения',
+            'email_student.email' => 'Введите корректный email',
+            'email_student.min' => 'Email слишком короткий',
+            'email_student.max' => 'Email слишком длинный (макс. 256 символов)',
+            'email_student.regex' => 'Введите корректный email',
+
+            'email_individual.required' => 'Поле почты обязательно для заполнения',
+            'email_individual.email' => 'Введите корректный email',
+            'email_individual.min' => 'Email слишком короткий',
+            'email_individual.max' => 'Email слишком длинный (макс. 256 символов)',
+            'email_individual.regex' => 'Введите корректный email',
+
+            'email_entity.required' => 'Поле почты обязательно для заполнения',
+            'email_entity.email' => 'Введите корректный email',
+            'email_entity.min' => 'Email слишком короткий',
+            'email_entity.max' => 'Email слишком длинный (макс. 256 символов)',
+            'email_entity.regex' => 'Введите корректный email',
+
+            // ── Phone ────────────────────────────────
+            'phone_student.required' => 'Поле телефона обязательно для заполнения',
+            'phone_student.regex' => 'Введите телефон в формате +7 XXXXXXXXXX',
+            'phone_individual.required' => 'Поле телефона обязательно для заполнения',
+            'phone_individual.regex' => 'Введите телефон в формате +7 XXXXXXXXXX',
+            'phone_entity.required' => 'Поле телефона обязательно для заполнения',
+            'phone_entity.regex' => 'Введите телефон в формате +7 XXXXXXXXXX',
+
+            // ── Track ────────────────────────────────
+            'track_student.required' => 'Выберите номинацию',
+            'track_student.in' => 'Некорректная номинация',
+            'track_individual.required' => 'Выберите номинацию',
+            'track_individual.in' => 'Некорректная номинация',
+            'track_1.in' => 'Некорректная номинация',
+            'track_2.in' => 'Некорректная номинация',
+            'track_3.in' => 'Некорректная номинация',
+
+            // ── Confirmation ─────────────────────────
+            'confirmation_student.required' => 'Необходимо согласие на обработку персональных данных',
+            'confirmation_student.accepted' => 'Необходимо согласие на обработку персональных данных',
+            'confirmation_individual.required' => 'Необходимо согласие на обработку персональных данных',
+            'confirmation_individual.accepted' => 'Необходимо согласие на обработку персональных данных',
+            'confirmation_entity.required' => 'Необходимо согласие на обработку персональных данных',
+            'confirmation_entity.accepted' => 'Необходимо согласие на обработку персональных данных',
+
+            // ── Файлы: обязательность ────────────────
             'files_student.required' => 'Прикрепите файл презентации',
             'files_individual.required' => 'Прикрепите файл презентации',
             'files_entity.required' => 'Прикрепите хотя бы один файл презентации',
 
-            // Файлы: минимум
+            // ── Файлы: минимум ───────────────────────
             'files_student.min' => 'Прикрепите файл презентации',
             'files_individual.min' => 'Прикрепите файл презентации',
             'files_entity.min' => 'Прикрепите хотя бы один файл презентации',
 
-            // Файлы: максимум
+            // ── Файлы: максимум ──────────────────────
             'files_student.max' => 'Можно загрузить только :max файл',
             'files_individual.max' => 'Можно загрузить только :max файл',
             'files_entity.max' => 'Можно загрузить максимум :max файла',
 
-            // Формат
-            'files_student.*.mimes' => 'Файл должен быть в формате .pptx',
-            'files_individual.*.mimes' => 'Файл должен быть в формате .pptx',
-            'files_entity.*.mimes' => 'Файл должен быть в формате .pptx',
+            // ── Файлы: формат ────────────────────────
+            'files_student.*.mimes' => 'Файл должен быть в формате .pptx или .pdf',
+            'files_individual.*.mimes' => 'Файл должен быть в формате .pptx или .pdf',
+            'files_entity.*.mimes' => 'Файл должен быть в формате .pptx или .pdf',
 
-            // Размер
-            'files_student.*.max' => 'Размер файла не должен превышать 200MB',
-            'files_individual.*.max' => 'Размер файла не должен превышать 200MB',
-            'files_entity.*.max' => 'Размер файла не должен превышать 200MB',
+            // ── Файлы: размер ────────────────────────
+            'files_student.*.max' => 'Размер файла не должен превышать 32MB',
+            'files_individual.*.max' => 'Размер файла не должен превышать 32MB',
+            'files_entity.*.max' => 'Размер файла не должен превышать 32MB',
 
-            // Валидность
+            // ── Файлы: валидность ────────────────────
             'files_student.*.file' => 'Загруженный файл поврежден или не является файлом',
             'files_individual.*.file' => 'Загруженный файл поврежден или не является файлом',
             'files_entity.*.file' => 'Загруженный файл поврежден или не является файлом',
 
-            // Обязательность каждого файла в массиве
+            // ── Файлы: обязательность каждого ────────
             'files_student.*.required' => 'Файл не был загружен',
             'files_individual.*.required' => 'Файл не был загружен',
             'files_entity.*.required' => 'Файл не был загружен',
         ];
     }
 
-    /**
-     * Обработка загрузки файлов.
-     * Файлы сохраняются в постоянное место (storage/app/applications/...),
-     * чтобы гарантированно существовать к моменту отправки письма
-     * (в том числе асинхронной через очередь).
-     */
     protected function handleFileUploads(Request $request, string $applicationType): array
     {
         $fieldName = match ($applicationType) {
@@ -102,6 +181,10 @@ abstract class ApplicationSubmitController
 
         $folder = 'applications/' . now()->format('Y/m/d');
 
+        // ⬇⬇⬇ НОВОЕ: суммарный размер
+        $totalSize = 0;
+        $maxTotalSize = 32 * 1024 * 1024; // 32 MB в байтах
+
         foreach ($request->file($fieldName) as $file) {
             if (!$file->isValid()) {
                 throw ValidationException::withMessages([
@@ -110,47 +193,71 @@ abstract class ApplicationSubmitController
             }
 
             $extension = strtolower($file->getClientOriginalExtension());
-            if (!in_array($extension, ['pptx', 'ppt'], true)) {
+            if (!in_array($extension, ['pptx', 'pdf'], true)) {
                 throw ValidationException::withMessages([
-                    $fieldName . '.*' => 'Файл должен быть в формате .pptx',
+                    $fieldName . '.*' => 'Файл должен быть в формате .pptx или .pdf',
                 ]);
             }
+
+            // ⬇⬇⬇ НОВОЕ: копим размер
+            $totalSize += $file->getSize();
+            // ⬆⬆⬆
 
             $diskPath = $file->store($folder, 'local');
 
             $uploadedFiles[] = [
                 'name' => $file->getClientOriginalName(),
-                'disk_path' => $diskPath, // ← ТОЛЬКО disk_path, никакого path
-                'mime' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                'disk_path' => $diskPath,
+                'mime' => $file->getClientMimeType() ?: 'application/octet-stream',
             ];
         }
+
+        // ⬇⬇⬇ НОВОЕ: проверка суммы
+        if ($totalSize > $maxTotalSize) {
+            // Удаляем уже загруженные файлы, чтобы не мусорить
+            $this->deleteFiles($uploadedFiles);
+
+            $totalMb = round($totalSize / 1024 / 1024, 2);
+            throw ValidationException::withMessages([
+                $fieldName . '.*' => "Суммарный размер файлов не должен превышать 32 MB (Текущий: {$totalMb} MB)",
+            ]);
+        }
+        // ⬆⬆⬆
 
         return $uploadedFiles;
     }
 
-    /**
-     * Сохранение заявки + файлов + отправка письма (всё в транзакции).
-     */
     public function applicationSubmit(Request $request): RedirectResponse
     {
-        $validated = $this->validateRequest($request);
-        $applicationType = $validated['application_type'];
+        $applicationType = null;
 
-        // 1. Файлы сохраняем ДО транзакции, чтобы если что — можно было их откатить
+        foreach (['student', 'individual', 'entity'] as $type) {
+            if ($request->input("application_type_{$type}") === $type) {
+                $applicationType = $type;
+                break;
+            }
+        }
+
+        if (!$applicationType) {
+            throw ValidationException::withMessages([
+                'application_type' => 'Не удалось определить тип заявки',
+            ]);
+        }
+
+        $this->normalizePhones($request);
+
+        $validated = $this->validateRequest($request);
+
         $files = $this->handleFileUploads($request, $applicationType);
 
         try {
             DB::beginTransaction();
 
-            // 2. Оставляем только нужные поля
             $filtered = $this->filterValidated($validated, $applicationType);
 
-            // 3. Создаём и сохраняем модель
             $application = $this->saveApplication($filtered);
             $application->save();
 
-            // 4. Отправляем письмо (синхронно, в рамках транзакции).
-            //    Если что-то падает — транзакция откатится, но файлы удалим в catch.
             $this->sendApplicationEmail($application, $filtered, $applicationType, $files);
 
             DB::commit();
@@ -160,7 +267,6 @@ abstract class ApplicationSubmitController
         } catch (\Throwable $e) {
             DB::rollBack();
 
-            // Удаляем файлы, если транзакция упала
             $this->deleteFiles($files);
 
             Log::error('Application submit failed', [
@@ -172,7 +278,7 @@ abstract class ApplicationSubmitController
             throw $e;
         }
 
-        session()->flash('application', $filtered);
+        session()->flash('application_success', true);
 
         return redirect('/');
     }
@@ -184,29 +290,56 @@ abstract class ApplicationSubmitController
     {
         $fields = match ($applicationType) {
             'student' => [
-                'application_type', 'person_name', 'email', 'phone',
-                'track_student', 'description', 'confirmation',
+                'application_type_student',
+                'person_name_student',
+                'email_student',
+                'phone_student',
+                'track_student',
+                'description_student',
+                'confirmation_student',
             ],
             'individual' => [
-                'application_type', 'person_name', 'email', 'phone',
-                'track_individual', 'description', 'confirmation',
+                'application_type_individual',
+                'person_name_individual',
+                'email_individual',
+                'phone_individual',
+                'track_individual',
+                'description_individual',
+                'confirmation_individual',
             ],
             'entity' => [
-                'application_type', 'organization_name', 'organization_tin',
-                'organization_representative', 'email', 'phone',
-                'track_1', 'track_2', 'track_3', 'description', 'confirmation',
+                'application_type_entity',
+                'organization_name',
+                'organization_tin',
+                'organization_representative',
+                'email_entity',
+                'phone_entity',
+                'track_1', 'track_2', 'track_3',
+                'description_entity',
+                'confirmation_entity',
             ],
             default => [],
         };
 
-        return array_intersect_key($validated, array_flip($fields));
+        $filtered = array_intersect_key($validated, array_flip($fields));
+
+        // ⬇⬇⬇ НОВОЕ: форматируем телефон один раз — и в БД, и в письмо
+        $phoneKey = match ($applicationType) {
+            'student' => 'phone_student',
+            'individual' => 'phone_individual',
+            'entity' => 'phone_entity',
+            default => null,
+        };
+
+        if ($phoneKey && !empty($filtered[$phoneKey])) {
+            $filtered[$phoneKey] = $this->formatPhone($filtered[$phoneKey]);
+        }
+        // ⬆⬆⬆
+
+        return $filtered;
     }
 
-    /**
-     * Отправка письма. Файлы НЕ удаляются здесь.
-     * Удаление файлов повесим на событие MessageSending / MessageSent,
-     * либо на успешный commit транзакции (см. ниже).
-     */
+
     protected function sendApplicationEmail(
         $application,
         array $validated,
@@ -246,8 +379,12 @@ abstract class ApplicationSubmitController
 
     protected function getApplicationName(array $validated, string $applicationType): string
     {
-        if (in_array($applicationType, ['student', 'individual'], true)) {
-            return $validated['person_name'] ?? 'Без имени';
+        if ($applicationType === 'student') {
+            return $validated['person_name_student'] ?? 'Без имени';
+        }
+
+        if ($applicationType === 'individual') {
+            return $validated['person_name_individual'] ?? 'Без имени';
         }
 
         if ($applicationType === 'entity') {
@@ -255,5 +392,48 @@ abstract class ApplicationSubmitController
         }
 
         return 'Без имени';
+    }
+
+    /**
+     * Приводит телефоны к виду +7XXXXXXXXXX до валидации.
+     * Иначе regex /^\+?7\d{10}$/ не сработает на «+7 333 333-33-33».
+     */
+    protected function normalizePhones(Request $request): void
+    {
+        foreach (['phone_student', 'phone_individual', 'phone_entity'] as $field) {
+            if (!$request->has($field)) {
+                continue;
+            }
+
+            $value = (string) $request->input($field);
+            $digits = preg_replace('/\D/', '', $value);
+
+            if ($digits === '' || strlen($digits) < 11) {
+                // оставляем как есть — валидатор вернёт ошибку
+                continue;
+            }
+
+            // берём последние 11 цифр и нормализуем первый символ к 7
+            $digits = substr($digits, -11);
+            $digits = '7' . substr($digits, 1);
+
+            $request->merge([$field => '+' . $digits]);
+        }
+    }
+
+    /**
+     * Приводит нормализованный телефон +7XXXXXXXXXX к виду +7 XXX XXX-XX-XX.
+     * Используется при сохранении в БД и в письме.
+     */
+    protected function formatPhone(string $phone): string
+    {
+        $digits = preg_replace('/\D/', '', $phone);
+        $digits = substr($digits, -10); // последние 10 цифр (без ведущей 7)
+
+        return '+7 '
+            . substr($digits, 0, 3) . ' '
+            . substr($digits, 3, 3) . '-'
+            . substr($digits, 6, 2) . '-'
+            . substr($digits, 8, 2);
     }
 }

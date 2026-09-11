@@ -9,12 +9,13 @@ function initApplicationOpen() {
         function openPopup() {
             popup.style.display = 'unset';
             app.style.overflow = 'hidden';
+            document.getElementById('LANDING-APPLICATION-WINDOW-SELECT').style.display = 'unset';
         }
 
         function closePopup() {
             popup.style.display = 'none';
             app.style.overflow = '';
-            document.getElementById('LANDING-APPLICATION-WINDOW-SELECT').style.display = 'unset';
+            document.getElementById('LANDING-APPLICATION-WINDOW-SELECT').style.display = 'none';
             document.getElementById('LANDING-APPLICATION-WINDOW-STUDENT').style.display = 'none';
             document.getElementById('LANDING-APPLICATION-WINDOW-INDIVIDUAL').style.display = 'none';
             document.getElementById('LANDING-APPLICATION-WINDOW-ENTITY').style.display = 'none';

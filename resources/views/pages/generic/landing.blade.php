@@ -9,16 +9,106 @@
 @section('meta-site-name', 'Премия «МИЛ»')
 
 @section('mode-desktop')
-    <div class="S-DESKTOP-message S-DESKTOP-message_email_copied" id="LANDING-MESSAGE-EMAIL_COPIED">
-        <div class="S-MESSAGE-wrapper">
-            <div class="S-MESSAGE-carcass" id="LANDING-MESSAGE-EMAIL_COPIED-CARCASS">
-                <div class="S-MESSAGE-icon">
+    <div class="S-DESKTOP-message_application_fail" id="LANDING-MESSAGE-APPLICATION_FAIL"
+         @if ($errors->any()) data-show-error="1" @endif>
+        <div class="S-MESSAGE_APPLICATION_FAIL-wrapper">
+            <div class="S-MESSAGE_APPLICATION_FAIL-carcass">
+                <div class="S-MESSAGE_APPLICATION_FAIL-window" id="LANDING-MESSAGE-APPLICATION_FAIL-WINDOW">
+                    <div class="S-WINDOW-wrapper">
+                        <div class="S-WINDOW-carcass">
+                            <div class="S-WINDOW-heading">
+                                <h3 class="T-WINDOW-heading TYPO-PRESET-CORE_H3">Что-то пошло не так...</h3>
+                            </div>
+                            <div class="S-WINDOW-messages">
+                                @php
+                                    $gentleWish = $errors->first('gentle_wish');
+                                    $otherErrors = collect($errors->all())
+                                        ->reject(fn ($error) => $error === $gentleWish)
+                                        ->values();
+                                @endphp
+
+                                @if ($otherErrors->isNotEmpty())
+                                    <ul>
+                                        @foreach ($otherErrors as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                            <div class="S-WINDOW-description">
+                                @if ($gentleWish)
+                                    <p class="T-WINDOW-description TYPO-PRESET-CORE_P">
+                                        {{ $gentleWish }}
+                                    </p>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="S-DESKTOP-message_application_success" id="LANDING-MESSAGE-APPLICATION_SUCCESS"
+         @if(session('application_success')) data-show-success="1" @endif>
+        <div class="S-MESSAGE_APPLICATION_SUCCESS-wrapper">
+            <div class="S-MESSAGE_APPLICATION_SUCCESS-carcass">
+                <div class="S-MESSAGE_APPLICATION_SUCCESS-window" id="LANDING-MESSAGE-APPLICATION_SUCCESS-WINDOW">
+                    <div class="S-WINDOW-wrapper">
+                        <div class="S-WINDOW-carcass">
+                            <div class="S-WINDOW-heading">
+                                <h3 class="T-WINDOW-heading TYPO-PRESET-CORE_H3">Ваша заявка<br>подана успешно!</h3>
+                            </div>
+                            <div class="S-WINDOW-icon">
+                                <x-svg.icons.success
+                                    class="I-WINDOW-icon"
+                                />
+                            </div>
+                            <div class="S-WINDOW-description">
+                                <p class="T-WINDOW-description TYPO-PRESET-CORE_P">
+                                    Ожидайте формирования списка номинантов.<br>
+                                    Вы будете уведомлены по указанной почте.<br><br>
+                                    Окно закроется автоматически через <span id="LANDING-MESSAGE-APPLICATION_SUCCESS-TIMER">5</span> сек.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="S-DESKTOP-message_application_sending" id="LANDING-MESSAGE-APPLICATION_SENDING">
+        <div class="S-MESSAGE_APPLICATION_SENDING-wrapper">
+            <div class="S-MESSAGE_APPLICATION_SENDING-carcass">
+                <div class="S-MESSAGE_APPLICATION_SENDING-window">
+                    <div class="S-WINDOW-wrapper S-WINDOW-wrapper_blue">
+                        <div class="S-WINDOW-carcass">
+                            <div class="S-WINDOW-heading">
+                                <h3 class="T-WINDOW-heading T-WINDOW-heading_blue TYPO-PRESET-CORE_H3">Заявка отправляется...</h3>
+                            </div>
+                            <div class="S-WINDOW-loading">
+                                <x-svg.icons.loading
+                                    class="I-WINDOW-loading I-WINDOW-loading_blue"
+                                />
+                            </div>
+                            <div class="S-WINDOW-description">
+                                <p class="T-WINDOW-description T-WINDOW-description_blue TYPO-PRESET-CORE_P_BOLD">Пожалуйста, не закрывайте вкладку!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="S-DESKTOP-message_email_copied" id="LANDING-MESSAGE-EMAIL_COPIED">
+        <div class="S-MESSAGE_EMAIL_COPIED-wrapper">
+            <div class="S-MESSAGE_EMAIL_COPIED-carcass" id="LANDING-MESSAGE-EMAIL_COPIED-CARCASS">
+                <div class="S-MESSAGE_EMAIL_COPIED-icon">
                     <x-svg.icons.check
-                        class="I-MESSAGE-icon"
+                        class="I-MESSAGE_EMAIL_COPIED-icon"
                     />
                 </div>
-                <div class="S-MESSAGE-text">
-                    <p class="T-MESSAGE-text TYPO-PRESET-CORE_H3">Почта скопирована в буфер обмена</p>
+                <div class="S-MESSAGE_EMAIL_COPIED-text">
+                    <p class="T-MESSAGE_EMAIL_COPIED-text TYPO-PRESET-CORE_H3">Почта скопирована в буфер обмена</p>
                 </div>
             </div>
         </div>
@@ -26,7 +116,7 @@
     <div class="S-DESKTOP-application" id="LANDING-APPLICATION-POPUP" style="display: none">
         <div class="S-APPLICATION-wrapper">
             <div class="S-APPLICATION-carcass">
-                <div class="S-APPLICATION-select S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-SELECT">
+                <div class="S-APPLICATION-select S-APPLICATION-window" id="LANDING-APPLICATION-WINDOW-SELECT" style="display: none">
                     <div class="S-SELECT-wrapper S-SELECT-wrapper_blue S-WINDOW-wrapper">
                         <div class="S-SELECT-carcass S-WINDOW-carcass">
                             <div class="S-SELECT-heading">
@@ -857,7 +947,7 @@
                                 </a>
                             </div>
                             <div class="S-LINKS-alt TYPO-PRESET-CORE_SMALL">
-                                <a class="L-LINKS-alt" href="#">Публичная оферта</a>
+                                <a class="L-LINKS-alt" href="{{ asset('docs/public_offer.pdf') }}" target="_blank" rel="noopener">Публичная оферта</a>
                                 <a class="L-LINKS-alt" href="#">Положение о премии</a>
                             </div>
                             <div class="S-LINKS-credit TYPO-PRESET-CORE_SMALL">

@@ -34,9 +34,400 @@
 
 
 
-    // CHUNK:MESSAGE
-    // LOCAL VARIABLES NAME = MESSAGE
-    .S-DESKTOP-message {
+    // CHUNK:MESSAGE_APPLICATION_FAIL
+    // LOCAL VARIABLES NAME = MESSAGE_APPLICATION_FAIL
+    .S-DESKTOP-message_application_fail {
+        // DISPLAY
+        display: none;
+        // POSITIONING
+        position: fixed;
+        // SCALING
+        width: 100vw;
+        height: 100vh;
+        // BACKGROUND
+        background-color: $PALETTE-POPUP_BACKGROUND;
+        // LAYERING
+        z-index: 300;
+
+        .S-MESSAGE_APPLICATION_FAIL-wrapper {
+            // FLEXBOX
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // SCALING
+            width: 100vw;
+            height: 100vh;
+
+            .S-MESSAGE_APPLICATION_FAIL-carcass {
+                // CSS-GRID SETUP
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 0;
+                grid-row-gap: 0;
+                align-items: center;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+
+                .S-MESSAGE_APPLICATION_FAIL-window {
+                    // CSS-GRID CONFIGURATION
+                    grid-area: 1 / 1 / 2 / 2;
+                    // SCALING
+                    width: max-content;
+                    height: max-content;
+                    // STREAMLINING
+                    border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                    .S-WINDOW-wrapper {
+                        // BACKGROUND
+                        background-color: $PALETTE-LIGHT_RED;
+                        // MARGINS & PADDINGS
+                        padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-WINDOW-carcass {
+                            // CSS-GRID SETUP
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(3, max-content);
+                            grid-column-gap: 0;
+                            grid-row-gap: 0;
+                            // BACKGROUND
+                            background-color: $PALETTE-SNOW;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SECTIONS;
+                            // MARGINS & PADDINGS
+                            padding: $GV-D-SIZES-INNER_PADDING;
+
+                            .S-WINDOW-heading {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+                                // MARGINS & PADDINGS
+                                margin-bottom: $GV-D-SIZES-DEFAULT * 1.2;
+
+                                .T-WINDOW-heading {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-LIGHT_RED;
+                                    text-align: center;
+                                    text-box: trim-both cap alphabetic;
+                                }
+                            }
+                            .S-WINDOW-messages {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 2 / 1 / 3 / 2;
+                                // MARGINS & PADDINGS
+                                margin-bottom: $GV-D-SIZES-DEFAULT * 1.2;
+
+
+                            }
+                            .S-WINDOW-description {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 3 / 1 / 4 / 2;
+
+                                .T-WINDOW-description {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-LIGHT_RED;
+                                    text-align: center;
+                                    text-box: trim-both cap alphabetic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:MESSAGE_APPLICATION_SUCCESS
+    // LOCAL VARIABLES NAME = MESSAGE_APPLICATION_SUCCESS
+    .S-DESKTOP-message_application_success {
+        // DISPLAY
+        display: none;
+        // POSITIONING
+        position: fixed;
+        // SCALING
+        width: 100vw;
+        height: 100vh;
+        // BACKGROUND
+        background-color: $PALETTE-POPUP_BACKGROUND;
+        // LAYERING
+        z-index: 300;
+
+        .S-MESSAGE_APPLICATION_SUCCESS-wrapper {
+            // FLEXBOX
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // SCALING
+            width: 100vw;
+            height: 100vh;
+
+            .S-MESSAGE_APPLICATION_SUCCESS-carcass {
+                // CSS-GRID SETUP
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 0;
+                grid-row-gap: 0;
+                align-items: center;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+
+                .S-MESSAGE_APPLICATION_SUCCESS-window {
+                    // CSS-GRID CONFIGURATION
+                    grid-area: 1 / 1 / 2 / 2;
+                    // SCALING
+                    width: max-content;
+                    height: max-content;
+                    // STREAMLINING
+                    border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                    .S-WINDOW-wrapper {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_GREEN;
+                        // MARGINS & PADDINGS
+                        padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-WINDOW-carcass {
+                            // CSS-GRID SETUP
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(3, max-content);
+                            grid-column-gap: 0;
+                            grid-row-gap: 0;
+                            // BACKGROUND
+                            background-color: $PALETTE-SNOW;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SECTIONS;
+                            // MARGINS & PADDINGS
+                            padding: $GV-D-SIZES-INNER_PADDING;
+
+                            .S-WINDOW-heading {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+                                // MARGINS & PADDINGS
+                                margin-bottom: $GV-D-SIZES-DEFAULT * 1.2;
+
+                                .T-WINDOW-heading {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_GREEN;
+                                    text-align: center;
+                                    text-box: trim-both cap alphabetic;
+                                }
+                            }
+                            .S-WINDOW-icon {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 2 / 1 / 3 / 2;
+                                // MARGINS & PADDINGS
+                                margin-bottom: $GV-D-SIZES-DEFAULT * 1.2;
+
+                                .I-WINDOW-icon {
+                                    // FILL
+                                    fill: $PALETTE-DARK_GREEN;
+                                    // SCALING
+                                    height: 12.6vh;
+                                }
+                            }
+                            .S-WINDOW-description {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 3 / 1 / 4 / 2;
+
+                                .T-WINDOW-description {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_GREEN;
+                                    text-align: center;
+                                    text-box: trim-both cap alphabetic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:MESSAGE_APPLICATION_SENDING
+    // LOCAL VARIABLES NAME = MESSAGE_APPLICATION_SENDING
+    .S-DESKTOP-message_application_sending {
+        // DISPLAY
+        display: none;
+        // POSITIONING
+        position: fixed;
+        // SCALING
+        width: 100vw;
+        height: 100vh;
+        // BACKGROUND
+        background-color: $PALETTE-POPUP_BACKGROUND;
+        // LAYERING
+        z-index: 300;
+
+        .S-MESSAGE_APPLICATION_SENDING-wrapper {
+            // FLEXBOX
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // SCALING
+            width: 100vw;
+            height: 100vh;
+
+            .S-MESSAGE_APPLICATION_SENDING-carcass {
+                // CSS-GRID SETUP
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 0;
+                grid-row-gap: 0;
+                align-items: center;
+                // FONT SETTINGS
+                color: $PALETTE-BLACK;
+
+                .S-MESSAGE_APPLICATION_SENDING-window {
+                    // CSS-GRID CONFIGURATION
+                    grid-area: 1 / 1 / 2 / 2;
+                    // SCALING
+                    width: max-content;
+                    height: max-content;
+                    // STREAMLINING
+                    border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                    .S-WINDOW-wrapper_blue {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_BLUE;
+                    }
+                    .S-WINDOW-wrapper_green {
+                        // BACKGROUND
+                        background-color: $PALETTE-DARK_GREEN;
+                    }
+                    .S-WINDOW-wrapper {
+                        // MARGINS & PADDINGS
+                        padding-bottom: $GV-D-SIZES-UNDER_SECTIONS;
+                        // STREAMLINING
+                        border-radius: $GV-D-ROUNDING-SECTIONS;
+
+                        .S-WINDOW-carcass {
+                            // CSS-GRID SETUP
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(3, max-content);
+                            grid-column-gap: 0;
+                            grid-row-gap: 0;
+                            // BACKGROUND
+                            background-color: $PALETTE-SNOW;
+                            // STREAMLINING
+                            border-radius: $GV-D-ROUNDING-SECTIONS;
+                            // MARGINS & PADDINGS
+                            padding: $GV-D-SIZES-INNER_PADDING;
+
+                            .S-WINDOW-heading {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+                                // MARGINS & PADDINGS
+                                margin-bottom: $GV-D-SIZES-DEFAULT * 1.2;
+
+                                .T-WINDOW-heading_blue {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_BLUE;
+                                }
+                                .T-WINDOW-heading_green {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_GREEN;
+                                }
+                                .T-WINDOW-heading {
+                                    // FONT SETTINGS
+                                    text-align: center;
+                                    text-box: trim-both cap alphabetic;
+                                }
+                            }
+                            .S-WINDOW-loading {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 2 / 1 / 3 / 2;
+                                // MARGINS & PADDINGS
+                                margin-bottom: $GV-D-SIZES-DEFAULT * 1.2;
+
+                                .I-WINDOW-loading_blue {
+                                    // FILL
+                                    fill: $PALETTE-DARK_BLUE;
+                                }
+                                .I-WINDOW-loading_green {
+                                    // FILL
+                                    fill: $PALETTE-DARK_GREEN;
+                                }
+                                .I-WINDOW-loading {
+                                    // SCALING
+                                    height: 8.5vh;
+                                    // ANIMATION
+                                    animation: spin 1s ease-in-out infinite;
+                                }
+
+                                @keyframes spin {
+                                    from { transform: rotate(0deg); }
+                                    to { transform: rotate(360deg); }
+                                }
+                            }
+                            .S-WINDOW-description {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: center;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 3 / 1 / 4 / 2;
+
+                                .T-WINDOW-description_blue {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_BLUE;
+                                }
+                                .T-WINDOW-description_green {
+                                    // FONT SETTINGS
+                                    color: $PALETTE-DARK_GREEN;
+                                }
+                                .T-WINDOW-description {
+                                    // FONT SETTINGS
+                                    text-align: center;
+                                    text-box: trim-both cap alphabetic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // CHUNK:MESSAGE_EMAIL_COPIED
+    // LOCAL VARIABLES NAME = MESSAGE_EMAIL_COPIED
+    .S-DESKTOP-message_email_copied {
         // POSITIONING
         position: fixed;
         // SCALING
@@ -47,7 +438,7 @@
         // LAYERING
         z-index: 300;
 
-        .S-MESSAGE-wrapper {
+        .S-MESSAGE_EMAIL_COPIED-wrapper {
             // FLEXBOX
             display: flex;
             justify-content: center;
@@ -56,7 +447,7 @@
             width: 100vw;
             height: 100vh;
 
-            .S-MESSAGE-carcass {
+            .S-MESSAGE_EMAIL_COPIED-carcass {
                 // CSS-GRID SETUP
                 display: grid;
                 grid-template-columns: repeat(2, max-content);
@@ -80,11 +471,11 @@
                     opacity 0.2s,
                     margin-bottom 0.2s;
 
-                .S-MESSAGE-icon {
+                .S-MESSAGE_EMAIL_COPIED-icon {
                     // CSS-GRID CONFIGURATION
                     grid-area: 1 / 1 / 2 / 2;
 
-                    .I-MESSAGE-icon {
+                    .I-MESSAGE_EMAIL_COPIED-icon {
                         // FLEXBOX
                         display: flex;
                         // SCALING
@@ -93,11 +484,11 @@
                         fill: $PALETTE-DARK_GREEN;
                     }
                 }
-                .S-MESSAGE-text {
+                .S-MESSAGE_EMAIL_COPIED-text {
                     // CSS-GRID CONFIGURATION
                     grid-area: 1 / 2 / 2 / 3;
 
-                    .T-MESSAGE-text {
+                    .T-MESSAGE_EMAIL_COPIED-text {
                         // FONT SETTINGS
                         color: $PALETTE-DARK_GREEN;
                         text-box: trim-both cap alphabetic;
@@ -484,6 +875,10 @@
                                                 // MARGINS & PADDINGS
                                                 margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
                                             }
+                                            .S-NAME_SOLO-name_input_error {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 2 / 2 / 3;
+                                            }
                                         }
                                         .S-NAME_ENTITY-carcass {
                                             // CSS-GRID SETUP
@@ -505,6 +900,10 @@
                                                 // MARGINS & PADDINGS
                                                 margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
                                             }
+                                            .S-NAME_ENTITY-name_input_error {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 2 / 2 / 3;
+                                            }
                                             .S-NAME_ENTITY-tin_title {
                                                 // CSS-GRID CONFIGURATION
                                                 grid-area: 2 / 1 / 3 / 2;
@@ -517,6 +916,10 @@
                                                 // MARGINS & PADDINGS
                                                 margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
                                             }
+                                            .S-NAME_ENTITY-tin_input_error {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 2 / 2 / 3 / 3;
+                                            }
                                             .S-NAME_ENTITY-representative_title {
                                                 // CSS-GRID CONFIGURATION
                                                 grid-area: 3 / 1 / 4 / 2;
@@ -528,6 +931,10 @@
                                                 grid-area: 3 / 2 / 4 / 3;
                                                 // MARGINS & PADDINGS
                                                 margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                            }
+                                            .S-NAME_ENTITY-representative_input_error {
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 3 / 2 / 4 / 3;
                                             }
                                         }
                                     }
@@ -543,6 +950,10 @@
                                         // MARGINS & PADDINGS
                                         margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
                                     }
+                                    .S-CONTENT-email_input_error {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 2 / 2 / 3 / 3;
+                                    }
                                     .S-CONTENT-phone_title {
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 3 / 1 / 4 / 2;
@@ -554,6 +965,10 @@
                                         grid-area: 3 / 2 / 4 / 3;
                                         // MARGINS & PADDINGS
                                         margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-phone_input_error {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 3 / 2 / 4 / 3;
                                     }
                                     .S-CONTENT-tracks {
                                         // CSS-GRID CONFIGURATION
@@ -790,7 +1205,7 @@
                                                                 // TRANSFORM
                                                                 transform: translateY(-0.8vh);
                                                                 // LAYERING
-                                                                z-index: 101;
+                                                                z-index: 102;
                                                                 // TRANSITION
                                                                 transition:
                                                                     opacity 0.1s,
@@ -866,6 +1281,10 @@
                                         grid-area: 5 / 2 / 6 / 3;
                                         // MARGINS & PADDINGS
                                         margin-bottom: $LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                    }
+                                    .S-CONTENT-description_input_error {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 5 / 2 / 6 / 3;
                                     }
                                     .S-CONTENT-presentation_title {
                                         // CSS-GRID CONFIGURATION
@@ -1044,7 +1463,7 @@
                                                             // CURSOR
                                                             cursor: pointer;
                                                             // LAYERING
-                                                            z-index: 102;
+                                                            z-index: 103;
 
                                                             &:checked + .S-CHECKBOX-box {
                                                                 // BACKGROUND
@@ -1140,6 +1559,15 @@
                                                 box-shadow: $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET $LV-D-APPLICATION-FORM-INPUT-CONFIRM-SHADOW_OFFSET $PALETTE-DARK_GREEN;
                                             }
                                         }
+                                        .B-CONTENT-submit_disabled {
+                                            // SHADOW
+                                            box-shadow: none !important;
+
+                                            &:hover {
+                                                // SHADOW
+                                                box-shadow: none !important;
+                                            }
+                                        }
                                         .B-CONTENT-submit {
                                             // BORDER
                                             border: none;
@@ -1160,6 +1588,14 @@
                                             .T-CONTENT-submit_green {
                                                 // FONT SETTINGS
                                                 color: $PALETTE-DARK_GREEN;
+                                            }
+                                            .T-CONTENT-submit_disabled {
+                                                // FONT SETTINGS
+                                                color: $PALETTE-BLACK_HALF !important;
+                                            }
+                                            .T-CONTENT-submit {
+                                                // TRANSITION
+                                                transition: color 0.2s;
                                             }
                                         }
                                     }
@@ -1437,6 +1873,102 @@
                                             &::placeholder {
                                                 // FONT SETTINGS
                                                 color: $PALETTE-BLACK_PLACEHOLDER;
+                                            }
+                                        }
+                                    }
+                                    .S-CONTENT-input_string_error {
+                                        // SCALING
+                                        width: 100%;
+                                        height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                        // OPACITY
+                                        opacity: 0;
+                                        // EVENTS
+                                        pointer-events: none;
+                                        // LAYERING
+                                        z-index: 101;
+
+                                        .S-INPUT_STRING_ERROR-carcass {
+                                            // CSS-GRID SETUP
+                                            display: grid;
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: 1fr;
+                                            grid-column-gap: 0;
+                                            grid-row-gap: 0;
+
+                                            .S-INPUT_STRING_ERROR-icon_blue {
+                                                background-color: $PALETTE-WHITE_BLUE;
+                                            }
+                                            .S-INPUT_STRING_ERROR-icon_green {
+                                                background-color: $PALETTE-WHITE_GREEN;
+                                            }
+                                            .S-INPUT_STRING_ERROR-icon {
+                                                // FLEXBOX
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                                justify-self: end;
+                                                // SCALING
+                                                width: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                                height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
+                                                // STREAMLINING
+                                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                                // EVENTS
+                                                pointer-events: auto;
+
+                                                &:hover {
+                                                    // CURSOR
+                                                    cursor: pointer;
+                                                }
+
+                                                .I-INPUT_STRING_ERROR-icon {
+                                                    // FLEXBOX
+                                                    display: flex;
+                                                    // SCALING
+                                                    height: 2.5vh;
+                                                    // MARGINS & PADDINGS
+                                                    margin-top: -0.2vh;
+                                                    // FILL
+                                                    fill: $PALETTE-LIGHT_RED;
+                                                }
+                                            }
+                                            .S-INPUT_STRING_ERROR-message {
+                                                // FLEXBOX
+                                                display: flex;
+                                                align-items: center;
+                                                // CSS-GRID CONFIGURATION
+                                                grid-area: 1 / 1 / 2 / 2;
+                                                justify-self: end;
+                                                // SCALING
+                                                width: max-content;
+                                                height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT + ($LV-D-APPLICATION-FORM-INPUTS_MARGIN * 2) - ($GV-D-SIZES-SMALL * 2);
+                                                // MARGINS & PADDINGS
+                                                margin-right: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT + ($GV-D-SIZES-SMALL * 0);
+                                                margin-top: -$LV-D-APPLICATION-FORM-INPUTS_MARGIN;
+                                                padding: $GV-D-SIZES-SMALL ($GV-D-SIZES-SMALL * 1.6);
+                                                // BACKGROUND
+                                                background-color: $PALETTE-LIGHT_RED;
+                                                // STREAMLINING
+                                                border-radius: $GV-D-ROUNDING-ELEMENTS;
+                                                // OPACITY
+                                                opacity: 0;
+                                                // EVENTS
+                                                pointer-events: none;
+                                                // TRANSITION
+                                                transition: opacity 0.2s;
+
+                                                .T-INPUT_STRING_ERROR-text {
+                                                    // FONT SETTINGS
+                                                    color: $PALETTE-SNOW;
+                                                    text-align: center;
+                                                }
+                                            }
+                                            .S-INPUT_STRING_ERROR-icon:hover ~ .S-INPUT_STRING_ERROR-message {
+                                                // OPACITY
+                                                opacity: 1;
+                                                // EVENTS
+                                                pointer-events: auto;
                                             }
                                         }
                                     }

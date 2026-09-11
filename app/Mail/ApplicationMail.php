@@ -56,10 +56,6 @@ class ApplicationMail extends Mailable
         $this->applicantName = $applicantName;
         $this->files = $files;
 
-        $this->email = $applicationData['email'] ?? null;
-        $this->phone = $applicationData['phone'] ?? null;
-        $this->description = $applicationData['description'] ?? null;
-
         match ($applicationType) {
             'student' => $this->fillStudentData($applicationData),
             'individual' => $this->fillIndividualData($applicationData),
@@ -70,13 +66,19 @@ class ApplicationMail extends Mailable
 
     private function fillStudentData(array $data): void
     {
-        $this->personName = $data['person_name'] ?? null;
+        $this->personName = $data['person_name_student'] ?? null;
+        $this->email = $data['email_student'] ?? null;
+        $this->phone = $data['phone_student'] ?? null;
+        $this->description = $data['description_student'] ?? null;
         $this->trackStudent = $this->getTrackName($data['track_student'] ?? null);
     }
 
     private function fillIndividualData(array $data): void
     {
-        $this->personName = $data['person_name'] ?? null;
+        $this->personName = $data['person_name_individual'] ?? null;
+        $this->email = $data['email_individual'] ?? null;
+        $this->phone = $data['phone_individual'] ?? null;
+        $this->description = $data['description_individual'] ?? null;
         $this->trackIndividual = $this->getTrackName($data['track_individual'] ?? null);
     }
 
@@ -85,6 +87,9 @@ class ApplicationMail extends Mailable
         $this->organizationName = $data['organization_name'] ?? null;
         $this->organizationTin = $data['organization_tin'] ?? null;
         $this->organizationRepresentative = $data['organization_representative'] ?? null;
+        $this->email = $data['email_entity'] ?? null;
+        $this->phone = $data['phone_entity'] ?? null;
+        $this->description = $data['description_entity'] ?? null;
         $this->track1 = $this->getTrackName($data['track_1'] ?? null);
         $this->track2 = $this->getTrackName($data['track_2'] ?? null);
         $this->track3 = $this->getTrackName($data['track_3'] ?? null);

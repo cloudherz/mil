@@ -31,17 +31,41 @@ function initApplicationFile() {
         const maxFiles = color === 'green' ? 3 : 1;
         const defaultText = maxFiles === 1 ? 'Прикрепить файл' : 'Прикрепить файлы';
 
+        /*
+        |--------------------------------------------------------------------------
+        | Определяем тип заявки из inputId (file_student -> student)
+        |--------------------------------------------------------------------------
+        */
+
+        const applicationType = inputId.replace('file_', ''); // 'student' | 'individual' | 'entity'
+
+        /*
+        |--------------------------------------------------------------------------
+        | Диспатчим кастомное событие для валидации
+        |--------------------------------------------------------------------------
+        */
+
+        function notifyValidation() {
+            document.dispatchEvent(
+                new CustomEvent(`files-updated-${applicationType}`)
+            );
+        }
+
+        /*
+        |--------------------------------------------------------------------------
+        | Обновление UI
+        |--------------------------------------------------------------------------
+        */
+
         function updateUI() {
             const files = Array.from(input.files || []);
 
             if (files.length > 0) {
-                // Показываем имена файлов
                 const names = files.map(f => f.name).join(', ');
                 text.textContent = names.length > 30 ? names.substring(0, 30) + '...' : names;
                 iconBefore.style.display = 'none';
                 iconAfter.style.display = 'unset';
 
-                // Меняем классы на _uploaded
                 if (parentContainer) {
                     parentContainer.classList.remove(`S-CONTENT-presentation_input_${color}_default`);
                     parentContainer.classList.add(`S-CONTENT-presentation_input_${color}_uploaded`);
@@ -51,7 +75,6 @@ function initApplicationFile() {
                     deleteContainer.classList.add(`S-PRESENTATION_INPUT-delete_${color}_uploaded`);
                 }
             } else {
-                // Возвращаем к дефолтному состоянию
                 text.textContent = defaultText;
                 iconBefore.style.display = 'unset';
                 iconAfter.style.display = 'none';
@@ -65,7 +88,16 @@ function initApplicationFile() {
                     deleteContainer.classList.add(`S-PRESENTATION_INPUT-delete_${color}_default`);
                 }
             }
+
+            // ── Уведомляем валидацию ──
+            notifyValidation();
         }
+
+        /*
+        |--------------------------------------------------------------------------
+        | Обработчик выбора файлов
+        |--------------------------------------------------------------------------
+        */
 
         input.addEventListener('change', (event: Event) => {
             const target = event.target as HTMLInputElement;
@@ -73,18 +105,40 @@ function initApplicationFile() {
             if (target.files && target.files.length > 0) {
                 const newFiles = Array.from(target.files);
 
-                // Проверка расширения
-                const invalidFiles = newFiles.filter(f => !f.name.toLowerCase().endsWith('.pptx'));
+                const allowedExtensions = ['.pptx', '.pdf'];
+                const invalidFiles = newFiles.filter(
+                    f => !allowedExtensions.some(ext => f.name.toLowerCase().endsWith(ext))
+                );
                 if (invalidFiles.length > 0) {
-                    alert('Можно загружать только .pptx файлы!');
+                    alert('Можно загружать только .pptx и .pdf файлы');
                     target.value = '';
+                    input.files = dataTransfer.files;
                     return;
                 }
 
                 // Проверка количества
                 if (dataTransfer.files.length + newFiles.length > maxFiles) {
-                    alert(`Максимум ${maxFiles} файл(а)!`);
+                    alert(`Максимально можно прикрепить ${maxFiles} файл(а)`);
                     target.value = '';
+                    input.files = dataTransfer.files;
+                    return;
+                }
+
+                // Проверка суммарного размера (32 MB на все файлы)
+                const MAX_TOTAL_SIZE = 32 * 1024 * 1024; // 32 MB в байтах
+                const existingSize = Array.from(dataTransfer.files).reduce((sum, f) => sum + f.size, 0);
+                const newSize = newFiles.reduce((sum, f) => sum + f.size, 0);
+                if (existingSize + newSize > MAX_TOTAL_SIZE) {
+                    const currentMb = (existingSize / 1024 / 1024).toFixed(1);
+                    const newMb = (newSize / 1024 / 1024).toFixed(1);
+                    alert(
+                        `Суммарный размер всех файлов не должен превышать 32 MB.\n` +
+                        `Уже загружено: ${currentMb} MB\n` +
+                        `Новый файл: ${newMb} MB\n` +
+                        `Итого: ${(Math.floor((existingSize + newSize) / 1024 / 1024 * 10) / 10).toFixed(1)} MB`
+                    );
+                    target.value = '';
+                    input.files = dataTransfer.files;
                     return;
                 }
 
@@ -98,7 +152,12 @@ function initApplicationFile() {
             }
         });
 
-        // Обработчик кнопки удаления
+        /*
+        |--------------------------------------------------------------------------
+        | Обработчик кнопки удаления
+        |--------------------------------------------------------------------------
+        */
+
         if (deleteButton) {
             deleteButton.addEventListener('click', (event: MouseEvent) => {
                 event.preventDefault();

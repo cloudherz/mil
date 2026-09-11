@@ -11,21 +11,25 @@ class IndividualApplicationSubmitController extends ApplicationSubmitController
     protected function getValidationRules(): array
     {
         return [
-            'application_type' => 'required',
-            'person_name' => 'required',
-            'organization_name' => 'prohibited',
-            'organization_tin' => 'prohibited',
-            'organization_representative' => 'prohibited',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'track_student' => 'prohibited',
-            'track_individual' => 'required',
-            'track_1' => 'prohibited',
-            'track_2' => 'prohibited',
-            'track_3' => 'prohibited',
-            'description' => 'required',
+            'application_type_individual' => 'required|in:individual',
+            'person_name_individual' => [
+                'required',
+                'string',
+                'min:2',
+                'max:256',
+                'regex:' . self::REGEX_PERSON_NAME,
+            ],
+            'email_individual' => 'required|email|min:5|max:256|regex:' . self::REGEX_EMAIL,
+            'phone_individual' => [
+                'required',
+                'string',
+                'regex:' . self::REGEX_PHONE,
+            ],
+            'track_individual' => 'required|in:1,2,3,4,5',
+            'description_individual' => 'required|string|min:1|max:10000',
+            'confirmation_individual' => 'required|accepted',
             'files_individual' => 'required|array|min:1|max:1',
-            'files_individual.*' => 'required|file|max:204800',
+            'files_individual.*' => 'required|file|mimes:pptx,pdf|max:32768',
         ];
     }
 
@@ -34,11 +38,11 @@ class IndividualApplicationSubmitController extends ApplicationSubmitController
         $timestamp = now()->timestamp;
 
         return new $this->modelClass([
-            'person_name' => $validated['person_name'],
-            'email' => $validated['email'],
-            'phone' => $validated['phone'],
+            'person_name' => $validated['person_name_individual'],
+            'email' => $validated['email_individual'],
+            'phone' => $validated['phone_individual'],
             'track_individual' => $validated['track_individual'],
-            'description' => $validated['description'],
+            'description' => $validated['description_individual'],
             'submit_date' => $timestamp
         ]);
     }

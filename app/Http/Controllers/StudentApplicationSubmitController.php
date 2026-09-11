@@ -11,21 +11,25 @@ class StudentApplicationSubmitController extends ApplicationSubmitController
     protected function getValidationRules(): array
     {
         return [
-            'application_type' => 'required',
-            'person_name' => 'required',
-            'organization_name' => 'prohibited',
-            'organization_tin' => 'prohibited',
-            'organization_representative' => 'prohibited',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'track_student' => 'required',
-            'track_individual' => 'prohibited',
-            'track_1' => 'prohibited',
-            'track_2' => 'prohibited',
-            'track_3' => 'prohibited',
-            'description' => 'required',
+            'application_type_student' => 'required|in:student',
+            'person_name_student' => [
+                'required',
+                'string',
+                'min:2',
+                'max:256',
+                'regex:' . self::REGEX_PERSON_NAME,
+            ],
+            'email_student' => 'required|email|min:5|max:256|regex:' . self::REGEX_EMAIL,
+            'phone_student' => [
+                'required',
+                'string',
+                'regex:' . self::REGEX_PHONE,
+            ],
+            'track_student' => 'required|in:1,2,3,4,5',
+            'description_student' => 'required|string|min:1|max:10000',
+            'confirmation_student' => 'required|accepted',
             'files_student' => 'required|array|min:1|max:1',
-            'files_student.*' => 'required|file|max:204800',
+            'files_student.*' => 'required|file|mimes:pptx,pdf|max:32768',
         ];
     }
 
@@ -34,11 +38,11 @@ class StudentApplicationSubmitController extends ApplicationSubmitController
         $timestamp = now()->timestamp;
 
         return new $this->modelClass([
-            'person_name' => $validated['person_name'],
-            'email' => $validated['email'],
-            'phone' => $validated['phone'],
+            'person_name' => $validated['person_name_student'],
+            'email' => $validated['email_student'],
+            'phone' => $validated['phone_student'],
             'track_student' => $validated['track_student'],
-            'description' => $validated['description'],
+            'description' => $validated['description_student'],
             'submit_date' => $timestamp
         ]);
     }

@@ -45,35 +45,6 @@
     @vite(['resources/css/app.css'])
 </head>
 <body id="APP">
-{{--    @if(session('description'))--}}
-{{--        <p>{{ session('description') }}</p>--}}
-{{--    @endif--}}
-    @if(session('application'))
-        @foreach(session('application') as $key => $value)
-            <p><strong>{{ $key }}:</strong> {{ $value }}</p>
-        @endforeach
-    @endif
-    @if ($errors->any())
-        <ul>
-            @php
-                $allErrors = $errors->all();
-                $gentleWish = $errors->first('gentle_wish');
-
-                if ($gentleWish) {
-                    $allErrors = array_filter($allErrors, function($error) use ($gentleWish) {
-                        return $error !== $gentleWish;
-                    });
-
-                    $allErrors = array_values($allErrors);
-                    array_unshift($allErrors, $gentleWish);
-                }
-            @endphp
-
-            @foreach ($allErrors as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    @endif
     <div class="S-DESKTOP-wrapper">
         <div class="S-DESKTOP-carcass">
             @yield('mode-desktop')

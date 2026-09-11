@@ -5,6 +5,10 @@ import './application/file.ts';
 import './application/open.ts';
 import './application/select.ts';
 import './application/track/select.ts';
+import './application/validation.ts';
+import './application/sending.ts';
+import './application/success.ts';
+import './application/fail.ts';
 
 import './header/scroll.ts';
 
