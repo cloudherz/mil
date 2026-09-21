@@ -1,5 +1,4 @@
 function initApplicationFile() {
-
     function setupFileUpload(
         inputId: string,
         labelId: string,
@@ -13,49 +12,46 @@ function initApplicationFile() {
         const label = document.getElementById(labelId) as HTMLLabelElement;
         const text = document.getElementById(textId) as HTMLSpanElement;
         const deleteButton = document.getElementById(deleteButtonId) as HTMLButtonElement;
-        const iconBefore = document.querySelector(iconBeforeSelector) as SVGElement;
-        const iconAfter = document.querySelector(iconAfterSelector) as SVGElement;
 
-        // Проверяем, что элементы найдены
-        if (!input || !label || !text || !deleteButton || !iconBefore || !iconAfter) {
-            console.error('Elements not found for:', inputId);
+        if (!input || !label || !text || !deleteButton) {
+            console.error('Elements not found (basic) for:', inputId);
             return;
         }
 
         const parentContainer = input.closest('.S-CONTENT-presentation_input') as HTMLDivElement;
         const deleteContainer = deleteButton?.closest('.S-PRESENTATION_INPUT-delete') as HTMLDivElement;
 
-        // DataTransfer для накопления файлов
+        if (!parentContainer) {
+            console.error('Parent container not found for:', inputId);
+            return;
+        }
+
+// Ищем иконки ВНУТРИ parentContainer, а не глобально
+        const iconBefore = parentContainer.querySelector(iconBeforeSelector) as SVGElement | null;
+        const iconAfter = parentContainer.querySelector(iconAfterSelector) as SVGElement | null;
+
+        if (!iconBefore || !iconAfter) {
+            console.error('Icons not found inside parentContainer for:', inputId);
+            return;
+        }
+
         const dataTransfer = new DataTransfer();
 
         const maxFiles = color === 'green' ? 3 : 1;
-        const defaultText = maxFiles === 1 ? 'Прикрепить файл' : 'Прикрепить файлы';
+        const defaultText = maxFiles === 1 ? 'Прикрепить файл (.pptx или .pdf) (до 32мб)' : 'Прикрепить файлы (.pptx или .pdf) (до 32мб)';
 
-        /*
-        |--------------------------------------------------------------------------
-        | Определяем тип заявки из inputId (file_student -> student)
-        |--------------------------------------------------------------------------
-        */
-
-        const applicationType = inputId.replace('file_', ''); // 'student' | 'individual' | 'entity'
-
-        /*
-        |--------------------------------------------------------------------------
-        | Диспатчим кастомное событие для валидации
-        |--------------------------------------------------------------------------
-        */
+        // Определяем тип заявки (с учётом mobile- префикса)
+        // 'file_student'            → 'student'
+        // 'mobile-file_student'     → 'mobile-student'
+        const applicationType = inputId
+            .replace('mobile-file_', 'mobile-')
+            .replace('file_', '');
 
         function notifyValidation() {
             document.dispatchEvent(
                 new CustomEvent(`files-updated-${applicationType}`)
             );
         }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Обновление UI
-        |--------------------------------------------------------------------------
-        */
 
         function updateUI() {
             const files = Array.from(input.files || []);
@@ -89,15 +85,8 @@ function initApplicationFile() {
                 }
             }
 
-            // ── Уведомляем валидацию ──
             notifyValidation();
         }
-
-        /*
-        |--------------------------------------------------------------------------
-        | Обработчик выбора файлов
-        |--------------------------------------------------------------------------
-        */
 
         input.addEventListener('change', (event: Event) => {
             const target = event.target as HTMLInputElement;
@@ -116,7 +105,6 @@ function initApplicationFile() {
                     return;
                 }
 
-                // Проверка количества
                 if (dataTransfer.files.length + newFiles.length > maxFiles) {
                     alert(`Максимально можно прикрепить ${maxFiles} файл(а)`);
                     target.value = '';
@@ -124,8 +112,7 @@ function initApplicationFile() {
                     return;
                 }
 
-                // Проверка суммарного размера (32 MB на все файлы)
-                const MAX_TOTAL_SIZE = 32 * 1024 * 1024; // 32 MB в байтах
+                const MAX_TOTAL_SIZE = 32 * 1024 * 1024;
                 const existingSize = Array.from(dataTransfer.files).reduce((sum, f) => sum + f.size, 0);
                 const newSize = newFiles.reduce((sum, f) => sum + f.size, 0);
                 if (existingSize + newSize > MAX_TOTAL_SIZE) {
@@ -134,35 +121,30 @@ function initApplicationFile() {
                     alert(
                         `Суммарный размер всех файлов не должен превышать 32 MB.\n` +
                         `Уже загружено: ${currentMb} MB\n` +
-                        `Новый файл: ${newMb} MB\n` +
-                        `Итого: ${(Math.floor((existingSize + newSize) / 1024 / 1024 * 10) / 10).toFixed(1)} MB`
+                        `Новый файл: ${newMb} MB\n`
                     );
+                    // alert(
+                    //     `Суммарный размер всех файлов не должен превышать 32 MB.\n` +
+                    //     `Уже загружено: ${currentMb} MB\n` +
+                    //     `Новый файл: ${newMb} MB\n` +
+                    //     `Итого: ${(Math.floor((existingSize + newSize) / 1024 / 1024 * 10) / 10).toFixed(1)} MB`
+                    // );
                     target.value = '';
                     input.files = dataTransfer.files;
                     return;
                 }
 
-                // Добавляем файлы в DataTransfer
                 newFiles.forEach(file => dataTransfer.items.add(file));
-
-                // Присваиваем input обновлённый список файлов
                 input.files = dataTransfer.files;
 
                 updateUI();
             }
         });
 
-        /*
-        |--------------------------------------------------------------------------
-        | Обработчик кнопки удаления
-        |--------------------------------------------------------------------------
-        */
-
         if (deleteButton) {
             deleteButton.addEventListener('click', (event: MouseEvent) => {
                 event.preventDefault();
 
-                // Очищаем все файлы
                 dataTransfer.items.clear();
                 input.files = dataTransfer.files;
                 input.value = '';
@@ -172,7 +154,7 @@ function initApplicationFile() {
         }
     }
 
-    // Студент - 1 файл
+    // ── DESKTOP ──
     setupFileUpload(
         'file_student',
         'uploadLabel_student',
@@ -183,7 +165,6 @@ function initApplicationFile() {
         '.I-PRESENTATION_INPUT-file_after_student'
     );
 
-    // Физ. лицо - 1 файл
     setupFileUpload(
         'file_individual',
         'uploadLabel_individual',
@@ -194,12 +175,42 @@ function initApplicationFile() {
         '.I-PRESENTATION_INPUT-file_after_individual'
     );
 
-    // Организация - 3 файла
     setupFileUpload(
         'file_entity',
         'uploadLabel_entity',
         'uploadText_entity',
         'uploadDelete_entity',
+        'green',
+        '.I-PRESENTATION_INPUT-file_before_entity',
+        '.I-PRESENTATION_INPUT-file_after_entity'
+    );
+
+    // ── MOBILE ──
+    setupFileUpload(
+        'mobile-file_student',
+        'mobile-uploadLabel_student',
+        'mobile-uploadText_student',
+        'mobile-uploadDelete_student',
+        'blue',
+        '.I-PRESENTATION_INPUT-file_before_student',
+        '.I-PRESENTATION_INPUT-file_after_student'
+    );
+
+    setupFileUpload(
+        'mobile-file_individual',
+        'mobile-uploadLabel_individual',
+        'mobile-uploadText_individual',
+        'mobile-uploadDelete_individual',
+        'blue',
+        '.I-PRESENTATION_INPUT-file_before_individual',
+        '.I-PRESENTATION_INPUT-file_after_individual'
+    );
+
+    setupFileUpload(
+        'mobile-file_entity',
+        'mobile-uploadLabel_entity',
+        'mobile-uploadText_entity',
+        'mobile-uploadDelete_entity',
         'green',
         '.I-PRESENTATION_INPUT-file_before_entity',
         '.I-PRESENTATION_INPUT-file_after_entity'

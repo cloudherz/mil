@@ -1,55 +1,93 @@
 function initApplicationOpen() {
-
     document.addEventListener('DOMContentLoaded', function() {
-        const popup = document.getElementById('LANDING-APPLICATION-POPUP');
-        const headerBtn = document.getElementById('LANDING-HEADER-ACTION_BUTTON');
-        const footerBtn = document.getElementById('LANDING-FOOTER-ACTION_BUTTON');
         const app = document.getElementById('APP');
 
-        function openPopup() {
-            popup.style.display = 'unset';
-            app.style.overflow = 'hidden';
-            document.getElementById('LANDING-APPLICATION-WINDOW-SELECT').style.display = 'unset';
-        }
+        // Пары «кнопки-триггеры → свой попап»
+        const pairs = [
+            {
+                popupId: 'LANDING-APPLICATION-POPUP',
+                windowSelectId: 'LANDING-APPLICATION-WINDOW-SELECT',
+                windowIds: [
+                    'LANDING-APPLICATION-WINDOW-STUDENT',
+                    'LANDING-APPLICATION-WINDOW-INDIVIDUAL',
+                    'LANDING-APPLICATION-WINDOW-ENTITY',
+                ],
+                triggerIds: [
+                    'LANDING-HEADER-ACTION_BUTTON',
+                    'LANDING-FOOTER-ACTION_BUTTON',
+                ],
+            },
+            {
+                popupId: 'LANDING-MOBILE-APPLICATION-POPUP',
+                windowSelectId: 'LANDING-MOBILE-APPLICATION-WINDOW-SELECT',
+                windowIds: [
+                    'LANDING-MOBILE-APPLICATION-WINDOW-STUDENT',
+                    'LANDING-MOBILE-APPLICATION-WINDOW-INDIVIDUAL',
+                    'LANDING-MOBILE-APPLICATION-WINDOW-ENTITY',
+                ],
+                triggerIds: [
+                    'LANDING-MOBILE-HEADER-ACTION_BUTTON',
+                    'LANDING-MOBILE-FOOTER-ACTION_BUTTON',
+                ],
+            },
+        ];
 
-        function closePopup() {
-            popup.style.display = 'none';
-            app.style.overflow = '';
-            document.getElementById('LANDING-APPLICATION-WINDOW-SELECT').style.display = 'none';
-            document.getElementById('LANDING-APPLICATION-WINDOW-STUDENT').style.display = 'none';
-            document.getElementById('LANDING-APPLICATION-WINDOW-INDIVIDUAL').style.display = 'none';
-            document.getElementById('LANDING-APPLICATION-WINDOW-ENTITY').style.display = 'none';
-        }
+        pairs.forEach(({ popupId, windowSelectId, windowIds, triggerIds }) => {
+            const popup = document.getElementById(popupId);
+            if (!popup) return;
 
-        function handlePopupClick(e) {
-            const target = e.target || e.srcElement;
-            let current = target;
-            let isInside = false;
+            function closePopup(): void {
+                popup!.style.display = 'none';
+                if (app) app.style.overflow = '';
 
-            while (current) {
-                if (current.classList && current.classList.contains('S-APPLICATION-window')) {
-                    isInside = true;
-                    break;
+                const selectEl = document.getElementById(windowSelectId);
+                if (selectEl) selectEl.style.display = 'none';
+
+                windowIds.forEach((id) => {
+                    const el = document.getElementById(id);
+                    if (el) el.style.display = 'none';
+                });
+            }
+
+            function handlePopupClick(e: MouseEvent): void {
+                const target = e.target as HTMLElement;
+                let current: HTMLElement | null = target;
+                let isInside = false;
+
+                while (current) {
+                    if (current.classList && current.classList.contains('S-APPLICATION-window')) {
+                        isInside = true;
+                        break;
+                    }
+                    current = current.parentNode as HTMLElement | null;
                 }
-                current = current.parentNode;
+
+                if (!isInside) {
+                    closePopup();
+                    popup!.removeEventListener('click', handlePopupClick);
+                }
             }
 
-            if (!isInside) {
-                closePopup();
-                popup.removeEventListener('click', handlePopupClick);
+            function openPopup(): void {
+                popup!.style.display = 'unset';
+                if (app) app.style.overflow = 'hidden';
+
+                const selectEl = document.getElementById(windowSelectId);
+                if (selectEl) selectEl.style.display = 'unset';
             }
-        }
 
-        function handleOpenClick(e) {
-            e.preventDefault();
-            openPopup();
-            popup.addEventListener('click', handlePopupClick);
-        }
+            function handleOpenClick(e: MouseEvent): void {
+                e.preventDefault();
+                openPopup();
+                popup!.addEventListener('click', handlePopupClick);
+            }
 
-        headerBtn.addEventListener('click', handleOpenClick);
-        footerBtn.addEventListener('click', handleOpenClick);
+            triggerIds.forEach((id) => {
+                const btn = document.getElementById(id);
+                if (btn) btn.addEventListener('click', handleOpenClick);
+            });
+        });
     });
-
 }
 
 initApplicationOpen();

@@ -39,7 +39,7 @@ function initApplicationTrackSelect() {
                 // Обновляем отображаемый текст
                 if (selectedValue) {
                     if (value === '-') {
-                        selectedValue.textContent = 'Выберите трек';
+                        selectedValue.textContent = 'Выберите номинацию';
                         selectedValue.classList.add('T-TRACK-select');
                     } else {
                         selectedValue.textContent = text;

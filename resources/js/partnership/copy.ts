@@ -1,41 +1,57 @@
 function initLandingPartnershipCopy() {
-
     document.addEventListener('DOMContentLoaded', () => {
-        const button = document.getElementById('LANDING-PARTNERSHIP-COPY_BUTTON');
-        const carcass = document.getElementById('LANDING-MESSAGE-EMAIL_COPIED-CARCASS');
         const email = 'hello@milpremia.ru';
 
-        let isCooldown = false;
+        // Список пар: [кнопка, carcass, значение marginBottom]
+        // Обе пары существуют в DOM одновременно — просто навешиваем обработчик на каждую.
+        const targets = [
+            {
+                button: document.getElementById('LANDING-PARTNERSHIP-COPY_BUTTON'),
+                carcass: document.getElementById('LANDING-MESSAGE-EMAIL_COPIED-CARCASS'),
+                marginBottom: '5vh',
+            },
+            {
+                button: document.getElementById('LANDING-MOBILE-PARTNERSHIP-COPY_BUTTON'),
+                carcass: document.getElementById('LANDING-MOBILE-MESSAGE-EMAIL_COPIED-CARCASS'),
+                marginBottom: '8dvw',
+            },
+        ];
 
-        button.addEventListener('click', async () => {
-            if (isCooldown) return;
+        for (const { button, carcass, marginBottom } of targets) {
+            // Пропускаем, если элемента нет в DOM
+            if (!button || !carcass) continue;
 
-            try {
-                isCooldown = true;
-                button.style.pointerEvents = 'none';
+            let isCooldown = false;
 
-                // Copy email to clipboard
-                await navigator.clipboard.writeText(email);
+            button.addEventListener('click', async () => {
+                if (isCooldown) return;
 
-                // Set carcass opacity to 1
-                carcass.style.opacity = '1';
-                carcass.style.marginBottom = '5vh';
+                try {
+                    isCooldown = true;
+                    button.style.pointerEvents = 'none';
 
-                setTimeout(() => {
-                    carcass.style.opacity = '0';
-                    carcass.style.marginBottom = '0';
+                    // Copy email to clipboard
+                    await navigator.clipboard.writeText(email);
+
+                    // Show carcass
+                    carcass.style.opacity = '1';
+                    carcass.style.marginBottom = marginBottom;
+
+                    setTimeout(() => {
+                        carcass.style.opacity = '0';
+                        carcass.style.marginBottom = '0';
+                        isCooldown = false;
+                        button.style.pointerEvents = 'auto';
+                    }, 3000);
+
+                } catch (err) {
+                    console.error('Failed to copy: ', err);
                     isCooldown = false;
                     button.style.pointerEvents = 'auto';
-                }, 3000);
-
-            } catch (err) {
-                console.error('Failed to copy: ', err);
-                isCooldown = false;
-                button.style.pointerEvents = 'auto';
-            }
-        });
+                }
+            });
+        }
     });
-
 }
 
 initLandingPartnershipCopy();

@@ -11,12 +11,12 @@
                 <div class="S-BOTTOM-wrapper">
                     <div class="S-BOTTOM-carcass">
                         <div class="S-BOTTOM-date">
-                            <p class="TYPO-D-PRESET-CORE_P_ITALIC">{{ $date }}</p>
+                            <p class="T-BOTTOM-date TYPO-D-PRESET-CORE_P_ITALIC">{{ $date }}</p>
                         </div>
                         <div class="S-BOTTOM-fresh" style="visibility: {{ $fresh === 'yes' ? 'unset' : 'hidden' }};">
                             <div class="S-FRESH-wrapper">
                                 <div class="S-FRESH-carcass">
-                                    <p class="TYPO-D-PRESET-CORE_P">Свежее</p>
+                                    <p class="T-FRESH-text TYPO-D-PRESET-CORE_P">Свежее</p>
                                 </div>
                             </div>
                         </div>

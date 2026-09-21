@@ -1,5 +1,4 @@
 function initApplicationValidation() {
-
     const DEBOUNCE_DELAY = 1000;
 
     interface FieldConfig {
@@ -25,6 +24,7 @@ function initApplicationValidation() {
     }
 
     const FORMS: FormConfig[] = [
+        // ── DESKTOP ──────────────────────────────
         {
             type: 'student',
             submitButtonId: 'submit_button_student',
@@ -66,6 +66,49 @@ function initApplicationValidation() {
                 fileId: 'file_entity',
             },
         },
+
+        // ── MOBILE ───────────────────────────────
+        {
+            type: 'mobile-student',
+            submitButtonId: 'mobile-submit_button_student',
+            fields: {
+                personName: { inputId: 'mobile-person_name_student', errorId: 'mobile-person_name_error_student' },
+                email: { inputId: 'mobile-email_student', errorId: 'mobile-email_error_student' },
+                phone: { inputId: 'mobile-phone_student', errorId: 'mobile-phone_error_student' },
+                description: { inputId: 'mobile-description_student', errorId: 'mobile-description_error_student' },
+                confirmation: { inputId: 'mobile-confirmation_student' },
+                trackIds: ['mobile-track_single'],
+                fileId: 'mobile-file_student',
+            },
+        },
+        {
+            type: 'mobile-individual',
+            submitButtonId: 'mobile-submit_button_individual',
+            fields: {
+                personName: { inputId: 'mobile-person_name_individual', errorId: 'mobile-person_name_error_individual' },
+                email: { inputId: 'mobile-email_individual', errorId: 'mobile-email_error_individual' },
+                phone: { inputId: 'mobile-phone_individual', errorId: 'mobile-phone_error_individual' },
+                description: { inputId: 'mobile-description_individual', errorId: 'mobile-description_error_individual' },
+                confirmation: { inputId: 'mobile-confirmation_individual' },
+                trackIds: ['mobile-track_individual'],
+                fileId: 'mobile-file_individual',
+            },
+        },
+        {
+            type: 'mobile-entity',
+            submitButtonId: 'mobile-submit_button_entity',
+            fields: {
+                organizationName: { inputId: 'mobile-organization_name_entity', errorId: 'mobile-organization_name_error_entity' },
+                organizationTin: { inputId: 'mobile-organization_tin_entity', errorId: 'mobile-organization_tin_error_entity' },
+                organizationRepresentative: { inputId: 'mobile-organization_representative_entity', errorId: 'mobile-organization_representative_error_entity' },
+                email: { inputId: 'mobile-email_entity', errorId: 'mobile-email_error_entity' },
+                phone: { inputId: 'mobile-phone_entity', errorId: 'mobile-phone_error_entity' },
+                description: { inputId: 'mobile-description_entity', errorId: 'mobile-description_error_entity' },
+                confirmation: { inputId: 'mobile-confirmation_entity' },
+                trackIds: ['mobile-track_1', 'mobile-track_2', 'mobile-track_3'],
+                fileId: 'mobile-file_entity',
+            },
+        },
     ];
 
     const DEBUG = false;
@@ -79,7 +122,6 @@ function initApplicationValidation() {
     function isPersonNameValid(value: string): boolean {
         if (!value) return false;
         if (value.length < 2 || value.length > 256) return false;
-        // Кириллица, пробел, дефис, точка, запятая, апостроф
         if (!/^[А-Яа-яЁё\s\-.,'’]+$/.test(value)) return false;
         return true;
     }
@@ -87,8 +129,6 @@ function initApplicationValidation() {
     function isOrganizationNameValid(value: string): boolean {
         if (!value) return false;
         if (value.length < 2 || value.length > 512) return false;
-        // Кириллица, латиница, цифры, пробел, дефис, точка, запятая, кавычки,
-        // скобки, №, слэш, обратный слэш, & % $ @ # ! ? : ; _ * +, апострофы
         if (!/^[А-Яа-яЁёA-Za-z0-9\s\-.,"'’()«»№\/\\&%$@#!?:;_*+]+$/.test(value)) return false;
         return true;
     }
@@ -103,8 +143,6 @@ function initApplicationValidation() {
     function isEmailValid(value: string): boolean {
         if (!value) return false;
         if (value.length <= 4 || value.length > 256) return false;
-        // Латиница, цифры, . _ % + - в локальной части;
-        // латиница, цифры, . - в домене; TLD — минимум 2 буквы
         if (!/^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$/.test(value)) return false;
         return true;
     }
@@ -153,21 +191,19 @@ function initApplicationValidation() {
     function setupForm(config: FormConfig): void {
         const submitButton = document.getElementById(config.submitButtonId) as HTMLButtonElement | null;
         if (!submitButton) {
-            console.warn(`[validation:${config.type}] Кнопка не найдена: ${config.submitButtonId}`);
+            debug(config.type, `Кнопка не найдена: ${config.submitButtonId}`);
             return;
         }
 
         submitButton.disabled = true;
 
-        // ⬇⬇⬇ ГЛАВНОЕ: находим свою форму
         const form = submitButton.closest('form');
         if (!form) {
-            console.warn(`[validation:${config.type}] Форма не найдена`);
+            debug(config.type, 'Форма не найдена');
             return;
         }
         debug(config.type, 'Форма найдена:', form.action);
 
-        // Ищем всё ВНУТРИ своей формы — защита от дублей ID
         const scope = form;
 
         const inputs: { [key: string]: HTMLInputElement | HTMLTextAreaElement | null } = {};
@@ -237,7 +273,6 @@ function initApplicationValidation() {
             let valid = false;
             trackInputs.forEach((input) => {
                 const v = input.value;
-                debug(config.type, `isTrackValid: input#${input.id} value="${v}"`);
                 if (v !== '' && v !== '-') valid = true;
             });
             debug(config.type, `isTrackValid => ${valid}`);
@@ -245,21 +280,13 @@ function initApplicationValidation() {
         }
 
         function isFilesValid(): boolean {
-            if (!fileInput) {
-                debug(config.type, 'isFilesValid: input not found => false');
-                return false;
-            }
+            if (!fileInput) return false;
             const count = fileInput.files ? fileInput.files.length : 0;
-            debug(config.type, `isFilesValid: files.length=${count} => ${count > 0}`);
             return count > 0;
         }
 
         function isConfirmationValid(): boolean {
-            if (!confirmationInput) {
-                debug(config.type, 'isConfirmationValid: not found => false');
-                return false;
-            }
-            debug(config.type, `isConfirmationValid: checked=${confirmationInput.checked}`);
+            if (!confirmationInput) return false;
             return confirmationInput.checked;
         }
 
@@ -294,7 +321,6 @@ function initApplicationValidation() {
                 files: isFilesValid(),
             };
             const allValid = Object.values(results).every((v) => v);
-            debug(config.type, 'updateSubmitButton', results, '=> allValid =', allValid);
 
             submitButton!.disabled = !allValid;
             submitButton!.style.opacity = allValid ? '1' : '1';
@@ -446,9 +472,8 @@ function initApplicationValidation() {
             });
         }
 
-        // ── Tracks: слушаем нативный change + custom event ──
+        // ── Tracks ──
 
-        // Патчим сеттер value, чтобы ловить программные изменения
         trackInputs.forEach((trackInput) => {
             const descriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value');
             if (descriptor && descriptor.set) {
@@ -459,20 +484,17 @@ function initApplicationValidation() {
                     set(newValue) {
                         originalSetter.call(this, newValue);
                         touched.track = true;
-                        debug(config.type, `track value set to "${newValue}"`);
                         updateSubmitButton();
                     },
                 });
             }
 
-            // На всякий случай — нативный change
             trackInput.addEventListener('change', () => {
                 touched.track = true;
                 updateSubmitButton();
             });
         });
 
-        // Клики по UL-опциям (select.ts обновляет hiddenInput.value, сработает сеттер)
         const trackLists = form.querySelectorAll('.UL-TRACK-options');
         trackLists.forEach((list) => {
             list.addEventListener('click', (e) => {
@@ -486,7 +508,13 @@ function initApplicationValidation() {
 
         // ── Files ──
 
-        document.addEventListener('files-updated-' + config.type, () => {
+        // Для desktop-формы — событие `files-updated-student` и т.д.
+        // Для mobile — нужно `files-updated-mobile-student` и т.д.
+        const fileEventName = config.type.startsWith('mobile-')
+            ? `files-updated-${config.type.replace('mobile-', 'mobile-')}`
+            : `files-updated-${config.type}`;
+
+        document.addEventListener(fileEventName, () => {
             touched.files = true;
             updateSubmitButton();
         });
@@ -521,7 +549,6 @@ function initApplicationValidation() {
             }
         });
 
-        // Первичная проверка на случай, если форма уже заполнена (browser autofill и т.п.)
         updateSubmitButton();
     }
 

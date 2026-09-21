@@ -15,3 +15,9 @@ import './header/scroll.ts';
 import './partnership/copy.ts';
 
 import './news/feed.ts';
+
+
+
+import './mobile/header/open.ts';
+
+import './mobile/tracks/open.ts';
