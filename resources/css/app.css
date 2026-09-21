@@ -12692,6 +12692,7 @@ br {
     padding: 3.4dvw 5.44dvw;
     background-color: oklch(61% 0 89.876deg);
     border-radius: 3.5dvw;
+    z-index: 400;
     transition: opacity 0.2s;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text .T-DESCRIPTION-text {
@@ -13643,6 +13644,7 @@ br {
     cursor: pointer;
   }
   .S-MOBILE-header .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-overlay .S-OVERLAY-wrapper .S-OVERLAY-carcass .S-OVERLAY-content .S-CONTENT-carcass .S-CONTENT-action .B-CONTENT-action .T-CONTENT-action {
+    color: oklch(32.65% 0.0127 252.99deg);
     text-box: trim-both cap alphabetic;
     padding: 3.4dvw 3.74dvw 3.978dvw 3.74dvw;
   }
@@ -15897,6 +15899,7 @@ br {
     padding: 3.4dvw 5.44dvw;
     background-color: oklch(61% 0 89.876deg);
     border-radius: 3.5dvw;
+    z-index: 400;
     transition: opacity 0.2s;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-select .S-SELECT-wrapper .S-SELECT-carcass .S-SELECT-description .S-DESCRIPTION-wrapper .S-DESCRIPTION-carcass .S-DESCRIPTION-text .T-DESCRIPTION-text {
@@ -16848,6 +16851,7 @@ br {
     cursor: pointer;
   }
   .S-MOBILE-header .S-HEADER-wrapper .S-HEADER-carcass .S-HEADER-overlay .S-OVERLAY-wrapper .S-OVERLAY-carcass .S-OVERLAY-content .S-CONTENT-carcass .S-CONTENT-action .B-CONTENT-action .T-CONTENT-action {
+    color: oklch(32.65% 0.0127 252.99deg);
     text-box: trim-both cap alphabetic;
     padding: 3.4dvw 3.74dvw 3.978dvw 3.74dvw;
   }

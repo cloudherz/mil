@@ -909,6 +909,8 @@
                                             background-color: $PALETTE-GRAY;
                                             // STREAMLINING
                                             border-radius: $GV-M-ROUNDING-ELEMENTS;
+                                            // LAYERING
+                                            z-index: 400;
                                             // TRANSITION
                                             transition: opacity 0.2s;
 
@@ -2379,6 +2381,7 @@
 
                                             .T-CONTENT-action {
                                                 // FONT SETTINGS
+                                                color: $PALETTE-BLACK;
                                                 text-box: trim-both cap alphabetic;
                                                 // MARGINS & PADDINGS
                                                 padding: $LV-M-HEADER-CONTENT-ACTION-PADDING_TOP $LV-M-HEADER-CONTENT-ACTION-PADDING_SIDES $LV-M-HEADER-CONTENT-ACTION-PADDING_BOTTOM $LV-M-HEADER-CONTENT-ACTION-PADDING_SIDES;
