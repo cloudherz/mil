@@ -13239,12 +13239,18 @@ br {
     background-color: oklch(63.85% 0.1954 257.48deg);
     color: oklch(100% 0 0deg);
   }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_blue:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
+  }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green {
     background: oklch(97.54% 0.036 160.67deg);
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover {
     background-color: oklch(60.51% 0.1384 159.32deg);
     color: oklch(100% 0 0deg);
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
     background-color: oklch(63.85% 0.1954 257.48deg) !important;
@@ -16490,12 +16496,18 @@ br {
     background-color: oklch(63.85% 0.1954 257.48deg);
     color: oklch(100% 0 0deg);
   }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_blue:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
+  }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green {
     background: oklch(97.54% 0.036 160.67deg);
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover {
     background-color: oklch(60.51% 0.1384 159.32deg);
     color: oklch(100% 0 0deg);
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
     background-color: oklch(63.85% 0.1954 257.48deg) !important;

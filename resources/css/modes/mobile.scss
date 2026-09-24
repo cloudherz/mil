@@ -1401,6 +1401,13 @@
                                                                         background-color: $PALETTE-DARK_BLUE;
                                                                         // FONT SETTINGS
                                                                         color: $PALETTE-SNOW;
+
+                                                                        .S-OPTION-icon {
+                                                                            .I-TRACK-option {
+                                                                                // FILL
+                                                                                fill: $PALETTE-SNOW;
+                                                                            }
+                                                                        }
                                                                     }
                                                                 }
                                                                 .LI-TRACK-option_green {
@@ -1412,6 +1419,13 @@
                                                                         background-color: $PALETTE-DARK_GREEN;
                                                                         // FONT SETTINGS
                                                                         color: $PALETTE-SNOW;
+
+                                                                        .S-OPTION-icon {
+                                                                            .I-TRACK-option {
+                                                                                // FILL
+                                                                                fill: $PALETTE-SNOW;
+                                                                            }
+                                                                        }
                                                                     }
                                                                 }
                                                                 .LI-TRACK-option_selected_blue {
