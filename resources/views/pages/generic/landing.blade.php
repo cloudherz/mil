@@ -936,7 +936,7 @@
                         <div class="S-LINKS-carcass">
                             <div class="S-LINKS-main TYPO-D-PRESET-CORE_P">
                                 <a class="L-LINKS-main" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">Сайт РАИР</a>
-                                <a class="L-LINKS-main" href="mailto:info@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
+                                <a class="L-LINKS-main" href="mailto:org@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
                             </div>
                             <div class="S-LINKS-socials">
                                 <a class="L-LINKS-socials" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
@@ -1944,7 +1944,7 @@
                             </div>
                             <div class="S-LEFT-links TYPO-M-PRESET-CORE_P">
                                 <a class="L-LEFT-links" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">Сайт РАИР</a>
-                                <a class="L-LEFT-links" href="mailto:info@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
+                                <a class="L-LEFT-links" href="mailto:org@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
                             </div>
                             <div class="S-LEFT-docs TYPO-M-PRESET-CORE_SMALL">
                                 <a class="L-LEFT-docs" href="{{ asset('docs/public_offer.pdf') }}" target="_blank" rel="noopener noreferrer">Публичная оферта</a>
