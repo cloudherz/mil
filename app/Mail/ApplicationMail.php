@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
@@ -128,7 +129,10 @@ class ApplicationMail extends Mailable
         $typeLabel = $typeLabels[$this->applicationType] ?? ucfirst($this->applicationType);
 
         return new Envelope(
-            from: config('mail.from.address'),
+            from: new Address(
+                config('mail.from.address'),
+                config('mail.from.name'),
+            ),
             subject: "{$typeLabel} №{$this->applicationId} — {$this->applicantName}",
         );
     }
