@@ -11,7 +11,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
-class ApplicationMail extends Mailable
+class ApplicationConfirmation extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -105,9 +105,6 @@ class ApplicationMail extends Mailable
         $this->track3 = $this->getTrackName($data['track_3'] ?? null);
     }
 
-    /**
-     * Преобразование номера трека в название.
-     */
     private function getTrackName(?string $trackNumber): ?string
     {
         if ($trackNumber === null || $trackNumber === '' || $trackNumber === '-') {
@@ -119,27 +116,19 @@ class ApplicationMail extends Mailable
 
     public function envelope(): Envelope
     {
-        $typeLabels = [
-            'student' => 'Студент',
-            'individual' => 'Физ. лицо',
-            'entity' => 'Организация',
-        ];
-
-        $typeLabel = $typeLabels[$this->applicationType] ?? ucfirst($this->applicationType);
-
         return new Envelope(
             from: config('mail.from.address'),
-            subject: "{$typeLabel} №{$this->applicationId} — {$this->applicantName}",
+            subject: 'Ваша заявка на Премию МИЛ отправлена успешно!',
         );
     }
 
     public function content(): Content
     {
         $view = match ($this->applicationType) {
-            'student' => 'emails.application.student',
-            'individual' => 'emails.application.individual',
-            'entity' => 'emails.application.entity',
-            default => 'emails.application.default',
+            'student' => 'emails.confirmation.student',
+            'individual' => 'emails.confirmation.individual',
+            'entity' => 'emails.confirmation.entity',
+            default => 'emails.confirmation.default',
         };
 
         return new Content(
@@ -164,38 +153,12 @@ class ApplicationMail extends Mailable
         );
     }
 
+    /**
+     * В письмо-подтверждение пользователю файлы НЕ прикладываем —
+     * они уже ушли админу. Плюс, чтобы не забивать почтовый ящик пользователя.
+     */
     public function attachments(): array
     {
-        $attachments = [];
-
-        foreach ($this->files as $file) {
-            $diskPath = $file['disk_path'] ?? null;
-
-            if (!$diskPath || !Storage::disk('local')->exists($diskPath)) {
-                Log::warning('ApplicationMail: attachment missing', [
-                    'application_id' => $this->applicationId,
-                    'disk_path' => $diskPath,
-                ]);
-                continue;
-            }
-
-            $absolutePath = Storage::disk('local')->path($diskPath);
-
-            $attachments[] = Attachment::fromPath($absolutePath)
-                ->as($file['name'])
-                ->withMime(
-                    $file['mime']
-                    ?? 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-                );
-        }
-
-        return $attachments;
-    }
-
-    public function build(): static
-    {
-        return $this->withSymfonyMessage(function (\Symfony\Component\Mime\Email $message) {
-            $message->getHeaders()->addTextHeader('X-Application-Id', (string) $this->applicationId);
-        });
+        return [];
     }
 }

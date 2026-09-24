@@ -546,7 +546,11 @@ function initApplicationValidation() {
 
             if (!allValid) {
                 e.preventDefault();
+                return;
             }
+
+            // Форма валидна — блокируем кнопку, чтобы избежать двойного сабмита
+            submitButton!.disabled = true;
         });
 
         updateSubmitButton();

@@ -3,8 +3,9 @@ function initLandingMobileHeaderOpen() {
     const closeBtn = document.getElementById('LANDING-MOBILE-HEADER-CLOSE');
     const overlay = document.getElementById('LANDING-MOBILE-HEADER-OVERLAY');
     const wrapper = document.getElementById('LANDING-MOBILE-HEADER-OVERLAY_WRAPPER');
+    const headerActionBtn = document.getElementById('LANDING-MOBILE-HEADER-ACTION_BUTTON');
 
-    if (!openBtn || !closeBtn || !overlay || !wrapper) return;
+    if (!openBtn || !closeBtn || !overlay || !wrapper || !headerActionBtn) return;
 
     const openMenu = () => {
         openBtn.style.display = 'none';
@@ -38,6 +39,10 @@ function initLandingMobileHeaderOpen() {
         link.addEventListener('click', () => {
             closeMenu();
         });
+    });
+
+    headerActionBtn.addEventListener('click', () => {
+        closeMenu();
     });
 
     // любой клик вне wrapper (в т.ч. вне overlay) закрывает меню

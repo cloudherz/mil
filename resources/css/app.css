@@ -71,7 +71,7 @@ br {
   --ital-reclined: -700;
 }
 
-.TYPO-FONT-PS_NORMAL, .TYPO-M-PRESET-CORE_SMALL, .TYPO-M-PRESET-CORE_P_ITALIC, .TYPO-M-PRESET-CORE_P_BOLD, .TYPO-M-PRESET-CORE_P, .TYPO-D-PRESET-CORE_SMALL, .TYPO-D-PRESET-CORE_P_ITALIC, .TYPO-D-PRESET-CORE_P_BOLD, .TYPO-D-PRESET-CORE_P, .TYPO-D-PRESET-HERO_DESCRIPTION, .TYPO-D-PRESET-HEADER_TEXT {
+.TYPO-FONT-PS_NORMAL, .TYPO-M-PRESET-CORE_SMALL, .TYPO-M-PRESET-CORE_P_ITALIC, .TYPO-M-PRESET-CORE_P_BOLD, .TYPO-M-PRESET-CORE_P, .TYPO-M-PRESET-HERO_HEADING_ALT, .TYPO-D-PRESET-CORE_SMALL, .TYPO-D-PRESET-CORE_P_ITALIC, .TYPO-D-PRESET-CORE_P_BOLD, .TYPO-D-PRESET-CORE_P, .TYPO-D-PRESET-HERO_DESCRIPTION, .TYPO-D-PRESET-HERO_HEADING_ALT, .TYPO-D-PRESET-HEADER_TEXT {
   font-family: "PangramSansNormal", sans-serif;
 }
 
@@ -99,6 +99,10 @@ br {
   font-size: 6.6vh;
 }
 
+.TYPO-D-SIZES-HERO_HEADING_ALT, .TYPO-D-PRESET-HERO_HEADING_ALT {
+  font-size: 3.3vh;
+}
+
 .TYPO-M-SIZES-SMALL, .TYPO-M-PRESET-CORE_SMALL {
   font-size: 3.15dvw;
 }
@@ -121,6 +125,10 @@ br {
 
 .TYPO-M-SIZES-H1, .TYPO-M-PRESET-HERO_HEADING {
   font-size: 8.4dvw;
+}
+
+.TYPO-M-SIZES-HERO_HEADING_ALT, .TYPO-M-PRESET-HERO_HEADING_ALT {
+  font-size: 3.36dvw;
 }
 
 .TYPO-M-SIZES-HERO_DESCRIPTION, .TYPO-M-PRESET-HERO_DESCRIPTION {
@@ -147,7 +155,7 @@ br {
   --current-wght: var(--wght-regular);
 }
 
-.TYPO-WEIGHT-MEDIUM, .TYPO-M-PRESET-CORE_SMALL, .TYPO-M-PRESET-CORE_P_ITALIC, .TYPO-M-PRESET-CORE_P, .TYPO-M-PRESET-CORE_H3_LIGHT, .TYPO-M-PRESET-HERO_DESCRIPTION, .TYPO-D-PRESET-CORE_SMALL, .TYPO-D-PRESET-CORE_P_ITALIC, .TYPO-D-PRESET-CORE_P, .TYPO-D-PRESET-CORE_H3_LIGHT, .TYPO-D-PRESET-HERO_DESCRIPTION {
+.TYPO-WEIGHT-MEDIUM, .TYPO-M-PRESET-CORE_SMALL, .TYPO-M-PRESET-CORE_P_ITALIC, .TYPO-M-PRESET-CORE_P, .TYPO-M-PRESET-CORE_H3_LIGHT, .TYPO-M-PRESET-HERO_DESCRIPTION, .TYPO-M-PRESET-HERO_HEADING_ALT, .TYPO-D-PRESET-CORE_SMALL, .TYPO-D-PRESET-CORE_P_ITALIC, .TYPO-D-PRESET-CORE_P, .TYPO-D-PRESET-CORE_H3_LIGHT, .TYPO-D-PRESET-HERO_DESCRIPTION, .TYPO-D-PRESET-HERO_HEADING_ALT {
   --current-wght: var(--wght-medium);
 }
 
@@ -175,7 +183,7 @@ br {
   --current-ital: var(--ital-reclined);
 }
 
-.TYPO-VARIABLE, .TYPO-M-PRESET-CORE_SMALL, .TYPO-M-PRESET-CORE_P_ITALIC, .TYPO-M-PRESET-CORE_P_BOLD, .TYPO-M-PRESET-CORE_P, .TYPO-M-PRESET-CORE_H4, .TYPO-M-PRESET-CORE_H3_LIGHT, .TYPO-M-PRESET-CORE_H3, .TYPO-M-PRESET-CORE_H2, .TYPO-M-PRESET-ACTION_HEADING, .TYPO-M-PRESET-HERO_DESCRIPTION, .TYPO-M-PRESET-HERO_HEADING, .TYPO-D-PRESET-CORE_SMALL, .TYPO-D-PRESET-CORE_P_ITALIC, .TYPO-D-PRESET-CORE_P_BOLD, .TYPO-D-PRESET-CORE_P, .TYPO-D-PRESET-CORE_H3_LIGHT, .TYPO-D-PRESET-CORE_H3, .TYPO-D-PRESET-CORE_H2, .TYPO-D-PRESET-PRIZES_NUMBER, .TYPO-D-PRESET-HERO_DESCRIPTION, .TYPO-D-PRESET-HERO_HEADING, .TYPO-D-PRESET-HEADER_TEXT {
+.TYPO-VARIABLE, .TYPO-M-PRESET-CORE_SMALL, .TYPO-M-PRESET-CORE_P_ITALIC, .TYPO-M-PRESET-CORE_P_BOLD, .TYPO-M-PRESET-CORE_P, .TYPO-M-PRESET-CORE_H4, .TYPO-M-PRESET-CORE_H3_LIGHT, .TYPO-M-PRESET-CORE_H3, .TYPO-M-PRESET-CORE_H2, .TYPO-M-PRESET-ACTION_HEADING, .TYPO-M-PRESET-HERO_DESCRIPTION, .TYPO-M-PRESET-HERO_HEADING_ALT, .TYPO-M-PRESET-HERO_HEADING, .TYPO-D-PRESET-CORE_SMALL, .TYPO-D-PRESET-CORE_P_ITALIC, .TYPO-D-PRESET-CORE_P_BOLD, .TYPO-D-PRESET-CORE_P, .TYPO-D-PRESET-CORE_H3_LIGHT, .TYPO-D-PRESET-CORE_H3, .TYPO-D-PRESET-CORE_H2, .TYPO-D-PRESET-PRIZES_NUMBER, .TYPO-D-PRESET-HERO_DESCRIPTION, .TYPO-D-PRESET-HERO_HEADING_ALT, .TYPO-D-PRESET-HERO_HEADING, .TYPO-D-PRESET-HEADER_TEXT {
   font-variation-settings: "wght" var(--current-wght, var(--wght-regular)), "ital" var(--current-ital, var(--ital-none));
 }
 
@@ -972,7 +980,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-nowrap {
     overflow: clip;
     text-overflow: ellipsis;
-    width: 80%;
+    width: 90%;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -1009,22 +1017,64 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_blue:hover {
     background-color: oklch(63.85% 0.1954 257.48deg);
-    color: oklch(100% 0 0deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green {
     background: oklch(97.54% 0.036 160.67deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover {
     background-color: oklch(60.51% 0.1384 159.32deg);
-    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green {
+    background-color: oklch(60.51% 0.1384 159.32deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_industry_visionary {
+    padding: 0 0 0 1.9vh !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_territory_development {
+    padding: 0 3.8vh 0 1.9vh !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option {
     display: flex;
     align-items: center;
+    flex-direction: row;
     padding: 0 1.9vh;
+    gap: 0.95vh;
     height: 5.2vh;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover {
+    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon .I-TRACK-option {
+    display: flex;
+    fill: oklch(32.65% 0.0127 252.99deg);
+    transition: fill 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .T-TRACK-option {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_title {
     display: flex;
@@ -1266,6 +1316,7 @@ br {
     grid-row-gap: 0;
     width: 100%;
     border-radius: 2.8vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     z-index: 201;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-hitbox {
@@ -1339,6 +1390,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-text {
     grid-area: 2/1/3/2;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-number_blue {
     color: oklch(74.07% 0.1354 256.19deg);
@@ -1384,6 +1436,7 @@ br {
     outline-width: 0;
     border-radius: 1.8vh;
     padding: 0 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-string:focus {
@@ -1413,6 +1466,7 @@ br {
     border-radius: 1.8vh;
     resize: none;
     padding: 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
@@ -1660,6 +1714,9 @@ br {
     line-height: 8vh;
     margin-top: 1vh;
   }
+  .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_alt {
+    margin-left: 0.7vh;
+  }
   .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair {
     display: flex;
     flex-direction: row;
@@ -1692,6 +1749,7 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
     grid-area: 1/1/2/2;
+    margin-right: 0.95vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
@@ -3951,7 +4009,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-nowrap {
     overflow: clip;
     text-overflow: ellipsis;
-    width: 80%;
+    width: 90%;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -3988,22 +4046,64 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_blue:hover {
     background-color: oklch(63.85% 0.1954 257.48deg);
-    color: oklch(100% 0 0deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green {
     background: oklch(97.54% 0.036 160.67deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover {
     background-color: oklch(60.51% 0.1384 159.32deg);
-    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green {
+    background-color: oklch(60.51% 0.1384 159.32deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_industry_visionary {
+    padding: 0 0 0 1.9vh !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_territory_development {
+    padding: 0 3.8vh 0 1.9vh !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option {
     display: flex;
     align-items: center;
+    flex-direction: row;
     padding: 0 1.9vh;
+    gap: 0.95vh;
     height: 5.2vh;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover {
+    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon .I-TRACK-option {
+    display: flex;
+    fill: oklch(32.65% 0.0127 252.99deg);
+    transition: fill 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .T-TRACK-option {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_title {
     display: flex;
@@ -4245,6 +4345,7 @@ br {
     grid-row-gap: 0;
     width: 100%;
     border-radius: 2.8vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     z-index: 201;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-hitbox {
@@ -4318,6 +4419,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-text {
     grid-area: 2/1/3/2;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-number_blue {
     color: oklch(74.07% 0.1354 256.19deg);
@@ -4363,6 +4465,7 @@ br {
     outline-width: 0;
     border-radius: 1.8vh;
     padding: 0 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-string:focus {
@@ -4392,6 +4495,7 @@ br {
     border-radius: 1.8vh;
     resize: none;
     padding: 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
@@ -4639,6 +4743,9 @@ br {
     line-height: 8vh;
     margin-top: 1vh;
   }
+  .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_alt {
+    margin-left: 0.7vh;
+  }
   .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair {
     display: flex;
     flex-direction: row;
@@ -4671,6 +4778,7 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
     grid-area: 1/1/2/2;
+    margin-right: 0.95vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
@@ -6930,7 +7038,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-nowrap {
     overflow: clip;
     text-overflow: ellipsis;
-    width: 80%;
+    width: 90%;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -6967,22 +7075,64 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_blue:hover {
     background-color: oklch(63.85% 0.1954 257.48deg);
-    color: oklch(100% 0 0deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green {
     background: oklch(97.54% 0.036 160.67deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover {
     background-color: oklch(60.51% 0.1384 159.32deg);
-    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green {
+    background-color: oklch(60.51% 0.1384 159.32deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_industry_visionary {
+    padding: 0 0 0 1.9vh !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_territory_development {
+    padding: 0 3.8vh 0 1.9vh !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option {
     display: flex;
     align-items: center;
+    flex-direction: row;
     padding: 0 1.9vh;
+    gap: 0.95vh;
     height: 5.2vh;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover {
+    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon .I-TRACK-option {
+    display: flex;
+    fill: oklch(32.65% 0.0127 252.99deg);
+    transition: fill 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .T-TRACK-option {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_title {
     display: flex;
@@ -7224,6 +7374,7 @@ br {
     grid-row-gap: 0;
     width: 100%;
     border-radius: 2.8vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     z-index: 201;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-hitbox {
@@ -7297,6 +7448,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-text {
     grid-area: 2/1/3/2;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-number_blue {
     color: oklch(74.07% 0.1354 256.19deg);
@@ -7342,6 +7494,7 @@ br {
     outline-width: 0;
     border-radius: 1.8vh;
     padding: 0 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-string:focus {
@@ -7371,6 +7524,7 @@ br {
     border-radius: 1.8vh;
     resize: none;
     padding: 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
@@ -7618,6 +7772,9 @@ br {
     line-height: 8vh;
     margin-top: 1vh;
   }
+  .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_alt {
+    margin-left: 0.7vh;
+  }
   .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair {
     display: flex;
     flex-direction: row;
@@ -7650,6 +7807,7 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
     grid-area: 1/1/2/2;
+    margin-right: 0.95vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
@@ -9909,7 +10067,7 @@ br {
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .S-TRACK-select .T-TRACK-nowrap {
     overflow: clip;
     text-overflow: ellipsis;
-    width: 80%;
+    width: 90%;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_blue {
     background: oklch(95.77% 0.0199 267.29deg);
@@ -9946,22 +10104,64 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_blue:hover {
     background-color: oklch(63.85% 0.1954 257.48deg);
-    color: oklch(100% 0 0deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green {
     background: oklch(97.54% 0.036 160.67deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_green:hover {
     background-color: oklch(60.51% 0.1384 159.32deg);
-    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green {
+    background-color: oklch(60.51% 0.1384 159.32deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_industry_visionary {
+    padding: 0 0 0 1.9vh !important;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_territory_development {
+    padding: 0 3.8vh 0 1.9vh !important;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option {
     display: flex;
     align-items: center;
+    flex-direction: row;
     padding: 0 1.9vh;
+    gap: 0.95vh;
     height: 5.2vh;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover {
+    color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option:hover .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vh;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon .I-TRACK-option {
+    display: flex;
+    fill: oklch(32.65% 0.0127 252.99deg);
+    transition: fill 0.2s;
+  }
+  .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .T-TRACK-option {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_title {
     display: flex;
@@ -10203,6 +10403,7 @@ br {
     grid-row-gap: 0;
     width: 100%;
     border-radius: 2.8vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     z-index: 201;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-hitbox {
@@ -10276,6 +10477,7 @@ br {
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-text {
     grid-area: 2/1/3/2;
+    color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-presentation_hint .S-HINT-wrapper .S-HINT-carcass .S-HINT-content .S-HINT_CONTENT-wrapper .S-HINT_CONTENT-carcass .S-HINT_CONTENT-panel .S-PANEL-wrapper .S-PANEL-carcass .S-PANEL-number_blue {
     color: oklch(74.07% 0.1354 256.19deg);
@@ -10321,6 +10523,7 @@ br {
     outline-width: 0;
     border-radius: 1.8vh;
     padding: 0 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-string:focus {
@@ -10350,6 +10553,7 @@ br {
     border-radius: 1.8vh;
     resize: none;
     padding: 1.9vh;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
@@ -10597,6 +10801,9 @@ br {
     line-height: 8vh;
     margin-top: 1vh;
   }
+  .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_alt {
+    margin-left: 0.7vh;
+  }
   .S-DESKTOP-main .S-MAIN-hero .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-rair {
     display: flex;
     flex-direction: row;
@@ -10629,6 +10836,7 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-question {
     grid-area: 1/1/2/2;
+    margin-right: 0.95vh;
     color: oklch(32.65% 0.0127 252.99deg);
   }
   .S-DESKTOP-main .S-MAIN-reason .S-REASON-wrapper .S-REASON-carcass .S-REASON-answer .T-REASON-answer_text {
@@ -12996,12 +13204,18 @@ br {
     background: oklch(97.54% 0.036 160.67deg);
     outline: oklch(60.51% 0.1384 159.32deg) solid 0.6dvw;
   }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_2 {
+    margin-left: -30.6883333333dvw;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_3 {
+    margin-left: -61.3766666667dvw;
+  }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options {
     position: absolute;
     top: calc(100% + 2.465dvw);
     left: 0;
     right: 0;
-    width: 100%;
+    width: 89.6dvw;
     height: 36.75dvw;
     overflow-y: auto;
     list-style: none;
@@ -13032,13 +13246,45 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
     color: oklch(100% 0 0deg);
   }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green {
+    background-color: oklch(60.51% 0.1384 159.32deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option {
     display: flex;
     align-items: center;
+    flex-direction: row;
     padding: 0 3.4dvw;
+    gap: 1.7dvw;
     height: 10.5dvw;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.8dvw;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon .I-TRACK-option {
+    display: flex;
+    fill: oklch(32.65% 0.0127 252.99deg);
+    transition: fill 0.2s;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .T-TRACK-option {
+    text-box: trim-both cap alphabetic;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_title {
     display: flex;
@@ -13400,6 +13646,7 @@ br {
     outline-width: 0;
     border-radius: 3.5dvw;
     padding: 0 3.4dvw;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-string:focus {
@@ -13429,6 +13676,7 @@ br {
     border-radius: 3.5dvw;
     resize: none;
     padding: 3.4dvw;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
@@ -13732,6 +13980,10 @@ br {
   }
   .S-MOBILE-main .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading {
     text-box: trim-both cap alphabetic;
+  }
+  .S-MOBILE-main .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_alt {
+    text-box: trim-both cap alphabetic;
+    margin-left: 0.3dvw;
   }
   .S-MOBILE-main .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-description {
     display: flex;
@@ -16203,12 +16455,18 @@ br {
     background: oklch(97.54% 0.036 160.67deg);
     outline: oklch(60.51% 0.1384 159.32deg) solid 0.6dvw;
   }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_2 {
+    margin-left: -30.6883333333dvw;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options_3 {
+    margin-left: -61.3766666667dvw;
+  }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options {
     position: absolute;
     top: calc(100% + 2.465dvw);
     left: 0;
     right: 0;
-    width: 100%;
+    width: 89.6dvw;
     height: 36.75dvw;
     overflow-y: auto;
     list-style: none;
@@ -16239,13 +16497,45 @@ br {
     background-color: oklch(60.51% 0.1384 159.32deg);
     color: oklch(100% 0 0deg);
   }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue {
+    background-color: oklch(63.85% 0.1954 257.48deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_blue .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green {
+    background-color: oklch(60.51% 0.1384 159.32deg) !important;
+    color: oklch(100% 0 0deg) !important;
+    opacity: 0.7;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option_selected_green .S-OPTION-icon .I-TRACK-option {
+    fill: oklch(100% 0 0deg) !important;
+  }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option {
     display: flex;
     align-items: center;
+    flex-direction: row;
     padding: 0 3.4dvw;
+    gap: 1.7dvw;
     height: 10.5dvw;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.8dvw;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .S-OPTION-icon .I-TRACK-option {
+    display: flex;
+    fill: oklch(32.65% 0.0127 252.99deg);
+    transition: fill 0.2s;
+  }
+  .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-tracks .S-CONTENT_TRACKS-carcass .S-CONTENT_TRACKS-track .S-TRACK-carcass .S-TRACK-select .S-SELECT-carcass .UL-TRACK-options .LI-TRACK-option .T-TRACK-option {
+    text-box: trim-both cap alphabetic;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-description_title {
     display: flex;
@@ -16607,6 +16897,7 @@ br {
     outline-width: 0;
     border-radius: 3.5dvw;
     padding: 0 3.4dvw;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-string:focus {
@@ -16636,6 +16927,7 @@ br {
     border-radius: 3.5dvw;
     resize: none;
     padding: 3.4dvw;
+    color: oklch(32.65% 0.0127 252.99deg);
     transition: outline-width 0.06s;
   }
   .S-MOBILE-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-input .IN-CONTENT-text:focus {
@@ -16939,6 +17231,10 @@ br {
   }
   .S-MOBILE-main .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading {
     text-box: trim-both cap alphabetic;
+  }
+  .S-MOBILE-main .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_alt {
+    text-box: trim-both cap alphabetic;
+    margin-left: 0.3dvw;
   }
   .S-MOBILE-main .S-HERO-carcass .S-HERO-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-description {
     display: flex;

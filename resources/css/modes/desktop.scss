@@ -1162,7 +1162,7 @@
                                                                     overflow: clip;
                                                                     text-overflow: ellipsis;
                                                                     // SCALING
-                                                                    width: 80%;
+                                                                    width: 90%;
                                                                 }
                                                             }
 
@@ -1225,7 +1225,6 @@
                                                                     &:hover {
                                                                         // BACKGROUND
                                                                         background-color: $PALETTE-DARK_BLUE;
-                                                                        color: $PALETTE-SNOW;
                                                                     }
                                                                 }
                                                                 .LI-TRACK-option_green {
@@ -1235,15 +1234,54 @@
                                                                     &:hover {
                                                                         // BACKGROUND
                                                                         background-color: $PALETTE-DARK_GREEN;
-                                                                        color: $PALETTE-SNOW;
                                                                     }
+                                                                }
+                                                                .LI-TRACK-option_selected_blue {
+                                                                    // BACKGROUND
+                                                                    background-color: $PALETTE-DARK_BLUE !important;
+                                                                    // FONT SETTINGS
+                                                                    color: $PALETTE-SNOW !important;
+                                                                    // OPACITY
+                                                                    opacity: 0.7;
+
+                                                                    .S-OPTION-icon {
+                                                                        .I-TRACK-option {
+                                                                            // FILL
+                                                                            fill: $PALETTE-SNOW !important;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .LI-TRACK-option_selected_green {
+                                                                    // BACKGROUND
+                                                                    background-color: $PALETTE-DARK_GREEN !important;
+                                                                    // FONT SETTINGS
+                                                                    color: $PALETTE-SNOW !important;
+                                                                    // OPACITY
+                                                                    opacity: 0.7;
+
+                                                                    .S-OPTION-icon {
+                                                                        .I-TRACK-option {
+                                                                            // FILL
+                                                                            fill: $PALETTE-SNOW !important;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .LI-TRACK-option_industry_visionary {
+                                                                    // MARGINS & PADDINGS
+                                                                    padding: 0 0 0 $GV-D-SIZES-SMALL !important;
+                                                                }
+                                                                .LI-TRACK-option_territory_development {
+                                                                    // MARGINS & PADDINGS
+                                                                    padding: 0 ($GV-D-SIZES-SMALL * 2) 0 $GV-D-SIZES-SMALL !important;
                                                                 }
                                                                 .LI-TRACK-option {
                                                                     // FLEXBOX
                                                                     display: flex;
                                                                     align-items: center;
+                                                                    flex-direction: row;
                                                                     // MARGINS & PADDINGS
                                                                     padding: 0 $GV-D-SIZES-SMALL;
+                                                                    gap: $GV-D-SIZES-SMALL * 0.5;
                                                                     // SCALING
                                                                     height: $LV-D-APPLICATION-FORM-INPUT-STRING-HEIGHT;
                                                                     // CURSOR
@@ -1252,6 +1290,41 @@
                                                                     transition:
                                                                         background 0.2s,
                                                                         color 0.2s;
+
+                                                                    &:hover {
+                                                                        // FONT SETTINGS
+                                                                        color: $PALETTE-SNOW;
+
+                                                                        .S-OPTION-icon {
+                                                                            .I-TRACK-option {
+                                                                                // FILL
+                                                                                fill: $PALETTE-SNOW;
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    .S-OPTION-icon {
+                                                                        // FLEXBOX
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                        // SCALING
+                                                                        width: 2vh;
+
+                                                                        .I-TRACK-option {
+                                                                            // FLEXBOX
+                                                                            display: flex;
+                                                                            // FILL
+                                                                            fill: $PALETTE-BLACK;
+                                                                            // TRANSITION
+                                                                            transition: fill 0.2s;
+                                                                        }
+                                                                    }
+
+                                                                    .T-TRACK-option {
+                                                                        // FONT SETTINGS
+                                                                        text-box: trim-both cap alphabetic;
+                                                                    }
                                                                 }
                                                             }
                                                         }
@@ -1634,6 +1707,8 @@
                                                 width: 100%;
                                                 // STREAMLINING
                                                 border-radius: $GV-D-ROUNDING-SECTIONS;
+                                                // FONT SETTINGS
+                                                color: $PALETTE-BLACK;
                                                 // LAYERING
                                                 z-index: 201;
 
@@ -1740,6 +1815,8 @@
                                                                         .S-PANEL-text {
                                                                             // CSS-GRID CONFIGURATION
                                                                             grid-area: 2 / 1 / 3 / 2;
+                                                                            // FONT SETTINGS
+                                                                            color: $PALETTE-BLACK;
                                                                         }
                                                                         .S-PANEL-number_blue {
                                                                             // FONT SETTINGS
@@ -1815,6 +1892,8 @@
                                             border-radius: $GV-D-ROUNDING-ELEMENTS;
                                             // MARGINS & PADDINGS
                                             padding: 0 $GV-D-SIZES-SMALL;
+                                            // FONT SETTINGS
+                                            color: $PALETTE-BLACK;
                                             // TRANSITION
                                             transition: outline-width 0.06s;
 
@@ -1859,6 +1938,8 @@
                                             resize: none;
                                             // MARGINS & PADDINGS
                                             padding: $GV-D-SIZES-SMALL;
+                                            // FONT SETTINGS
+                                            color: $PALETTE-BLACK;
                                             // TRANSITION
                                             transition: outline-width 0.06s;
 
@@ -2259,6 +2340,11 @@
                                 line-height: 8vh;
                                 // MARGINS & PADDINGS
                                 margin-top: 1vh;
+
+                                .T-CONTENT-heading_alt {
+                                    // MARGINS & PADDINGS
+                                    margin-left: 0.7vh;
+                                }
                             }
                             .S-CONTENT-rair {
                                 // FLEXBOX
@@ -2319,6 +2405,8 @@
                     .S-REASON-question {
                         // CSS-GRID CONFIGURATION
                         grid-area: 1 / 1 / 2 / 2;
+                        // MARGINS & PADDINGS
+                        margin-right: $GV-D-SIZES-SMALL * 0.5;
                         // FONT SETTINGS
                         color: $PALETTE-BLACK;
                     }

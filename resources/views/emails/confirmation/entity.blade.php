@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Заявка организации</title>
+    <title>Ваша заявка на Премию МИЛ отправлена успешно!</title>
 </head>
 <body>
-    <h2>Заявка организации №{{ $applicationId }}</h2>
+    <h2>Спасибо!</h2>
+    <p>Ваша заявка принята и направлена на верификацию в Оргкомитет.<br>Ожидайте информацию на электронную почту.</p>
+    <br>
+    <h2>Указанные данные:</h2>
     <p><strong>Название организации:</strong> {{ $organizationName ?? 'Не указано' }}</p>
     <p><strong>ИНН:</strong> {{ $organizationTin ?? 'Не указан' }}</p>
     <p><strong>Представитель:</strong> {{ $organizationRepresentative ?? 'Не указан' }}</p>

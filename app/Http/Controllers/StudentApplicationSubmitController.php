@@ -25,7 +25,7 @@ class StudentApplicationSubmitController extends ApplicationSubmitController
                 'string',
                 'regex:' . self::REGEX_PHONE,
             ],
-            'track_student' => 'required|in:1,2,3,4,5',
+            'track_student' => 'required|in:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15',
             'description_student' => 'required|string|min:1|max:10000',
             'confirmation_student' => 'required|accepted',
             'files_student' => 'required|array|min:1|max:1',

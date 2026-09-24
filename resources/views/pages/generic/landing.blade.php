@@ -56,7 +56,7 @@
                     <div class="S-WINDOW-wrapper">
                         <div class="S-WINDOW-carcass">
                             <div class="S-WINDOW-heading">
-                                <h3 class="T-WINDOW-heading TYPO-D-PRESET-CORE_H3">Ваша заявка<br>подана успешно!</h3>
+                                <h3 class="T-WINDOW-heading TYPO-D-PRESET-CORE_H3">Ваша заявка<br>отправлена успешно!</h3>
                             </div>
                             <div class="S-WINDOW-icon">
                                 <x-svg.icons.success
@@ -65,8 +65,9 @@
                             </div>
                             <div class="S-WINDOW-description">
                                 <p class="T-WINDOW-description TYPO-D-PRESET-CORE_P">
-                                    Ожидайте формирования списка номинантов.<br>
-                                    Вы будете уведомлены по указанной почте.<br><br>
+                                    Спасибо! Ваша заявка принята и направлена<br>
+                                    на верификацию в Оргкомитет, ожидайте информацию<br>
+                                    на электронную почту.<br><br>
                                     Окно закроется автоматически через <span id="LANDING-MESSAGE-APPLICATION_SUCCESS-TIMER">5</span> сек.
                                 </p>
                             </div>
@@ -260,7 +261,10 @@
                                             />
                                         </div>
                                         <div class="S-CONTENT-heading">
-                                            <h1 class="TYPO-D-PRESET-HERO_HEADING">молодые инновационные<br>лидеры</h1>
+                                            <h1 class="T-CONTENT-heading TYPO-D-PRESET-HERO_HEADING">
+                                                молодые инновационные<br>лидеры
+                                                <span class="T-CONTENT-heading_alt TYPO-D-PRESET-HERO_HEADING_ALT">России и Беларуси</span>
+                                            </h1>
                                         </div>
                                         <div class="S-CONTENT-rair">
                                             <h2 class="TYPO-D-PRESET-HERO_DESCRIPTION">премия Российской Ассоциации Инновационного Развития</h2>
@@ -279,7 +283,12 @@
                         <div class="S-REASON-carcass">
                             <div class="S-REASON-question S-REASON-block">
                                 <h3 class="TYPO-D-PRESET-CORE_H3">Зачем участвовать?</h3>
-                                <p class="TYPO-D-PRESET-CORE_P">Премия МИЛ запускается впервые:<br>Ваше инновационное лидерство получит<br>признание профессионалов и внимание<br>медиа.</p>
+                                <p class="TYPO-D-PRESET-CORE_P">
+                                    Ваше инновационное лидерство<br>
+                                    получит признание профессионалов<br>
+                                    и внимание медиа.<br>
+                                    Победа гарантирует участнику:
+                                </p>
                             </div>
                             <div class="S-REASON-answer_1 S-REASON-block S-REASON-answer">
                                 <h3 class="T-REASON-answer_heading TYPO-D-PRESET-CORE_H3">1.</h3>
@@ -503,19 +512,19 @@
                                         />
                                         <x-blades.dates.column
                                             number="2"
-                                            date="30 Октября, 2026"
+                                            date="10 Ноября, 2026"
                                             description="Верификация. Формирование списка номинантов."
                                             state="future"
                                         />
                                         <x-blades.dates.column
                                             number="3"
-                                            date="10 Февраля, 2027"
+                                            date="25 Декабря, 2026"
                                             description="Независимая экспертная оценка жюри и выставление баллов по критериям."
                                             state="future"
                                         />
                                         <x-blades.dates.column
                                             number="4"
-                                            date="20 Марта, 2027"
+                                            date="15 Января, 2027"
                                             description="Отбор финалистов по каждой номинации. Объявление шорт-листа."
                                             state="future"
                                         />
@@ -927,7 +936,7 @@
                         <div class="S-LINKS-carcass">
                             <div class="S-LINKS-main TYPO-D-PRESET-CORE_P">
                                 <a class="L-LINKS-main" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">Сайт РАИР</a>
-                                <a class="L-LINKS-main" href="mailto:info@rair-info.ru">info@rair-info.ru</a>
+                                <a class="L-LINKS-main" href="mailto:info@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
                             </div>
                             <div class="S-LINKS-socials">
                                 <a class="L-LINKS-socials" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
@@ -1031,7 +1040,7 @@
                     <div class="S-WINDOW-wrapper">
                         <div class="S-WINDOW-carcass">
                             <div class="S-WINDOW-heading">
-                                <h3 class="T-WINDOW-heading TYPO-M-PRESET-CORE_H3">Ваша заявка<br>подана успешно!</h3>
+                                <h3 class="T-WINDOW-heading TYPO-M-PRESET-CORE_H3">Ваша заявка<br>отправлена успешно!</h3>
                             </div>
                             <div class="S-WINDOW-icon">
                                 <x-svg.icons.success
@@ -1040,9 +1049,9 @@
                             </div>
                             <div class="S-WINDOW-description">
                                 <p class="T-WINDOW-description TYPO-M-PRESET-CORE_P">
-                                    Ожидайте формирования списка<br>
-                                    номинантов. Вы будете уведомлены<br>
-                                    по указанной почте.<br><br>
+                                    Спасибо! Ваша заявка принята и направлена<br>
+                                    на верификацию в Оргкомитет, ожидайте<br>
+                                    информацию на электронную почту.<br><br>
                                     Окно закроется автоматически<br>
                                     через <span id="LANDING-MOBILE-MESSAGE-APPLICATION_SUCCESS-TIMER">5</span> сек.
                                 </p>
@@ -1259,7 +1268,10 @@
                                             />
                                         </div>
                                         <div class="S-CONTENT-heading">
-                                            <h1 class="T-CONTENT-heading TYPO-M-PRESET-HERO_HEADING">МОЛОДЫЕ<br>ИННОВАЦИОННЫЕ<br>ЛИДЕРЫ</h1>
+                                            <h1 class="T-CONTENT-heading TYPO-M-PRESET-HERO_HEADING">
+                                                МОЛОДЫЕ<br>ИННОВАЦИОННЫЕ<br>ЛИДЕРЫ
+                                                <span class="T-CONTENT-heading_alt TYPO-M-PRESET-HERO_HEADING_ALT">России и Беларуси</span>
+                                            </h1>
                                         </div>
                                         <div class="S-CONTENT-description">
                                             <p class="T-CONTENT-description TYPO-M-PRESET-HERO_DESCRIPTION">премия Российской Ассоциации<br>Инновационного Развития</p>
@@ -1282,7 +1294,7 @@
                                 <h2 class="T-REASON-heading TYPO-M-PRESET-CORE_H2">Зачем участвовать?</h2>
                             </div>
                             <div class="S-REASON-description">
-                                <p class="T-REASON-description TYPO-M-PRESET-HERO_DESCRIPTION">Премия МИЛ запускается впервые: Ваше инновационное лидерство получит признание профессионалов и внимание медиа.</p>
+                                <p class="T-REASON-description TYPO-M-PRESET-HERO_DESCRIPTION">Ваше инновационное лидерство получит признание профессионалов и внимание медиа.<br>Победа гарантирует участнику:</p>
                             </div>
                             <div class="S-REASON-number_1 S-REASON-number">
                                 <p class="T-REASON-number TYPO-M-PRESET-CORE_H2">1.</p>
@@ -1511,19 +1523,19 @@
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="2"
-                                            date="30 Октября, 2026"
+                                            date="10 Ноября, 2026"
                                             description="Верификация. Формирование списка номинантов."
                                             state="future"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="3"
-                                            date="10 Февраля, 2027"
+                                            date="25 Декабря, 2026"
                                             description="Независимая экспертная оценка жюри и выставление баллов по критериям."
                                             state="future"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="4"
-                                            date="20 Марта, 2027"
+                                            date="15 Января, 2027"
                                             description="Отбор финалистов по каждой номинации. Объявление шорт-листа."
                                             state="future"
                                         />
@@ -1932,7 +1944,7 @@
                             </div>
                             <div class="S-LEFT-links TYPO-M-PRESET-CORE_P">
                                 <a class="L-LEFT-links" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">Сайт РАИР</a>
-                                <a class="L-LEFT-links" href="mailto:info@rair-info.ru">info@rair-info.ru</a>
+                                <a class="L-LEFT-links" href="mailto:info@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
                             </div>
                             <div class="S-LEFT-docs TYPO-M-PRESET-CORE_SMALL">
                                 <a class="L-LEFT-docs" href="{{ asset('docs/public_offer.pdf') }}" target="_blank" rel="noopener noreferrer">Публичная оферта</a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ApplicationMail;
+use App\Mail\ApplicationConfirmation;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -260,6 +261,16 @@ abstract class ApplicationSubmitController
 
             $this->sendApplicationEmail($application, $filtered, $applicationType, $files);
 
+            try {
+                $this->sendConfirmationEmail($application, $filtered, $applicationType);
+            } catch (\Throwable $e) {
+                Log::error('Confirmation email failed', [
+                    'application_id' => $this->getApplicationId($application),
+                    'type' => $applicationType,
+                    'error' => $e->getMessage(),
+                ]);
+            }
+
             DB::commit();
 
             Log::info("Application #{$this->getApplicationId($application)} ({$applicationType}) submitted successfully");
@@ -356,6 +367,40 @@ abstract class ApplicationSubmitController
         );
 
         Log::info("Email sent for {$applicationType} application #{$id}");
+    }
+
+    /**
+     * Отправляет письмо-подтверждение пользователю.
+     * Без вложений. Только текст «всё ок».
+     */
+    protected function sendConfirmationEmail(
+        $application,
+        array $validated,
+        string $applicationType
+    ): void {
+        $recipientEmail = match ($applicationType) {
+            'student' => $validated['email_student'] ?? null,
+            'individual' => $validated['email_individual'] ?? null,
+            'entity' => $validated['email_entity'] ?? null,
+            default => null,
+        };
+
+        if (!$recipientEmail) {
+            Log::warning('Confirmation email skipped: no recipient email', [
+                'application_id' => $this->getApplicationId($application),
+                'type' => $applicationType,
+            ]);
+            return;
+        }
+
+        $id = $this->getApplicationId($application);
+        $name = $this->getApplicationName($validated, $applicationType);
+
+        Mail::to($recipientEmail)->send(
+            new ApplicationConfirmation($validated, $applicationType, $id, $name, [])
+        );
+
+        Log::info("Confirmation email sent to user for {$applicationType} application #{$id}");
     }
 
     /**

@@ -585,6 +585,7 @@
     $LV-M-APPLICATION-FORM-INPUT_WIDTH: 100dvw - ($GV-M-SIZES-DEFAULT * 2);
     $LV-M-APPLICATION-FORM-INPUT_TITLE-MARGIN_LEFT: $GV-M-SIZES-SMALL * 1;
     $LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-GAP: $LV-M-APPLICATION-FORM-INPUTS_MARGIN / 2;
+    $LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-WIDTH: ($LV-M-APPLICATION-FORM-INPUT_WIDTH - ($LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-GAP * 2)) / 3;
     .S-MOBILE-application {
         // POSITIONING
         position: fixed;
@@ -1344,6 +1345,13 @@
                                                                 // BORDER
                                                                 outline: $PALETTE-DARK_GREEN solid $LV-M-APPLICATION-FORM-INPUTS_OUTLINE_WIDTH;
                                                             }
+                                                            .UL-TRACK-options_2 {
+                                                                //margin-left: -(($LV-M-APPLICATION-FORM-INPUT_WIDTH + $LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-GAP) / 3);
+                                                                margin-left: -($LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-WIDTH + $LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-GAP);
+                                                            }
+                                                            .UL-TRACK-options_3 {
+                                                                margin-left: -(($LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-WIDTH * 2) + ($LV-M-APPLICATION-FORM-ENTITY-SELECT_TRACKS-GAP * 2));
+                                                            }
                                                             .UL-TRACK-options {
                                                                 // POSITIONING
                                                                 position: absolute;
@@ -1351,7 +1359,7 @@
                                                                 left: 0;
                                                                 right: 0;
                                                                 // SCALING
-                                                                width: calc(100%);
+                                                                width: $LV-M-APPLICATION-FORM-INPUT_WIDTH;
                                                                 height: (($LV-M-APPLICATION-FORM-INPUT-STRING-HEIGHT * 3) + ($LV-M-APPLICATION-FORM-INPUT-STRING-HEIGHT / 2));
                                                                 // OVERFLOW
                                                                 overflow-y: auto;
@@ -1391,6 +1399,7 @@
                                                                     &:hover {
                                                                         // BACKGROUND
                                                                         background-color: $PALETTE-DARK_BLUE;
+                                                                        // FONT SETTINGS
                                                                         color: $PALETTE-SNOW;
                                                                     }
                                                                 }
@@ -1401,15 +1410,48 @@
                                                                     &:hover {
                                                                         // BACKGROUND
                                                                         background-color: $PALETTE-DARK_GREEN;
+                                                                        // FONT SETTINGS
                                                                         color: $PALETTE-SNOW;
+                                                                    }
+                                                                }
+                                                                .LI-TRACK-option_selected_blue {
+                                                                    // BACKGROUND
+                                                                    background-color: $PALETTE-DARK_BLUE !important;
+                                                                    // FONT SETTINGS
+                                                                    color: $PALETTE-SNOW !important;
+                                                                    // OPACITY
+                                                                    opacity: 0.7;
+
+                                                                    .S-OPTION-icon {
+                                                                        .I-TRACK-option {
+                                                                            // FILL
+                                                                            fill: $PALETTE-SNOW !important;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .LI-TRACK-option_selected_green {
+                                                                    // BACKGROUND
+                                                                    background-color: $PALETTE-DARK_GREEN !important;
+                                                                    // FONT SETTINGS
+                                                                    color: $PALETTE-SNOW !important;
+                                                                    // OPACITY
+                                                                    opacity: 0.7;
+
+                                                                    .S-OPTION-icon {
+                                                                        .I-TRACK-option {
+                                                                            // FILL
+                                                                            fill: $PALETTE-SNOW !important;
+                                                                        }
                                                                     }
                                                                 }
                                                                 .LI-TRACK-option {
                                                                     // FLEXBOX
                                                                     display: flex;
                                                                     align-items: center;
+                                                                    flex-direction: row;
                                                                     // MARGINS & PADDINGS
                                                                     padding: 0 $GV-M-SIZES-SMALL;
+                                                                    gap: $GV-M-SIZES-SMALL * 0.5;
                                                                     // SCALING
                                                                     height: $LV-M-APPLICATION-FORM-INPUT-STRING-HEIGHT;
                                                                     // CURSOR
@@ -1418,6 +1460,29 @@
                                                                     transition:
                                                                         background 0.2s,
                                                                         color 0.2s;
+
+                                                                    .S-OPTION-icon {
+                                                                        // FLEXBOX
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                        // SCALING
+                                                                        width: 3.8dvw;
+
+                                                                        .I-TRACK-option {
+                                                                            // FLEXBOX
+                                                                            display: flex;
+                                                                            // FILL
+                                                                            fill: $PALETTE-BLACK;
+                                                                            // TRANSITION
+                                                                            transition: fill 0.2s;
+                                                                        }
+                                                                    }
+
+                                                                    .T-TRACK-option {
+                                                                        // FONT SETTINGS
+                                                                        text-box: trim-both cap alphabetic;
+                                                                    }
                                                                 }
                                                             }
                                                         }
@@ -1988,6 +2053,8 @@
                                             border-radius: $GV-M-ROUNDING-ELEMENTS;
                                             // MARGINS & PADDINGS
                                             padding: 0 $GV-M-SIZES-SMALL;
+                                            // FONT SETTINGS
+                                            color: $PALETTE-BLACK;
                                             // TRANSITION
                                             transition: outline-width 0.06s;
 
@@ -2032,6 +2099,8 @@
                                             resize: none;
                                             // MARGINS & PADDINGS
                                             padding: $GV-M-SIZES-SMALL;
+                                            // FONT SETTINGS
+                                            color: $PALETTE-BLACK;
                                             // TRANSITION
                                             transition: outline-width 0.06s;
 
@@ -2527,6 +2596,12 @@
                             .T-CONTENT-heading {
                                 // FONT SETTINGS
                                 text-box: trim-both cap alphabetic;
+                            }
+                            .T-CONTENT-heading_alt {
+                                // FONT SETTINGS
+                                text-box: trim-both cap alphabetic;
+                                // MARGINS & PADDINGS
+                                margin-left: 0.3dvw;
                             }
                         }
                         .S-CONTENT-description {

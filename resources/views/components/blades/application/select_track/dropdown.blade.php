@@ -5,12 +5,99 @@
     />
 </div>
 <ul class="UL-TRACK-options UL-TRACK-options_{{ $color }}">
-    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }} LI-TRACK-option_default" data-value="-">(Отменить выбор)</li>
-    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="1">Технологии и Бизнес</li>
-    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="2">Корпорации и Индустрия</li>
-    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="3">Регионы и Территории</li>
-    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="4">Общество и Будущее</li>
-    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }}" data-value="5">Наука и Инженерия</li>
+    <li class="LI-TRACK-option LI-TRACK-option_{{ $color }} LI-TRACK-option_default" data-value="-">
+        <span class="T-TRACK-option">(Отменить выбор)</span>
+    </li>
+    {{--                                 --}}
+    {{--  Track 1 — Технологии и Бизнес  --}}
+    {{--                                 --}}
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="1"
+        text="Технологический прорыв"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="2"
+        text="Масштабирование смыслов"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="3"
+        text="Международная экспансия"
+    />
+    {{--                                    --}}
+    {{--  Track 2 — Корпорации и Индустрия  --}}
+    {{--                                    --}}
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="4"
+        text="Архитектор трансформации"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="5"
+        text="Индустриальный чемпион"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="6"
+        text="Кооперация ради суверенитета"
+    />
+    {{--                                  --}}
+    {{--  Track 3 — Регионы и Территории  --}}
+    {{--                                  --}}
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="7"
+        text="Строитель экосистемы"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="8"
+        text="Региональный прорыв"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="9"
+        text="Устойчивое развитие территории"
+    />
+    {{--                                --}}
+    {{--  Track 4 — Общество и Будущее  --}}
+    {{--                                --}}
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="10"
+        text="Технологии для жизни"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="11"
+        text="Визионер отрасли"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="12"
+        text="Наставник поколения"
+    />
+    {{--                               --}}
+    {{--  Track 5 — Наука и Инженерия  --}}
+    {{--                               --}}
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="13"
+        text="Академический предприниматель"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="14"
+        text="Инженерный прорыв"
+    />
+    <x-blades.application.select_track.li
+        color="{{ $color }}"
+        number="15"
+        text="Наставник инноваторов"
+    />
 </ul>
 <input
     class="S-TRACK-hidden-input"

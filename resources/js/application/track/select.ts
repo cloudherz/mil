@@ -59,8 +59,14 @@ function initApplicationTrackSelect() {
                 hiddenInput.dispatchEvent(new Event('change', { bubbles: true }));
                 // ⬆⬆⬆
 
-                optionsList.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
-                this.classList.add('selected');
+                optionsList.querySelectorAll('li').forEach(li => {
+                    li.classList.remove('LI-TRACK-option_selected');
+                    li.classList.remove('LI-TRACK-option_selected_blue');
+                    li.classList.remove('LI-TRACK-option_selected_green');
+                });
+
+                const color = (this as HTMLElement).dataset.color;
+                this.classList.add(color ? `LI-TRACK-option_selected_${color}` : 'LI-TRACK-option_selected');
 
                 optionsList.classList.remove('open');
                 select.classList.remove('open');

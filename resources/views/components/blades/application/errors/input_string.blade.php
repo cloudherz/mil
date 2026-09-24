@@ -4,6 +4,7 @@
             <div class="S-INPUT_STRING_ERROR-icon S-INPUT_STRING_ERROR-icon_{{ $color }}">
                 <x-svg.icons.alert
                     class="I-INPUT_STRING_ERROR-icon"
+                    style=""
                 />
             </div>
             <div class="S-INPUT_STRING_ERROR-message">
