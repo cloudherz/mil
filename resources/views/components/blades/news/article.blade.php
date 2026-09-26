@@ -1,11 +1,15 @@
-<div class="S-ARTICLES-article S-ARTICLES-article_{{ $number }}">
+<div class="S-ARTICLES-article">
     <div class="S-ARTICLE-wrapper">
         <div class="S-ARTICLE-carcass">
             <div class="S-ARTICLE-headline">
                 <h3 class="T-ARTICLE-headline TYPO-D-PRESET-CORE_H3">{!! $headline !!}</h3>
             </div>
             <div class="S-ARTICLE-text">
-                <p class="T-ARTICLE-text TYPO-D-PRESET-CORE_P">{!! $text !!}</p>
+                <div class="S-TEXT-wrapper">
+                    <div class="S-TEXT-carcass">
+                        <p class="T-ARTICLE-text TYPO-D-PRESET-CORE_P">{!! $text !!}</p>
+                    </div>
+                </div>
             </div>
             <div class="S-ARTICLE-bottom">
                 <div class="S-BOTTOM-wrapper">

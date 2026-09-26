@@ -4630,6 +4630,8 @@
     $LV-M-NEWS-BUTTON_SHADOW_OFFSET: $GV-M-SIZES-UNDER_SECTIONS / 1.4;
     $LV-M-NEWS-BUTTON_ICON_SIZE: 6.7dvw;
     $LV-M-NEWS-ARTICLE-INNER_PADDING: $GV-M-SIZES-DEFAULT * 1.6;
+    $LV-M-NEWS-TEXT_FADE-MARGIN: $GV-M-SIZES-DEFAULT * 1.5;
+    $LV-M-NEWS-FRESH-PADDING_TOP: 2.4dvw ;
     #news-m {
         // SCROLL
         scroll-margin-top: 0;
@@ -4730,13 +4732,50 @@
                                                     // CSS-GRID CONFIGURATION
                                                     grid-area: 2 / 1 / 3 / 2;
                                                     // SCALING
-                                                    height: 60dvw;
+                                                    height: 65dvw;
                                                     // MARGINS & PADDINGS
-                                                    padding: 0 $LV-M-NEWS-ARTICLE-INNER_PADDING $GV-M-FONT_SIZES-SMALL $LV-M-NEWS-ARTICLE-INNER_PADDING;
+                                                    margin: 0 $LV-M-NEWS-ARTICLE-INNER_PADDING ($LV-M-NEWS-FRESH-PADDING_TOP + $GV-M-SIZES-SMALL) $LV-M-NEWS-ARTICLE-INNER_PADDING;
+                                                    // OVERFLOW
+                                                    overflow-y: auto;
+                                                    overflow-x: hidden;
+                                                    // POSITIONING
+                                                    position: relative;
 
-                                                    .T-ARTICLE-text {
-                                                        // FONT SETTINGS
-                                                        text-box: trim-both cap alphabetic;
+                                                    &::after {
+                                                        // CONTENT
+                                                        content: "";
+                                                        // DISPLAY
+                                                        display: block;
+                                                        // POSITIONING
+                                                        position: sticky;
+                                                        bottom: -0.3dvw;
+                                                        left: 0;
+                                                        // SCALING
+                                                        width: 100%;
+                                                        height: $LV-M-NEWS-TEXT_FADE-MARGIN;
+                                                        // BACKGROUND
+                                                        background: linear-gradient(
+                                                                to bottom,
+                                                                $PALETTE-GLASS 0%,
+                                                                $PALETTE-SNOW 100%
+                                                        );
+                                                        // EVENTS
+                                                        pointer-events: none;
+                                                    }
+
+                                                    .S-TEXT-wrapper {
+                                                        // POSITIONING
+                                                        position: relative;
+
+                                                        .S-TEXT-carcass {
+                                                            // POSITIONING
+                                                            position: relative;
+
+                                                            .T-ARTICLE-text {
+                                                                // FONT SETTINGS
+                                                                text-box: trim-both cap alphabetic;
+                                                            }
+                                                        }
                                                     }
                                                 }
                                                 .S-ARTICLE-bottom {
@@ -4758,7 +4797,7 @@
                                                             // CSS-GRID CONFIGURATION
                                                             grid-area: 1 / 1 / 2 / 2;
                                                             // MARGINS & PADDINGS
-                                                            padding-bottom: $LV-M-NEWS-ARTICLE-INNER_PADDING;
+                                                            padding-bottom: $LV-M-NEWS-ARTICLE-INNER_PADDING * 1.03;
 
                                                             .T-BOTTOM-date {
                                                                 // FONT SETTINGS
@@ -4776,8 +4815,8 @@
                                                             // STREAMLINING
                                                             border-radius: $GV-M-ROUNDING-SMALL $GV-M-ROUNDING-SMALL 0 0;
                                                             // MARGINS & PADDINGS
-                                                            padding: 2.4dvw 2.6dvw 0 2.6dvw;
-                                                            margin-top: -2.4dvw;
+                                                            padding: $LV-M-NEWS-FRESH-PADDING_TOP ($LV-M-NEWS-FRESH-PADDING_TOP * 1.1) 0 ($LV-M-NEWS-FRESH-PADDING_TOP * 1.1);
+                                                            margin-top: -$LV-M-NEWS-FRESH-PADDING_TOP;
                                                             // SCALING
                                                             width: max-content;
 

@@ -2965,7 +2965,30 @@ br {
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text {
     grid-area: 2/1/3/2;
     height: 35vh;
-    padding: 0 3.5vh 1.485vh 3.5vh;
+    margin: 0 3.5vh 2.97vh 3.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text::after {
+    content: "";
+    display: block;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.9vh;
+    background: linear-gradient(to bottom, oklch(100% 0 0deg / 0) 0%, oklch(100% 0 0deg) 100%);
+    pointer-events: none;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass .T-ARTICLE-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom {
     grid-area: 3/1/4/2;
@@ -2981,7 +3004,10 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date {
     grid-area: 1/1/2/2;
-    padding-bottom: 3.5vh;
+    padding-bottom: 4.235vh;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date .T-BOTTOM-date {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh {
     display: flex;
@@ -2995,6 +3021,9 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass {
     color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass .T-FRESH-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-buttons {
     grid-area: 2/1/3/2;
@@ -5994,7 +6023,30 @@ br {
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text {
     grid-area: 2/1/3/2;
     height: 35vh;
-    padding: 0 3.5vh 1.485vh 3.5vh;
+    margin: 0 3.5vh 2.97vh 3.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text::after {
+    content: "";
+    display: block;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.9vh;
+    background: linear-gradient(to bottom, oklch(100% 0 0deg / 0) 0%, oklch(100% 0 0deg) 100%);
+    pointer-events: none;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass .T-ARTICLE-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom {
     grid-area: 3/1/4/2;
@@ -6010,7 +6062,10 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date {
     grid-area: 1/1/2/2;
-    padding-bottom: 3.5vh;
+    padding-bottom: 4.235vh;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date .T-BOTTOM-date {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh {
     display: flex;
@@ -6024,6 +6079,9 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass {
     color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass .T-FRESH-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-buttons {
     grid-area: 2/1/3/2;
@@ -9023,7 +9081,30 @@ br {
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text {
     grid-area: 2/1/3/2;
     height: 35vh;
-    padding: 0 3.5vh 1.485vh 3.5vh;
+    margin: 0 3.5vh 2.97vh 3.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text::after {
+    content: "";
+    display: block;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.9vh;
+    background: linear-gradient(to bottom, oklch(100% 0 0deg / 0) 0%, oklch(100% 0 0deg) 100%);
+    pointer-events: none;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass .T-ARTICLE-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom {
     grid-area: 3/1/4/2;
@@ -9039,7 +9120,10 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date {
     grid-area: 1/1/2/2;
-    padding-bottom: 3.5vh;
+    padding-bottom: 4.235vh;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date .T-BOTTOM-date {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh {
     display: flex;
@@ -9053,6 +9137,9 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass {
     color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass .T-FRESH-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-buttons {
     grid-area: 2/1/3/2;
@@ -12052,7 +12139,30 @@ br {
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text {
     grid-area: 2/1/3/2;
     height: 35vh;
-    padding: 0 3.5vh 1.485vh 3.5vh;
+    margin: 0 3.5vh 2.97vh 3.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text::after {
+    content: "";
+    display: block;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.9vh;
+    background: linear-gradient(to bottom, oklch(100% 0 0deg / 0) 0%, oklch(100% 0 0deg) 100%);
+    pointer-events: none;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass {
+    position: relative;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass .T-ARTICLE-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom {
     grid-area: 3/1/4/2;
@@ -12068,7 +12178,10 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date {
     grid-area: 1/1/2/2;
-    padding-bottom: 3.5vh;
+    padding-bottom: 4.235vh;
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date .T-BOTTOM-date {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh {
     display: flex;
@@ -12082,6 +12195,9 @@ br {
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass {
     color: oklch(100% 0 0deg);
+  }
+  .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-fresh .S-FRESH-carcass .T-FRESH-text {
+    text-box: trim-both cap alphabetic;
   }
   .S-DESKTOP-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-buttons {
     grid-area: 2/1/3/2;
@@ -15317,10 +15433,30 @@ br {
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text {
     grid-area: 2/1/3/2;
-    height: 60dvw;
-    padding: 0 8.32dvw 3.15dvw 8.32dvw;
+    height: 65dvw;
+    margin: 0 8.32dvw 5.8dvw 8.32dvw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
   }
-  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .T-ARTICLE-text {
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text::after {
+    content: "";
+    display: block;
+    position: sticky;
+    bottom: -0.3dvw;
+    left: 0;
+    width: 100%;
+    height: 7.8dvw;
+    background: linear-gradient(to bottom, oklch(100% 0 0deg / 0) 0%, oklch(100% 0 0deg) 100%);
+    pointer-events: none;
+  }
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper {
+    position: relative;
+  }
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass {
+    position: relative;
+  }
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass .T-ARTICLE-text {
     text-box: trim-both cap alphabetic;
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom {
@@ -15337,7 +15473,7 @@ br {
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date {
     grid-area: 1/1/2/2;
-    padding-bottom: 8.32dvw;
+    padding-bottom: 8.5696dvw;
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date .T-BOTTOM-date {
     text-box: trim-both cap alphabetic;
@@ -15348,7 +15484,7 @@ br {
     grid-area: 1/2/2/3;
     background-color: oklch(83.25% 0.1842 154.43deg);
     border-radius: 2.8dvw 2.8dvw 0 0;
-    padding: 2.4dvw 2.6dvw 0 2.6dvw;
+    padding: 2.4dvw 2.64dvw 0 2.64dvw;
     margin-top: -2.4dvw;
     width: max-content;
   }
@@ -18574,10 +18710,30 @@ br {
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text {
     grid-area: 2/1/3/2;
-    height: 60dvw;
-    padding: 0 8.32dvw 3.15dvw 8.32dvw;
+    height: 65dvw;
+    margin: 0 8.32dvw 5.8dvw 8.32dvw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
   }
-  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .T-ARTICLE-text {
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text::after {
+    content: "";
+    display: block;
+    position: sticky;
+    bottom: -0.3dvw;
+    left: 0;
+    width: 100%;
+    height: 7.8dvw;
+    background: linear-gradient(to bottom, oklch(100% 0 0deg / 0) 0%, oklch(100% 0 0deg) 100%);
+    pointer-events: none;
+  }
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper {
+    position: relative;
+  }
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass {
+    position: relative;
+  }
+  .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-text .S-TEXT-wrapper .S-TEXT-carcass .T-ARTICLE-text {
     text-box: trim-both cap alphabetic;
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom {
@@ -18594,7 +18750,7 @@ br {
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date {
     grid-area: 1/1/2/2;
-    padding-bottom: 8.32dvw;
+    padding-bottom: 8.5696dvw;
   }
   .S-MOBILE-main .S-MAIN-news .S-NEWS-wrapper .S-NEWS-carcass .S-NEWS-feed .S-FEED-carcass .S-FEED-articles .S-ARTICLES-wrapper .S-ARTICLES-carcass .S-ARTICLES-article .S-ARTICLE-carcass .S-ARTICLE-bottom .S-BOTTOM-carcass .S-BOTTOM-date .T-BOTTOM-date {
     text-box: trim-both cap alphabetic;
@@ -18605,7 +18761,7 @@ br {
     grid-area: 1/2/2/3;
     background-color: oklch(83.25% 0.1842 154.43deg);
     border-radius: 2.8dvw 2.8dvw 0 0;
-    padding: 2.4dvw 2.6dvw 0 2.6dvw;
+    padding: 2.4dvw 2.64dvw 0 2.64dvw;
     margin-top: -2.4dvw;
     width: max-content;
   }

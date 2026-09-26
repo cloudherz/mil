@@ -408,7 +408,7 @@
                                             background_transform="scale(190%) translateX(16%) translateY(71%) rotate(6deg)"
                                             heading="Корпорации и Индустрия"
                                             text="
-                                                <span>Для основателей, руководителей компаний и R&D, инженерных команд, запустивших новый промышленный продукт или производственную линию.</span>
+                                                <span>Для основателей, руководителей компаний, отделов и R£D, инженерных команд, запустивших новый пром. продукт или производственную линию.</span>
                                                 <span class='TYPO-D-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
                                                 <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Архитектор трансформации»</span>
@@ -429,7 +429,7 @@
                                             background_transform="scale(195%) translateX(-6%) translateY(64%) rotate(-7deg)"
                                             heading="Регионы и Территории"
                                             text="
-                                                <span>Для глав регионов, муниципалитетов, технопарков, ОЭЗ, ИНТЦ и фондов, построивших работающую инфраструктуру инноваций.</span>
+                                                <span>Для глав регионов, муниципалитетов, технопарков, ОЭЗ, ИНТЦ, ЦОД и фондов, построивших работающую инфраструктуру инноваций.</span>
                                                 <span class='TYPO-D-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
                                                 <span class='TYPO-D-PRESET-CORE_P_BOLD'>«Строитель экосистемы»</span>
@@ -813,41 +813,11 @@
                                         <div class="S-FEED-articles">
                                             <div class="S-ARTICLES-wrapper" id="LANDING-NEWS-ARTICLES-WRAPPER">
                                                 <div class="S-ARTICLES-carcass" id="LANDING-NEWS-ARTICLES-CARCASS">
-                                                    <x-blades.news.article
-                                                        fresh="yes"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.news.article
-                                                        fresh="yes"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.news.article
-                                                        fresh="no"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.news.article
-                                                        fresh="no"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.news.article
-                                                        fresh="no"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
+                                                    @if (view()->exists('components.open.news.feed_desktop'))
+                                                        @include('components.open.news.feed_desktop')
+                                                    @else
+                                                        @include('components.open.news.feed_missing')
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -1420,7 +1390,7 @@
                                             background_transform="scale(190%) translateX(16%) translateY(71%) rotate(6deg)"
                                             heading="Корпорации и Индустрия"
                                             text="
-                                                <span>Для основателей, руководителей компаний и R&D, инженерных команд, запустивших новый промышленный продукт или производственную линию.</span>
+                                                <span>Для основателей, руководителей компаний, отделов и R£D, инженерных команд, запустивших новый промышленный продукт или производственную линию.</span>
                                                 <span class='TYPO-M-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
                                                 <span class='TYPO-M-PRESET-CORE_P_BOLD'>«Архитектор трансформации»</span>
@@ -1441,7 +1411,7 @@
                                             background_transform="scale(195%) translateX(-6%) translateY(64%) rotate(-7deg)"
                                             heading="Регионы и Территории"
                                             text="
-                                                <span>Для глав регионов, муниципалитетов, технопарков, ОЭЗ, ИНТЦ и фондов, построивших работающую инфраструктуру инноваций.</span>
+                                                <span>Для глав регионов, муниципалитетов, технопарков, ОЭЗ, ИНТЦ, ЦОД и фондов, построивших работающую инфраструктуру инноваций.</span>
                                                 <span class='TYPO-M-PRESET-CORE_H3'>Номинации трека:</span>
                                                 <br>
                                                 <span class='TYPO-M-PRESET-CORE_P_BOLD'>«Строитель экосистемы»</span>
@@ -1833,41 +1803,11 @@
                                         <div class="S-FEED-articles">
                                             <div class="S-ARTICLES-wrapper" id="LANDING-MOBILE-NEWS-ARTICLES-WRAPPER">
                                                 <div class="S-ARTICLES-carcass" id="LANDING-MOBILE-NEWS-ARTICLES-CARCASS">
-                                                    <x-blades.mobile.news.article
-                                                        fresh="yes"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.mobile.news.article
-                                                        fresh="yes"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.mobile.news.article
-                                                        fresh="no"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.mobile.news.article
-                                                        fresh="no"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
-                                                    <x-blades.mobile.news.article
-                                                        fresh="no"
-                                                        number="1"
-                                                        date="14.08.2026"
-                                                        headline="Короткий заголовок новой новости"
-                                                        text="Субъектам РФ нужны готовые технологические команды под пилоты, но «мэтч» с ними происходит случайно."
-                                                    />
+                                                    @if (view()->exists('components.open.news.feed_mobile'))
+                                                        @include('components.open.news.feed_mobile')
+                                                    @else
+                                                        @include('components.open.news.feed_missing')
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

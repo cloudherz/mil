@@ -44,6 +44,37 @@ function initLandingNewsFeed() {
             return;
         }
 
+        // === BLOCK NATIVE TOUCH SCROLLING ===
+        // Отключаем горизонтальный свайп на тач-устройствах (только кнопки),
+        // но сохраняем вертикальный скролл внутри .S-ARTICLE-text.
+        wrapper.style.touchAction = 'pan-y';
+
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        wrapper.addEventListener('touchstart', function(e: TouchEvent) {
+            const t = e.touches[0];
+            if (!t) return;
+            touchStartX = t.clientX;
+            touchStartY = t.clientY;
+        }, { passive: true });
+
+        wrapper.addEventListener('touchmove', function(e: TouchEvent) {
+            if (!e.cancelable) return;
+
+            const t = e.touches[0];
+            if (!t) return;
+
+            const dx = Math.abs(t.clientX - touchStartX);
+            const dy = Math.abs(t.clientY - touchStartY);
+
+            // Вертикальный жест — не трогаем (нужен для скролла текста)
+            if (dy > dx) return;
+
+            // Горизонтальный жест — блокируем
+            e.preventDefault();
+        }, { passive: false });
+
         // === CALCULATE ARTICLE WIDTH (including gap) ===
         let articleWidth = 0;
         let gap = 0;
@@ -136,77 +167,6 @@ function initLandingNewsFeed() {
             }
         }
 
-        // === DRAG TO SCROLL ===
-        let isDragging = false;
-        let startX = 0;
-        let scrollLeft = 0;
-        let hasMoved = false;
-
-        wrapper.addEventListener('mousedown', function(e: MouseEvent) {
-            isDragging = true;
-            hasMoved = false;
-            startX = e.pageX - wrapper.offsetLeft;
-            scrollLeft = wrapper.scrollLeft;
-            wrapper.style.cursor = 'grabbing';
-            wrapper.style.userSelect = 'none';
-        });
-
-        document.addEventListener('mousemove', function(e: MouseEvent) {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - wrapper.offsetLeft;
-            const walk = (x - startX) * 1.5;
-            wrapper.scrollLeft = scrollLeft - walk;
-            if (Math.abs(walk) > 3) hasMoved = true;
-        });
-
-        document.addEventListener('mouseup', function() {
-            if (isDragging) {
-                isDragging = false;
-                wrapper.style.cursor = 'grab';
-                wrapper.style.userSelect = '';
-
-                if (hasMoved) {
-                    snapToNearestArticle();
-                }
-            }
-        });
-
-        // === SNAP TO NEAREST ARTICLE ===
-        function snapToNearestArticle() {
-            if (articleWidth === 0) return;
-            const currentScroll = wrapper.scrollLeft;
-            const nearestIndex = Math.round(currentScroll / articleWidth);
-            const maxIndex = Math.max(0, totalArticles - visibleCount);
-            const snapIndex = Math.min(nearestIndex, maxIndex);
-            scrollToArticle(snapIndex, true);
-        }
-
-        // === TOUCH SUPPORT ===
-        let touchStartX = 0;
-        let touchScrollLeft = 0;
-        let isTouching = false;
-
-        wrapper.addEventListener('touchstart', function(e: TouchEvent) {
-            isTouching = true;
-            touchStartX = e.touches[0].pageX - wrapper.offsetLeft;
-            touchScrollLeft = wrapper.scrollLeft;
-        }, { passive: true });
-
-        wrapper.addEventListener('touchmove', function(e: TouchEvent) {
-            if (!isTouching) return;
-            const x = e.touches[0].pageX - wrapper.offsetLeft;
-            const walk = (x - touchStartX) * 1.5;
-            wrapper.scrollLeft = touchScrollLeft - walk;
-        }, { passive: true });
-
-        wrapper.addEventListener('touchend', function() {
-            if (isTouching) {
-                isTouching = false;
-                snapToNearestArticle();
-            }
-        });
-
         // === RE-CALCULATE ON RESIZE ===
         let resizeTimeout: number | undefined;
         window.addEventListener('resize', function() {
@@ -223,7 +183,6 @@ function initLandingNewsFeed() {
             wrapper.scrollLeft = 0;
             currentIndex = 0;
             updateButtons();
-            wrapper.style.cursor = 'grab';
         }
 
         setTimeout(init, 50);

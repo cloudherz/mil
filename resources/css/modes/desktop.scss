@@ -4249,6 +4249,7 @@
     $LV-D-NEWS-BUTTON_SIZE: 7vh;
     $LV-D-NEWS-BUTTON_SHADOW_OFFSET: $GV-D-SIZES-UNDER_SECTIONS / 1.4;
     $LV-D-NEWS-BUTTON_ICON_SIZE: 3vh;
+    $LV-D-NEWS-TEXT_FADE-MARGIN: $GV-D-SIZES-SMALL;
     #news {
         // SCROLL
         scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT);
@@ -4350,8 +4351,50 @@
                                                     // SCALING
                                                     height: 35vh;
                                                     // MARGINS & PADDINGS
-                                                    padding: 0 $GV-D-SIZES-DEFAULT $GV-D-FONT_SIZES-SMALL $GV-D-SIZES-DEFAULT;
+                                                    margin: 0 $GV-D-SIZES-DEFAULT ($GV-D-FONT_SIZES-SMALL * 2) $GV-D-SIZES-DEFAULT;
+                                                    // OVERFLOW
+                                                    overflow-y: auto;
+                                                    overflow-x: hidden;
+                                                    // POSITIONING
+                                                    position: relative;
+
+                                                    &::after {
+                                                        // CONTENT
+                                                        content: "";
+                                                        // DISPLAY
+                                                        display: block;
+                                                        // POSITIONING
+                                                        position: sticky;
+                                                        bottom: 0;
+                                                        left: 0;
+                                                        // SCALING
+                                                        width: 100%;
+                                                        height: $LV-D-NEWS-TEXT_FADE-MARGIN;
+                                                        // BACKGROUND
+                                                        background: linear-gradient(
+                                                                to bottom,
+                                                                $PALETTE-GLASS 0%,
+                                                                $PALETTE-SNOW 100%
+                                                        );
+                                                        // EVENTS
+                                                        pointer-events: none;
+                                                    }
+                                                    .S-TEXT-wrapper {
+                                                        // POSITIONING
+                                                        position: relative;
+
+                                                        .S-TEXT-carcass {
+                                                            // POSITIONING
+                                                            position: relative;
+
+                                                            .T-ARTICLE-text {
+                                                                // FONT SETTINGS
+                                                                text-box: trim-both cap alphabetic;
+                                                            }
+                                                        }
+                                                    }
                                                 }
+
                                                 .S-ARTICLE-bottom {
                                                     // CSS-GRID CONFIGURATION
                                                     grid-area: 3 / 1 / 4 / 2;
@@ -4371,7 +4414,12 @@
                                                             // CSS-GRID CONFIGURATION
                                                             grid-area: 1 / 1 / 2 / 2;
                                                             // MARGINS & PADDINGS
-                                                            padding-bottom: $GV-D-SIZES-DEFAULT;
+                                                            padding-bottom: $GV-D-SIZES-DEFAULT * 1.21;
+
+                                                            .T-BOTTOM-date {
+                                                                // FONT SETTINGS
+                                                                text-box: trim-both cap alphabetic;
+                                                            }
                                                         }
                                                         .S-BOTTOM-fresh {
                                                             // FLEXBOX
@@ -4392,6 +4440,11 @@
                                                             .S-FRESH-carcass {
                                                                 // FONT SETTINGS
                                                                 color: $PALETTE-SNOW;
+
+                                                                .T-FRESH-text {
+                                                                    // FONT SETTINGS
+                                                                    text-box: trim-both cap alphabetic;
+                                                                }
                                                             }
                                                         }
                                                     }
