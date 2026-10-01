@@ -1514,6 +1514,9 @@
                                             grid-row-gap: 0;
 
                                             .S-CONFIRMATION-checkbox {
+                                                // FLEXBOX
+                                                display: flex;
+                                                align-items: center;
                                                 // CSS-GRID CONFIGURATION
                                                 grid-area: 1 / 1 / 2 / 2;
 

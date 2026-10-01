@@ -749,9 +749,9 @@
                                         <x-blades.jury.card
                                             number="6"
                                             color="green"
-                                            name="Лейбинен Снежана Александровна"
-                                            title='Председатель Гильдии предпринимателей Турочагского района Ресублики Алтай'
-                                            portrait="images/people/optimized/leybinen_snezhana_alexandrovna-portrait-01.webp"
+                                            name="Липина Светлана Артуровна"
+                                            title='Заместитель председателя СОПС ВАВТ Минэкономразвития РФ'
+                                            portrait="images/people/optimized/lipina_svetlana_arturovna-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
                                             number="7"
@@ -791,9 +791,9 @@
                                         <x-blades.jury.card
                                             number="12"
                                             color="green"
-                                            name="Липина Светлана Артуровна"
-                                            title='Заместитель председателя СОПС ВАВТ Минэкономразвития РФ'
-                                            portrait="images/people/optimized/lipina_svetlana_arturovna-portrait-01.webp"
+                                            name="Лейбинен Снежана Александровна"
+                                            title='Председатель Гильдии предпринимателей Турочагского района Ресублики Алтай'
+                                            portrait="images/people/optimized/leybinen_snezhana_alexandrovna-portrait-01.webp"
                                         />
                                     </div>
                                 </div>
@@ -1739,9 +1739,9 @@
                                         <x-blades.mobile.jury.card
                                             number="6"
                                             color="green"
-                                            name="Лейбинен Снежана Александровна"
-                                            title='Председатель Гильдии предпринимателей<br>Турочагского района Ресублики Алтай'
-                                            portrait="images/people/optimized/leybinen_snezhana_alexandrovna-portrait-01.webp"
+                                            name="Липина Светлана Артуровна"
+                                            title='Заместитель председателя<br>СОПС ВАВТ Минэкономразвития РФ'
+                                            portrait="images/people/optimized/lipina_svetlana_arturovna-portrait-01.webp"
                                         />
                                         <x-blades.mobile.jury.card
                                             number="7"
@@ -1781,9 +1781,9 @@
                                         <x-blades.mobile.jury.card
                                             number="12"
                                             color="green"
-                                            name="Липина Светлана Артуровна"
-                                            title='Заместитель председателя<br>СОПС ВАВТ Минэкономразвития РФ'
-                                            portrait="images/people/optimized/lipina_svetlana_arturovna-portrait-01.webp"
+                                            name="Лейбинен Снежана Александровна"
+                                            title='Председатель Гильдии предпринимателей<br>Турочагского района Ресублики Алтай'
+                                            portrait="images/people/optimized/leybinen_snezhana_alexandrovna-portrait-01.webp"
                                         />
                                     </div>
                                 </div>

@@ -1199,6 +1199,8 @@ br {
     grid-row-gap: 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper {
@@ -4257,6 +4259,8 @@ br {
     grid-row-gap: 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper {
@@ -7315,6 +7319,8 @@ br {
     grid-row-gap: 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper {
@@ -10373,6 +10379,8 @@ br {
     grid-row-gap: 0;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox {
+    display: flex;
+    align-items: center;
     grid-area: 1/1/2/2;
   }
   .S-DESKTOP-application .S-APPLICATION-wrapper .S-APPLICATION-carcass .S-APPLICATION-form .S-FORM-wrapper .S-FORM-carcass .S-FORM-content .S-CONTENT-carcass .S-CONTENT-confirmation .S-CONFIRMATION-carcass .S-CONFIRMATION-checkbox .S-CHECKBOX-wrapper {
