@@ -715,7 +715,7 @@
                                             number="1"
                                             color="blue"
                                             name="Шичкина Марина Ивановна"
-                                            title='Генеральный директор НП «Росссийская ассоциация инновационного развития»'
+                                            title='Генеральный директор НП «Российская ассоциация инновационного развития»'
                                             portrait="images/people/optimized/shichkina_marina_ivanovna-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
@@ -907,6 +907,7 @@
                             <div class="S-LINKS-main TYPO-D-PRESET-CORE_P">
                                 <a class="L-LINKS-main" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">Сайт РАИР</a>
                                 <a class="L-LINKS-main" href="mailto:org@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
+                                <a class="L-LINKS-main" href="tel:+79251381254">+7 (925) 138-12-54</a>
                             </div>
                             <div class="S-LINKS-socials">
                                 <a class="L-LINKS-socials" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
@@ -1705,7 +1706,7 @@
                                             number="1"
                                             color="blue"
                                             name="Шичкина Марина Ивановна"
-                                            title='Генеральный директор НП «Росссийская<br>ассоциация инновационного развития»'
+                                            title='Генеральный директор НП «Российская<br>ассоциация инновационного развития»'
                                             portrait="images/people/optimized/shichkina_marina_ivanovna-portrait-01.webp"
                                         />
                                         <x-blades.mobile.jury.card
@@ -1885,6 +1886,7 @@
                             <div class="S-LEFT-links TYPO-M-PRESET-CORE_P">
                                 <a class="L-LEFT-links" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">Сайт РАИР</a>
                                 <a class="L-LEFT-links" href="mailto:org@rair-info.ru">По всем вопросам:<br>org@rair-info.ru</a>
+                                <a class="L-LEFT-links" href="tel:+79251381254">+7 (925) 138-12-54</a>
                             </div>
                             <div class="S-LEFT-docs TYPO-M-PRESET-CORE_SMALL">
                                 <a class="L-LEFT-docs" href="{{ asset('docs/public_offer.pdf') }}" target="_blank" rel="noopener noreferrer">Публичная оферта</a>
