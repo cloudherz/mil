@@ -750,7 +750,7 @@
                                             number="6"
                                             color="green"
                                             name="Липина Светлана Артуровна"
-                                            title='Заместитель председателя СОПС ВАВТ Минэкономразвития РФ'
+                                            title='Заместитель председателя СОПС ВАВТ Минэкономразвития РФ, Доктор экономических наук'
                                             portrait="images/people/optimized/lipina_svetlana_arturovna-portrait-01.webp"
                                         />
                                         <x-blades.jury.card
@@ -910,7 +910,7 @@
                                 <a class="L-LINKS-main" href="tel:+79251381254">+7 (925) 138-12-54</a>
                             </div>
                             <div class="S-LINKS-socials">
-                                <a class="L-LINKS-socials" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
+                                <a class="L-LINKS-socials" href="https://t.me/milpremia" rel="noopener noreferrer" target="_blank">
                                     <x-svg.icons.socials.telegram
                                         class="I-LINKS-socials"
                                         style="width: 3.55vh;"
@@ -1741,7 +1741,7 @@
                                             number="6"
                                             color="green"
                                             name="Липина Светлана Артуровна"
-                                            title='Заместитель председателя<br>СОПС ВАВТ Минэкономразвития РФ'
+                                            title='Заместитель председателя<br>СОПС ВАВТ Минэкономразвития РФ,<br>Доктор экономических наук'
                                             portrait="images/people/optimized/lipina_svetlana_arturovna-portrait-01.webp"
                                         />
                                         <x-blades.mobile.jury.card
