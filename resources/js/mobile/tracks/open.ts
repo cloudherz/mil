@@ -6,8 +6,19 @@ function initLandingMobileTracksOpen() {
             const text = document.getElementById(`${card.id}-CONTENT-TEXT`);
             if (!text) return;
 
+            const heading = card.querySelector<HTMLElement>('.I-CONTENT-heading');
+            const isOpening = text.classList.contains('S-CONTENT-text_closed');
+
             text.classList.toggle('S-CONTENT-text_closed');
             text.classList.toggle('S-CONTENT-text_opened');
+
+            if (heading) {
+                if (isOpening) {
+                    heading.classList.add('I-CONTENT-heading_opened');
+                } else {
+                    heading.classList.remove('I-CONTENT-heading_opened');
+                }
+            }
         });
     });
 }

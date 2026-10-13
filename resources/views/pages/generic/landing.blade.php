@@ -1904,6 +1904,20 @@
                                 />
                                 <p class="T-RIGHT-mil TYPO-M-PRESET-CORE_H4">МОЛОДЫЕ<br>ИННОВАЦИОННЫЕ<br>ЛИДЕРЫ</p>
                             </div>
+                            <div class="S-RIGHT-socials">
+                                <a class="L-RIGHT-socials" href="https://t.me/milpremia" rel="noopener noreferrer" target="_blank">
+                                    <x-svg.icons.socials.telegram
+                                        class="I-RIGHT-socials"
+                                        style="width: 7dvw;"
+                                    />
+                                </a>
+                                <a class="L-RIGHT-socials" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
+                                    <x-svg.icons.socials.vk
+                                        class="I-RIGHT-socials"
+                                        style="width: 7.36dvw;"
+                                    />
+                                </a>
+                            </div>
                             <div class="S-RIGHT-credit">
                                 <p class="T-RIGHT-credit TYPO-M-PRESET-CORE_SMALL">© Все права защищены</p>
                             </div>

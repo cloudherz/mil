@@ -14507,8 +14507,26 @@ br {
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.872dvw;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.111dvw;
+    margin-bottom: 0.832dvw;
     text-align: center;
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading_blue {
+    fill: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading_green {
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading_opened {
+    rotate: 180deg;
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading {
+    display: flex;
+    width: 2.7vh;
+    rotate: 0;
+    transition: rotate 0.2s;
   }
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_blue {
     color: oklch(63.85% 0.1954 257.48deg);
@@ -14531,7 +14549,7 @@ br {
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text {
     display: flex;
     flex-direction: column;
-    margin-top: 3.328dvw;
+    margin-top: 4.368dvw;
   }
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text .TYPO-M-PRESET-CORE_H3 {
     text-align: center;
@@ -15692,7 +15710,7 @@ br {
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr max-content;
+    grid-template-rows: 1fr repeat(2, max-content);
     grid-column-gap: 0;
     grid-row-gap: 0;
     height: 100%;
@@ -15700,7 +15718,7 @@ br {
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-mil {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     grid-area: 1/1/2/2;
     width: 38.7dvw;
     gap: 2.38dvw;
@@ -15715,13 +15733,28 @@ br {
     text-box: trim-both cap alphabetic;
     color: oklch(100% 0 0deg);
   }
+  .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3.06dvw;
+    margin-bottom: 4.25dvw;
+    grid-area: 2/1/3/2;
+  }
+  .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-socials .L-RIGHT-socials {
+    display: flex;
+  }
+  .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-socials .L-RIGHT-socials .I-RIGHT-socials {
+    display: flex;
+    fill: oklch(100% 0 0deg);
+  }
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-credit {
     display: flex;
     flex-direction: column;
-    grid-area: 2/1/3/2;
+    grid-area: 3/1/4/2;
     gap: 4.25dvw;
   }
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-credit .T-RIGHT-credit {
+    text-align: right;
     text-box: trim-both cap alphabetic;
     color: oklch(74.07% 0.1354 256.19deg);
   }
@@ -17784,8 +17817,26 @@ br {
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.872dvw;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.111dvw;
+    margin-bottom: 0.832dvw;
     text-align: center;
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading_blue {
+    fill: oklch(63.85% 0.1954 257.48deg);
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading_green {
+    fill: oklch(60.51% 0.1384 159.32deg);
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading_opened {
+    rotate: 180deg;
+  }
+  .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .I-CONTENT-heading {
+    display: flex;
+    width: 2.7vh;
+    rotate: 0;
+    transition: rotate 0.2s;
   }
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-heading .T-CONTENT-heading_blue {
     color: oklch(63.85% 0.1954 257.48deg);
@@ -17808,7 +17859,7 @@ br {
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text {
     display: flex;
     flex-direction: column;
-    margin-top: 3.328dvw;
+    margin-top: 4.368dvw;
   }
   .S-MOBILE-main .S-MAIN-tracks .S-TRACKS-wrapper .S-TRACKS-carcass .S-TRACKS-cards .S-CARDS-carcass .S-CARDS-card .S-CARD-wrapper .S-CARD-carcass .S-CARD-content .S-CONTENT-carcass .S-CONTENT-text .T-CONTENT-text .TYPO-M-PRESET-CORE_H3 {
     text-align: center;
@@ -18969,7 +19020,7 @@ br {
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr max-content;
+    grid-template-rows: 1fr repeat(2, max-content);
     grid-column-gap: 0;
     grid-row-gap: 0;
     height: 100%;
@@ -18977,7 +19028,7 @@ br {
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-mil {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     grid-area: 1/1/2/2;
     width: 38.7dvw;
     gap: 2.38dvw;
@@ -18992,13 +19043,28 @@ br {
     text-box: trim-both cap alphabetic;
     color: oklch(100% 0 0deg);
   }
+  .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3.06dvw;
+    margin-bottom: 4.25dvw;
+    grid-area: 2/1/3/2;
+  }
+  .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-socials .L-RIGHT-socials {
+    display: flex;
+  }
+  .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-socials .L-RIGHT-socials .I-RIGHT-socials {
+    display: flex;
+    fill: oklch(100% 0 0deg);
+  }
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-credit {
     display: flex;
     flex-direction: column;
-    grid-area: 2/1/3/2;
+    grid-area: 3/1/4/2;
     gap: 4.25dvw;
   }
   .S-MOBILE-footer .S-FOOTER-wrapper .S-FOOTER-carcass .S-FOOTER-right .S-RIGHT-wrapper .S-RIGHT-carcass .S-RIGHT-credit .T-RIGHT-credit {
+    text-align: right;
     text-box: trim-both cap alphabetic;
     color: oklch(74.07% 0.1354 256.19deg);
   }

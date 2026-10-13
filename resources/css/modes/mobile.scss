@@ -3067,7 +3067,7 @@
     // CHUNK:TRACKS
     // LOCAL VARIABLES NAME = TRACKS
     $LV-M-TRACKS-CARDS_GAP: $GV-M-SIZES-DEFAULT;
-    $LV-M-TRACKS-CARD-MARGIN_SPLIT-HEADING: $GV-M-SIZES-DEFAULT * 0.36;
+    $LV-M-TRACKS-CARD-MARGIN_SPLIT-HEADING: $GV-M-SIZES-DEFAULT * 0.16;
     $LV-M-TRACKS-CARD-MARGIN_SPLIT-TEXT: $GV-M-SIZES-DEFAULT - $LV-M-TRACKS-CARD-MARGIN_SPLIT-HEADING;
     #tracks-m {
         // SCROLL
@@ -3231,10 +3231,36 @@
                                                     // FLEXBOX
                                                     display: flex;
                                                     justify-content: center;
+                                                    flex-direction: column;
+                                                    align-items: center;
                                                     // MARGINS & PADDINGS
+                                                    gap: $GV-M-SIZES-SMALL * 0.915;
                                                     margin-bottom: $LV-M-TRACKS-CARD-MARGIN_SPLIT-HEADING;
                                                     // FONT SETTINGS
                                                     text-align: center;
+
+                                                    .I-CONTENT-heading_blue {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_BLUE;
+                                                    }
+                                                    .I-CONTENT-heading_green {
+                                                        // FILL
+                                                        fill: $PALETTE-DARK_GREEN;
+                                                    }
+                                                    .I-CONTENT-heading_opened {
+                                                        // TRANSFORM
+                                                        rotate: 180deg;
+                                                    }
+                                                    .I-CONTENT-heading {
+                                                        // FLEXBOX
+                                                        display: flex;
+                                                        // SCALING
+                                                        width: 2.7vh;
+                                                        // TRANSFORM
+                                                        rotate: 0;
+                                                        // TRANSITION
+                                                        transition: rotate 0.2s;
+                                                    }
 
                                                     .T-CONTENT-heading_blue {
                                                         // FONT SETTINGS
@@ -5157,7 +5183,7 @@
                             // CSS-GRID SETUP
                             display: grid;
                             grid-template-columns: 1fr;
-                            grid-template-rows: 1fr max-content;
+                            grid-template-rows: 1fr repeat(2, max-content);
                             grid-column-gap: 0;
                             grid-row-gap: 0;
                             // SCALING
@@ -5167,7 +5193,7 @@
                                 // FLEXBOX
                                 display: flex;
                                 flex-direction: column;
-                                align-items: flex-start;
+                                align-items: flex-end;
                                 // CSS-GRID CONFIGURATION
                                 grid-area: 1 / 1 / 2 / 2;
                                 // SCALING
@@ -5190,17 +5216,40 @@
                                     color: $PALETTE-SNOW;
                                 }
                             }
+                            .S-RIGHT-socials {
+                                // FLEXBOX
+                                display: flex;
+                                justify-content: flex-end;
+                                // MARGINS & PADDINGS
+                                gap: $GV-M-SIZES-SMALL * 0.9;
+                                margin-bottom: $LV-M-FOOTER-TEXT_LINKS-GAP;
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 2 / 1 / 3 / 2;
+
+                                .L-RIGHT-socials {
+                                    // FLEXBOX
+                                    display: flex;
+
+                                    .I-RIGHT-socials {
+                                        // FLEXBOX
+                                        display: flex;
+                                        // FILL
+                                        fill: $PALETTE-SNOW;
+                                    }
+                                }
+                            }
                             .S-RIGHT-credit {
                                 // FLEXBOX
                                 display: flex;
                                 flex-direction: column;
                                 // CSS-GRID CONFIGURATION
-                                grid-area: 2 / 1 / 3 / 2;
+                                grid-area: 3 / 1 / 4 / 2;
                                 // MARGINS & PADDINGS
                                 gap: $LV-M-FOOTER-TEXT_LINKS-GAP;
 
                                 .T-RIGHT-credit {
                                     // FONT SETTINGS
+                                    text-align: right;
                                     text-box: trim-both cap alphabetic;
                                     color: $PALETTE-DARK_BLUE_PALE;
                                 }

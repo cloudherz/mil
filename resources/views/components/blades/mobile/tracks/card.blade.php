@@ -21,6 +21,10 @@
                         </div>
                         <div class="S-CONTENT-heading">
                             <h3 class="T-CONTENT-heading T-CONTENT-heading_{{ $color }} TYPO-M-PRESET-CORE_H3">{!! $heading !!}</h3>
+                            <x-svg.icons.dropdown
+                                class="I-CONTENT-heading I-CONTENT-heading_{{ $color }}"
+                                style=""
+                            />
                         </div>
                         <div class="S-CONTENT-text S-CONTENT-text_closed" id="LANDING-MOBILE-TRACKS-CARD_{{ $number }}-CONTENT-TEXT">
                             <p class="T-CONTENT-text TYPO-M-PRESET-CORE_P">{!! $text !!}</p>
