@@ -507,31 +507,31 @@
                                         <x-blades.dates.column
                                             number="1"
                                             date="25 Сентября, 2026"
-                                            description="Старт премии. Начало приема заявок."
+                                            description="Старт премии.<br>Начало приема заявок."
                                             state="present"
                                         />
                                         <x-blades.dates.column
                                             number="2"
-                                            date="10 Ноября, 2026"
-                                            description="Верификация. Формирование списка номинантов."
+                                            date="25 Ноября, 2026"
+                                            description="Завершение приема заявок. Верификация. Формирование списка номинантов."
                                             state="future"
                                         />
                                         <x-blades.dates.column
                                             number="3"
                                             date="25 Декабря, 2026"
-                                            description="Независимая экспертная оценка жюри и выставление баллов по критериям."
+                                            description="Независимая экспертная оценка жюри<br>и выставление баллов<br>по критериям."
                                             state="future"
                                         />
                                         <x-blades.dates.column
                                             number="4"
                                             date="15 Января, 2027"
-                                            description="Отбор финалистов по каждой номинации. Объявление шорт-листа."
+                                            description="Отбор финалистов<br>по каждой номинации. Объявление шорт-листа."
                                             state="future"
                                         />
                                         <x-blades.dates.column
                                             number="5"
-                                            date="Март, 2027"
-                                            description="Защита проектов. Торжественное награждение финалистов."
+                                            date="25 Марта, 2027"
+                                            description="Церемония награждения<br>в Конгресс-центре<br>МГТУ им. Н.Э. Баумана."
                                             state="future"
                                         />
                                         <x-blades.dates.side
@@ -1489,31 +1489,31 @@
                                         <x-blades.mobile.dates.shelf
                                             number="1"
                                             date="25 Сентября, 2026"
-                                            description="Старт премии. Начало приема заявок."
+                                            description="Старт премии.<br>Начало приема заявок."
                                             state="present"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="2"
-                                            date="10 Ноября, 2026"
-                                            description="Верификация. Формирование списка номинантов."
+                                            date="25 Ноября, 2026"
+                                            description="Завершение приема заявок. Верификация. Формирование списка номинантов."
                                             state="future"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="3"
                                             date="25 Декабря, 2026"
-                                            description="Независимая экспертная оценка жюри и выставление баллов по критериям."
+                                            description="Независимая экспертная оценка жюри и выставление баллов<br>по критериям."
                                             state="future"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="4"
                                             date="15 Января, 2027"
-                                            description="Отбор финалистов по каждой номинации. Объявление шорт-листа."
+                                            description="Отбор финалистов по каждой номинации. Объявление<br>шорт-листа."
                                             state="future"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="5"
-                                            date="Март, 2027"
-                                            description="Защита проектов. Торжественное награждение финалистов."
+                                            date="25 Марта, 2027"
+                                            description="Церемония награждения<br>в Конгресс-центре МГТУ<br>им. Н.Э. Баумана."
                                             state="future"
                                         />
                                         <x-blades.mobile.dates.lid

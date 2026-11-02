@@ -3515,8 +3515,13 @@
                                                         // FLEXBOX
                                                         display: flex;
                                                         align-items: flex-end;
+                                                        // SCALING
+                                                        width: 100%;
 
                                                         .S-CONTENT-shift {
+                                                            // SCALING
+                                                            width: 100%;
+
                                                             .S-SHIFT-wrapper {
                                                                 // MARGINS & PADDINGS
                                                                 margin-bottom: calc($LV-M-DATES-SHELVES_GAP);

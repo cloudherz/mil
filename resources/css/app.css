@@ -14678,6 +14678,10 @@ br {
   .S-MOBILE-main .S-MAIN-dates .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-wrapper .S-WIDGET-carcass .S-WIDGET-shelf .S-SHELF-wrapper .S-SHELF-carcass .S-SHELF-content .S-CONTENT-wrapper .S-CONTENT-carcass {
     display: flex;
     align-items: flex-end;
+    width: 100%;
+  }
+  .S-MOBILE-main .S-MAIN-dates .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-wrapper .S-WIDGET-carcass .S-WIDGET-shelf .S-SHELF-wrapper .S-SHELF-carcass .S-SHELF-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-shift {
+    width: 100%;
   }
   .S-MOBILE-main .S-MAIN-dates .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-wrapper .S-WIDGET-carcass .S-WIDGET-shelf .S-SHELF-wrapper .S-SHELF-carcass .S-SHELF-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-shift .S-SHIFT-wrapper {
     margin-bottom: 3.8dvw;
@@ -17988,6 +17992,10 @@ br {
   .S-MOBILE-main .S-MAIN-dates .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-wrapper .S-WIDGET-carcass .S-WIDGET-shelf .S-SHELF-wrapper .S-SHELF-carcass .S-SHELF-content .S-CONTENT-wrapper .S-CONTENT-carcass {
     display: flex;
     align-items: flex-end;
+    width: 100%;
+  }
+  .S-MOBILE-main .S-MAIN-dates .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-wrapper .S-WIDGET-carcass .S-WIDGET-shelf .S-SHELF-wrapper .S-SHELF-carcass .S-SHELF-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-shift {
+    width: 100%;
   }
   .S-MOBILE-main .S-MAIN-dates .S-DATES-wrapper .S-DATES-carcass .S-DATES-widget .S-WIDGET-wrapper .S-WIDGET-carcass .S-WIDGET-shelf .S-SHELF-wrapper .S-SHELF-carcass .S-SHELF-content .S-CONTENT-wrapper .S-CONTENT-carcass .S-CONTENT-shift .S-SHIFT-wrapper {
     margin-bottom: 3.8dvw;
