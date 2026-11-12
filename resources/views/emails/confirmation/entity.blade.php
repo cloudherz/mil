@@ -16,6 +16,6 @@
     <p><strong>Номинация 1:</strong> {{ $track1 ?? 'Не указана' }}</p>
     <p><strong>Номинация 2:</strong> {{ $track2 ?? 'Не указана' }}</p>
     <p><strong>Номинация 3:</strong> {{ $track3 ?? 'Не указана' }}</p>
-    <p><strong>Описание проекта:</strong> {{ $description ?? 'Не указано' }}</p>
+    <p><strong>Описание проекта:</strong> {!! nl2br(e($description)) ?? 'Не указано' !!}</p>
 </body>
 </html>

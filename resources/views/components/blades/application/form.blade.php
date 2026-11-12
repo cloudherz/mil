@@ -287,7 +287,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="S-CONTENT-confirmation">
+                    <div class="S-CONTENT-confirmation S-CONTENT-confirmation_1">
                         <div class="S-CONFIRMATION-wrapper">
                             <div class="S-CONFIRMATION-carcass">
                                 <div class="S-CONFIRMATION-checkbox">
@@ -310,8 +310,35 @@
                                 <div class="S-CONFIRMATION-text">
                                     <p class="T-CONFIRMATION-text TYPO-D-PRESET-CORE_P">
                                         Даю согласие на обработку своих персональных данных (имя, фамилия, отчество, почта)<br>
-                                        в соответствии с требованиями Федерального закона №152-ФЗ от 27.07.2006 и соглашаюсь<br>
-                                        с условиями публичной оферты.
+                                        в соответствии с требованиями Федерального закона №152-ФЗ от 27.07.2006.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="S-CONTENT-confirmation S-CONTENT-confirmation_2">
+                        <div class="S-CONFIRMATION-wrapper">
+                            <div class="S-CONFIRMATION-carcass">
+                                <div class="S-CONFIRMATION-checkbox">
+                                    <div class="S-CHECKBOX-wrapper">
+                                        <div class="S-CHECKBOX-carcass">
+                                            <input
+                                                class="IN-CHECKBOX-input"
+                                                type="checkbox"
+                                                id="confirmation_offer_{{ $type }}"
+                                                name="confirmation_offer_{{ $type }}"
+                                            />
+                                            <div class="S-CHECKBOX-box">
+                                                <x-svg.icons.check
+                                                    class="I-CHECKBOX-icon"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="S-CONFIRMATION-text">
+                                    <p class="T-CONFIRMATION-text TYPO-D-PRESET-CORE_P">
+                                        Соглашаюсь с условиями <a class="L-CONFIRMATION-text TYPO-D-PRESET-CORE_P_BOLD" href="{{ asset('docs/public_offer.pdf') }}" target="_blank" rel="noopener noreferrer">публичной оферты</a>.
                                     </p>
                                 </div>
                             </div>

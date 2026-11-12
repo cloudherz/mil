@@ -268,9 +268,11 @@
                                         </div>
                                         <div class="S-CONTENT-rair">
                                             <h2 class="TYPO-D-PRESET-HERO_DESCRIPTION">премия Российской Ассоциации Инновационного Развития</h2>
-                                            <x-svg.rair.color_full
-                                                class="I-CONTENT-rair"
-                                            />
+                                            <a class="L-CONTENT-rair" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
+                                                <x-svg.rair.color_full
+                                                    class="I-CONTENT-rair"
+                                                />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -791,9 +793,9 @@
                                         <x-blades.jury.card
                                             number="12"
                                             color="green"
-                                            name="Лейбинен Снежана Александровна"
-                                            title='Председатель Гильдии предпринимателей Турочагского района Ресублики Алтай'
-                                            portrait="images/people/optimized/leybinen_snezhana_alexandrovna-portrait-01.webp"
+                                            name="Тарасова Елена Александровна"
+                                            title='Основатель агентства спецпроектов «Красная площадь» и национальной премии «Лучшие города России»'
+                                            portrait="images/people/optimized/tarasova_elena_aleksandrovna-portrait-01.webp"
                                         />
                                     </div>
                                 </div>
@@ -838,6 +840,30 @@
                                                     </button>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="S-MAIN-partners" id="partners">
+                    <div class="S-PARTNERS-wrapper">
+                        <div class="S-PARTNERS-carcass">
+                            <div class="S-PARTNERS-title">
+                                <h2 class="TYPO-D-PRESET-CORE_H2">Партнеры</h2>
+                            </div>
+                            <div class="S-PARTNERS-list DEV-DISABLE_SELECTION">
+                                <div class="S-LIST-wrapper">
+                                    <div class="S-LIST-carcass">
+                                        <div class="S-LIST-row S-LIST-row_1">
+                                            <img class="I-LIST-logo I-LIST-logo_1" src="{{ asset('images/partners/optimized/samotlor.webp') }}" alt="Самотлор Инвест" title="Самотлор Инвест" draggable="false"/>
+                                            <img class="I-LIST-logo I-LIST-logo_2" src="{{ asset('images/partners/optimized/ict2go.webp') }}" alt="ICT 2 GO" title="ICT 2 GO"  draggable="false"/>
+                                            <img class="I-LIST-logo I-LIST-logo_3" src="{{ asset('images/partners/optimized/your_business.webp') }}" alt="Свое Дело" title="Свое Дело"  draggable="false"/>
+                                        </div>
+                                        <div class="S-LIST-row S-LIST-row_2">
+                                            <img class="I-LIST-logo I-LIST-logo_1" src="{{ asset('images/partners/optimized/red_square.webp') }}" alt="Красная Площадь Говорит" title="Красная Площадь Говорит"  draggable="false"/>
+                                            <img class="I-LIST-logo I-LIST-logo_2" src="{{ asset('images/partners/optimized/kaleidoscope.webp') }}" alt="Калейдоскоп ТВ" title="Калейдоскоп ТВ"  draggable="false"/>
                                         </div>
                                     </div>
                                 </div>
@@ -894,9 +920,11 @@
                                 <p class="T-LOGOS-mil TYPO-D-PRESET-CORE_H3">молодые инновационные<br>лидеры</p>
                             </div>
                             <div class="S-LOGOS-rair">
-                                <x-svg.rair.color_full
-                                    class="I-LOGOS-rair"
-                                />
+                                <a class="L-LOGOS-rair" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
+                                    <x-svg.rair.color_full
+                                        class="I-LOGOS-rair"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1248,9 +1276,11 @@
                                             <p class="T-CONTENT-description TYPO-M-PRESET-HERO_DESCRIPTION">премия Российской Ассоциации<br>Инновационного Развития</p>
                                         </div>
                                         <div class="S-CONTENT-rair">
-                                            <x-svg.rair.color_full
-                                                class="I-CONTENT-rair"
-                                            />
+                                            <a class="L-CONTENT-rair" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
+                                                <x-svg.rair.color_full
+                                                    class="I-CONTENT-rair"
+                                                />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1782,9 +1812,9 @@
                                         <x-blades.mobile.jury.card
                                             number="12"
                                             color="green"
-                                            name="Лейбинен Снежана Александровна"
-                                            title='Председатель Гильдии предпринимателей<br>Турочагского района Ресублики Алтай'
-                                            portrait="images/people/optimized/leybinen_snezhana_alexandrovna-portrait-01.webp"
+                                            name="Тарасова Елена Александровна"
+                                            title='Основатель агентства спецпроектов «Красная площадь» и национальной премии «Лучшие города России»'
+                                            portrait="images/people/optimized/tarasova_elena_aleksandrovna-portrait-01.webp"
                                         />
                                     </div>
                                 </div>
@@ -1836,6 +1866,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="S-MAIN-partners" id="partners-m">
+                    <div class="S-PARTNERS-wrapper">
+                        <div class="S-PARTNERS-carcass">
+                            <div class="S-PARTNERS-title">
+                                <h2 class="TYPO-M-PRESET-CORE_H2">Партнеры</h2>
+                            </div>
+                            <div class="S-PARTNERS-list">
+                                <img class="I-LIST-logo I-LIST-logo_1" src="{{ asset('images/partners/optimized/samotlor.webp') }}" alt="Самотлор Инвест" title="Самотлор Инвест" draggable="false"/>
+                                <img class="I-LIST-logo I-LIST-logo_2" src="{{ asset('images/partners/optimized/ict2go.webp') }}" alt="ICT 2 GO" title="ICT 2 GO"  draggable="false"/>
+                                <img class="I-LIST-logo I-LIST-logo_3" src="{{ asset('images/partners/optimized/your_business.webp') }}" alt="Свое Дело" title="Свое Дело"  draggable="false"/>
+                                <img class="I-LIST-logo I-LIST-logo_4" src="{{ asset('images/partners/optimized/red_square.webp') }}" alt="Красная Площадь Говорит" title="Красная Площадь Говорит"  draggable="false"/>
+                                <img class="I-LIST-logo I-LIST-logo_5" src="{{ asset('images/partners/optimized/kaleidoscope.webp') }}" alt="Калейдоскоп ТВ" title="Калейдоскоп ТВ"  draggable="false"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="S-MAIN-action" id="action-m">
                     <div class="S-ACTION-wrapper">
                         <div class="S-ACTION-carcass">
@@ -1879,9 +1925,11 @@
                     <div class="S-LEFT-wrapper">
                         <div class="S-LEFT-carcass">
                             <div class="S-LEFT-rair">
-                                <x-svg.rair.color_full
-                                    class="I-LEFT-rair"
-                                />
+                                <a class="L-LEFT-rair" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">
+                                    <x-svg.rair.color_full
+                                        class="I-LEFT-rair"
+                                    />
+                                </a>
                             </div>
                             <div class="S-LEFT-links TYPO-M-PRESET-CORE_P">
                                 <a class="L-LEFT-links" href="https://rair-info.ru/" rel="noopener noreferrer" target="_blank">Сайт РАИР</a>

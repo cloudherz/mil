@@ -1674,12 +1674,19 @@
                                             }
                                         }
                                     }
-                                    .S-CONTENT-confirmation {
+                                    .S-CONTENT-confirmation_1 {
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 11 / 1 / 12 / 2;
                                         // MARGINS & PADDINGS
+                                        margin-bottom: $GV-M-SIZES-DEFAULT * 0.7;
+                                    }
+                                    .S-CONTENT-confirmation_2 {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 12 / 1 / 13 / 2;
+                                        // MARGINS & PADDINGS
                                         margin-bottom: $GV-M-SIZES-DEFAULT;
-
+                                    }
+                                    .S-CONTENT-confirmation {
                                         .S-CONFIRMATION-carcass {
                                             // CSS-GRID SETUP
                                             display: grid;
@@ -1777,13 +1784,22 @@
                                                     color: $PALETTE-BLACK_HOVER;
                                                     // FONT SETTINGS
                                                     text-box: trim-both cap alphabetic;
+
+                                                    .L-CONFIRMATION-text {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-BLACK_HOVER;
+                                                        text-decoration-line: underline;
+                                                        text-decoration-style: solid;
+                                                        text-underline-offset: 0.4dvw;
+                                                        text-decoration-thickness: 0.3dvw;
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                     .S-CONTENT-submit {
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 12 / 1 / 13 / 2;
+                                        grid-area: 13 / 1 / 14 / 2;
 
                                         .B-CONTENT-submit_blue {
                                             // BACKGROUND
@@ -2637,11 +2653,16 @@
                             // CSS-GRID CONFIGURATION
                             grid-area: 3 / 2 / 4 / 3;
 
-                            .I-CONTENT-rair {
+                            .L-CONTENT-rair {
                                 // FLEXBOX
                                 display: flex;
-                                // SCALING
-                                height: 6dvw;
+
+                                .I-CONTENT-rair {
+                                    // FLEXBOX
+                                    display: flex;
+                                    // SCALING
+                                    height: 6dvw;
+                                }
                             }
                         }
                     }
@@ -4935,6 +4956,81 @@
 
 
 
+    // CHUNK:PARTNERS
+    // LOCAL VARIABLES NAME = PARTNERS
+    #partners-m {
+        // SCROLL
+        scroll-margin-top: $GV-M-SIZES-SECTIONS;
+    }
+    .S-MOBILE-main {
+        .S-MAIN-partners {
+            .S-PARTNERS-wrapper {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // MARGINS & PADDINGS
+                margin: $GV-M-SIZES-SECTIONS 0 ($GV-M-SIZES-SECTIONS * 3) 0;
+
+                .S-PARTNERS-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: 0;
+                    grid-row-gap: $GV-M-SIZES-H2_CONTENT * 2;
+                    justify-items: center;
+
+                    .S-PARTNERS-title {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                        // FONT SETTINGS
+                        color: $PALETTE-BLACK;
+                        // SCALING
+                        width: $GV-M-CORE-CONTENT_WIDTH;
+                    }
+
+                    .S-PARTNERS-list {
+                        // FLEXBOX
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .I-LIST-logo_1 {
+                            // SCALING
+                            width: 44dvw;
+                            // MARGINS & PADDINGS
+                            margin-bottom: 22dvw;
+                        }
+                        .I-LIST-logo_2 {
+                            // SCALING
+                            width: 40dvw;
+                            // MARGINS & PADDINGS
+                            margin-bottom: 22dvw;
+                        }
+                        .I-LIST-logo_3 {
+                            // SCALING
+                            width: 58dvw;
+                            // MARGINS & PADDINGS
+                            margin-bottom: 22dvw;
+                        }
+                        .I-LIST-logo_4 {
+                            // SCALING
+                            width: 74dvw;
+                            // MARGINS & PADDINGS
+                            margin-bottom: 23dvw;
+                        }
+                        .I-LIST-logo_5 {
+                            // SCALING
+                            width: 69dvw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
     // CHUNK:ACTION
     // LOCAL VARIABLES NAME = ACTION
     .S-MOBILE-main {
@@ -5134,11 +5230,16 @@
                             // MARGINS & PADDINGS
                             margin-bottom: $GV-M-SIZES-DEFAULT * 2;
 
-                            .I-LEFT-rair {
+                            .L-LEFT-rair {
                                 // FLEXBOX
                                 display: flex;
-                                // SCALING
-                                height: 11.1dvw;
+
+                                .I-LEFT-rair {
+                                    // FLEXBOX
+                                    display: flex;
+                                    // SCALING
+                                    height: 11.1dvw;
+                                }
                             }
                         }
                         .S-LEFT-links {

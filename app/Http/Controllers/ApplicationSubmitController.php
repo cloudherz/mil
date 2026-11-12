@@ -128,6 +128,13 @@ abstract class ApplicationSubmitController
             'confirmation_entity.required' => 'Необходимо согласие на обработку персональных данных',
             'confirmation_entity.accepted' => 'Необходимо согласие на обработку персональных данных',
 
+            'confirmation_offer_student.required' => 'Необходимо согласие с публичной офертой',
+            'confirmation_offer_student.accepted' => 'Необходимо согласие с публичной офертой',
+            'confirmation_offer_individual.required' => 'Необходимо согласие с публичной офертой',
+            'confirmation_offer_individual.accepted' => 'Необходимо согласие с публичной офертой',
+            'confirmation_offer_entity.required' => 'Необходимо согласие с публичной офертой',
+            'confirmation_offer_entity.accepted' => 'Необходимо согласие с публичной офертой',
+
             // ── Файлы: обязательность ────────────────
             'files_student.required' => 'Прикрепите файл презентации',
             'files_individual.required' => 'Прикрепите файл презентации',
@@ -308,6 +315,7 @@ abstract class ApplicationSubmitController
                 'track_student',
                 'description_student',
                 'confirmation_student',
+                'confirmation_offer_student'
             ],
             'individual' => [
                 'application_type_individual',
@@ -317,6 +325,7 @@ abstract class ApplicationSubmitController
                 'track_individual',
                 'description_individual',
                 'confirmation_individual',
+                'confirmation_offer_individual',
             ],
             'entity' => [
                 'application_type_entity',
@@ -328,6 +337,7 @@ abstract class ApplicationSubmitController
                 'track_1', 'track_2', 'track_3',
                 'description_entity',
                 'confirmation_entity',
+                'confirmation_offer_entity',
             ],
             default => [],
         };

@@ -18,6 +18,7 @@ function initApplicationValidation() {
             phone: FieldConfig;
             description: FieldConfig;
             confirmation: { inputId: string };
+            confirmationOffer: { inputId: string };
             trackIds: string[];
             fileId: string;
         };
@@ -34,6 +35,7 @@ function initApplicationValidation() {
                 phone: { inputId: 'phone_student', errorId: 'phone_error_student' },
                 description: { inputId: 'description_student', errorId: 'description_error_student' },
                 confirmation: { inputId: 'confirmation_student' },
+                confirmationOffer: { inputId: 'confirmation_offer_student' },
                 trackIds: ['track_single'],
                 fileId: 'file_student',
             },
@@ -47,6 +49,7 @@ function initApplicationValidation() {
                 phone: { inputId: 'phone_individual', errorId: 'phone_error_individual' },
                 description: { inputId: 'description_individual', errorId: 'description_error_individual' },
                 confirmation: { inputId: 'confirmation_individual' },
+                confirmationOffer: { inputId: 'confirmation_offer_individual' },
                 trackIds: ['track_individual'],
                 fileId: 'file_individual',
             },
@@ -62,6 +65,7 @@ function initApplicationValidation() {
                 phone: { inputId: 'phone_entity', errorId: 'phone_error_entity' },
                 description: { inputId: 'description_entity', errorId: 'description_error_entity' },
                 confirmation: { inputId: 'confirmation_entity' },
+                confirmationOffer: { inputId: 'confirmation_offer_entity' },
                 trackIds: ['track_1', 'track_2', 'track_3'],
                 fileId: 'file_entity',
             },
@@ -77,6 +81,7 @@ function initApplicationValidation() {
                 phone: { inputId: 'mobile-phone_student', errorId: 'mobile-phone_error_student' },
                 description: { inputId: 'mobile-description_student', errorId: 'mobile-description_error_student' },
                 confirmation: { inputId: 'mobile-confirmation_student' },
+                confirmationOffer: { inputId: 'mobile-confirmation_offer_student' },
                 trackIds: ['mobile-track_single'],
                 fileId: 'mobile-file_student',
             },
@@ -90,6 +95,7 @@ function initApplicationValidation() {
                 phone: { inputId: 'mobile-phone_individual', errorId: 'mobile-phone_error_individual' },
                 description: { inputId: 'mobile-description_individual', errorId: 'mobile-description_error_individual' },
                 confirmation: { inputId: 'mobile-confirmation_individual' },
+                confirmationOffer: { inputId: 'mobile-confirmation_offer_individual' },
                 trackIds: ['mobile-track_individual'],
                 fileId: 'mobile-file_individual',
             },
@@ -105,6 +111,7 @@ function initApplicationValidation() {
                 phone: { inputId: 'mobile-phone_entity', errorId: 'mobile-phone_error_entity' },
                 description: { inputId: 'mobile-description_entity', errorId: 'mobile-description_error_entity' },
                 confirmation: { inputId: 'mobile-confirmation_entity' },
+                confirmationOffer: { inputId: 'mobile-confirmation_offer_entity' },
                 trackIds: ['mobile-track_1', 'mobile-track_2', 'mobile-track_3'],
                 fileId: 'mobile-file_entity',
             },
@@ -226,6 +233,7 @@ function initApplicationValidation() {
         loadField('description', config.fields.description);
 
         const confirmationInput = scope.querySelector(`#${CSS.escape(config.fields.confirmation.inputId)}`) as HTMLInputElement | null;
+        const confirmationOfferInput = scope.querySelector(`#${CSS.escape(config.fields.confirmationOffer.inputId)}`) as HTMLInputElement | null;
         const fileInput = scope.querySelector(`#${CSS.escape(config.fields.fileId)}`) as HTMLInputElement | null;
 
         const trackInputs: HTMLInputElement[] = [];
@@ -290,6 +298,11 @@ function initApplicationValidation() {
             return confirmationInput.checked;
         }
 
+        function isConfirmationOfferValid(): boolean {
+            if (!confirmationOfferInput) return false;
+            return confirmationOfferInput.checked;
+        }
+
         // ── Touched ──
 
         const touched: { [key: string]: boolean } = {
@@ -301,6 +314,7 @@ function initApplicationValidation() {
             phone: false,
             description: false,
             confirmation: false,
+            confirmationOffer: false,
             track: false,
             files: false,
         };
@@ -317,6 +331,7 @@ function initApplicationValidation() {
                 phone: isFieldValid('phone'),
                 description: isFieldValid('description'),
                 confirmation: isConfirmationValid(),
+                confirmationOffer: isConfirmationOfferValid(),
                 track: isTrackValid(),
                 files: isFilesValid(),
             };
@@ -472,6 +487,17 @@ function initApplicationValidation() {
             });
         }
 
+        if (confirmationOfferInput) {
+            confirmationOfferInput.addEventListener('change', () => {
+                touched.confirmationOffer = true;
+                updateSubmitButton();
+            });
+            confirmationOfferInput.addEventListener('blur', () => {
+                touched.confirmationOffer = true;
+                updateSubmitButton();
+            });
+        }
+
         // ── Tracks ──
 
         trackInputs.forEach((trackInput) => {
@@ -541,6 +567,7 @@ function initApplicationValidation() {
                 isFieldValid('phone') &&
                 isFieldValid('description') &&
                 isConfirmationValid() &&
+                isConfirmationOfferValid() &&
                 isTrackValid() &&
                 isFilesValid();
 

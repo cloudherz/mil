@@ -1499,12 +1499,19 @@
                                             }
                                         }
                                     }
-                                    .S-CONTENT-confirmation {
+                                    .S-CONTENT-confirmation_1 {
                                         // CSS-GRID CONFIGURATION
                                         grid-area: 7 / 1 / 8 / 3;
                                         // MARGINS & PADDINGS
+                                        margin-bottom: $GV-D-SIZES-DEFAULT * 0.5;
+                                    }
+                                    .S-CONTENT-confirmation_2 {
+                                        // CSS-GRID CONFIGURATION
+                                        grid-area: 8 / 1 / 9 / 3;
+                                        // MARGINS & PADDINGS
                                         margin-bottom: $GV-D-SIZES-DEFAULT;
-
+                                    }
+                                    .S-CONTENT-confirmation {
                                         .S-CONFIRMATION-carcass {
                                             // CSS-GRID SETUP
                                             display: grid;
@@ -1602,13 +1609,28 @@
                                                     color: $PALETTE-BLACK_HOVER;
                                                     // FONT SETTINGS
                                                     text-box: trim-both cap alphabetic;
+
+                                                    .L-CONFIRMATION-text {
+                                                        // FONT SETTINGS
+                                                        color: $PALETTE-BLACK_HOVER;
+                                                        text-decoration-line: underline;
+                                                        text-decoration-style: solid;
+                                                        text-underline-offset: 0.3vh;
+                                                        // TRANSITION
+                                                        transition: text-underline-offset 0.2s;
+
+                                                        &:hover {
+                                                            // FONT SETTINGS
+                                                            text-underline-offset: 0.6vh;
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                     .S-CONTENT-submit {
                                         // CSS-GRID CONFIGURATION
-                                        grid-area: 8 / 1 / 9 / 3;
+                                        grid-area: 9 / 1 / 10 / 3;
 
                                         .B-CONTENT-submit_blue {
                                             // BACKGROUND
@@ -2360,9 +2382,16 @@
                                 // MARGINS & PADDINGS
                                 margin: ($GV-D-CORE-HEADER_HEIGHT / 1.2) 0;
 
-                                .I-CONTENT-rair {
-                                    // SCALING
-                                    width: 15vh;
+                                .L-CONTENT-rair {
+                                    // FLEXBOX
+                                    display: flex;
+
+                                    .I-CONTENT-rair {
+                                        // FLEXBOX
+                                        display: flex;
+                                        // SCALING
+                                        width: 15vh;
+                                    }
                                 }
                             }
                         }
@@ -4524,6 +4553,104 @@
 
 
 
+    // CHUNK:PARTNERS
+    // LOCAL VARIABLES NAME = PARTNERS
+    #partners {
+        // SCROLL
+        scroll-margin-top: ($GV-D-CORE-HEADER_HEIGHT);
+    }
+    .S-DESKTOP-main {
+        .S-MAIN-partners {
+            .S-PARTNERS-wrapper {
+                // FLEXBOX
+                display: flex;
+                justify-content: center;
+                // MARGINS & PADDINGS
+                padding: $GV-D-SIZES-SECTIONS 0 ($GV-D-SIZES-SECTIONS * 3) 0;
+
+                .S-PARTNERS-carcass {
+                    // CSS-GRID SETUP
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, max-content);
+                    grid-column-gap: 0;
+                    grid-row-gap: $GV-D-SIZES-H2_CONTENT;
+                    justify-items: center;
+
+                    .S-PARTNERS-title {
+                        // CSS-GRID CONFIGURATION
+                        grid-area: 1 / 1 / 2 / 2;
+                        // FONT SETTINGS
+                        color: $PALETTE-BLACK;
+                        // SCALING
+                        width: $GV-D-CORE-CONTENT_WIDTH;
+                    }
+
+                    .S-PARTNERS-list {
+                        .S-LIST-carcass {
+                            // CSS-GRID SETUP
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(2, 1fr);
+                            grid-column-gap: 0;
+                            grid-row-gap: 8vh;
+                            justify-items: center;
+
+                            .S-LIST-row {
+                                // FLEXBOX
+                                display: flex;
+                                align-items: center;
+
+                                .I-LIST-logo {
+                                    // FLEXBOX
+                                    display: flex;
+                                }
+                            }
+                            .S-LIST-row_1 {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 1 / 1 / 2 / 2;
+
+                                .I-LIST-logo_1 {
+                                    // SCALING
+                                    width: 30vh;
+                                    // MARGINS & PADDINGS
+                                    margin-right: 12.5vh;
+                                }
+                                .I-LIST-logo_2 {
+                                    // SCALING
+                                    width: 30vh;
+                                    // MARGINS & PADDINGS
+                                    margin-right: 12.5vh;
+                                }
+                                .I-LIST-logo_3 {
+                                    // SCALING
+                                    width: 36.5vh;
+                                }
+                            }
+                            .S-LIST-row_2 {
+                                // CSS-GRID CONFIGURATION
+                                grid-area: 2 / 1 / 3 / 2;
+
+                                .I-LIST-logo_1 {
+                                    // SCALING
+                                    width: 45vh;
+                                    // MARGINS & PADDINGS
+                                    margin-right: 12.5vh;
+                                }
+                                .I-LIST-logo_2 {
+                                    // SCALING
+                                    width: 39vh;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
     // CHUNK:ACTION
     // LOCAL VARIABLES NAME = ACTION
     .S-DESKTOP-main {
@@ -4745,11 +4872,20 @@
                                 }
                             }
                             .S-LOGOS-rair {
-                                .I-LOGOS-rair {
+                                .L-LOGOS-rair {
+                                    // FLEXBOX
+                                    display: flex;
                                     // SCALING
-                                    width: 13vh;
-                                    // MARGINS & PADDINGS
-                                    margin-bottom: -0.3vh;
+                                    width: max-content;
+
+                                    .I-LOGOS-rair {
+                                        // FLEXBOX
+                                        display: flex;
+                                        // SCALING
+                                        width: 13vh;
+                                        // MARGINS & PADDINGS
+                                        margin-bottom: -0.3vh;
+                                    }
                                 }
                             }
                         }

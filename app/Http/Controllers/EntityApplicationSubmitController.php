@@ -38,6 +38,7 @@ class EntityApplicationSubmitController extends ApplicationSubmitController
             'track_3' => 'nullable|required_without_all:track_1,track_2|in:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15',
             'description_entity' => 'required|string|min:1|max:10000',
             'confirmation_entity' => 'required|accepted',
+            'confirmation_offer_entity' => 'required|accepted',
             'files_entity' => 'required|array|min:1|max:3',
             'files_entity.*' => 'required|file|mimes:pptx,pdf|max:32768',
         ];

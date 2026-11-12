@@ -12,6 +12,6 @@
     <p><strong>Почта:</strong> {{ $email ?? 'Не указана' }}</p>
     <p><strong>Телефон:</strong> {{ $phone ?? 'Не указан' }}</p>
     <p><strong>Номинация:</strong> {{ $trackStudent ?? 'Не указана' }}</p>
-    <p><strong>Описание проекта:</strong> {{ $description ?? 'Не указано' }}</p>
+    <p><strong>Описание проекта:</strong> {!! nl2br(e($description)) ?? 'Не указано' !!}</p>
 </body>
 </html>
