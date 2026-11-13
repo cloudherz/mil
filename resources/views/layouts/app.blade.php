@@ -7,6 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('meta-title', 'TITLE')</title>
+
+    @include('components.head.yandex')
+
     <meta name="description" content="@yield('meta-description', 'DESCRIPTION')">
     <meta name="keywords" content="@yield('meta-keywords', 'KEYWORDS')">
     <meta name="author" content="{{ config('app.author') }}">
