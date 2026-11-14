@@ -1,5 +1,19 @@
 @extends('layouts.app')
 
+@php
+    $testDate = null; // '21 November 1984'
+
+    $now = (!app()->isProduction() && $testDate)
+        ? strtotime($testDate)
+        : time();
+
+    $state = function ($start, $end = null) use ($now) {
+        if ($now < strtotime($start)) return 'future';
+        if ($end && $now >= strtotime($end)) return 'past';
+        return 'present';
+    };
+@endphp
+
 @section('meta-title', '«МИЛ» Премия Молодые Инновационные Лидеры')
 @section('meta-description', 'Премия Российской Ассоциации Инновационного Развития')
 @section('meta-keywords', 'МИЛ, MIL')
@@ -510,31 +524,31 @@
                                             number="1"
                                             date="25 Сентября, 2026"
                                             description="Старт премии.<br>Начало приема заявок."
-                                            state="present"
+                                            :state="$state('25 September 2026', '25 November 2026')"
                                         />
                                         <x-blades.dates.column
                                             number="2"
                                             date="25 Ноября, 2026"
                                             description="Завершение приема заявок. Верификация. Формирование списка номинантов."
-                                            state="future"
+                                            :state="$state('25 November 2026', '25 December 2026')"
                                         />
                                         <x-blades.dates.column
                                             number="3"
                                             date="25 Декабря, 2026"
                                             description="Независимая экспертная оценка жюри<br>и выставление баллов<br>по критериям."
-                                            state="future"
+                                            :state="$state('25 December 2026', '15 January 2027')"
                                         />
                                         <x-blades.dates.column
                                             number="4"
                                             date="15 Января, 2027"
                                             description="Отбор финалистов<br>по каждой номинации. Объявление шорт-листа."
-                                            state="future"
+                                            :state="$state('15 January 2027', '25 March 2027')"
                                         />
                                         <x-blades.dates.column
                                             number="5"
                                             date="25 Марта, 2027"
                                             description="Церемония награждения<br>в Конгресс-центре<br>МГТУ им. Н.Э. Баумана."
-                                            state="future"
+                                            :state="$state('25 March 2027')"
                                         />
                                         <x-blades.dates.side
                                             position="right"
@@ -1520,31 +1534,31 @@
                                             number="1"
                                             date="25 Сентября, 2026"
                                             description="Старт премии.<br>Начало приема заявок."
-                                            state="present"
+                                            :state="$state('25 September 2026', '25 November 2026')"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="2"
                                             date="25 Ноября, 2026"
                                             description="Завершение приема заявок. Верификация. Формирование списка номинантов."
-                                            state="future"
+                                            :state="$state('25 November 2026', '25 December 2026')"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="3"
                                             date="25 Декабря, 2026"
                                             description="Независимая экспертная оценка жюри и выставление баллов<br>по критериям."
-                                            state="future"
+                                            :state="$state('25 December 2026', '15 January 2027')"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="4"
                                             date="15 Января, 2027"
                                             description="Отбор финалистов по каждой номинации. Объявление<br>шорт-листа."
-                                            state="future"
+                                            :state="$state('15 January 2027', '25 March 2027')"
                                         />
                                         <x-blades.mobile.dates.shelf
                                             number="5"
                                             date="25 Марта, 2027"
                                             description="Церемония награждения<br>в Конгресс-центре МГТУ<br>им. Н.Э. Баумана."
-                                            state="future"
+                                            :state="$state('25 March 2027')"
                                         />
                                         <x-blades.mobile.dates.lid
                                             number="2"
