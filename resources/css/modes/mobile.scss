@@ -4759,126 +4759,147 @@
                                             background-color: $PALETTE-SNOW;
                                             // STREAMLINING
                                             border-radius: $GV-M-ROUNDING-SECTIONS;
+                                            // SCALING
+                                            height: 116dvw;
 
-                                            .S-ARTICLE-carcass {
-                                                // CSS-GRID SETUP
-                                                display: grid;
-                                                grid-template-columns: 1fr;
-                                                grid-template-rows: repeat(2, max-content) 1fr;
-                                                grid-column-gap: 0;
-                                                grid-row-gap: 0;
+                                            .S-ARTICLE-wrapper {
+                                                // SCALING
+                                                height: 100%;
 
-                                                .S-ARTICLE-headline {
-                                                    // CSS-GRID CONFIGURATION
-                                                    grid-area: 1 / 1 / 2 / 2;
-                                                    // MARGINS & PADDINGS
-                                                    padding: $LV-M-NEWS-ARTICLE-INNER_PADDING $LV-M-NEWS-ARTICLE-INNER_PADDING ($GV-M-SIZES-DEFAULT * 1.2) $LV-M-NEWS-ARTICLE-INNER_PADDING;
-
-                                                    .T-ARTICLE-headline {
-                                                        // FONT SETTINGS
-                                                        color: $PALETTE-DARK_BLUE;
-                                                        text-box: trim-both cap alphabetic;
-                                                    }
-                                                }
-                                                .S-ARTICLE-text {
-                                                    // CSS-GRID CONFIGURATION
-                                                    grid-area: 2 / 1 / 3 / 2;
+                                                .S-ARTICLE-carcass {
+                                                    // CSS-GRID SETUP
+                                                    display: grid;
+                                                    grid-template-columns: 1fr;
+                                                    grid-template-rows: max-content 1fr max-content;
+                                                    grid-column-gap: 0;
+                                                    grid-row-gap: 0;
                                                     // SCALING
-                                                    height: 65dvw;
-                                                    // MARGINS & PADDINGS
-                                                    margin: 0 $LV-M-NEWS-ARTICLE-INNER_PADDING ($LV-M-NEWS-FRESH-PADDING_TOP + $GV-M-SIZES-SMALL) $LV-M-NEWS-ARTICLE-INNER_PADDING;
-                                                    // OVERFLOW
-                                                    overflow-y: auto;
-                                                    overflow-x: hidden;
-                                                    // POSITIONING
-                                                    position: relative;
+                                                    height: 100%;
 
-                                                    &::after {
-                                                        // CONTENT
-                                                        content: "";
-                                                        // DISPLAY
-                                                        display: block;
-                                                        // POSITIONING
-                                                        position: sticky;
-                                                        bottom: -0.3dvw;
-                                                        left: 0;
-                                                        // SCALING
-                                                        width: 100%;
-                                                        height: $LV-M-NEWS-TEXT_FADE-MARGIN;
-                                                        // BACKGROUND
-                                                        background: linear-gradient(
-                                                                to bottom,
-                                                                $PALETTE-GLASS 0%,
-                                                                $PALETTE-SNOW 100%
-                                                        );
-                                                        // EVENTS
-                                                        pointer-events: none;
+                                                    .S-ARTICLE-headline {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 1 / 1 / 2 / 2;
+                                                        // MARGINS & PADDINGS
+                                                        padding: $LV-M-NEWS-ARTICLE-INNER_PADDING $LV-M-NEWS-ARTICLE-INNER_PADDING ($GV-M-SIZES-DEFAULT * 1.2) $LV-M-NEWS-ARTICLE-INNER_PADDING;
+
+                                                        .T-ARTICLE-headline {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE;
+                                                            text-box: trim-both cap alphabetic;
+                                                        }
                                                     }
-
-                                                    .S-TEXT-wrapper {
+                                                    .S-ARTICLE-text {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 2 / 1 / 3 / 2;
+                                                        // MARGINS & PADDINGS
+                                                        margin: 0 $LV-M-NEWS-ARTICLE-INNER_PADDING ($LV-M-NEWS-FRESH-PADDING_TOP + $GV-M-SIZES-SMALL) $LV-M-NEWS-ARTICLE-INNER_PADDING;
+                                                        // OVERFLOW
+                                                        overflow-y: auto;
+                                                        overflow-x: hidden;
                                                         // POSITIONING
                                                         position: relative;
 
-                                                        .S-TEXT-carcass {
+                                                        &::after {
+                                                            // CONTENT
+                                                            content: "";
+                                                            // DISPLAY
+                                                            display: block;
+                                                            // POSITIONING
+                                                            position: sticky;
+                                                            bottom: -0.3dvw;
+                                                            left: 0;
+                                                            // SCALING
+                                                            width: 100%;
+                                                            height: $LV-M-NEWS-TEXT_FADE-MARGIN;
+                                                            // BACKGROUND
+                                                            background: linear-gradient(
+                                                                    to bottom,
+                                                                    $PALETTE-GLASS 0%,
+                                                                    $PALETTE-SNOW 100%
+                                                            );
+                                                            // EVENTS
+                                                            pointer-events: none;
+                                                        }
+
+                                                        .S-TEXT-wrapper {
                                                             // POSITIONING
                                                             position: relative;
 
-                                                            .T-ARTICLE-text {
-                                                                // FONT SETTINGS
-                                                                text-box: trim-both cap alphabetic;
+                                                            .S-TEXT-carcass {
+                                                                // POSITIONING
+                                                                position: relative;
+
+                                                                .T-ARTICLE-text {
+                                                                    // FONT SETTINGS
+                                                                    text-box: trim-both cap alphabetic;
+                                                                }
+
+                                                                a {
+                                                                    // FONT SETTINGS
+                                                                    text-box: trim-both cap alphabetic;
+                                                                    text-decoration: none;
+                                                                    color: $PALETTE-LIGHT_GREEN;
+                                                                    // TRANSITION
+                                                                    transition: color 0.2s;
+
+                                                                    &:hover {
+                                                                        // FONT SETTINGS
+                                                                        color: $PALETTE-LIGHT_GREEN_HOVER;
+                                                                    }
+                                                                }
                                                             }
                                                         }
                                                     }
-                                                }
-                                                .S-ARTICLE-bottom {
-                                                    // CSS-GRID CONFIGURATION
-                                                    grid-area: 3 / 1 / 4 / 2;
-                                                    // MARGINS & PADDINGS
-                                                    padding: 0 $LV-M-NEWS-ARTICLE-INNER_PADDING;
+                                                    .S-ARTICLE-bottom {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 3 / 1 / 4 / 2;
+                                                        // MARGINS & PADDINGS
+                                                        padding: 0 $LV-M-NEWS-ARTICLE-INNER_PADDING;
 
-                                                    .S-BOTTOM-carcass {
-                                                        // CSS-GRID SETUP
-                                                        display: grid;
-                                                        grid-template-columns: max-content 1fr;
-                                                        grid-template-rows: 1fr;
-                                                        grid-column-gap: 0;
-                                                        grid-row-gap: 0;
-                                                        justify-items: end;
+                                                        .S-BOTTOM-carcass {
+                                                            // CSS-GRID SETUP
+                                                            display: grid;
+                                                            grid-template-columns: max-content 1fr;
+                                                            grid-template-rows: 1fr;
+                                                            grid-column-gap: 0;
+                                                            grid-row-gap: 0;
+                                                            justify-items: end;
 
-                                                        .S-BOTTOM-date {
-                                                            // CSS-GRID CONFIGURATION
-                                                            grid-area: 1 / 1 / 2 / 2;
-                                                            // MARGINS & PADDINGS
-                                                            padding-bottom: $LV-M-NEWS-ARTICLE-INNER_PADDING * 1.03;
+                                                            .S-BOTTOM-date {
+                                                                // CSS-GRID CONFIGURATION
+                                                                grid-area: 1 / 1 / 2 / 2;
+                                                                // MARGINS & PADDINGS
+                                                                padding-bottom: $LV-M-NEWS-ARTICLE-INNER_PADDING * 1.03;
 
-                                                            .T-BOTTOM-date {
-                                                                // FONT SETTINGS
-                                                                text-box: trim-both cap alphabetic;
-                                                            }
-                                                        }
-                                                        .S-BOTTOM-fresh {
-                                                            // FLEXBOX
-                                                            display: flex;
-                                                            justify-content: center;
-                                                            // CSS-GRID CONFIGURATION
-                                                            grid-area: 1 / 2 / 2 / 3;
-                                                            // BACKGROUND
-                                                            background-color: $PALETTE-LIGHT_GREEN;
-                                                            // STREAMLINING
-                                                            border-radius: $GV-M-ROUNDING-SMALL $GV-M-ROUNDING-SMALL 0 0;
-                                                            // MARGINS & PADDINGS
-                                                            padding: $LV-M-NEWS-FRESH-PADDING_TOP ($LV-M-NEWS-FRESH-PADDING_TOP * 1.1) 0 ($LV-M-NEWS-FRESH-PADDING_TOP * 1.1);
-                                                            margin-top: -$LV-M-NEWS-FRESH-PADDING_TOP;
-                                                            // SCALING
-                                                            width: max-content;
-
-                                                            .S-FRESH-carcass {
-                                                                // FONT SETTINGS
-                                                                color: $PALETTE-SNOW;
-
-                                                                .T-FRESH-text {
+                                                                .T-BOTTOM-date {
                                                                     // FONT SETTINGS
                                                                     text-box: trim-both cap alphabetic;
+                                                                }
+                                                            }
+                                                            .S-BOTTOM-fresh {
+                                                                // FLEXBOX
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                // CSS-GRID CONFIGURATION
+                                                                grid-area: 1 / 2 / 2 / 3;
+                                                                // BACKGROUND
+                                                                background-color: $PALETTE-LIGHT_GREEN;
+                                                                // STREAMLINING
+                                                                border-radius: $GV-M-ROUNDING-SMALL $GV-M-ROUNDING-SMALL 0 0;
+                                                                // MARGINS & PADDINGS
+                                                                padding: $LV-M-NEWS-FRESH-PADDING_TOP ($LV-M-NEWS-FRESH-PADDING_TOP * 1.1) 0 ($LV-M-NEWS-FRESH-PADDING_TOP * 1.1);
+                                                                margin-top: -$LV-M-NEWS-FRESH-PADDING_TOP;
+                                                                // SCALING
+                                                                width: max-content;
+
+                                                                .S-FRESH-carcass {
+                                                                    // FONT SETTINGS
+                                                                    color: $PALETTE-SNOW;
+
+                                                                    .T-FRESH-text {
+                                                                        // FONT SETTINGS
+                                                                        text-box: trim-both cap alphabetic;
+                                                                    }
                                                                 }
                                                             }
                                                         }

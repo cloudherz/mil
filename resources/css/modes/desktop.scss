@@ -4357,125 +4357,146 @@
                                             background-color: $PALETTE-SNOW;
                                             // STREAMLINING
                                             border-radius: $GV-D-ROUNDING-SECTIONS;
+                                            // SCALING
+                                            height: 56.6vh;
 
-                                            .S-ARTICLE-carcass {
-                                                // CSS-GRID SETUP
-                                                display: grid;
-                                                grid-template-columns: 1fr;
-                                                grid-template-rows: repeat(2, max-content) 1fr;
-                                                grid-column-gap: 0;
-                                                grid-row-gap: 0;
+                                            .S-ARTICLE-wrapper {
+                                                // SCALING
+                                                height: 100%;
 
-                                                .S-ARTICLE-headline {
-                                                    // CSS-GRID CONFIGURATION
-                                                    grid-area: 1 / 1 / 2 / 2;
-                                                    // MARGINS & PADDINGS
-                                                    padding: $GV-D-SIZES-DEFAULT $GV-D-SIZES-DEFAULT ($GV-D-FONT_SIZES-SMALL * 2) $GV-D-SIZES-DEFAULT;
-
-                                                    .T-ARTICLE-headline {
-                                                        // FONT SETTINGS
-                                                        color: $PALETTE-DARK_BLUE;
-                                                    }
-                                                }
-                                                .S-ARTICLE-text {
-                                                    // CSS-GRID CONFIGURATION
-                                                    grid-area: 2 / 1 / 3 / 2;
+                                                .S-ARTICLE-carcass {
+                                                    // CSS-GRID SETUP
+                                                    display: grid;
+                                                    grid-template-columns: 1fr;
+                                                    grid-template-rows: max-content 1fr max-content;
+                                                    grid-column-gap: 0;
+                                                    grid-row-gap: 0;
                                                     // SCALING
-                                                    height: 35vh;
-                                                    // MARGINS & PADDINGS
-                                                    margin: 0 $GV-D-SIZES-DEFAULT ($GV-D-FONT_SIZES-SMALL * 2) $GV-D-SIZES-DEFAULT;
-                                                    // OVERFLOW
-                                                    overflow-y: auto;
-                                                    overflow-x: hidden;
-                                                    // POSITIONING
-                                                    position: relative;
+                                                    height: 100%;
 
-                                                    &::after {
-                                                        // CONTENT
-                                                        content: "";
-                                                        // DISPLAY
-                                                        display: block;
-                                                        // POSITIONING
-                                                        position: sticky;
-                                                        bottom: 0;
-                                                        left: 0;
-                                                        // SCALING
-                                                        width: 100%;
-                                                        height: $LV-D-NEWS-TEXT_FADE-MARGIN;
-                                                        // BACKGROUND
-                                                        background: linear-gradient(
-                                                                to bottom,
-                                                                $PALETTE-GLASS 0%,
-                                                                $PALETTE-SNOW 100%
-                                                        );
-                                                        // EVENTS
-                                                        pointer-events: none;
+                                                    .S-ARTICLE-headline {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 1 / 1 / 2 / 2;
+                                                        // MARGINS & PADDINGS
+                                                        padding: $GV-D-SIZES-DEFAULT $GV-D-SIZES-DEFAULT ($GV-D-FONT_SIZES-SMALL * 2) $GV-D-SIZES-DEFAULT;
+
+                                                        .T-ARTICLE-headline {
+                                                            // FONT SETTINGS
+                                                            color: $PALETTE-DARK_BLUE;
+                                                        }
                                                     }
-                                                    .S-TEXT-wrapper {
+                                                    .S-ARTICLE-text {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 2 / 1 / 3 / 2;
+                                                        // MARGINS & PADDINGS
+                                                        margin: 0 $GV-D-SIZES-DEFAULT ($GV-D-FONT_SIZES-SMALL * 2) $GV-D-SIZES-DEFAULT;
+                                                        // OVERFLOW
+                                                        overflow-y: auto;
+                                                        overflow-x: hidden;
                                                         // POSITIONING
                                                         position: relative;
 
-                                                        .S-TEXT-carcass {
+                                                        &::after {
+                                                            // CONTENT
+                                                            content: "";
+                                                            // DISPLAY
+                                                            display: block;
+                                                            // POSITIONING
+                                                            position: sticky;
+                                                            bottom: 0;
+                                                            left: 0;
+                                                            // SCALING
+                                                            width: 100%;
+                                                            height: $LV-D-NEWS-TEXT_FADE-MARGIN;
+                                                            // BACKGROUND
+                                                            background: linear-gradient(
+                                                                    to bottom,
+                                                                    $PALETTE-GLASS 0%,
+                                                                    $PALETTE-SNOW 100%
+                                                            );
+                                                            // EVENTS
+                                                            pointer-events: none;
+                                                        }
+                                                        .S-TEXT-wrapper {
                                                             // POSITIONING
                                                             position: relative;
 
-                                                            .T-ARTICLE-text {
-                                                                // FONT SETTINGS
-                                                                text-box: trim-both cap alphabetic;
+                                                            .S-TEXT-carcass {
+                                                                // POSITIONING
+                                                                position: relative;
+
+                                                                .T-ARTICLE-text {
+                                                                    // FONT SETTINGS
+                                                                    text-box: trim-both cap alphabetic;
+                                                                }
+
+                                                                a {
+                                                                    // FONT SETTINGS
+                                                                    text-box: trim-both cap alphabetic;
+                                                                    text-decoration: none;
+                                                                    color: $PALETTE-LIGHT_GREEN;
+                                                                    // TRANSITION
+                                                                    transition: color 0.2s;
+
+                                                                    &:hover {
+                                                                        // FONT SETTINGS
+                                                                        color: $PALETTE-LIGHT_GREEN_HOVER;
+                                                                    }
+                                                                }
                                                             }
                                                         }
                                                     }
-                                                }
 
-                                                .S-ARTICLE-bottom {
-                                                    // CSS-GRID CONFIGURATION
-                                                    grid-area: 3 / 1 / 4 / 2;
-                                                    // MARGINS & PADDINGS
-                                                    padding: 0 $GV-D-SIZES-DEFAULT;
+                                                    .S-ARTICLE-bottom {
+                                                        // CSS-GRID CONFIGURATION
+                                                        grid-area: 3 / 1 / 4 / 2;
+                                                        // MARGINS & PADDINGS
+                                                        padding: 0 $GV-D-SIZES-DEFAULT;
 
-                                                    .S-BOTTOM-carcass {
-                                                        // CSS-GRID SETUP
-                                                        display: grid;
-                                                        grid-template-columns: max-content 1fr;
-                                                        grid-template-rows: 1fr;
-                                                        grid-column-gap: 0;
-                                                        grid-row-gap: 0;
-                                                        justify-items: end;
+                                                        .S-BOTTOM-carcass {
+                                                            // CSS-GRID SETUP
+                                                            display: grid;
+                                                            grid-template-columns: max-content 1fr;
+                                                            grid-template-rows: 1fr;
+                                                            grid-column-gap: 0;
+                                                            grid-row-gap: 0;
+                                                            justify-items: end;
 
-                                                        .S-BOTTOM-date {
-                                                            // CSS-GRID CONFIGURATION
-                                                            grid-area: 1 / 1 / 2 / 2;
-                                                            // MARGINS & PADDINGS
-                                                            padding-bottom: $GV-D-SIZES-DEFAULT * 1.21;
+                                                            .S-BOTTOM-date {
+                                                                // CSS-GRID CONFIGURATION
+                                                                grid-area: 1 / 1 / 2 / 2;
+                                                                // MARGINS & PADDINGS
+                                                                padding-bottom: $GV-D-SIZES-DEFAULT * 1.21;
 
-                                                            .T-BOTTOM-date {
-                                                                // FONT SETTINGS
-                                                                text-box: trim-both cap alphabetic;
-                                                            }
-                                                        }
-                                                        .S-BOTTOM-fresh {
-                                                            // FLEXBOX
-                                                            display: flex;
-                                                            justify-content: center;
-                                                            // CSS-GRID CONFIGURATION
-                                                            grid-area: 1 / 2 / 2 / 3;
-                                                            // BACKGROUND
-                                                            background-color: $PALETTE-LIGHT_GREEN;
-                                                            // STREAMLINING
-                                                            border-radius: $GV-D-ROUNDING-SMALL $GV-D-ROUNDING-SMALL 0 0;
-                                                            // MARGINS & PADDINGS
-                                                            padding: 1.5vh 1.6vh 0 1.6vh;
-                                                            margin-top: -1.5vh;
-                                                            // SCALING
-                                                            width: max-content;
-
-                                                            .S-FRESH-carcass {
-                                                                // FONT SETTINGS
-                                                                color: $PALETTE-SNOW;
-
-                                                                .T-FRESH-text {
+                                                                .T-BOTTOM-date {
                                                                     // FONT SETTINGS
                                                                     text-box: trim-both cap alphabetic;
+                                                                }
+                                                            }
+                                                            .S-BOTTOM-fresh {
+                                                                // FLEXBOX
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                // CSS-GRID CONFIGURATION
+                                                                grid-area: 1 / 2 / 2 / 3;
+                                                                // BACKGROUND
+                                                                background-color: $PALETTE-LIGHT_GREEN;
+                                                                // STREAMLINING
+                                                                border-radius: $GV-D-ROUNDING-SMALL $GV-D-ROUNDING-SMALL 0 0;
+                                                                // MARGINS & PADDINGS
+                                                                padding: 1.5vh 1.6vh 0 1.6vh;
+                                                                margin-top: -1.5vh;
+                                                                // SCALING
+                                                                width: max-content;
+
+                                                                .S-FRESH-carcass {
+                                                                    // FONT SETTINGS
+                                                                    color: $PALETTE-SNOW;
+
+                                                                    .T-FRESH-text {
+                                                                        // FONT SETTINGS
+                                                                        text-box: trim-both cap alphabetic;
+                                                                    }
                                                                 }
                                                             }
                                                         }
